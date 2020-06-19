@@ -1,5 +1,5 @@
-#Scrum Artefacts and Events
-#Week 1 Homework
+# Scrum Artefacts and Events
+## Week 1 Homework
 
 	
 >	SCRUM Artefacts and Events
