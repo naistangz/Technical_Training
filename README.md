@@ -1,7 +1,7 @@
-#Test read me file
+# Test read me file
 This is a read me file 
 
-##Using Git and Github
+## Using Git and Github
 ```bash 
 git init
 ```
