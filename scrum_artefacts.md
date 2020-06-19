@@ -22,5 +22,5 @@
 **Sprint Backlog**- list of tasks to be completed during a scrum sprint, team selects a number of product backlog items and identifies tasks necessary to complete user story ( a description of software feature from end user perspective, describes type of user, what they want and why, starting point to convo that establishes real product requirement)
 >
 **Product Increment** - Sum of product backlog items completed during spring and value of increments of all previous springs. At end of spring, new increment must be working product aka useable condition. Must be in working condition regardless of whether product owner decides to release it. 
-> ![scrum picture](../images/scrum_artifacts.jpg)
+
 ___
