@@ -1,5 +1,4 @@
-# Test read me file
-This is a read me file 
+# Testing File
 
 ## Using Git and Github
 ```bash 
