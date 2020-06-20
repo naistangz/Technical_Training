@@ -97,7 +97,7 @@ Example: The airline industry continues to grow. The cost of entry is low with r
 > * **Technological** -> the innovations in technology that may affect the operations of the industry and the market favourably or unfavourably e.g technology incentives, the level of innovation, automation, research and development (R&D) activity, tech change and tech awareness that a market possesses
 > * **Environmental** -> they have become important due to increasing scarcity of raw materials, pollution targets and carbon footprint targets set by the government e.g weather, climate environmental offsets and climate change which may affect industries such as tourism, farming, agriculture and insurance
 > * **Legal** -> may have overlap with political factors but also include specific laws such as discrimination laws, antitrust laws, employment laws, consumer protection laws, copyright and patent laws. Companies need to know what is and what is not legal in order trade successfully and ethically
-![pestle](./images/pestle.png) ![pestel2](./images/pestel.jpg)
+![pestle](./images/pestle.png) 
 
 ---
 ### **SWOT**
