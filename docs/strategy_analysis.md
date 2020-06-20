@@ -22,7 +22,7 @@ MOST analysis is used to improve internal processes and company culture by analy
 **Tactics**
 > They define how the strategies are going to be implemented at the lowest level
 
-![mission](./images/mission.jpeg)
+![mission](../images/mission.jpeg)
 
 
 ---
@@ -35,7 +35,7 @@ The products and business units are divided into four quadrants:
 * Cash cow - **Milk/Harvest** - Matured (High market share, but low market growth) 
 * Dog - **Divest** - On the declining path (Low market share, and low market growth)
 
-![boston](./images/boston.png)
+![boston](../images/boston.png)
 ---
 ### **Porter's Five Forces** ###
 This is a tool to understand the competitiveness of your business environment, and for identifying a company's strategy's potential profitability. 
@@ -83,7 +83,7 @@ Example: Airlines have a hard time differentiating themselves and creating custo
 - This threat also depends on capabilities of likely potential entrants. If there are well established companies in the industry operating in other geographic regions, the threat of entry rises.
 
 Example: The airline industry continues to grow. The cost of entry is low with ready access to aircraft and financing, availability of skilled personnel, and access to gates. New airlines often have advantages due to less seniority of personnel, which lowers wages, and newer aircraft with greater fuel efficiency. 
-![porters](./images/porters.jpg)
+![porters](../images/porters.jpg)
 
 ---
 ### **PESTLE**
@@ -97,7 +97,7 @@ Example: The airline industry continues to grow. The cost of entry is low with r
 > * **Technological** -> the innovations in technology that may affect the operations of the industry and the market favourably or unfavourably e.g technology incentives, the level of innovation, automation, research and development (R&D) activity, tech change and tech awareness that a market possesses
 > * **Environmental** -> they have become important due to increasing scarcity of raw materials, pollution targets and carbon footprint targets set by the government e.g weather, climate environmental offsets and climate change which may affect industries such as tourism, farming, agriculture and insurance
 > * **Legal** -> may have overlap with political factors but also include specific laws such as discrimination laws, antitrust laws, employment laws, consumer protection laws, copyright and patent laws. Companies need to know what is and what is not legal in order trade successfully and ethically
-![pestle](./images/pestle.png) 
+![pestle](../images/pestle.png) 
 
 ---
 ### **SWOT**
@@ -111,7 +111,7 @@ Example: The airline industry continues to grow. The cost of entry is low with r
 
 SWOT is a strategic planning technique used to help a person or organisation identify strengths, weaknesses, opportunities, and threats related to business competitions or project planning.
 
-![swot](./images/swit.png) ![swot2](./images/swot-analysis-header1.png)
+![swot](../images/swit.png) ![swot2](../images/swot-analysis-header1.png)
 
 
 
