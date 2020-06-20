@@ -18,5 +18,7 @@ git push origin master
 ---
 
 **Technical Consultant Curriculum** [HERE](/docs)
+
 **CodePen Projects** [HERE](https://codepen.io/tangintech)
+
 **Linkedin Profile** [HERE](https://www.linkedin.com/in/anais-tang/)
