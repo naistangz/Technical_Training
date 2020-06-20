@@ -16,6 +16,7 @@
 CREATE DATABASES database_name;
 ```
 `CREATE TABLE` creates a new table in the database. It allows you to specify the name of the table and the name of each column in the table.
+
 **SELECT:**
 ```sql
 SELECT column_name 
