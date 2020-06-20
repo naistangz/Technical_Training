@@ -30,7 +30,7 @@ FROM table_name;
 SELECT DISTINCT column_name
 FROM table_name;
 ```
-`SELECT DISTINCT` SELECT DISTINCT specifies that the statement is going to be a query that returns unique values in the specified column(s).
+`SELECT DISTINCT` specifies that the statement is going to be a query that returns unique values in the specified column(s).
 
 **SUM:**
 ```sql
