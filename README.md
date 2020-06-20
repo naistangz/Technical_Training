@@ -17,7 +17,7 @@ git push origin master
 ```
 ---
 
-**Technical Consultant Curriculum** [HERE](/docs)
+**DevOps Trainee Notes** [HERE](/docs)
 
 **CodePen Projects** [HERE](https://codepen.io/tangintech)
 
