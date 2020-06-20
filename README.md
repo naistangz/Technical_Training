@@ -16,8 +16,8 @@ git push origin master
 ```
 ---
 
-**DevOps Trainee Notes** [HERE](/docs)
+**Anais' DevOps Trainee Notes** [HERE](/docs)
 
-**CodePen Projects** [HERE](https://codepen.io/tangintech)
+**Anais' CodePen Projects** [HERE](https://codepen.io/tangintech)
 
-**Linkedin Profile** [HERE](https://www.linkedin.com/in/anais-tang/)
+**Anais' Linkedin Profile** [HERE](https://www.linkedin.com/in/anais-tang/)
