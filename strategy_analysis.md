@@ -108,6 +108,7 @@ Example: The airline industry continues to grow. The cost of entry is low with r
 > * **Threats**: elements in the environment that could cause trouble for the business or project.
 
 **What is a SWOT analysis?**
+
 SWOT is a strategic planning technique used to help a person or organisation identify strengths, weaknesses, opportunities, and threats related to business competitions or project planning.
 
 ![swot](./images/swit.png) ![swot2](./images/swot-analysis-header1.png)
