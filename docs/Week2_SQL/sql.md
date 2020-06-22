@@ -32,11 +32,11 @@
 - **Candidate Key** - Candidates for becoming primary key
 
 > Example: Stud ID, Roll No, and email are candidate keys which helps us to uniquely identify the student record in the table. 
-**StudID** | Roll No | First Name | Last Name | Email
---- | --- | --- | --- | ---
-1 | 11 | Tom |Price|abc@gmail.com
-2 | 12 | Nick | Wright | xyz@gmail.com
-3 | 13 | Dana | Natan | mno@yahoo.com
+> **StudID** | Roll No | First Name | Last Name | Email
+> --- | --- | --- | --- | ---
+> 1 | 11 | Tom |Price|abc@gmail.com
+> 2 | 12 | Nick | Wright | xyz@gmail.com
+> 3 | 13 | Dana | Natan | mno@yahoo.com
 
 ## Candidate Key Constraints:
 - It must contain unique values
