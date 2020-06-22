@@ -33,7 +33,14 @@
 
 ## Types of Database
 - **Flat-File Database**
-
+    - Stores everything in one Table. Good for small numbers of records related to a single topic.
+- **Relational Database**
+    - Gives you the ability to separate masses of data into numerous tables.
+    - They are linked to each other through the use of keys.
+- **Big Data**
+    - MongoDB, Vertica, etc.
+    - Used for Data Analytics and Business Intelligence
+    - Digital Age and Internet of Thing
 
 
 ## List of common SQL Commands ##

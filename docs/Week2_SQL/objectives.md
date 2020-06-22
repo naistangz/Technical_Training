@@ -16,4 +16,6 @@ Which categories of data might you find in each table?
 - Primary keys cannot have `NULL` values
 - Bank account would **not** be an ideal primary key as a good relational database should contain a primary key that should not change  
 
-** Foreign Keys
+**Foreign Keys**
+- A column that references a column (primary key)
+of another table
