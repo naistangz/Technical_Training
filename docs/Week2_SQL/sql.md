@@ -31,14 +31,31 @@
 - **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data.
 - **Candidate Key** - Candidates for becoming primary key
 
+> Example: Stud ID, Roll No, and email are candidate keys which helps us to uniquely identify the student record in the table. 
 **StudID** | Roll No | First Name | Last Name | Email
 --- | --- | --- | --- | ---
 1 | 11 | Tom |Price|abc@gmail.com
 2 | 12 | Nick | Wright | xyz@gmail.com
 3 | 13 | Dana | Natan | mno@yahoo.com
 
+## Candidate Key Constraints:
+- It must contain unique values
+- Must not contain `null` values
+- It should not contain minimum fields to ensure uniqueness
+- Uniquely identify each record in a table
 
-- **Composite Key** - One or more columns that can uniquely identify **each** row in the table. *Uniqueness is only guaranteed when the columns are combined; when taken individually the columns do not guarantee uniqueness.*
+- **Composite Key** - A key that has more than one attributes. Refers to cases where more than one column is used to specify the primary key of a table. 
+> Example: In the Sales table, there are four columns (attributes) - **cust_id**, **product_code**, **product_count**:
+> cust_id | order_id | product_code | product_count
+> --- | --- | --- | ---
+> CO1 | 0001 | POO7 | 23
+> C02 | 0123 | P007 | 19
+> C02 | 0123 | P230 | 82
+> C01 | 0001 | P890 | 42
+> - None of these columns **alone** can play a role of key in this table.
+> - The key should be having more than one attributes: **{cust_id, product_code}**
+
+
 - **Foreign Key** - A key used to link two tables together. Refers to the primary key in another table. 
 > Example: In the SalesOrderHeader table, the column **SalesOrderHeader.CurrencyRateID** is a **foreign** key since it is related to the **CurrencyRate.CurrencyRateID.** **CurrencyRate.CurrencyRateID** is the primary key of the **CurrencyRate** table.
 >![foreign_key](../../images/foreign_key.webp)
