@@ -45,7 +45,9 @@
 - Uniquely identify each record in a table
 
 - **Composite Key** - A key that has more than one attributes. Refers to cases where more than one column is used to specify the primary key of a table. 
+
 > Example: In the Sales table, there are four columns (attributes) - **cust_id**, **product_code**, **product_count**:
+
 > cust_id | order_id | product_code | product_count
 > --- | --- | --- | ---
 > CO1 | 0001 | POO7 | 23
