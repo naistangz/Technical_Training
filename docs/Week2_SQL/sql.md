@@ -29,6 +29,10 @@
 - **Table** - A predefined format of rows and columns that define an entity. Also known as a File.
 - **Entity** - Anything you want to model in a table
 - **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data.
+- **Candidate Key** - Candidates for becoming primary key
+- **Composite Key** - One or more columns that can uniquely identify **each** row in the table. *Uniqueness is only guaranteed when the columns are combined; when taken individually the columns do not guarantee uniqueness.*
+
+![many-to-many](../../images/many.png)
 ---
 
 ## Types of Database
@@ -42,7 +46,29 @@
     - Used for Data Analytics and Business Intelligence
     - Digital Age and Internet of Thing
 
+---
+## Querying Relationship Database
+**One-to-One Relationship**
+- One row in one table can only relate to one and only one row in another table and vice versa.
+- This is the least common database relationship.
+> For example: in school database, each student has only one student ID, and **each** student ID is assigned to only one person
 
+**One-To-Many**
+- Parent record (primary key) in one table can reference several child (foreign) records in another table.
+- The child cannot have more than one parent record
+> For example: an e-commerce website may have the following:
+> * Customers can make many orders
+> * Orders can contain many items
+> * Items can have descriptions in many languages
+
+**Many-to-Many**
+- In some instances, you need multiple instances on both sides of the relationship
+- Contains composite a primary key
+- Requires creation of junction table which creates one-to-many relationships 
+> For example: an online education website can enroll multiple students to multiple courses
+
+
+---
 ## List of common SQL Commands ##
 
 ### Section 1: Basic Commands ###

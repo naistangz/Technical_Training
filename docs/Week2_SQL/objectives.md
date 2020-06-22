@@ -1,4 +1,4 @@
-## Exercise 1
+# Exercise 1
 
 ##### Library_db
 table_books
@@ -8,7 +8,10 @@ table_library_patron:
 table_customer_info:
 table_bank_account:
 
-Which categories of data might you find in each table? 
+### Which categories of data might you find in each table? 
+
+**Possible answers:** isbn code, date published, title of book, bank accounts, customer id, 
+
 ---
 **Primary Keys**
 - Primary key is a field in a table which uniquely identifies each row/record in a database table.
