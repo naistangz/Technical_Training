@@ -31,7 +31,10 @@
 - **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data.
 ---
 
-## 
+## Types of Database
+- **Flat-File Database**
+
+
 
 ## List of common SQL Commands ##
 
