@@ -7,6 +7,9 @@
 - The relationship between data is also stored in the form of tables. 
 - SQL statements are used to retrieve and update data in a database
 - SQL operates through simple, declarative statements. This keeps data accurate and secure, and it helps maintain the integrity of databases, regardless of size.
+
+**What is a database?**
+- An organised repository of data in order to efficiently retrieve data
 ---
 ## List of common SQL Commands ##
 
