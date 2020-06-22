@@ -30,6 +30,9 @@
 - **Entity** - Anything you want to model in a table
 - **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data.
 ---
+
+## 
+
 ## List of common SQL Commands ##
 
 ### Section 1: Basic Commands ###
