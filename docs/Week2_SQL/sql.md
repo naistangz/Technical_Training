@@ -7,7 +7,6 @@
 - The relationship between data is also stored in the form of tables. 
 - SQL statements are used to retrieve and update data in a database
 - SQL operates through simple, declarative statements. This keeps data accurate and secure, and it helps maintain the integrity of databases, regardless of size.
-- A relational database is a collection of information that organizes data points with defined relationships for easy access.
 ---
 ## List of common SQL Commands ##
 
