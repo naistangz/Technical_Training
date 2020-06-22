@@ -81,15 +81,10 @@
 
 > Example: You have a list of students and a list of classes. There's a **many-to-many** relationship between the students and their classes:
 
->> - Each student can take multiple classes
+> - Each student can take multiple classes
 > - Each class have have multiple students enrolled
 > - A junction table is useful if we want to store information about each student's grades or which semester that student took the class
 
-[students_and_classes](../../images/classroom.png)
-> The students' **grades** in their classes `AND` the **times** can be considered *attributes of the relationships* between the students and the classes in which they enrolled.
-> - Each relationship has their own relevant lists of info, the best way to proceed is by making a junction table.
-
-[junction_table](../../images/junction.png)
 ---
 ## Types of Database
 - **Flat-File Database**
