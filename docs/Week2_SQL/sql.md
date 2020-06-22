@@ -6,7 +6,9 @@
 - It is used for managing data in relational database management system which stores data in the form of tables.
 - The relationship between data is also stored in the form of tables. 
 - SQL statements are used to retrieve and update data in a database
-- SQL operates through simple, declarative statements. This keeps data accurate and secure, and it helps maintain the integrity of databases, regardless of size.
+- SQL operates through simple, declarative statements. This keeps data accurate and secure, and it helps maintain the integrity of databases, regardless of size
+- A relational database is a collection of information that organizes data points with defined relationships for easy access
+> For example, e-commerce businesses can use the relational model to process purchases and track inventory. The relational database is the most widely accepted database model.
 ---
 ## List of common SQL Commands ##
 
