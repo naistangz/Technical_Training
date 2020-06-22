@@ -33,9 +33,9 @@
 
 **StudID** | Roll No | First Name | Last Name | Email
 --- | --- | --- | --- | ---
-1 | 11 | Tom |Price|[abc@gmail.com]
-2 | 12 | Nick | Wright | [xyz@gmail.com]
-3 | 13 | Dana | Natan | [mno@yahoo.com]
+1 | 11 | Tom |Price|abc@gmail.com
+2 | 12 | Nick | Wright | xyz@gmail.com
+3 | 13 | Dana | Natan | mno@yahoo.com
 
 
 - **Composite Key** - One or more columns that can uniquely identify **each** row in the table. *Uniqueness is only guaranteed when the columns are combined; when taken individually the columns do not guarantee uniqueness.*
