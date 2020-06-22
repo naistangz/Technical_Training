@@ -9,7 +9,8 @@
 - SQL operates through simple, declarative statements. This keeps data accurate and secure, and it helps maintain the integrity of databases, regardless of size.
 
 **What is a database?**
-- An organised repository of data in order to efficiently retrieve data
+- An organised repository of data in order to efficiently retrieve data 
+- It is help in a computer 
 ---
 ## List of common SQL Commands ##
 
