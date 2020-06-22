@@ -30,11 +30,35 @@
 - **Entity** - Anything you want to model in a table
 - **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data.
 - **Candidate Key** - Candidates for becoming primary key
+
+**StudID** | Roll No | First Name | Last Name | Email
+--- | --- | --- | --- | ---
+1 | 11 | Tom |Price|[abc@gmail.com]
+2 | 12 | Nick | Wright | [xyz@gmail.com]
+3 | 13 | Dana | Natan | [mno@yahoo.com]
+
+
 - **Composite Key** - One or more columns that can uniquely identify **each** row in the table. *Uniqueness is only guaranteed when the columns are combined; when taken individually the columns do not guarantee uniqueness.*
+- **Foreign Key** - A key used to link two tables together. Refers to the primary key in another table. 
+> Example: In the SalesOrderHeader table, the column **SalesOrderHeader.CurrencyRateID** is a **foreign** key since it is related to the **CurrencyRate.CurrencyRateID.** **CurrencyRate.CurrencyRateID** is the primary key of the **CurrencyRate** table.
+>![foreign_key](../../images/foreign_key.webp)
 
-![many-to-many](../../images/many.png)
+- **Primary Key** - Uniquely identifies each record in the table 
+> *Most* tables should have a primary key 
+> Each table can have more than one column which is part of its Primary Key (composite key) e.g. Order No + Order Line Number
+> The DMBS will enforce the uniqueness of the Primary Key, not allowing repeated records to exist in the records.
+> The primary key for each table is stored in an index, used to enforce the uniqueness requirement. 
+
+## Primary Key Constraints ##
+- A primary key must be unique 
+- Must always have an entry 
+    - cannot be blank or `NULL`
+- The value must never change 
+- Each table may have a maximum of one Primary Key (or one composite primary key)
+
+- **Junction Table**
+- Used when dealing with many-to-many relationships in SQL database.
 ---
-
 ## Types of Database
 - **Flat-File Database**
     - Stores everything in one Table. Good for small numbers of records related to a single topic.
@@ -63,10 +87,15 @@
 
 **Many-to-Many**
 - In some instances, you need multiple instances on both sides of the relationship
+- One or more rows in a table can be related to 0, 1 or many rows in another table.
+- A 3rd table called a mapping or link table is required in order to implement such a relationship. 
 - Contains composite a primary key
-- Requires creation of junction table which creates one-to-many relationships 
+- Requires creation of junction table which creates one-to-many relationships
+- A junction table will allow us to create the many-to-many relationship and prevent us from adding duplicate entries.
 > For example: an online education website can enroll multiple students to multiple courses
+> Customers can purchase many products
 
+![many-to-many](../../images/many.png)
 
 ---
 ## List of common SQL Commands ##
