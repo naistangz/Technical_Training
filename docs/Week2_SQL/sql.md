@@ -38,7 +38,7 @@
 > 2 | 12 | Nick | Wright | xyz@gmail.com
 > 3 | 13 | Dana | Natan | mno@yahoo.com
 
-## Candidate Key Constraints:
+ **Candidate Key Constraints:**
 - It must contain unique values
 - Must not contain `null` values
 - It should not contain minimum fields to ensure uniqueness
@@ -68,7 +68,7 @@
 > The DMBS will enforce the uniqueness of the Primary Key, not allowing repeated records to exist in the records.
 > The primary key for each table is stored in an index, used to enforce the uniqueness requirement. 
 
-## Primary Key Constraints ##
+**Primary Key Constraints**
 - A primary key must be unique 
 - Must always have an entry 
     - cannot be blank or `NULL`
