@@ -10,7 +10,25 @@
 
 **What is a database?**
 - An organised repository of data in order to efficiently retrieve data 
-- It is help in a computer 
+- It is held in a computer
+
+**Examples of databases:**
+- eCommerce
+- Finances
+- Customer Bank Accounts
+- Sales information
+
+> We must be able to structure tables to contain the right type of information, so that we can query it
+
+**We have to label *raw data* in order to process our data and information efficiently**
+
+---
+## Terminology 
+- **Column** - Database tables are composed of individual columns corresponding to the attributes of the object
+- **Row** - A row consists of one set of attributes corresponding to one instance that a table describes. Also known as Records or Tuples.
+- **Table** - A predefined format of rows and columns that define an entity. Also known as a File.
+- **Entity** - Anything you want to model in a table
+- **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data.
 ---
 ## List of common SQL Commands ##
 
