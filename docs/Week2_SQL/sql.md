@@ -142,6 +142,12 @@ ALTER TABLE employees
 `ALTER TABLE` changes the structure of a table. Used to add, modify, or drop columns in a table.
 > This will add a column to the *employees* table called *last_name*
 
+**DROP:**
+```sql
+DROP DATABASE database_name
+```
+`DROP` is used to delete a whole database or just a table. The `DROP` statement destroys the objects like an existing database, table, index, or view.
+
 **SELECT:**
 ```sql
 SELECT column_name 

@@ -77,4 +77,38 @@
 ```sql
 /* This is a comment in sql*/
 ```
+### Insert Breakdown 
 
+### Variations of Insert
+- **Changing the order of the columns**
+    - If you've already created a table, the order in which you add the data doesn't have to be the same as the original column order as long as the values match the order you are inserting.
+- **Omitting column names**
+    - You don't have to put the column names in, but the values have to be in the same order as the original columns.
+- **Leaving some columns out**
+    - You can leave some information out, it doesn't have to be inserted with the rest. For this you will have to specify the column names the values are going into. 
+
+**What error do you get with:**
+- A missing **VALUE?**
+- A missing **column?**
+- A missing **single quote mark?**
+
+**NULL**
+- `NULL` is not nothing, does not equate to zero.
+- A value can be `NULL`, BUT `NULL` never equals `NULL` because `NULL` is an undefined value.
+
+**UPDATE AND DELETE:**
+
+**Database Considerations:**
+    - Data Security
+    - Data Recovery 
+    - Data Integrity
+    - Normal Form 
+
+## Normal Form 
+
+### 1st Normal Form 
+- A database is in First Normal Form when the following conditions are satisfied:
+    - Make everything **Atomic**
+    > Data must be presented as small as it can be.
+                                                                                                                     
+    - There should be no repeating groups                                                                                                                 >
