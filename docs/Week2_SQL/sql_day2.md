@@ -131,7 +131,7 @@ WHERE [condition]
         - For example, a table that records data on a book and its author(s) with the following columns:
         [BookID],  [Author1], [Author2], [Author3], is not in 1NF because [Author 1], [Author 2], and [Author 3] are all repeating the same attribute.
          
-    **For example:** This **table** is not in **1NF** because the values in **colour** are not **atomic**. the values in the [Colour] column can be divided into 'red' and 'green'
+    **For example:** This **table** is not in **1NF** because the values in **colour** are not **atomic**. the values in the [Colour] column can be divided into 'red' and 'green'.
     
     **Product ID** | **Colour** |**Price**|
     ------|------  |------ 
@@ -247,7 +247,9 @@ We need to split the table, **Location** column should only rely on the **primar
 1|London
 3|New York
 4|Tokyo 
-    
+
+---
+ 
 ### 3rd Normal Form   
 - A database is in Third Normal Form when the following conditions are satisfied:
      - It is in 2NF
@@ -259,6 +261,7 @@ We need to split the table, **Location** column should only rely on the **primar
 `book_table_detail`
 
 **Book_id** |**Genre_id** |**Genre_type**|**Price**
+---|---|---|---
 1|1| Fiction| 9.99
 2|2|Travel|14.99
 3|1|Fiction|24.99
