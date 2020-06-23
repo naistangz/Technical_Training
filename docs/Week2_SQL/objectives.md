@@ -22,3 +22,13 @@ table_bank_account:
 **Foreign Keys**
 - A column that references a column (primary key)
 of another table
+
+
+# Activity Day 2 
+Column Name | Description | Example | Data Type 
+----------------| ------------|------------ |------------
+Post Code | 6 to 8 Characters| WV1 8JD | VARCHAR(10)
+Phone Number | 11 Digits, no punctuation| 07956283593 | CHAR(11)
+Birth Date | dd/mm/yyyy | 31/01/1980 | DATE or DATETIME
+Weight in Kg | A number with decimal place | 63.5029 | DECIMAL(6, 4)
+Comments | Large block of text, more than 255 characters | VARCHAR(8000) or VARCHAR(MAX)

@@ -37,34 +37,34 @@
 
 
 ## Data Types (Part 1)
-* VARCHAR
+* **VARCHAR**
     - Adaptable to different lengths of characters. Records MAX size.
     - More memory efficient than `CHAR`
 
-* CHARACTER or CHAR
+* **CHARACTER or CHAR**
     - Data must be at a **fixed length.** Fixed amount of space used.
     - 50% faster than VARCHAR
 
-* INT
+* **INT**
     - Holds a whole number/integer value (see also bigint, smallint and tinyint) positive or negative.
     - INT = 32-bit size (4 bytes) 
     - INT = 64-bit size (4 bytes)
     
-* DATE or TIME or DATETIME
+* **DATE or TIME or DATETIME**
     - Stores Date, Time or both date and time
-    - 
+    
     
 ## Data Types (Part 2)
-* DECIMAL or NUMERIC
+* **DECIMAL or NUMERIC**
     - Fixed-point number. Max number for size is 65
     - DECIMAL(p,s) -> **p** is precision 
     - DECIMAL(6,4) = 12.4567
 
-* BINARY
+* **BINARY**
     - Use to store binary data such as an image or file
 
-* FLOAT
+* **FLOAT**
     - Scientific use (very large numbers)
 
-* BIT 
+* **BIT**
     - Equivalent to binary (0,1 or `NULL`)
