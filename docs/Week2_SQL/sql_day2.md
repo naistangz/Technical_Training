@@ -4,7 +4,7 @@
 
 * Data Manipulation Language
 * Data Definition Language
-* Data Control Language 
+* Data Control Language
 * Transaction Control Language
 
 * **DML** 
@@ -35,6 +35,7 @@
 > * Used to manage transactions in the database
 > * Used to manage changes made by DML statements 
 
+*Tip:* use `DROP` before `CREATE` to remove database that already exists with the same name, allowing you to create database/table.
 
 ## Data Types (Part 1)
 * **VARCHAR**
