@@ -128,12 +128,19 @@
 ## List of common SQL Commands ##
 
 ### Section 1: Basic Commands ###
-**Create databases:**
+**CREATE DATABASE:**
 ```sql
 CREATE DATABASES database_name;
 ```
-`CREATE TABLE` creates a new table in the database. It allows you to specify the name of the table and the name of each column in the table.
+`CREATE DATABASE` creates a new database
 
+**ALTER TABLE:**
+```sql
+ALTER TABLE employees
+    ADD last_name VARCHAR(50);
+```
+`ALTER TABLE` changes the structure of a table. Used to add, modify, or drop columns in a table.
+> This will add a column to the *employees* table called *last_name*
 
 **SELECT:**
 ```sql

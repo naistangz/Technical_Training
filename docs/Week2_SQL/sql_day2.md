@@ -58,9 +58,11 @@
 * **DECIMAL or NUMERIC**
     - Fixed-point number. Max number for size is 65
     - DECIMAL(p,s) 
-        - **p** is precision which is maximum total of decimal digits that will be stored
-        - **s** is the scale which is number of decimal digits that will be stored to right of decimal point 
+        - **p** total number of digits in the value, i.e. on both sides of the decimal point
+        - **s** stands for scale, number of digits after the decimal point
     - DECIMAL(6,4) = 12.4567
+        - Total 6 numbers
+        - 2 digits after decimal point
 
 * **BINARY**
     - Use to store binary data such as an image or file
@@ -75,3 +77,4 @@
 ```sql
 /* This is a comment in sql*/
 ```
+
