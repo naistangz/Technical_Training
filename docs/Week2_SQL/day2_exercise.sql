@@ -1,20 +1,20 @@
--- drop database
+-- DELETING DATABASE
 DROP DATABASE anais_db
 
--- create database
+-- CREATING DATABASE
 CREATE DATABASE anais_db
 
--- using a database
+-- USING A DATABASE
 USE anais_db
 
-DROP TABLE anais_films
+DROP TABLE film_table
 
--- creating a table 
-CREATE TABLE anais_films
+-- CREATING THE FIRST TABLE
+CREATE TABLE film_table
 (
     film_name VARCHAR(15),
     film_type VARCHAR(15),
-    date_of_release DATETIME,
+    release_date DATETIME,
     director CHAR(15),
     writer CHAR(15),
     Star DECIMAL(2, 1),
@@ -23,24 +23,27 @@ CREATE TABLE anais_films
     plot_summary VARCHAR(MAX)
 )
 
---alter table 
-ALTER TABLE anais_films
-ADD release_date DATETIME;
+-- ALTERING THE TABLE
+ALTER TABLE film_table ADD film_id INT IDENTITY PRIMARY KEY;
 
-INSERT INTO anais_films(
+INSERT INTO film_table(
     film_name, film_type, release_date, director, writer, star, film_language, official_website, plot_summary
 )
-VALUES(
+VALUES
+(
+    'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
+),
+(
+    'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
+),
+(
     'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
 );
 
---SP_HELP anais_films;
 
-SELECT * FROM anais_films;
+SELECT * FROM film_table;
 
-ALTER TABLE anais_films
-ADD film_id INT IDENTITY PRIMARY KEY;
-
+-- CREATING A SECOND TABLE
 DROP TABLE director;
 
 CREATE TABLE director(
@@ -49,28 +52,28 @@ CREATE TABLE director(
     city VARCHAR(20) DEFAULT 'LONDON',
     film_id INT,
     PRIMARY KEY(director_id),
-    FOREIGN KEY(film_id) REFERENCES anais_films(film_id)
+    FOREIGN KEY(film_id) REFERENCES film_table(film_id)
 
 )
-
-SELECT * FROM director;
 
 INSERT INTO director
 (director_name, film_id)
 VALUES 
 ('Steve', 1),
-('Tom', 2)
+('Bob', 2),
+('Stacy', 3)
 
-INSERT INTO director
-(director_name, film_id)
-VALUES
-('Bob', 4)
 
 SELECT * FROM director;
 
 
 /*Why is this not working Auto and manual way*/
 
-DELETE FROM anais_films WHERE film_id =1
+-- ALTER TABLE director
+-- ADD CONSTRAINT film_id
+-- FOREIGN KEY (film_id) 
+-- REFERENCES film_table (film_id) ON DELETE CASCADE
 
-UPDATE director SET director= 'Jamie' where film_id = 1
+-- DELETE FROM film_table WHERE film_id =1
+
+-- UPDATE director SET director= 'Jamie' where film_id = 2

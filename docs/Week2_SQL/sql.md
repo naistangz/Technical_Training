@@ -2,7 +2,7 @@
 
 ## What is SQL? ##
 **SQL** stands for Structured Query Language. 
->
+
 - It is used for managing data in relational database management system which stores data in the form of tables.
 - The relationship between data is also stored in the form of tables. 
 - SQL statements are used to retrieve and update data in a database
