@@ -358,3 +358,4 @@ Also known as SQL left join. If we want to join two tables: A and B, `LEFT JOIN`
 ![left_outer_join](../../images/left_outer_join.jpeg)
 
 
+

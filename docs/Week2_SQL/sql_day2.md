@@ -114,13 +114,13 @@ WHERE [condition]
 ```
 
 **Database Considerations:**
-    - Data Security
-    - Data Recovery 
-    - Data Integrity
-    - Normal Form 
+- Data Security
+- Data Recovery 
+- Data Integrity
+- Normal Form 
 
 ## Normal Form 
--Normalisation is the process of organising/designing data in a database so that it avoids redundancies of data (all data stored only in one place)
+Normalisation is the process of organising/designing data in a database so that it avoids redundancies of data (all data stored only in one place)
 
 ### 1st Normal Form 
 - A database is in First Normal Form when the following conditions are satisfied:
@@ -294,5 +294,8 @@ We need to create separate tables to remove any function dependencies. **Book_id
     - Required to retrieve a particular record from the entity table. 
 
 
-Week 2 Day 2 (23-06-2020) SQL Exercise [HERE](day2_exercise.sql)
+
+
+
+> **Week 2 Day 2 (23-06-2020) SQL Exercise** [HERE](day2_exercise.sql)
                                                                                              
