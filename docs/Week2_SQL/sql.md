@@ -38,7 +38,7 @@
 > 2 | 12 | Nick | Wright | xyz@gmail.com
 > 3 | 13 | Dana | Natan | mno@yahoo.com
 
- **Candidate Key Constraints:**
+**Candidate Key Constraints:**
 - It must contain unique values
 - Must not contain `null` values
 - It should not contain minimum fields to ensure uniqueness
@@ -76,8 +76,8 @@
 - Each table may have a maximum of one Primary Key (or one composite primary key)
 
 - **Junction Table**
-- Also known as a Bridge Table or Join Table, Junction Table contains references to two groups 
-- Used when dealing with many-to-many relationships in SQL database.
+    - Also known as a Bridge Table or Join Table, Junction Table contains references to two groups 
+    - Used when dealing with many-to-many relationships in SQL database.
 
 > Example: You have a list of students and a list of classes. There's a **many-to-many** relationship between the students and their classes:
 
@@ -331,4 +331,17 @@ JOIN table_2
 An `INNER JOIN` will combine rows from different tables if the *join condition* is true.
 
 ![innerjoin](../../images/inner_join.jpg)
+
+**LEFT OUTER JOIN**
+```sql
+SELECT column1, column2...
+FROM table_A
+LEFT JOIN table_B on join_condition
+WHERE row_condition
+```
+
+Also known as SQL left join. If we want to join two tables: A and B, `LEFT JOIN` returns all rows in left table **(A)** and all matching rows found in the right table **(B)**. 
+
+![left_outer_join](../../images/left_outer_join.jpeg)
+
 
