@@ -73,7 +73,7 @@
 * **BIT**
     - Equivalent to binary (0,1 or `NULL`)
     
-## Comments
+**Comments**
 ```sql
 /* This is a comment in sql*/
 ```
@@ -105,10 +105,31 @@
     - Normal Form 
 
 ## Normal Form 
+- Through normalisation, we achieve better design because we are removing redundancies 
 
 ### 1st Normal Form 
 - A database is in First Normal Form when the following conditions are satisfied:
     - Make everything **Atomic**
     > Data must be presented as small as it can be.
                                                                                                                      
-    - There should be no repeating groups                                                                                                                 >
+    - There should be no repeating groups
+    > For example, a table that records data on a book and its author(s) with the following columns:
+    > [BookID],  [Author1], [Author2], [Author3], is not in 1NF because 
+                                                                                                                                                                                                                                                                                                                                         
+### 2nd Normal Form 
+- A database in in Second Normal Form when the following conditions are satisfied:
+    - It is in 1NF
+    - All non-key attributes are fully functional dependent on the Primary Key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+       
+### 3rd Normal Form   
+- A database is in Third Normal Form when the following conditions are satisfied:
+     - It is in 2NF
+     - There no transitive functional dependency
+        - i.e. When a non-key column is functionally dependent on another non-key column, which is functionally dependent on the **primary key**
+
+
+
+**What are non-key attributes?**
+**What are key attributes?**
+
+                                                                                             

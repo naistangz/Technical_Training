@@ -12,37 +12,39 @@ DROP TABLE anais_films
 -- creating a table 
 CREATE TABLE anais_films
 (
-    film_id INT IDENTITY(1,1) PRIMARY KEY,
-    film_name VARCHAR(10) NOT NULL,
-    film_type VARCHAR(50)
+    film_name VARCHAR(15),
+    film_type VARCHAR(15),
+    date_of_release DATETIME,
+    director CHAR(15),
+    writer CHAR(15),
+    Star DECIMAL(2, 1),
+    film_language CHAR(15),
+    official_website VARCHAR(40),
+    plot_summary VARCHAR(MAX)
 )
 
--- alter table 
--- ALTER TABLE anais_films
--- ADD film_id INT IDENTITY
+--alter table 
+ALTER TABLE anais_films
+ADD release_date DATETIME;
 
-INSERT INTO anais_films VALUES
-(
-('Star Wars', 'Sci fi'),
-('Star Trek', 'Sci fi')
+INSERT INTO anais_films(
+    film_name, film_type, release_date, director, writer, star, film_language, official_website, plot_summary
 )
+VALUES(
+    'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
+);
 
-INSERT INTO anais_films VALUES
-('Batman', 'Action')
-
--- INSERT INTO anais_films(
---     film_name, film_type, release_date, director, writer, star, film_language, official_website, plot_summary
--- )
--- VALUES(
---     'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
--- );
+--SP_HELP anais_films;
 
 SELECT * FROM anais_films;
 
-DROP TABLE director 
+ALTER TABLE anais_films
+ADD film_id INT IDENTITY PRIMARY KEY;
+
+DROP TABLE director;
 
 CREATE TABLE director(
-    director_id INT,
+    director_id INT IDENTITY,
     director_name VARCHAR(50),
     city VARCHAR(20) DEFAULT 'LONDON',
     film_id INT,
@@ -51,9 +53,7 @@ CREATE TABLE director(
 
 )
 
-ALTER TABLE anais_films
-ADD film_id INT IDENTITY PRIMARY KEY
-
+SELECT * FROM director;
 
 INSERT INTO director
 (director_name, film_id)
@@ -66,10 +66,11 @@ INSERT INTO director
 VALUES
 ('Bob', 4)
 
-SELECT * FROM director
-SELECT * FROM anais_films;
+SELECT * FROM director;
+
 
 /*Why is this not working Auto and manual way*/
+
 DELETE FROM anais_films WHERE film_id =1
 
 UPDATE director SET director= 'Jamie' where film_id = 1
