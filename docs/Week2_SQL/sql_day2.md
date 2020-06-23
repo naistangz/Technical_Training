@@ -125,12 +125,13 @@ WHERE [condition]
 - A database is in First Normal Form when the following conditions are satisfied:
     1. Make everything **Atomic**
         - Data must be presented as small as it can be
+        - A value that cannot be divided
    
     2. There should be no repeating groups
         - For example, a table that records data on a book and its author(s) with the following columns:
         [BookID],  [Author1], [Author2], [Author3], is not in 1NF because [Author 1], [Author 2], and [Author 3] are all repeating the same attribute.
          
-    **For example:** This **table** is not in **1NF** because the values in **colour** are not **atomic**, meaning they are not singular values.
+    **For example:** This **table** is not in **1NF** because the values in **colour** are not **atomic**. the values in the [Colour] column can be divided into 'red' and 'green'
     
     **Product ID** | **Colour** |**Price**|
     ------|------  |------ 
@@ -173,9 +174,46 @@ WHERE [condition]
     - It is in 1NF
     - All non-key attributes are fully functional dependent on the Primary Key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
         - One-to-one relationship    
-![second_normal](../../images/second_normal.webp)    
 
-**For example:** 
+**Example 1:**
+Suppose a school wants to store the data of teachers and the subjects they teach. Since a teacher can teach more than one subjects, the table can have multiple rows for a same teacher. (One-to-many relationship)
+
+teacher_id|subject|teacher_age
+-----|-----|-----
+111|maths|38
+111|physics|38
+222|biology|38
+333|physics|40
+333|chemistry|40
+
+**Candidate Keys:**{teacher_id, subject}
+**Non prime attribute:** teacher_age
+
+* Table is in 1 NF because each attribute has atomic values 
+* It is not in 2NF because non prime attribute teacher_age is dependent on teacher_id alone.
+* This violates the rule for 2NF *"no non-prime attribute is dependent on the proper subset of any candidate key of the table"*
+
+**Solution:**
+
+`teacher_details_table`
+
+teacher_id|teacher_age
+----|----
+111|38
+222|38
+333|40
+
+`teacher_subject_table`
+
+teacher_id|subject
+----|----
+111|Maths
+222|Physics
+333|Biology 
+333|Physics
+333|Chemistry 
+
+**Example 2:** 
 
 **Composite key** is used. **Product_ID** and **store** combine to make a primary key.
 In this case **location** only depend on **store** which is part of the primary key.
@@ -194,7 +232,7 @@ In this case **location** only depend on **store** which is part of the primary 
 
 We need to split the table, **Location** column should only rely on the **primary key**, in this case **store**.
 
-`_table_purchase` **table1*
+`_table_purchase` **table1**
 
 **product_id**|**store**
 ----|----
@@ -216,7 +254,7 @@ We need to split the table, **Location** column should only rely on the **primar
      - There no transitive functional dependency
         - i.e. When a non-key column is functionally dependent on another non-key column, which is functionally dependent on the **primary key**
 
-**For example:** **Book_ID** determines **Genre_ID**. **Genre_ID** determines **Genre Type**. They are **functionally dependent** on each other
+**For example:** **Genre_ID** dependent on  **Book_ID**. **Genre Type** dependent on **Genre_ID** . They are **functionally dependent** on each other
 
 `book_table_detail`
 
@@ -245,9 +283,11 @@ We need to create separate tables to remove any function dependencies. **Book_id
 2|Travel
 
 **What are non-key attributes?**
-    - Attributes or fields of fields, other than candidate *key attributes**
+    - Attributes or fields of fields, other than candidate *key attributes* 
 
 **What are key attributes?**
+    - Uniquely identify a record or an instance on an entity
+    - Required to retrieve a particular record from the entity table. 
 
 
 Week 2 Day 2 (23-06-2020) SQL Exercise [HERE](day2_exercise.sql)
