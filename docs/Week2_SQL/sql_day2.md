@@ -57,7 +57,9 @@
 ## Data Types (Part 2)
 * **DECIMAL or NUMERIC**
     - Fixed-point number. Max number for size is 65
-    - DECIMAL(p,s) -> **p** is precision 
+    - DECIMAL(p,s) 
+        - **p** is precision which is maximum total of decimal digits that will be stored
+        - **s** is the scale which is number of decimal digits that will be stored to right of decimal point 
     - DECIMAL(6,4) = 12.4567
 
 * **BINARY**
@@ -68,3 +70,8 @@
 
 * **BIT**
     - Equivalent to binary (0,1 or `NULL`)
+    
+## Comments
+```sql
+/* This is a comment in sql*/
+```
