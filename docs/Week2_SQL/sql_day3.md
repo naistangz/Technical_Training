@@ -112,6 +112,11 @@ CREATE TABLE Persons (
 
 If we don't use the above, we cannot delete data from the main table for which data in child table exists. We get the following:
 
+
+```sql
+ERROR: Record in child table exist
+```
+
 **Example:**
 
 ```sql
@@ -123,13 +128,9 @@ REFERENCES film_table (film_id) ON DELETE CASCADE
 
 This query deletes `film_id` on parent table **and** child table.
 
-```sql
-ERROR: Record in child table exist
-```
 
 ---
 
-## String Functions
-The following string functions can be used to manipu
+
 
 > **Week 2 Day 3 (24-06-2020) SQL Exercise: *Wild cards, Arithmetic Operators, Operators, String Functions*** [HERE](day3_exercise.sql)

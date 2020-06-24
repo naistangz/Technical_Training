@@ -190,7 +190,7 @@ SELECT TOP 6 c.Country, c.Region
 FROM Customers c
 WHERE Region  IS NOT NULL;
 
-/*Arithmetic Operators*/
+/*ARITHMETIC OPERATORS*/
 SELECT UnitPrice, Quantity, Discount, UnitPrice * Quantity AS 'Gross Total'
 FROM [Order Details];
 
@@ -222,7 +222,7 @@ ROUND((UnitPrice * Quantity * (1.00- Discount)),2) AS 'Net Total'
 FROM [Order Details]
 ORDER BY 'Net Total' DESC;
 
-/*String Functions*/
+/*STRING FUNCTIONS*/
 USE astha_db
 SELECT * FROM film_table
 
@@ -287,7 +287,7 @@ WHERE CHARINDEX('''', p.productName) > 0;
 SELECT p.ProductName 
 FROM Products p
 WHERE p.productName LIKE '%''%';
---Find's single quotes 
+--Finds single quotes 
 
 
 
