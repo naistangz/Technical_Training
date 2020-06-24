@@ -332,6 +332,18 @@ ORDER BY column_name ASC | DESC;
 
 `ORDER BY` is a clause that indicates you want to sort the result set by a particular column either alphabetically or numerically.
 
+**WILDCARDS:**
+
+Wildcards can be used as a substitute for any other characters in a string when using the **LIKE** operator
+
+%|A substitute for zero or more characters
+-----|-----
+_ | A sub for single character
+[charlist]|Sets and ranges of characters to match i.e. LIKE [ABC]% This will bring back anything starting with any of those letters
+[^charlist]|sets and ranges of characters that don't match i.e. LIKE[^ABC]% This will bring back anything that does not start with those letters
+
+
+---
 ### Section 2: Joins ###
 
 **INNER JOIN:**
