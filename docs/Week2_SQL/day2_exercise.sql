@@ -34,10 +34,10 @@ VALUES
     'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
 ),
 (
-    'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
+    'Python', 'Drama', '1993-12-20', 'Bill Gates', 'Shane', 3, 'french', 'www.python.com', 'a very useful programming language'
 ),
 (
-    'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
+    'HTML', 'Family', '2015-06-20', 'Hans Carl', 'Tipee', 5, 'swahili', 'www.html.com', 'the basics of coding'
 );
 
 
@@ -66,14 +66,21 @@ VALUES
 
 SELECT * FROM director;
 
--- DELETE FROM film_table WHERE film_id =1
+
 /*Why is this not working Auto and manual way??*/
 
--- ALTER TABLE director
--- ADD CONSTRAINT film_id
--- FOREIGN KEY (film_id) 
--- REFERENCES film_table (film_id) ON DELETE CASCADE
+/*SOLUTION*/
+UPDATE director SET director_name= 'Jamie' where film_id = 2
+
+ALTER TABLE director
+ADD CONSTRAINT film_id
+FOREIGN KEY (film_id) 
+REFERENCES film_table (film_id) ON DELETE CASCADE
+
+DELETE FROM film_table WHERE film_id =1;
+
+SELECT * FROM director;
 
 
 
--- UPDATE director SET director= 'Jamie' where film_id = 2
+

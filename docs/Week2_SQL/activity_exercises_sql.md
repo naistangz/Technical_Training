@@ -38,7 +38,7 @@ Comments |Lorem ipsum dolor sit amet, consectetur adipiscing elit.| Large block 
 Why is this table NOT in 1NF?
 Product ID | Colour | Price
 ----------|----------|----------
-1| red, green, 10.99
+1| red, green|10.99
 2| yellow|  12.00
 3| green | 14.99
 4| yellow, blue| 5.99
