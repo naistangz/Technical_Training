@@ -66,14 +66,14 @@ VALUES
 
 SELECT * FROM director;
 
-
-/*Why is this not working Auto and manual way*/
+-- DELETE FROM film_table WHERE film_id =1
+/*Why is this not working Auto and manual way??*/
 
 -- ALTER TABLE director
 -- ADD CONSTRAINT film_id
 -- FOREIGN KEY (film_id) 
 -- REFERENCES film_table (film_id) ON DELETE CASCADE
 
--- DELETE FROM film_table WHERE film_id =1
+
 
 -- UPDATE director SET director= 'Jamie' where film_id = 2

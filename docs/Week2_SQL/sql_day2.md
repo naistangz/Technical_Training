@@ -279,7 +279,7 @@ We need to create separate tables to remove any function dependencies. **Book_id
 2|2|14.99
 3|1|24.99
 
-`table_genre`
+`table_genre` **table2**
 
 **Genre_id**| **genre_type**
 ---|---
@@ -292,7 +292,6 @@ We need to create separate tables to remove any function dependencies. **Book_id
 **What are key attributes?**
     - Uniquely identify a record or an instance on an entity
     - Required to retrieve a particular record from the entity table. 
-
 
 
 
