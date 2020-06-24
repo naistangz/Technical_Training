@@ -16,6 +16,7 @@ CREATE TABLE Student(s_id int NOT NULL, Name varchar(60), Age int);
 
 The above query will declare that the s_id field of **Student table** will not take `NULL` value.
 
+---
 - `UNIQUE`
     - Ensures field or column will only have unique values. A `UNIQUE` constraint field will not have duplicate data.
     - Can be applied at column level or table level.
@@ -27,6 +28,7 @@ ALTER TABLE Student ADD UNIQUE(s_id);
 
 The above query specifies that **s_field** of **Student** table will only have unique value.
 
+---
 - `PRIMARY KEY`
     - Uniquely identifies each record in a database. A Primary Key must contain unique value and it must not contain `NULL` value. Usually Primary Key is used to index the data inside the table.
     
@@ -38,6 +40,7 @@ ALTER table Student ADD PRIMARY KEY (s_id);
 
 This will create a `PRIMARY KEY` on the `s_id`
 
+ ---
  
 - `FOREIGN KEY`
     - Used to relate two tables. `FOREIGN KEY` constraint is also used to restrict actions that would destroy links between tables.
@@ -70,6 +73,8 @@ This prevents *invalid* data to be inserted into **c_id** column of **order_deta
 ALTER TABLE order_detail ADD FOREIGN KEY (c_id) REFERENCES Customer_Detail(c_id);
 ```
 
+---
+
 - `CHECK`
     - This is used to restrict the value of a column between a range. 
     - Performs check on the values, before storing them into the database.
@@ -82,6 +87,7 @@ ALTER table Student ADD CHECK(s_id > 0);
 
 This query restricts **s_id** value to be greater than zero.
 
+---
 - `DEFAULT`
     - The following sets a `DEFAULT` value for the 'City' column when the 'Persons' table is created 
 ```sql
@@ -93,6 +99,7 @@ CREATE TABLE Persons (
     City varchar(255) DEFAULT 'Sandnes'
 );
 ```
+---
     
 ## Behaviour of Foreign Key Column `ON DELETE`
 
