@@ -257,4 +257,5 @@ ORDER BY OrderID;
 ```
 
 
-Find SQL exercise for *Date Functions, Case Statement, Aggregate Functions, Joins* [HERE](sql_day4.md)
+
+> Week 2 Day 4 (25-06-2020) SQL exercise: *Date Functions, Case Statement, Aggregate Functions, Joins* [HERE](sql_day4.md)
