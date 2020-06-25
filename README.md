@@ -1,12 +1,5 @@
 # Welcome to my Github! :blush:
 
-
-
----
-:round_pushpin: **London Based**
-
-:pencil2: **Technical Consultant Training Roadmap:**
-
 **`Anais'` DevOps Trainee Notes** [HERE](/docs)
 
 **`Anais'` CodePen Projects** [HERE](https://codepen.io/tangintech)
@@ -16,7 +9,7 @@
 ---
 :round_pushpin: **London Based**
 
-:pencil2:: *Technical Consultant Training Program:**
+:pencil2:: **Technical Consultant Training Program Roadmap:**
 
 - [x] 1.Business Skills and Agile Methodologies
 - [x] 2.SQL
