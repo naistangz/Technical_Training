@@ -7,10 +7,14 @@
 - The relationship between data is also stored in the form of tables. 
 - SQL statements are used to retrieve and update data in a database
 - SQL operates through simple, declarative statements. This keeps data accurate and secure, and it helps maintain the integrity of databases, regardless of size.
+- Edgar F.Codd while working for IBM created relational database
 
 **What is a database?**
 - An organised repository of data in order to efficiently retrieve data 
 - It is held in a computer
+
+**What is a relational database?**
+- A type of database that stores and provides access to data points that are related to one another.
 
 **Examples of databases:**
 - eCommerce

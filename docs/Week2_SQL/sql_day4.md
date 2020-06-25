@@ -1,6 +1,25 @@
-## Week 2.4 SQL
+## Week 2.4 SQL Date Functions, Aggregate and Joins
 
-## Joins
+## Section 1 Date Functions
+
+The following date functions can be used to manipulate dates in various ways in the `SELECT` clause:
+
+`GET DATE`| `SELECT GETDATE()` to return the current date and time (in the session time zone)
+------|---------
+`SYSDATETIME`|`SELECT SYSDATETIME()` to return the date and time of the computer (server) being used 
+`DATEADD`|`DATEADD(D,5,OrderDate) AS 'DUE Date` to add 5 days from the OrderDate.
+`DATEDIFF`| `DATEDIFF(d, OrderDate, ShippedDate) AS 'Ship Time'` to add 5 days 
+`YEAR`|`SELECT YEAR(OrderDate) AS 'Order Year'` to extract the year from a date
+`MONTH`|`SELECT MONTH(OrderDate) AS 'Order Month'` to extract the month from a date.
+`DAY`| `SELECT DAY(OrderDate) AS 'Order Day` to extract the day from a date
+
+**Note:** Use `GET DATE` rather than `SYSDATETIME` as system date time may not be updated e.g. when working in a different time zone
+
+
+Find SQl exercise for *Date Functions, Aggregate Functions* [HERE](sql_day4.md)
+
+---
+## Section 2 Joins
 
 RECAP from [Monday](sql_day1.md): 
 
@@ -131,3 +150,5 @@ ID|Name|Amount|Date
 
 ---
 **UNION**
+
+

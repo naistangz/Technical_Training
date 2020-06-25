@@ -284,10 +284,12 @@ WHERE CHARINDEX('''', p.productName) > 0;
 -- SELECT * FROM TableName WHERE CHARINDEX('''',ColumnName) > 0 
 
 /*Option 2 with LIKE*/
-SELECT p.ProductName 
+SELECT p.ProductName AS 'Product Name'
 FROM Products p
 WHERE p.productName LIKE '%''%';
 --Finds single quotes 
+
+
 
 
 
