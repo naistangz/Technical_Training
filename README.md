@@ -1,6 +1,5 @@
 # Welcome to my Github! :blush:
 
----
 
 **`Anais'` DevOps Trainee Notes** [HERE](/docs)
 
