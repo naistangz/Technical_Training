@@ -133,4 +133,5 @@ This query deletes `film_id` on parent table **and** child table.
 
 
 
+
 > **Week 2 Day 3 (24-06-2020) SQL Exercise: *Wild cards, Arithmetic Operators, Operators, String Functions*** [HERE](day3_exercise.sql)

@@ -344,30 +344,5 @@ _ | A sub for single character
 
 
 ---
-### Section 2: Joins ###
-
-**INNER JOIN:**
-```sql
-SELECT column_name(s)
-FROM table_1
-JOIN table_2
-  ON table_1.column_name = table_2.column_name;
-```
-An `INNER JOIN` will combine rows from different tables if the *join condition* is true.
-
-![innerjoin](../../images/inner_join.jpg)
-
-**LEFT OUTER JOIN**
-```sql
-SELECT column1, column2...
-FROM table_A
-LEFT JOIN table_B on join_condition
-WHERE row_condition
-```
-
-Also known as SQL left join. If we want to join two tables: A and B, `LEFT JOIN` returns all rows in left table **(A)** and all matching rows found in the right table **(B)**. 
-
-![left_outer_join](../../images/left_outer_join.jpeg)
-
 
 
