@@ -149,6 +149,84 @@ ID|Name|Amount|Date
 5|Felicia|3000|2009-07-08
 
 ---
-**UNION**
 
+**SELF JOIN**
+
+- A join in which a table is joined with itself (also called Unary relationship)
+- To join a table itself means that each row of the table is combined with itself and with every other row of the table. 
+
+**For example:**
+
+Name|ID|ManagerID |Manager
+-----|------|-----|------
+Robert|456| - | -
+Cook|383|222|William
+Daniel|777|222|William
+Smith|123|456|Robert
+William|222|456|Robert
+
+In this example, the condition is ID = ManagerID
+
+**Example 2:**
+```sql
+SELECT o.customerID, o.employeeID, b.ShipCity, b.CustomerID
+FROM orders o, orders b
+WHERE o.customerID = b.CustomerID;
+```
+
+---
+**CROSS JOIN**
+
+- A `CROSS JOIN` also known as `cartesian` is used to generate a paired combination of each row of the first table with each row of the first table with each row of the second table.
+- The output table is the product of the number of rows in the input tables.
+
+> i.e Table1 contains 15 rows, Table2 contains 20 rows, a cross join would produce the product of table1 and table2 = 300 rows
+
+![cross_join](../../images/cross_join.png)
+
+In the above example, there are two tables, each with three rows. A Cross join would produce the product of the two tables = 3 * 3 = 9 rows
+
+```sql
+SELECT
+COUNT(o.CustomerID)
+FROM orders o
+ 
+SELECT
+COUNT(o.CustomerID)
+FROM Customers o;
+
+SELECT 91*830
+ 
+SELECT *
+FROM Orders o 
+CROSS JOIN customers c;
+```
+
+---
+## Section 3 Having vs Where
+
+1. `HAVING` clause was added to SQL because where keyword could not used with aggregate functions
+2.`WHERE` clause used for filtering rows and applies on each and every row 
+3.`HAVING` clause is used to filter groups in SQL 
+4. When `WHERE` and `HAVING` are used together in `SELECT` query with aggregate function, `WHERE` clause applied first 
+on individual rows and **only** rows which pass the condition is included for creating groups.
+5. Column Aliases cannot be used in `HAVING` clause
+
+**For example**
+```sql
+SELECT COUNT(c.customerID) AS 'Number in Country', c.country
+FROM customers c 
+WHERE COUNTRY != 'USA' /* or <> */
+GROUP BY c.Country
+HAVING COUNT(c.customerID) > 9;
+```
+
+**Compare with the following which will return an error:**
+
+```sql
+SELECT COUNT(c.customerID), c.country
+FROM Customers c 
+GROUP BY c.Country
+WHERE COUNT(c.customerID) > 10;
+```
 

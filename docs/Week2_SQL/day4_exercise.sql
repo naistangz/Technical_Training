@@ -129,13 +129,42 @@ ORDER BY 'AVG Reorder Level' DESC;
 --Aggregate functions are not available for use in the WHERE clause due to SQL processing lang 
 --WHERE can come before FROM, Before HAVING
 
-
 SELECT SupplierID,
 SUM(unitsonorder) AS 'Total on Order',
 AVG(unitsonorder) AS 'AVG on order'
 FROM Products
 GROUP BY SupplierID
 HAVING AVG(unitsonorder) > 5; --cannot use aliasing so have to write AVG(units on order) again
+
+SELECT COUNT(c.customerID) AS 'Number of People living in each country', c.country
+FROM customers c
+GROUP BY Country
+ORDER BY 'number of people living in each country' DESC;
+
+--HAVING--
+SELECT COUNT(c.customerID), c.country
+FROM Customers c 
+GROUP BY c.Country
+HAVING COUNT(c.customerID) > 10;
+
+--WHERE will not work with agg functions. Expecting an error--
+SELECT COUNT(c.customerID), c.country
+FROM Customers c 
+GROUP BY c.Country
+WHERE COUNT(c.customerID) > 10 -- will return an error
+
+SELECT COUNT(c.customerID) AS 'Number in Country', c.country
+FROM customers c 
+WHERE COUNTRY != 'USA' /* or <> */
+GROUP BY c.Country
+HAVING COUNT(c.customerID) > 9;
+
+SELECT COUNT([orderID]) AS 'Number of orders'
+,SUM([Freight]) AS 'Freight Volume'
+,[ShipCity]
+FROM Orders
+GROUP BY [ShipCity]
+HAVING COUNT([orderID]) > 10;
 
 /*SQL SELECT STATEMENT - PROCESSING SEQUENCE
 FROM 
@@ -148,13 +177,13 @@ ORDER BY */
 
 --JOINs--
 
-SELECT * FROM  customers;
+SELECT * FROM  Customers;
 --customers and orders have a relation (via customerID)
 
 SELECT * FROM Orders;
 --customers and orders have a relation (via customerID)
 
-SELECT * FROM employees;
+SELECT * FROM Employees;
 --orders and employees have a relation (via employeeID)
 
 SELECT * FROM Products;
@@ -166,7 +195,7 @@ SELECT * FROM Suppliers;
 
 --Examples:
 --FULL JOIN
-SELECT c.customerID, c.contactName, o.employeeID, o.ShipCity
+SELECT c.customerID, c.contactName, o.employeeID, o.ShipCity, o.ShipAddress
 FROM orders o 
 FULL JOIN customers c
 ON c.customerID = o.CustomerID
@@ -177,7 +206,7 @@ SELECT c.customerID, c.contactName, o.employeeID, o.ShipCity
 FROM orders o 
 INNER JOIN customers c
 ON c.customerID = o.CustomerID
-ORDER BY EmployeeID;
+ORDER BY CustomerID;
 
 --LEFT JOIN
 SELECT c.customerID, c.contactName, o.employeeID, o.ShipCity
@@ -192,3 +221,48 @@ FROM orders o
 RIGHT JOIN customers c
 ON c.customerID = o.CustomerID
 ORDER BY EmployeeID;
+
+--SELF JOIN 
+SELECT o.customerID, o.employeeID, b.ShipCity, b.CustomerID
+FROM orders o, orders b
+WHERE o.customerID = b.CustomerID;
+
+--CROSS JOIN 
+SELECT
+COUNT(o.CustomerID)
+FROM orders o
+ 
+SELECT
+COUNT(o.CustomerID)
+FROM Customers o;
+
+SELECT 91*830
+ 
+SELECT *
+FROM Orders o 
+CROSS JOIN customers c;
+
+--MORE JOIN EXERCISES
+SELECT * FROM course;
+
+SELECT * FROM student;
+
+SELECT * FROM course c 
+INNER JOIN 
+student s  
+ON s.course_id = c.c_id;
+
+SELECT * FROM student s
+LEFT JOIN course c 
+ON s.course_id = c.c_id;
+
+SELECT * FROM student s RIGHT JOIN course c 
+ON s.course_id = c.c_id;
+
+
+
+
+
+
+
+
