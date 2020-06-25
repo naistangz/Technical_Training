@@ -1,25 +1,26 @@
--- Date Functions 
+/* DATE FUNCTIONS*/
 
 
--- Extracting age With decimal
+/*Extracting age With decimal*/
+
 SELECT CONCAT(FirstName, ' ', LastName) AS 'Employee Name',
 BirthDate AS 'Birth Date',
 DATEDIFF(d, BirthDate, GetDate())/365.25 AS 'Age'
 FROM Employees;
 
---Extracting year 
+/*Extracting year*/
 SELECT YEAR(e.BirthDate) AS 'Year of my Birth'
 FROM Employees e;
 
---Extracting moth 
+/*Extracting month */
 SELECT MONTH(e.BirthDate) AS 'Month of my Birth'
 FROM Employees e;
 
---Extracting day
+/*Extracting day*/
 SELECT DAY(e.BirthDate) AS 'Day of my Birth'
 FROM Employees e;
 
---Sysdatetime vs Getdate
+/*Sysdatetime vs Getdate*/
 SELECT * FROM Employees
 
 SELECT DATEDIFF(yy, e.HireDate, SYSDATETIME())
@@ -28,7 +29,7 @@ FROM Employees e;
 SELECT DATEDIFF(yy, e.HireDate, GetDATE())
 FROM Employees e;
 
--- DATEADD
+/* DATEADD*/
 SELECT 
 OrderDate AS 'Order Date',
 ShippedDate AS 'Shipped Date',
@@ -66,6 +67,7 @@ FROM Employees;
 --Writing conditional statement using CASE
 -- CASE statements can be useful when you need varying results output baesd on differing data.
 -- Use single quotes for data and double quotes for column aliases
+
 SELECT OrderDate, ShippedDate,
 CASE WHEN DATEDIFF(d, o.OrderDate, o.ShippedDate) < 10 
 THEN 'On Time'
@@ -78,6 +80,7 @@ FROM orders o;
 --1. Age greater than 65 = "Retired"
 --2. Age greater than 60= 'Retirement Due'
 --3. Age less than 60
+
 SELECT 
 CONCAT(FirstName, ' ', LastName) AS "Employee Name",
 DATEDIFF(d, BirthDate, GetDate())/365 AS "Age",
@@ -104,6 +107,7 @@ FROM Products p;
 --Calculate units on order using aggregate functions per supplier
 --Group by is added to provide subtotals
 --Multiple columns can be added as a comma separated list to provide further levels of subtotals.
+
 SELECT supplierID, 
 SUM(unitsonorder) AS 'Total on Order',
 AVG(Unitsonorder) AS 'AVG on Order',
