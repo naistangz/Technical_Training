@@ -24,7 +24,8 @@ git push origin master
 
 ---
 :round_pushpin: **London Based**
-**Technical Consultant Training Program:**
+
+:pencil2: **Technical Consultant Training Program:**
 
 - [x] 1.Business Skills and Agile Methodologies
 - [x] 2.SQL
