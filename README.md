@@ -11,7 +11,7 @@
 ---
 :round_pushpin: **London Based**
 
-:pencil2: **Technical Consultant Training Roadmap**
+:pencil2: **Technical Consultant Training Roadmap:**
 
 - [x] 1.Business Skills and Agile Methodologies
 - [x] 2.SQL
