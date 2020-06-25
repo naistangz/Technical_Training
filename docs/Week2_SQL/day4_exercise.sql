@@ -259,6 +259,41 @@ ON s.course_id = c.c_id;
 SELECT * FROM student s RIGHT JOIN course c 
 ON s.course_id = c.c_id;
 
+--Using rows from products, group by supplier showing an average of units on order for each supplier
+--Include the supplier name (use companyName) in the result set using an INNER JOIN to the suppliers table
+SELECT * FROM Products;
+SELECT * FROM Suppliers;
+
+SELECT s.CompanyName AS "Supplier Name"
+, AVG(p.UnitsOnOrder) AS "AVG Units on Order for Each Supplier"
+FROM Products p
+INNER JOIN Suppliers s
+ON s.SupplierID = p.SupplierID
+GROUP BY s.CompanyName, s.SupplierID -- Do group by on primary key 
+ORDER BY 'AVG Units on Order for Each Supplier' DESC;
+
+/*HOMEWORK
+List order from the orders table and JOIN to the Customers and Employees tables to include 
+Customer Name (Company Name) and Employee Name (First and Last Name)
+
+From the orders table, include OrderID, OrderDate and Freight*/
+SELECT * FROM orders;
+SELECT * FROM customers;
+SELECT * FROM Employees;
+
+SELECT 
+CONCAT(FirstName, ' ', LastName) AS 'Employee Name', 
+c.CompanyName as 'Customer Name', 
+o.orderID,
+o.OrderDate,
+o.Freight
+FROM customers c
+INNER JOIN Orders o
+ON o.CustomerID = c.CustomerID
+INNER JOIN employees e
+ON o.employeeID = e.employeeID;
+
+
 
 
 
