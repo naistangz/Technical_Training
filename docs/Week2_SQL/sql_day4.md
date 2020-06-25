@@ -16,7 +16,7 @@ The following date functions can be used to manipulate dates in various ways in 
 **Note:** Use `GET DATE` rather than `SYSDATETIME` as system date time may not be updated e.g. when working in a different time zone
 
 
-Find SQl exercise for *Date Functions, Aggregate Functions* [HERE](sql_day4.md)
+Find SQL exercise for *Date Functions, Case Statement, Aggregate Functions, Joins* [HERE](sql_day4.md)
 
 ---
 ## Section 2 Joins
@@ -230,3 +230,29 @@ GROUP BY c.Country
 WHERE COUNT(c.customerID) > 10;
 ```
 
+---
+**Homework:**
+
+- List order from the orders table and JOIN to the Customers and Employees tables to include 
+Customer Name (Company Name) and Employee Name (First and Last Name)
+
+- From the orders table, include OrderID, OrderDate and Freight
+
+```sql
+SELECT * FROM orders;
+SELECT * FROM customers;
+SELECT * FROM Employees;
+
+SELECT 
+CONCAT(FirstName, ' ', LastName) AS 'Employee Name', 
+c.CompanyName as 'Customer Name', 
+o.orderID,
+o.OrderDate,
+o.Freight
+FROM customers c
+INNER JOIN Orders o
+ON o.CustomerID = c.CustomerID
+INNER JOIN employees e
+ON o.employeeID = e.employeeID
+ORDER BY OrderID;
+```
