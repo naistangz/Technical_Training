@@ -16,7 +16,6 @@ The following date functions can be used to manipulate dates in various ways in 
 **Note:** Use `GET DATE` rather than `SYSDATETIME` as system date time may not be updated e.g. when working in a different time zone
 
 
-Find SQL exercise for *Date Functions, Case Statement, Aggregate Functions, Joins* [HERE](sql_day4.md)
 
 ---
 ## Section 2 Joins
@@ -256,3 +255,6 @@ INNER JOIN employees e
 ON o.employeeID = e.employeeID
 ORDER BY OrderID;
 ```
+
+
+Find SQL exercise for *Date Functions, Case Statement, Aggregate Functions, Joins* [HERE](sql_day4.md)
