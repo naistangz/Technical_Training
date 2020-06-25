@@ -71,6 +71,7 @@ ORDER BY
 ```
 
 **Output:**
+
 ![output](../../images/right_join_output.png)
 
 Returns all rows from `RIGHT` table, even if there are **no** matches in the left table. 
@@ -121,7 +122,7 @@ Which would produce the following outcome:
 
 ID|Name|Amount|Date
 ---|---|---|-----
-1|Priscilla|NULL
+1|Priscilla|NULL|NULL
 2|Jane|NULL|NULL
 3|Bob |3049|2009-10-08
 3|Bob |1500|2008-11-20
