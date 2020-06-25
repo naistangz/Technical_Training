@@ -173,6 +173,7 @@ FROM orders o, orders b
 WHERE o.customerID = b.CustomerID;
 ```
 
+
 ---
 **CROSS JOIN**
 
@@ -204,15 +205,20 @@ CROSS JOIN customers c;
 ---
 ## Section 3 Having vs Where
 
-1. `HAVING` clause was added to SQL because where keyword could not used with aggregate functions
-2.`WHERE` clause used for filtering rows and applies on each and every row 
-3.`HAVING` clause is used to filter groups in SQL 
-4. When `WHERE` and `HAVING` are used together in `SELECT` query with aggregate function, `WHERE` clause applied first 
-on individual rows and **only** rows which pass the condition is included for creating groups.
-5. Column Aliases cannot be used in `HAVING` clause
+- `WHERE` clause introduces a condition on *individual* rows
+
+- `HAVING` clause introduces a condition on *aggregations*, i.e. results of selection where a single result, such as `COUNT`, `AVG`, `MIN`,`MAX` or `SUM`
+has been produced from *multiple* rows. 
+
+- The `HAVING` clause filters the data on the group row but not the individual row.
+
+**Note:** Use `WHERE` before `GROUP BY` and `HAVING` after `GROUP BY`
+
+- Column Aliases cannot be used in `HAVING` clause
 
 **For example**
 ```sql
+USE NORTHWIND 
 SELECT COUNT(c.customerID) AS 'Number in Country', c.country
 FROM customers c 
 WHERE COUNTRY != 'USA' /* or <> */
@@ -230,7 +236,7 @@ WHERE COUNT(c.customerID) > 10;
 ```
 
 ---
-**Homework:**
+**Exercise:**
 
 - List order from the orders table and JOIN to the Customers and Employees tables to include 
 Customer Name (Company Name) and Employee Name (First and Last Name)

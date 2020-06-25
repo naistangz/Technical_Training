@@ -296,5 +296,5 @@ We need to create separate tables to remove any function dependencies. **Book_id
 
 
 
-> **Week 2 Day 2 (23-06-2020) SQL Exercise** [HERE](day2_exercise.sql)
+> **Week 2 Day 2 (23-06-2020) SQL Exercise: Creating a Database, Creating a table, altering a table, inputting values into a table** [HERE](day2_exercise.sql)
                                                                                              
