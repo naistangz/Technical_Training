@@ -201,33 +201,33 @@ FULL JOIN customers c
 ON c.customerID = o.CustomerID
 ORDER BY EmployeeID;
 
---INNER JOIN 
+-- INNER JOIN --
 SELECT c.customerID, c.contactName, o.employeeID, o.ShipCity
 FROM orders o 
 INNER JOIN customers c
 ON c.customerID = o.CustomerID
 ORDER BY CustomerID;
 
---LEFT JOIN
+--LEFT JOIN--
 SELECT c.customerID, c.contactName, o.employeeID, o.ShipCity
 FROM orders o 
 LEFT JOIN customers c
 ON c.customerID = o.CustomerID
 ORDER BY EmployeeID;
 
---RIGHT JOIN
+--RIGHT JOIN--
 SELECT c.customerID, c.contactName, o.employeeID, o.ShipCity
 FROM orders o 
 RIGHT JOIN customers c
 ON c.customerID = o.CustomerID
 ORDER BY EmployeeID;
 
---SELF JOIN 
+--SELF JOIN--
 SELECT o.customerID, o.employeeID, b.ShipCity, b.CustomerID
 FROM orders o, orders b
 WHERE o.customerID = b.CustomerID;
 
---CROSS JOIN 
+--CROSS JOIN--
 SELECT
 COUNT(o.CustomerID)
 FROM orders o
@@ -242,7 +242,7 @@ SELECT *
 FROM Orders o 
 CROSS JOIN customers c;
 
---MORE JOIN EXERCISES
+--MORE JOIN EXERCISES--
 SELECT * FROM course;
 
 SELECT * FROM student;
@@ -259,8 +259,8 @@ ON s.course_id = c.c_id;
 SELECT * FROM student s RIGHT JOIN course c 
 ON s.course_id = c.c_id;
 
---Using rows from products, group by supplier showing an average of units on order for each supplier
---Include the supplier name (use companyName) in the result set using an INNER JOIN to the suppliers table
+--Using rows from products, group by supplier showing an average of units on order for each supplier--
+--Include the supplier name (use companyName) in the result set using an INNER JOIN to the suppliers table--
 SELECT * FROM Products;
 SELECT * FROM Suppliers;
 
@@ -277,6 +277,7 @@ List order from the orders table and JOIN to the Customers and Employees tables 
 Customer Name (Company Name) and Employee Name (First and Last Name)
 
 From the orders table, include OrderID, OrderDate and Freight*/
+
 SELECT * FROM orders;
 SELECT * FROM customers;
 SELECT * FROM Employees;
@@ -291,7 +292,8 @@ FROM customers c
 INNER JOIN Orders o
 ON o.CustomerID = c.CustomerID
 INNER JOIN employees e
-ON o.employeeID = e.employeeID;
+ON o.employeeID = e.employeeID
+ORDER BY OrderID;
 
 
 
