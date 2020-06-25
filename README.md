@@ -1,31 +1,17 @@
-# Testing File
+# Welcome to my Github! :blush:
 
-## Using Git and Github
-```bash 
-git init
-```
-
-```
-git add .
-```
-```
-git commit -m 'add a message'
-```
-```
-git push origin master
-```
 ---
 
-**Anais' DevOps Trainee Notes** [HERE](/docs)
+**`Anais'` DevOps Trainee Notes** [HERE](/docs)
 
-**Anais' CodePen Projects** [HERE](https://codepen.io/tangintech)
+**`Anais'` CodePen Projects** [HERE](https://codepen.io/tangintech)
 
-**Anais' Linkedin Profile** [HERE](https://www.linkedin.com/in/anais-tang/)
+**`Anais'` Linkedin Profile** [HERE](https://www.linkedin.com/in/anais-tang/)
 
 ---
 :round_pushpin: **London Based**
 
-:pencil2: **Technical Consultant Training Program:**
+:pencil2: **Technical Consultant Training Roadmap**
 
 - [x] 1.Business Skills and Agile Methodologies
 - [x] 2.SQL
