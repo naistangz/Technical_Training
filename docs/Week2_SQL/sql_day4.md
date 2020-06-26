@@ -209,6 +209,7 @@ CROSS JOIN customers c;
 
 - `HAVING` clause introduces a condition on *aggregations*, i.e. results of selection where a single result, such as `COUNT`, `AVG`, `MIN`,`MAX` or `SUM`
 has been produced from *multiple* rows. 
+    > When using aggregations, the `WHERE` clause will not work. E.g. `SUM()` applies ONLY to rows that satisfy the `WHERE` conditions. If you put `SUM()` in the `WHERE` clause, the query will keep looping back and forth whenever conditions are not met.
 
 - The `HAVING` clause filters the data on the group row but not the individual row.
 

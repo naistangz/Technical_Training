@@ -43,20 +43,20 @@ SELECT * FROM Orders;
 
 SELECT * FROM Employees;
 
---Option 1
+-- Option 1
 SELECT CONCAT(FirstName, ' ', LastName) AS 'Employee Name',
 BirthDate AS 'Birth Date',
 DATEDIFF(d, BirthDate, GetDate())/365 AS 'Age'
 FROM Employees;
 
---Option 2
+-- Option 2
 
 SELECT CONCAT(FirstName, ' ', LastName) AS 'Employee Name',
 BirthDate AS 'Birth Date',
 DATEDIFF(YYYY, BirthDate, GetDate()) AS 'Age'
 FROM Employees;
 
---Option 3
+-- Option 3
 
 SELECT 
 CONCAT(FirstName, ' ', LastName) AS 'Employee Name',
@@ -64,7 +64,7 @@ BirthDate AS 'Birth Date',
 ROUND(DATEDIFF(Year, BirthDate, GetDate()),5) AS 'Age'
 FROM Employees;
 
---Writing conditional statement using CASE
+-- Writing conditional statement using CASE
 -- CASE statements can be useful when you need varying results output baesd on differing data.
 -- Use single quotes for data and double quotes for column aliases
 
@@ -91,7 +91,7 @@ ELSE 'More than 5 years to go'
 END AS "Retirement Status"
 FROM Employees;
 
---Aggregate Functions
+-- Aggregate Functions
 SELECT * FROM Products;
 
 SELECT p.UnitsOnOrder
@@ -104,9 +104,9 @@ MIN(p.UnitsOnOrder) AS 'Min On Order',
 MAX(p.UnitsOnOrder) AS 'Max On Order'
 FROM Products p;
 
---Calculate units on order using aggregate functions per supplier
---Group by is added to provide subtotals
---Multiple columns can be added as a comma separated list to provide further levels of subtotals.
+-- Calculate units on order using aggregate functions per supplier
+-- Group by is added to provide subtotals
+-- Multiple columns can be added as a comma separated list to provide further levels of subtotals.
 
 SELECT supplierID, 
 SUM(unitsonorder) AS 'Total on Order',
@@ -115,9 +115,9 @@ MAX(UnitsOnorder) AS 'Max on Order'
 FROM Products
 GROUP BY SupplierID;
 
---Use GROUP BY to calc the AVG Reorder Level for all products by CategoryID
---Remember the SELECT clause must match the Group By clause apart from any aggregates
---What is highest AVG reorder level use order by with DESC
+-- Use GROUP BY to calc the AVG Reorder Level for all products by CategoryID
+-- Remember the SELECT clause must match the Group By clause apart from any aggregates
+-- What is highest AVG reorder level use order by with DESC
 
 SELECT * FROM Products;
 
@@ -128,10 +128,10 @@ FROM Products
 GROUP BY CategoryID --Where will not work in group data when using group by therefore need to use HAVING 
 ORDER BY 'AVG Reorder Level' DESC;
 
---Using HAVING instead of WHERE when filtering on subtotals/group data
---Column Aliases cannot be used in the Having clause
---Aggregate functions are not available for use in the WHERE clause due to SQL processing lang 
---WHERE can come before FROM, Before HAVING
+-- Using HAVING instead of WHERE when filtering on subtotals/group data
+-- Column Aliases cannot be used in the Having clause
+-- Aggregate functions are not available for use in the WHERE clause due to SQL processing lang 
+-- WHERE can come before FROM, Before HAVING
 
 SELECT SupplierID,
 SUM(unitsonorder) AS 'Total on Order',
@@ -145,13 +145,13 @@ FROM customers c
 GROUP BY Country
 ORDER BY 'number of people living in each country' DESC;
 
---HAVING--
+-- HAVING
 SELECT COUNT(c.customerID), c.country
 FROM Customers c 
 GROUP BY c.Country
 HAVING COUNT(c.customerID) > 10;
 
---WHERE will not work with agg functions. Expecting an error--
+-- WHERE will not work with agg functions. Expecting an error--
 SELECT COUNT(c.customerID), c.country
 FROM Customers c 
 GROUP BY c.Country
@@ -179,13 +179,13 @@ SELECT
 DISTINCT 
 ORDER BY */
 
---JOINs--
+--JOINs
 
 SELECT * FROM  Customers;
---customers and orders have a relation (via customerID)
+-- Customers and orders have a relation (via customerID)
 
 SELECT * FROM Orders;
---customers and orders have a relation (via customerID)
+-- Customers and orders have a relation (via customerID)
 
 SELECT * FROM Employees;
 --orders and employees have a relation (via employeeID)
@@ -287,17 +287,16 @@ SELECT * FROM customers;
 SELECT * FROM Employees;
 
 SELECT 
-CONCAT(FirstName, ' ', LastName) AS 'Employee Name', 
-c.CompanyName as 'Customer Name', 
-o.orderID,
+CONCAT(e.FirstName, ' ', e.LastName) AS "Employee Name", 
+c.CompanyName as "Company Name", 
 o.OrderDate,
+o.OrderID,
 o.Freight
 FROM customers c
-INNER JOIN Orders o
+INNER JOIN Orders o -- For good practice: Orders table connects Employees and Customers therefore it should be in the middle. 
 ON o.CustomerID = c.CustomerID
 INNER JOIN employees e
-ON o.employeeID = e.employeeID
-ORDER BY OrderID;
+ON o.employeeID = e.employeeID;
 
 
 
