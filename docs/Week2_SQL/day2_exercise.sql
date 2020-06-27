@@ -26,19 +26,12 @@ CREATE TABLE film_table
 -- ALTERING THE TABLE
 ALTER TABLE film_table ADD film_id INT IDENTITY PRIMARY KEY;
 
-INSERT INTO film_table(
-    film_name, film_type, release_date, director, writer, star, film_language, official_website, plot_summary
-)
+INSERT INTO film_table
+    (film_name, film_type, release_date, director, writer, star, film_language, official_website, plot_summary)
 VALUES
-(
-    'SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'
-),
-(
-    'Python', 'Drama', '1993-12-20', 'Bill Gates', 'Shane', 3, 'french', 'www.python.com', 'a very useful programming language'
-),
-(
-    'HTML', 'Family', '2015-06-20', 'Hans Carl', 'Tipee', 5, 'swahili', 'www.html.com', 'the basics of coding'
-);
+    ('SQL', 'Romance', '2000-02-20', 'Neil Armstrong', 'Anais', 4.5, 'japanese', 'www.sql.com', 'a very painful journey into DevOps'),
+    ('Python', 'Drama', '1993-12-20', 'Bill Gates', 'Shane', 3, 'french', 'www.python.com', 'a very useful programming language'),
+    ('HTML', 'Family', '2015-06-20', 'Hans Carl', 'Tipee', 5, 'swahili', 'www.html.com', 'the basics of coding');
 
 
 SELECT * FROM film_table;
@@ -74,7 +67,7 @@ UPDATE director SET director_name= 'Jamie' where film_id = 2
 
 ALTER TABLE director
 ADD CONSTRAINT film_id
-FOREIGN KEY (film_id) 
+FOREIGN KEY film_id
 REFERENCES film_table (film_id) ON DELETE CASCADE
 
 DELETE FROM film_table WHERE film_id =1;
