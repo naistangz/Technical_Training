@@ -29,7 +29,7 @@ Common date and time formatting:
 - `d` - this is day of month from 1-31 (if this is used on its own it will display the entire date)
 - `us` - this shows the date using the US culture which is MM/DD/YYYY
 
-**Subqueries**
+### Section 2 Subqueries
 
 The following subquery would be more efficient if it was changed to a `JOIN` as there are **no aggregate** functions in the queries
 
