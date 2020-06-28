@@ -244,7 +244,7 @@ We need to split the table, **Location** column should only rely on the **primar
 3|2
 4|3  
     
-`_table_store` **table2*
+`_table_store` **table2**
 
 **product_id**|**Location**
 ----|----
