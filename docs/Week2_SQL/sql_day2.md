@@ -7,28 +7,28 @@
 * Data Control Language
 * Transaction Control Language
 
-* **DML** 
+* **DML** Data Manipulation Language 
     - `SELECT`
     - `INSERT`
     - `UPDATE`
     - `DELETE`
-> * Used to manipulate data 
+> * Used to manipulate, store, retrieve, delete and update data 
     
-* **DDL**
-    - `CREATE`
-    - `ALTER`
-    - `DROP`
+* **DDL** Data Definition Language 
+    - `CREATE`- Builds a new table, database
+    - `ALTER` - Modifies an existing database table
+    - `DROP` - Deletes a table, index or view
     - `TRUNCATE`
-> * Used to define data structures
+> * Used to define and create the structure of database objects in a database
 
-* **DCL**
+* **DCL** Data Control Language 
     - `GRANT` 
     - `REVOKE`
 > * These privileges are given by the database administrator who will grant users access to the database.
 > * Deals with highly private information such as client data
 
 
-* **TCL**
+* **TCL** Transaction Control Language
     - `COMMIT`
     - `ROLLBACK`
     - `SAVEPOINT`
@@ -41,11 +41,13 @@
 * **VARCHAR**
     - Adaptable to different lengths of characters. Records MAX size.
     - More memory efficient than `CHAR`
-
+    - For example if `VARCHAR(10)` and value is 'apple', varchar takes in max size of apple and eliminates white spaces
+    
 * **CHARACTER or CHAR**
     - Data must be at a **fixed length.** Fixed amount of space used.
     - 50% faster than VARCHAR
-
+    - For example if `CHAR(10)` but inputted data is less than 10, data would still be 10.
+    
 * **INT**
     - Holds a whole number/integer value (see also bigint, smallint and tinyint) positive or negative.
     - INT = 32-bit size (4 bytes) 
@@ -97,6 +99,7 @@
 **NULL**
 - `NULL` is not nothing, does not equate to zero.
 - A value can be `NULL`, BUT `NULL` never equals `NULL` because `NULL` is an undefined value.
+- It is a field will no value.
 
 **UPDATE AND DELETE:**
 - `UPDATE` command modifies records in table. Along with `WHERE` clause you can update specific records from the table.
