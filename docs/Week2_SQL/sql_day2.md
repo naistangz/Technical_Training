@@ -159,9 +159,9 @@ Normalisation is the process of organising/designing data in a database so that 
     4|5.99
     5|20.00
     
-    **_table_product_colour** **table2**
+    `_table_product_colour` **table2**
     
-    **product_id**|*colour**
+    **product_id**|**colour**
     -----|-----
     1|red
     1|green
