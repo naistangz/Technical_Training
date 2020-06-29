@@ -92,6 +92,39 @@
 - The value must never change 
 - Each table may have a maximum of one Primary Key (or one composite primary key)
 
+Example: 
+
+EmployeeID(PK) | FirstName|LastName|Government Number
+----|-----|-----|----
+1000|John|Smith |11-234-123
+1001|Mary|Tallow|21-269-942
+1002|Joe|Tallow|96-892-922
+1003|John|Smith|21-426-263
+
+Assuming that EmployeeID is primary key, we want to place a `UNIQUE` constraint on GovernmentNumber to ensure each employee has their own number
+
+**Unique Key Characteristics**
+* There can be multiple keys defined on a table
+* Unique Keys result in NONCLUSTERED Unique Indexes by default (meaning index contains pointers to the location of the data)
+* Column may be `NULL`, but on one `NULL` per column is allowed
+* A unique constraint can be referenced by a Foreign Key Constraint
+
+> Clustered vs Non-clustered index:
+> * Clustered index is type of index which sorts data rows on their key value. In database, there is only one clustered index per table.
+> * Clustered index defines the order in which data is stored in table.
+> * Non clustered index stores data at one location and indices at another location. Index containers pointers to the location of the data.
+> * Non clustered index defined in non-ordering field of table. This type of indexing method helps to improve the performance of queries that use keys which are not assigned as a primary and add unique key for a table.
+
+For example:
+
+Clustered Index
+![clustered_index](../../images/clustered.png)
+
+vs 
+
+Non-Clustered Index
+![non_clustered](../../images/non_clustered.png)
+
 - **Junction Table**
     - Also known as a Bridge Table or Join Table, Junction Table contains references to two groups 
     - Used when dealing with many-to-many relationships in SQL database.
