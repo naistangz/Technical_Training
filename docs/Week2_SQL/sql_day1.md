@@ -92,6 +92,7 @@
 - **Junction Table**
     - Also known as a Bridge Table or Join Table, Junction Table contains references to two groups 
     - Used when dealing with many-to-many relationships in SQL database.
+    - n:m or n:n = 'Many to Many '
 
 > Example: You have a list of students and a list of classes. There's a **many-to-many** relationship between the students and their classes:
 
@@ -116,27 +117,41 @@
 **One-to-One Relationship**
 - One row in one table can only relate to one and only one row in another table and vice versa.
 - This is the least common database relationship.
-> For example: in school database, each student has only one student ID, and **each** student ID is assigned to only one person
+> For example: 
+> * In school database, each student has only one student ID, and **each** student ID is assigned to only one person
+> * People-Passports (each person has only one passport from a particular country and each passport is intended for only one person)
+> * Country-Flag (each country has only one flag and each flag belongs to only one country)
 
 **One-To-Many**
 - Parent record (primary key) in one table can reference several child (foreign) records in another table.
 - The child cannot have more than one parent record
+- 1:n
 > For example: an e-commerce website may have the following:
 > * Customers can make many orders
 > * Orders can contain many items
 > * Items can have descriptions in many languages
+> * One museum can have many works of art 
+
+![one_to_many_museum](../../images/museum_works.png)
 
 **Many-to-Many**
 - In some instances, you need multiple instances on both sides of the relationship
 - One or more rows in a table can be related to 0, 1 or many rows in another table.
 - A 3rd table called a mapping or link table is required in order to implement such a relationship. 
 - Contains composite a primary key
-- Requires creation of junction table which creates one-to-many relationships
+- Requires creation of junction table (3rd table) which creates one-to-many relationships
 - A junction table will allow us to create the many-to-many relationship and prevent us from adding duplicate entries.
-> For example: an online education website can enroll multiple students to multiple courses
-> Customers can purchase many products
+- A junction table can be seen as a table to store attributes of the relationships between two lists of entities.
+> For example: 
+> * An online education website can enroll multiple students to multiple courses
+> * Customers can purchase many products
+> * You can have many books related to many authors 
 
-![many-to-many](../../images/many.png)
+![many_to_many_books](../../images/manytomany_books.png)
+
+**Junction table example:**
+
+![junction_table example](../../images/junction_table.png)
 
 ---
 ## List of common SQL Commands ##

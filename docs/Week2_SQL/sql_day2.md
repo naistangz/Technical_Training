@@ -73,13 +73,14 @@
         - **s** stands for scale, number of digits after the decimal point
     - DECIMAL(6,4) = 12.4567
         - Total 6 numbers
-        - 2 digits after decimal point
+        - 4 digits after decimal point
 
 * **BINARY**
     - Use to store binary data such as an image or file
 
 * **FLOAT**
     - Scientific use (very large numbers)
+    - Real numbers with decimal points 
 
 * **BIT**
     - Equivalent to binary (0,1 or `NULL`)
@@ -88,6 +89,11 @@
 ```sql
 /* This is a comment in sql*/
 ```
+### Database Design 
+**N:M** Many-to-many relationship 
+
+**1:n** Refers to a one-to-many relationship
+
 ### Insert Breakdown 
 
 ### Variations of Insert
