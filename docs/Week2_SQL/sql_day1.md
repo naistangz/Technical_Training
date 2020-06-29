@@ -77,9 +77,13 @@
 > Each table can have more than one column which is part of its Primary Key (composite key) e.g. Order No + Order Line Number
 > The DMBS will enforce the uniqueness of the Primary Key, not allowing repeated records to exist in the records.
 > The primary key for each table is stored in an index, used to enforce the uniqueness requirement. 
-> **Unique Key vs Primary Key:** a unique key constraint uniquely identifies each record in the database. This provides uniqueness for column or columns.
-> Primary Key constraints has automatic unique constraint. But not, in case of unique key. There can be multiple unique key on a table. 
-> Unique key creates non-clustered index by default.  Primary Key creates clustered index by default. 
+
+**Unique Key vs Primary Key:** 
+
+* A unique key constraint uniquely identifies each record in the database. This provides uniqueness for column or columns.
+* Primary Key constraints has automatic unique constraint. But not in case of unique key. There can be multiple unique key on a table. 
+* Unique key creates non-clustered index by default.  
+* Primary Key creates clustered index by default. 
 
 **Primary Key Constraints**
 - A primary key must be unique 
