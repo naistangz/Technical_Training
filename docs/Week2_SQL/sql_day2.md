@@ -21,14 +21,6 @@
     - `TRUNCATE` - Deletes entire data of the table 
 > * Used to define and create the structure of database objects in a database
 
-## **DELETE vs TRUNCATE vs DROP**:
-
-**`DELETE`** vs **`TRUNCATE`**: `DELETE` used to remove records using `WHERE` clause. `TRUNCATE` removes all records. `TRUNCATE` is not possible when a table is referenced by a foreign key.
-
-**`DELETE`** vs **`DROP`**: `DROP` DDL command removes a table from the database. Removes **all** named elements of the schema like relations, domains or constraints. `DELETE` removes only those tuples which satisfy the `WHERE` clause condition. If `WHERE` clause is missing then by default all tuples present in relation are *removed (same as `TRUNCATE`)*
-
-**`TRUNCATE`** vs **`DROP`**: `DROP` Removes table definition, indexes, data, constraints, triggers. Cannot be rolled back (must be recreated) `TRUNCATE` removes all data but preserves structure of table and remain in the memory for further operations unlike `DROP` table.
-
 * **DCL** Data Control Language 
     - `GRANT` 
     - `REVOKE`
@@ -44,6 +36,14 @@
 > * Used to manage changes made by DML statements 
 
 *Tip:* use `DROP` before `CREATE` to remove database that already exists with the same name, allowing you to create database/table.
+
+## **DELETE vs TRUNCATE vs DROP**:
+
+**`DELETE`** vs **`TRUNCATE`**: `DELETE` used to remove records using `WHERE` clause. `TRUNCATE` removes all records. `TRUNCATE` is not possible when a table is referenced by a foreign key.
+
+**`DELETE`** vs **`DROP`**: `DROP` DDL command removes a table from the database. Removes **all** named elements of the schema like relations, domains or constraints. `DELETE` removes only those tuples which satisfy the `WHERE` clause condition. If `WHERE` clause is missing then by default all tuples present in relation are *removed (same as `TRUNCATE`)*
+
+**`TRUNCATE`** vs **`DROP`**: `DROP` Removes table definition, indexes, data, constraints, triggers. Cannot be rolled back (must be recreated) `TRUNCATE` removes all data but preserves structure of table and remain in the memory for further operations unlike `DROP` table.
 
 ## Data Types (Part 1)
 * **VARCHAR**
