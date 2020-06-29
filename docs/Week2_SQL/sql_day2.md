@@ -21,7 +21,7 @@
     - `TRUNCATE` - Deletes entire data of the table 
 > * Used to define and create the structure of database objects in a database
 
-**DELETE vs TRUNCATE vs DROP**:
+## **DELETE vs TRUNCATE vs DROP**:
 
 **`DELETE`** vs **`TRUNCATE`**: `DELETE` used to remove records using `WHERE` clause. `TRUNCATE` removes all records. `TRUNCATE` is not possible when a table is referenced by a foreign key.
 
