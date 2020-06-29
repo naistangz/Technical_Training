@@ -15,6 +15,8 @@
 
 **What is a relational database?**
 - A type of database that stores and provides access to data points that are related to one another.
+- Provides relational operators to manipulate the data stored into the tables
+- Stores the data into the collection of tables, which is related by common fields between the columns of the table. 
 
 **Examples of databases:**
 - eCommerce
@@ -28,11 +30,15 @@
 
 ---
 ## Terminology 
+- **Tables** - A set of data that are organised in a model with columns and rows.
+- **Fields** - A table has specified number of columns called fields. 
+- **Records** - Data in rows 
 - **Column** - Database tables are composed of individual columns corresponding to the attributes of the object
 - **Row** - A row consists of one set of attributes corresponding to one instance that a table describes. Also known as Records or Tuples.
 - **Table** - A predefined format of rows and columns that define an entity. Also known as a File.
 - **Entity** - Anything you want to model in a table
-- **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data.
+- **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data. Can be termed as *File Manager* that manages data in a database rather than saving it in file systems.
+- **Tuple** - A **row value.**. One row in a **table** or produced by a `SELECT` list. Represents all info from each field associated with a single record. 
 - **Candidate Key** - Candidates for becoming primary key
 
 > Example: Stud ID, Roll No, and email are candidate keys which helps us to uniquely identify the student record in the table. 
@@ -66,11 +72,13 @@
 > Example: In the SalesOrderHeader table, the column **SalesOrderHeader.CurrencyRateID** is a **foreign** key since it is related to the **CurrencyRate.CurrencyRateID.** **CurrencyRate.CurrencyRateID** is the primary key of the **CurrencyRate** table.
 >![foreign_key](../../images/foreign_key.webp)
 
-- **Primary Key** - Uniquely identifies each record in the table 
+- **Primary Key** - Uniquely identifies each record or a row in the table 
 > *Most* tables should have a primary key 
 > Each table can have more than one column which is part of its Primary Key (composite key) e.g. Order No + Order Line Number
 > The DMBS will enforce the uniqueness of the Primary Key, not allowing repeated records to exist in the records.
 > The primary key for each table is stored in an index, used to enforce the uniqueness requirement. 
+> **Unique Key vs Primary Key:** a unique key constraint uniquely identifies each record in the database. This provides uniqueness for column or columns.
+> Primary Key constraints has automatic unique constraint. But not, in case of unique key. There can be multiple unique key on a table. 
 
 **Primary Key Constraints**
 - A primary key must be unique 
