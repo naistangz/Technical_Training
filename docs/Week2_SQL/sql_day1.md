@@ -39,6 +39,7 @@
 - **Entity** - Anything you want to model in a table
 - **DBMS** - A **D**ata **B**ase **M**anagement **S**ystem allows a computer to perform database functions of storing, retrieving, adding, deleting and modifying data. Can be termed as *File Manager* that manages data in a database rather than saving it in file systems.
 - **Tuple** - A **row value.**. One row in a **table** or produced by a `SELECT` list. Represents all info from each field associated with a single record. 
+- **Unique Key** - Group of one or more than one fields or columns which uniquely identify database record. Like primary key, but can accept one `NULL` value for a table column. Cannot contain identical values. 
 - **Candidate Key** - Candidates for becoming primary key
 
 > Example: Stud ID, Roll No, and email are candidate keys which helps us to uniquely identify the student record in the table. 
@@ -79,6 +80,7 @@
 > The primary key for each table is stored in an index, used to enforce the uniqueness requirement. 
 > **Unique Key vs Primary Key:** a unique key constraint uniquely identifies each record in the database. This provides uniqueness for column or columns.
 > Primary Key constraints has automatic unique constraint. But not, in case of unique key. There can be multiple unique key on a table. 
+> Unique key creates non-clustered index by default.  Primary Key creates clustered index by default. 
 
 **Primary Key Constraints**
 - A primary key must be unique 
