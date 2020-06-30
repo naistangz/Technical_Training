@@ -21,7 +21,8 @@ num = 5;
 **Interpreted** vs **Compiled Programming Languages:**
 
 *Extracted from* [FreeCodeCamp](https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/)
-*Every program is a set of instructions, whether it's to add two numbers or send a request over the internet. Compilers and interpreters take human-readable code and convert it to computer-readable machine code. 
+
+* Every program is a set of instructions, whether it's to add two numbers or send a request over the internet. Compilers and interpreters take human-readable code and convert it to computer-readable machine code. 
 
 **What is an assembler?**
 - Translates assembly language into machine code. 
