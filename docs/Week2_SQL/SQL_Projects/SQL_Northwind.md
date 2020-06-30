@@ -186,6 +186,8 @@ VALUES
 SELECT * FROM Sparta_Table;
 ```
 
+![sparta_table](sparta_table.jpg)
+
 
 **Exercise 3 – Northwind Data Analysis linked to Excel (30 marks)**
 
