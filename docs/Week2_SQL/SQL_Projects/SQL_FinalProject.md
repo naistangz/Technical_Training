@@ -186,7 +186,7 @@ VALUES
 SELECT * FROM Sparta_Table;
 ```
 
-![sparta_table](sparta_table.jpg)
+![sparta_table](./images/sparta_table.jpg)
 
 
 **Exercise 3 – Northwind Data Analysis linked to Excel (30 marks)**
@@ -228,7 +228,7 @@ HAVING ROUND(SUM(od.UnitPrice*od.Quantity*(1.00-od.Discount)), 2) > 10000
 ORDER BY "Net Sales";
 ```
 
-![Supplier_sales_graph](supplier_sales.png)
+![Supplier_sales_graph](./images/supplier_sales.png)
 
 **3.3 List the Top 10 Customers year to date (YTD) for the latest year in the Orders file.**
 
@@ -280,4 +280,4 @@ ORDER BY
     MONTH(o.OrderDate);
 ```
 
-![shipping_graph](shipping_time.png)
+![shipping_graph](./images/shipping_time.png)
