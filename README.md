@@ -11,11 +11,11 @@
 
 :pencil2:: **Technical Consultant Training Program Roadmap:**
 
-- [x] 1.Business Skills and Agile Methodologies
-- [x] 2.SQL
-- [ ] 3.Python
-- [ ] 4.Python
-- [ ] 5.Python
+- [x] **Week 1** Business Skills and Agile Methodologies
+- [x] **Week 2** SQL
+- [ ] **Week 3** Python
+- [ ] **Week 4** Python
+- [ ] **Week 5** Python
 
 ---
 
