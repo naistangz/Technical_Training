@@ -19,7 +19,7 @@
 
 ---
 
-**Projects**
+:books: **Projects**
 
 1. SQL Data Analysis [HERE](/docs/Week2_SQL/SQL_Projects)
 
