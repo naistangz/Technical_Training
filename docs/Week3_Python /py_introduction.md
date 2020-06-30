@@ -3,10 +3,9 @@
 ## Python Characteristics 
 1. Python is an interpreted language meaning it goes through an interpreter, which turns code you write into the **language** understood by your computer's processor
 2. Python supports **object-oriented programming** and concepts of classes, objects encapsulation, etc.
-3. We do not need to declare the type of variable because it is a dynamically typed language. 
-4. It is a **portable language** meaning we can run python on different platforms such as Linux, Unix, and Mac.
-5. Python has a **large standard library** which provides a rich set of module and functions so you do not have to write your own code for every single thing e.g. regular expressions, unit-testing, web browsers, etc.
-6. It is **dynamically-typed** meaning the type e.g. int, double, long for a variable is determined at **run time** not in **advance** so we do not need to specify the type of variable. 
+3. It is a **portable language** meaning we can run python on different platforms such as Linux, Unix, and Mac.
+4. Python has a **large standard library** which provides a rich set of module and functions so you do not have to write your own code for every single thing e.g. regular expressions, unit-testing, web browsers, etc.
+5. It is **dynamically-typed** meaning the type e.g. int, double, long for a variable is determined at **run time** not in **advance** so we do not need to specify the type of variable. 
 
 **Python (Dynamically Typed):**
 ```python
