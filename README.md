@@ -21,7 +21,7 @@
 
 **Projects**
 
-1. SQL Data Analysis [HERE](/docs/Week2_SQl/SQL_Projects)
+1. SQL Data Analysis [HERE](/docs/Week2_SQL/SQL_Projects)
 
 
  
