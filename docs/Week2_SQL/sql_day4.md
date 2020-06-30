@@ -8,7 +8,7 @@ The following date functions can be used to manipulate dates in various ways in 
 ------|---------
 `SYSDATETIME`|`SELECT SYSDATETIME()` to return the date and time of the computer (server) being used 
 `DATEADD`|`DATEADD(D,5,OrderDate) AS 'DUE Date` to add 5 days from the OrderDate.
-`DATEDIFF`| `DATEDIFF(d, OrderDate, ShippedDate) AS 'Ship Time'` to add 5 days 
+`DATEDIFF`| `DATEDIFF(d, OrderDate, ShippedDate) AS 'Ship Time'` to find difference between orderdate and shippeddate
 `YEAR`|`SELECT YEAR(OrderDate) AS 'Order Year'` to extract the year from a date
 `MONTH`|`SELECT MONTH(OrderDate) AS 'Order Month'` to extract the month from a date.
 `DAY`| `SELECT DAY(OrderDate) AS 'Order Day` to extract the day from a date
