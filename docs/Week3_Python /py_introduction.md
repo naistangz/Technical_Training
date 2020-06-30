@@ -1,4 +1,4 @@
-# Week 3.2 Python Introduction: 
+# Week 3.2 Python Introduction :snake:
 
 ## Python Characteristics 
 1. Python is an interpreted language meaning it goes through an interpreter, which turns code you write into the **language** understood by your computer's processor
@@ -6,6 +6,8 @@
 3. It is a **portable language** meaning we can run python on different platforms such as Linux, Unix, and Mac.
 4. Python has a **large standard library** which provides a rich set of module and functions so you do not have to write your own code for every single thing e.g. regular expressions, unit-testing, web browsers, etc.
 5. It is **dynamically-typed** meaning the type e.g. int, double, long for a variable is determined at **run time** not in **advance** so we do not need to specify the type of variable. 
+
+:bulb: *Developed by Guido Van Rossum* :bulb:
 
 **Python (Dynamically Typed):**
 ```python
@@ -74,5 +76,6 @@ addNumbers(4,5) # returns 9
 - Interpreted code will show an error as soon as it hits a problem, so it is easier to debug than compiled code. 
 
 > Examples of interpreted languages: PHP, Ruby, Python and Javascript 
+
 
 > Common Python Interview Questions [HERE](https://www.guru99.com/python-interview-questions-answers.html)
