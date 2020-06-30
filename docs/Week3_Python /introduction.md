@@ -77,5 +77,9 @@ addNumbers(4,5) # returns 9
 
 > Examples of interpreted languages: PHP, Ruby, Python and Javascript 
 
+**What is a variable?**
+- A place holder - an empty box 
+- A place holder to store different types of data such as strings, booleans and integers. 
 
 > Common Python Interview Questions [HERE](https://www.guru99.com/python-interview-questions-answers.html)
+> Week 3 Day 2 (30-06-2020) Python Exercises: *Variables* [HERE](variables.py)
