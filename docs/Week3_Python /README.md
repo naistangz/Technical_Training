@@ -11,9 +11,10 @@
 - [x] [List](lists.py)
 - [x] [Dictionaries](dictionaries.py)
 - [x] [Tuples](tuples.py)
-- [ ]  [Object-Oriented Programming] :fire:
-- [ ] [Control Flow and Loops](control_flow.py)
-- [ ] []
+- [ ] [Object-Oriented Programming] :fire:
+- [x] [Control Flow](control_flow.py)
+- [x] [Sets](sets.py)
+- [x] [Loops](loops.py)
 
 
 ## **Terminology**
@@ -51,15 +52,6 @@ student_record = {
 }
 ```
 
-**Tuple**
-- They are the same as lists but immutable meaning they cannot be changed
-- Tuples use parenthesis ()
-
-```python
-dob = ("name", "dob", "passport number")
-print(dob)
-```
-
 **List**
 - A data structure that is mutable, or changeable.
 - Each element or value that is inside of a list is called an item.
@@ -69,6 +61,41 @@ print(dob)
 cities = ["Paris", "Hong Kong", "Buenos Aires", "London,", "Tel Aviv", "Amsterdam"]
 print(cities)
 ```
+
+**Loops**
+- There are two types of loops, for and while 
+- For loops can iterate over a sequence of numbers using the 'range' and 'xrange' functions
+- While loops repeat as long as a certain boolean condition is met
+
+```python
+list_data = [1, 2, 3]
+
+# Using for 
+# Prints 1, 2, 3
+for n in list_data:
+    print(n)
+
+# Using while
+# Prints out the numbers 0, 1, 2, 3, 4
+for x in range(5):
+    print(x)
+```
+
+**Sets**
+- An unordered collection data type that is iterable, mutable and has no duplicate elements
+- They are very similar to lists but it has a highly optimised method for checking whether a specific element is contained in the set.
+- This is based on a data structure known as a has table
+
+**Tuple**
+- They are the same as lists but immutable meaning they cannot be changed
+- Tuples use parenthesis ()
+
+```python
+dob = ("name", "dob", "passport number")
+print(dob)
+```
+
+
 ---
 
 > Common Python Interview Questions [HERE](https://www.guru99.com/python-interview-questions-answers.html)
