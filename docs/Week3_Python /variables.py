@@ -10,7 +10,7 @@ print(x)
 print(y)
 print(x + y)
 
-# builtin method called type()
+# builtin method called type() to find what kind of variable it is
 print(type(y))
 
 print(str(x) + string) # you cannot combine string with an integer so turn the integer into a string
@@ -19,6 +19,7 @@ age = 99
 NHS = 123455
 string = 'Sparta'
 salary = 50000
+
 
 
 name = input("Please enter your name")
@@ -38,7 +39,7 @@ print(first_name)
 print(last_name)
 
 # Create a variable called full_name and display full_name
-full_name = first_name + last_name
+full_name = first_name + ' ' + last_name
 print(full_name)
 
 # Create a variable called age
@@ -50,7 +51,6 @@ address = "3 Tennant House"
 print(address)
 
 # Prompt the user to display all the information
-details = input("What is your favourite colour?")
-print(details)
+print("Hello" + " " + full_name + ', ' + "You are" + " " + str(age) + " " + "years old and you live at" + " " + address)
 
 
