@@ -12,11 +12,28 @@
 - [x] [Dictionaries](dictionaries.py)
 - [x] [Tuples](tuples.py)
 - [ ] [Object-Oriented Programming]
-- [ ] [Control Flow and Loops]
+- [ ] [Control Flow and Loops](control_flow.py)
 - [ ] []
 
 
 ## **Terminology**
+**Control Flow**
+- The order in which the program's code executes
+- The control flow of a Python program is regulated by conditional statements, loops, and function calls
+
+```python
+# Control Flow Statements with If
+age = int(input("How old are you?"))
+
+if age < 21:
+    print("You ain't old enough to watch this")
+elif age <= 17:
+    print("This is an R rated movie, unfortunately, you are underage")
+elif age <= 12:
+    print("You are too young to watch a PG rated film ")
+else:
+    print("This movie is appropriate for your age")
+```
 
 **Dictionary**
 - An unordered collection of data values, used to store data values like a map
