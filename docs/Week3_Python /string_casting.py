@@ -25,9 +25,9 @@ print(3 % 9) # Modular gives the left over value of the equation
 print("Hello World")
 print('Hello World')
 
-The best practice and why
-Using double quotes is better
-See below why
+# The best practice and why
+# Using double quotes is better
+# See below why
 
 print('Ugne's class is eng 67') # single quotes
 print("Ugne's class is eng 67") # double quote
