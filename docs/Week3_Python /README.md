@@ -4,11 +4,12 @@
 
 - [x] [Introduction](introduction.md)
 - [x] [Variables](variables.py)
-- [x] [Strings](string_casting.py)
+- [x] [Strings and Concatenation](string_casting.py)
+- [x] [Built-in Methods](string_casting.py)
 - [x] [Indexing And Slicing](string_casting.py)
 - [x] [List](lists.py)
-- [ ] [Dictionaries](lists.py)
-- [ ] [Tuples](tuples.py)
+- [x] [Dictionaries](lists.py)
+- [x] [Tuples](tuples.py)
 - [ ] []
 - [ ] []
 - [ ] []

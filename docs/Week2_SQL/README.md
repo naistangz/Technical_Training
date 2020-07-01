@@ -17,4 +17,4 @@
 ---
 
 **SQL Projects and Exams**
-1. [Northwind Database Data Analysis](/docs/week2_SQl/SQL_Projects)
+1. [Northwind Database Data Analysis](/docs/Week2_SQL/SQL_Projects)
