@@ -51,6 +51,6 @@ address = "3 Tennant House"
 print(address)
 
 # Prompt the user to display all the information
-print("Hello" + " " + full_name + ', ' + "You are" + " " + str(age) + " " + "years old and you live at" + " " + address)
-
+print("Hello" + " " + full_name + ', ' + "you are" + " " + str(age) + " " + "years old and you live at" + " " + address)
+# Returns Hello Kenneth Leith, you are 65 years old and you live at 3 Tennant House
 
