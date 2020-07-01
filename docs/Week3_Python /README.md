@@ -35,6 +35,7 @@ elif age <= 12:
 else:
     print("This movie is appropriate for your age")
 ```
+---
 
 **Dictionary**
 - An unordered collection of data values, used to store data values like a map
@@ -52,6 +53,7 @@ student_record = {
 }
 ```
 
+---
 **List**
 - A data structure that is mutable, or changeable.
 - Each element or value that is inside of a list is called an item.
@@ -62,6 +64,7 @@ cities = ["Paris", "Hong Kong", "Buenos Aires", "London,", "Tel Aviv", "Amsterda
 print(cities)
 ```
 
+---
 **Loops**
 - There are two types of loops, for and while 
 - For loops can iterate over a sequence of numbers using the 'range' and 'xrange' functions
@@ -81,11 +84,26 @@ for x in range(5):
     print(x)
 ```
 
+---
 **Sets**
 - An unordered collection data type that is iterable, mutable and has no duplicate elements
 - They are very similar to lists but it has a highly optimised method for checking whether a specific element is contained in the set.
 - This is based on a data structure known as a has table
 
+```python
+# Normal Set
+# Prints b, c, a, d
+normal_set = set(["a", "b", "c"])
+normal_set.add("d")
+print(normal_set)
+
+# Frozen Set
+# Prints f, e, g, cannot use 'add' attribute 
+frozen_set = frozenset(["e", "f", "g"])
+print(frozen_set)
+```
+
+---
 **Tuple**
 - They are the same as lists but immutable meaning they cannot be changed
 - Tuples use parenthesis ()

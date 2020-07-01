@@ -18,10 +18,13 @@ print(car_parts)
 # Elements of a set can be modified at any time, elements of the frozen set remain the same after creation
 
 # Normal Set
+# Prints b, c, a or c, a, b
 normal_set = set(["a", "b", "c"])
+normal_set.add("d")
 print(normal_set)
 
 # Frozen Set
+# Prints f, e, g
 frozen_set = frozenset(["e", "f", "g"])
 print(frozen_set)
 
