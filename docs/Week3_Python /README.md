@@ -11,7 +11,7 @@
 - [x] [List](lists.py)
 - [x] [Dictionaries](dictionaries.py)
 - [x] [Tuples](tuples.py)
-- [ ] [Object-Oriented Programming]
+- [ ]  [Object-Oriented Programming] :fire:
 - [ ] [Control Flow and Loops](control_flow.py)
 - [ ] []
 
