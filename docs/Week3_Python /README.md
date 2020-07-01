@@ -5,10 +5,10 @@
 - [x] [Introduction](introduction.md)
 - [x] [Variables](variables.py)
 - [x] [Strings](string_casting.py)
-- [x] [Indexing](string_casting.py)
+- [x] [Indexing And Slicing](string_casting.py)
 - [x] [List](lists.py)
 - [ ] [Dictionaries](lists.py)
-- [ ] [Tuples](lists.py)
+- [ ] [Tuples](tuples.py)
 - [ ] []
 - [ ] []
 - [ ] []

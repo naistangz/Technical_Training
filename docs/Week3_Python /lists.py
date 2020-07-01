@@ -39,6 +39,16 @@ print(cities)
 cities.insert(2, "London")
 print(cities)
 
-# Lists with different variable types
+# Lists with different data types
 mix_type_string = [1,2,3, "one", "two", "three"]
 print(mix_type_string)
+
+string_list = ["hello", "world", "!"]
+int_list = [5, 4, 3]
+
+combined_list = string_list + int_list
+print(combined_list)
+
+# Lists within lists
+combined_data_types = [[1, 2, 3], ["one", "two", "three"]]
+print(combined_data_types)
