@@ -83,3 +83,23 @@ def modulus(a , b):
 
 print(modulus(100, 4))
 print(modulus(45, 7))
+
+# Adding user input
+def user_multiply():
+    number_1 = int(input("Choose a number:\n"))
+    number_2 = int(input("Choose another number:\n"))
+    print("The product of your chosen numbers is: ")
+    return number_1 * number_2
+
+print(user_multiply())
+
+
+# Creating a function with multiple args
+def multi_args(*kwargs):
+    print(type(kwargs))
+
+    for args in kwargs:
+        print(args)
+    return args
+
+print(multi_args(1, 2, 4, 6, 7))
