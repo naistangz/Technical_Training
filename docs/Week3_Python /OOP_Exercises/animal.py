@@ -1,9 +1,9 @@
-class Animal:
+class Animal(object):
 
-    def __init__(self, name=None, legNumber=None, habitat=None): # default to None, optional arguments
+    def __init__(self, name, habitat, legNumber=0,): # default to None, optional arguments
         self.name = name
-        self.legNumber = legNumber
         self.habitat = habitat
+        self.legNumber = legNumber
         print("An animal has been created")
 
 
@@ -18,13 +18,12 @@ class Animal:
 
     # __str__ method returns the string representation of the object
     def __str__(self):
-        return "name: " + str(self.name)
+        return "Name:" + str(self.name) + " Habitat:" + str(self.habitat) + " Number of Legs:" + str(self.legNumber)
 
 
-
-Dog = Animal("Tony", 4, "house")
-# Dog.setLeg(4)
-print(Dog.legNumber)
+Dog = Animal("Fluff", "home", 4)
+Dog.whoAmI()
+Dog.eat()
 Dog.describe()
 
 # Returns the object representation
