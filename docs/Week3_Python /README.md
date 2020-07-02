@@ -12,6 +12,7 @@
 - [x] [List](lists.py)
 - [x] [Dictionaries](dictionaries.py)
 - [x] [Tuples](tuples.py)
+- [x] [Functions](function.py)
 - [ ] [Object-Oriented Programming] :fire:
 - [x] [Control Flow](control_flow.py)
 - [x] [Sets](sets.py)
@@ -59,6 +60,17 @@ student_record = {
     "completed_lesson": 5,
     "completed_lesson_names": ["Business Skills", "SQL", "Python"]
 }
+```
+---
+**Function**
+- A block of organised, reusable code that is used to perform a single, related action
+- DRY *Don't* *Repeat* *Yourself*
+- You can pass data (parameters), into a function.
+
+```python
+def greet(name):
+    name = input("What is your name? \n")
+    return "Hello, " + name + " Good morning!"
 ```
 
 ---
