@@ -192,8 +192,10 @@ In the above program, we created two classes i.e. `Animal` (parent class) and `P
 The child class modified the behaviour of the parent class. We also extended the functions of the parent class, by creating new methods like `tweet()` and `fly()`.
 
 We used the `super()` function inside the `__init__()` method. This allows us to run the `__init__()` method of the parent class inside the child class. 
+---
 
 ### Encapsulation 
+---
 
 ### Polymorphism
 - Poly means many 
@@ -263,6 +265,8 @@ Methods such as `__str__()`, which have not been overridden in the child classes
 
 The `fact()` method for object `a(Square class)` is overridden. However, `fact()` method for object `b` has not been overridden. It is *inheriting* from the Parent `Shape` class. 
 
+---
+
 ### Abstraction 
 - Abstraction focuses on hiding the internal implementations of a process or method from the user. In this way, the user knows what he is doing but not how the work is being done. 
 - Using a car as an analogy. We drive without knowing what is going on underneath. We use the breaks to stop the car but we don't know how the breaks work. 
@@ -271,6 +275,8 @@ The `fact()` method for object `a(Square class)` is overridden. However, `fact()
 
 ![car_analogy_abstraction](../../images/car_analogy.jpg)
 
+
+---
 
 ## Key Points to Remember:
 - OOP makes the program easy to understand as well as efficient
