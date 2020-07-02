@@ -8,7 +8,7 @@
 - [x] [Strings and Concatenation](string_casting.py)
 - [x] [Built-in Methods Examples](string_casting.py) 
 - [x] [More Built-in Functions with Python](https://docs.python.org/3/library/functions.html)
-- [x] [Indexing And Slicing](string_casting.py)
+- [x] [Indexing And Slicing](slicing.md)
 - [x] [List](lists.py)
 - [x] [Dictionaries](dictionaries.py)
 - [x] [Tuples](tuples.py)
