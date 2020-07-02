@@ -34,16 +34,13 @@
 
 ```python
 # Control Flow Statements with If
+required_age = 18
 age = int(input("How old are you?"))
 
-if age < 21:
-    print("You ain't old enough to watch this")
-elif age <= 17:
-    print("This is an R rated movie, unfortunately, you are underage")
-elif age <= 12:
-    print("You are too young to watch a PG rated film ")
+if age < 18:
+    print("You are too young to watch this movie.\nThe required age to watch this movie is {}".format(str(required_age)))
 else:
-    print("This movie is appropriate for your age")
+    print("Congratulations!\nYou are old enough to watch the movie! Enjoy!")
 ```
 ---
 
