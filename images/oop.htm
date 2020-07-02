@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://www.educative.io/blog/object-oriented-programming -->
+<html class="default no-touch" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--mui-inject-first--><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 0.875rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+}
+.MuiTypography-body1 {
+  font-size: 1rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.MuiTypography-caption {
+  font-size: 0.75rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+}
+.MuiTypography-button {
+  font-size: 0.875rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  margin: 0;
+  font-size: 6rem;
+  text-align: center;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+}
+.MuiTypography-h2 {
+  font-size: 3.75rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.MuiTypography-h3 {
+  font-size: 3rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+}
+.MuiTypography-h4 {
+  font-size: 2.125rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+}
+.MuiTypography-h5 {
+  font-size: 1.5rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+}
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.MuiTypography-subtitle1 {
+  font-size: 1rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+}
+.MuiTypography-subtitle2 {
+  font-size: 0.875rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+}
+.MuiTypography-overline {
+  font-size: 0.75rem;
+  font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #5553FF;
+}
+.MuiTypography-colorSecondary {
+  color: #53ACFF;
+}
+.MuiTypography-colorTextPrimary {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError {
+  color: #D42154;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss1 {
+  font-size: 8rem;
+  font-weight: 300;
+  line-height: 92px;
+  letter-spacing: -2px;
+}
+@media(max-width: 768px) {
+  .jss1 {
+    font-size: 6rem;
+    line-height: 68px;
+    letter-spacing: -1.2px;
+  }
+}
+.jss2 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+@media(max-width: 768px) {
+  .jss2 {
+    font-size: 4rem;
+    letter-spacing: 0.25px;
+  }
+}
+.jss3 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+@media(max-width: 768px) {
+  .jss3 {
+    font-size: 3.4rem;
+  }
+}
+.jss4 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+@media(max-width: 768px) {
+  .jss4 {
+    font-size: 2.8rem;
+  }
+}
+.jss5 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+@media(max-width: 768px) {
+  .jss5 {
+    font-size: 2.2rem;
+  }
+}
+.jss6 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+@media(max-width: 768px) {
+  .jss6 {
+    font-weight: 700;
+  }
+}
+.jss7 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.jss8 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+.jss9 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+.jss10 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+.jss11 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.35px;
+}
+.jss12 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.35px;
+}
+.jss13 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.jss14 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+</style><style data-jss="" data-meta="makeStyles">
+
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="PrivateHiddenCss">
+@media (min-width:320px) and (max-width:599.95px) {
+  .jss85 {
+    display: none;
+  }
+}
+@media (min-width:320px) {
+  .jss86 {
+    display: none;
+  }
+}
+@media (max-width:599.95px) {
+  .jss87 {
+    display: none;
+  }
+}
+@media (min-width:600px) and (max-width:799.95px) {
+  .jss88 {
+    display: none;
+  }
+}
+@media (min-width:600px) {
+  .jss89 {
+    display: none;
+  }
+}
+@media (max-width:799.95px) {
+  .jss90 {
+    display: none;
+  }
+}
+@media (min-width:800px) and (max-width:1024.95px) {
+  .jss91 {
+    display: none;
+  }
+}
+@media (min-width:800px) {
+  .jss92 {
+    display: none;
+  }
+}
+@media (max-width:1024.95px) {
+  .jss93 {
+    display: none;
+  }
+}
+@media (min-width:1025px) and (max-width:1919.95px) {
+  .jss94 {
+    display: none;
+  }
+}
+@media (min-width:1025px) {
+  .jss95 {
+    display: none;
+  }
+}
+@media (max-width:1919.95px) {
+  .jss96 {
+    display: none;
+  }
+}
+@media (min-width:1920px) {
+  .jss97 {
+    display: none;
+  }
+}
+@media (min-width:1920px) {
+  .jss98 {
+    display: none;
+  }
+}
+@media (min-width:320px) {
+  .jss99 {
+    display: none;
+  }
+}
+</style><style data-jss="" data-meta="MuiBox">
+
+</style><style data-jss="" data-meta="MuiBox">
+</style><style data-jss="" data-meta="makeStyles">
+.jss48 {
+  display: flex;
+}
+@media (max-width:479.95px) {
+  .jss48 {
+    margin-top: 24px;
+    text-align: center;
+  }
+}
+.jss49 {
+  top: -24px;
+  right: -24px;
+  width: 48px;
+  border: #F5F5F5 1px solid;
+  cursor: pointer;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  border-radius: 100%;
+  justify-content: center;
+  background-color: #fff;
+}
+@media (max-width:479.95px) {
+  .jss49 {
+    top: 0px;
+    right: 0px;
+  }
+}
+</style>
+          
+          <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta property="fb:app_id" content="530312767132745">
+          <meta property="og:type" content="website">
+          <meta property="og:locale" content="en_US">
+          <meta property="og:site_name" content="Educative: Interactive Courses for Software Developers">
+      
+          <meta name="twitter:site" content="@educativeinc">
+          <meta name="twitter:domain" content="educative.io">
+          <!-- <meta name="twitter:creator" content="@educativeinc" /> --><title>What is Object Oriented Programming? OOP Explained in Depth</title>
+          <meta property="og:title" content="What is Object Oriented Programming? OOP Explained in Depth">
+          <meta name="twitter:title" content="What is Object Oriented Programming? OOP Explained in Depth"><meta name="description" content="Learn what is OOP, the building blocks of an OOP program, the four principles that make up OOP, and more.">
+          <meta property="og:description" content="Learn what is OOP, the building blocks of an OOP program, the four principles that make up OOP, and more.">
+          <meta name="twitter:description" content="Learn what is OOP, the building blocks of an OOP program, the four principles that make up OOP, and more.">
+          <meta name="keywords" content="OOP, JavaScript">
+          <meta property="og:image" content="https://lh3.googleusercontent.com/fARA3hWiB5-Ai2_IBlwGjxBaVknzGG9AZoUAul3F1AEhWIqRpLG0UVYY8pPRH8dbZxFeiFmzApvH8wys9rn3YuFQ5r6ZTw">
+          <meta property="og:image:secure_url" content="https://lh3.googleusercontent.com/fARA3hWiB5-Ai2_IBlwGjxBaVknzGG9AZoUAul3F1AEhWIqRpLG0UVYY8pPRH8dbZxFeiFmzApvH8wys9rn3YuFQ5r6ZTw">
+          <meta name="twitter:card" content="summary_large_image">
+          <meta name="twitter:image:src" content="https://lh3.googleusercontent.com/fARA3hWiB5-Ai2_IBlwGjxBaVknzGG9AZoUAul3F1AEhWIqRpLG0UVYY8pPRH8dbZxFeiFmzApvH8wys9rn3YuFQ5r6ZTw"><meta property="og:url" content="https://www.educative.io/blog/object-oriented-programming">
+          
+      
+          <script type="text/javascript" async="" src="./oop_files/insight.min.js"></script><script async="" src="./oop_files/uwt.js"></script><script async="" src="./oop_files/fbevents.js"></script><script type="text/javascript" async="" src="./oop_files/analytics.js" nonce="AcH1RKHmhQCKSbp/duuqgg=="></script><script defer="" src="./oop_files/gtm.js"></script><script nonce="AcH1RKHmhQCKSbp/duuqgg==" type="application/ld+json">
+            {
+              "@context": "http://schema.org/",
+              "@type": "EducationalOrganization",
+              "url": "https://www.educative.io",
+              "logo": "https://www.educative.io/static/imgs/logos/MainLogoV2.png"
+            }
+          </script>
+      
+          <script nonce="AcH1RKHmhQCKSbp/duuqgg==" type="application/ld+json">
+            {
+                "@context": "http://schema.org/",
+                "@type": "TechArticle",
+                "description": "Learn what is OOP, the building blocks of an OOP program, the four principles that make up OOP, and more."
+                ,
+                "headline": "What is Object Oriented Programming? OOP Explained in Depth"
+                ,
+                "name": "What is Object Oriented Programming? OOP Explained in Depth"
+                ,
+                "image": "https://lh3.googleusercontent.com/fARA3hWiB5-Ai2_IBlwGjxBaVknzGG9AZoUAul3F1AEhWIqRpLG0UVYY8pPRH8dbZxFeiFmzApvH8wys9rn3YuFQ5r6ZTw"
+                ,
+                "keywords": "OOP, JavaScript"
+                ,
+                "datePublished": "2020-04-15"
+                ,
+                "dateModified": "2020-04-15"
+                ,
+                "mainEntityOfPage": "https://www.educative.io/"
+                ,
+                "author": {
+                    "@type": "Person",
+                    "name": "Erin Doherty"
+                }
+                ,
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Educative",
+                    "legalName": "Educative Inc",
+                    "url": "https://www.educative.io",
+                    "email": "contact@educative.io"
+                }
+                ,
+                "publisher": {
+                   "@type": "EducationalOrganization",
+                    "name": "Educative",
+                    "legalName": "Educative Inc",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.educative.io/static/imgs/logos/MainLogoV2.png"
+                    }
+                }
+                
+            }
+          </script>
+          
+          <link rel="shortcut icon" type="image/x-icon" href="https://www.educative.io/static/favicons/favicon-whiteV2.png" id="favicon-scheme">
+          <script nonce="AcH1RKHmhQCKSbp/duuqgg==">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-W3ZFCR2');</script>
+          <script nonce="AcH1RKHmhQCKSbp/duuqgg==">randomSeed = 0.15992281376222728</script>
+          <script nonce="AcH1RKHmhQCKSbp/duuqgg==">preloadedState = JSON.parse(decodeURIComponent(atob("JTdCJTIyYWpheE1vZGUlMjIlM0ElN0IlMjJlbmFibGVkJTIyJTNBdHJ1ZSU3RCUyQyUyMmF1dGhvciUyMiUzQSU3QiUyMmFydGljbGVTbmFwc2hvdCUyMiUzQSU3QiUyMnByb3BlcnRpZXMlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCU3RCUyQyUyMmNvbGxlY3Rpb24lMjIlM0ElN0IlN0QlMkMlMjJjb2xsZWN0aW9uQXJ0aWNsZSUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyYXJ0aWNsZVJldmlzaW9ucyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIycGFnZSUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIycHJvZmlsZSUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyd29yayUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyY2F0YWxvZyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyYWxsQ29sbGFib3JhdG9ycyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyY29uY2VwdHMlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMnNhbGVzJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlN0QlMkMlMjJhZmZpbGlhdGUlMjIlM0ElN0IlMjJjYXRhbG9nJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJhZmZpbGlhdGVzJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlN0QlMkMlMjJlZHByZXNzbyUyMiUzQSU3QiUyMnNob3RzJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJib29rbWFya2VkU2hvdHMlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMnRhZ3MlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMnByb3BlcnRpZXMlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCU3RCUyQyUyMmNvbGxlY3Rpb25BcnRpY2xlUHJldmlldyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIybG9hZGVyJTIyJTNBJTdCJTIyaXNMb2FkZWQlMjIlM0FmYWxzZSUyQyUyMmlzTG9hZGluZyUyMiUzQWZhbHNlJTdEJTJDJTIybW9kYWxzJTIyJTNBJTdCJTIyc2hvd01vZGFsJTIyJTNBZmFsc2UlMkMlMjJ0eXBlVG9TaG93JTIyJTNBbnVsbCUyQyUyMnBhcmFtcyUyMiUzQW51bGwlN0QlMkMlMjJwYXltZW50JTIyJTNBJTdCJTIyd29ya0RhdGElMjIlM0FudWxsJTJDJTIyY291cG9uJTIyJTNBbnVsbCUyQyUyMnRvdGFsX3ByaWNlJTIyJTNBbnVsbCUyQyUyMnRyYW5zYWN0aW9uX2lkJTIyJTNBbnVsbCUyQyUyMnVzZXJfdHJhbnNhY3Rpb25faWQlMjIlM0FudWxsJTdEJTJDJTIycGFnZSUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIycGFnZVByZXZpZXclMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMnBhZ2VTdW1tYXJ5JTIyJTNBJTdCJTdEJTJDJTIyc2hvdFN1bW1hcnklMjIlM0ElN0IlN0QlMkMlMjJlZGl0b3JQYWdlcyUyMiUzQSU3QiUyMmVkaXRvclBhZ2UlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMmVkaXRvclBhZ2VQdWJsaXNoZWQlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCU3RCUyQyUyMmVkaXRvclBhZ2VTdW1tYXJ5JTIyJTNBJTdCJTdEJTJDJTIycmVhZGVyJTIyJTNBJTdCJTIyZmVhdHVyZWQlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMndvcmtzJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJ0cmFja3MlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMnNob3RzJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJlZGl0b3JQYWdlcyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyYXVkaWVuY2UlMjIlM0ElN0IlMjJ3b3JrcyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIydHJhY2tzJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlN0QlN0QlMkMlMjJzdWJzY3JpcHRpb24lMjIlM0ElN0IlN0QlMkMlMjJzZWFyY2glMjIlM0ElN0IlMjJzZWFyY2hTdHJpbmclMjIlM0ElMjIlMjIlMkMlMjJpc1Jlc2V0YWJsZSUyMiUzQXRydWUlMkMlMjJmaWx0ZXIlMjIlM0ElMjJhbGwlMjIlN0QlMkMlMjJ3aWRnZXRzJTIyJTNBJTdCJTIyaWRzJTIyJTNBJTVCJTVEJTJDJTIyZW50aXRpZXMlMjIlM0ElN0IlN0QlN0QlMkMlMjJ1c2VyJTIyJTNBJTdCJTIyaW5mbyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTJDJTIybG9nZ2VkT3V0JTIyJTNBdHJ1ZSU3RCUyQyUyMndpZGdldHNEYXRhJTIyJTNBJTdCJTIybG9hZGluZyUyMiUzQWZhbHNlJTJDJTIyc2F2aW5nV2lkZ2V0JTIyJTNBbnVsbCUyQyUyMnJlc2V0dGluZ1dpZGdldCUyMiUzQW51bGwlMkMlMjJzbmFwc2hvdHMlMjIlM0ElN0IlN0QlMkMlMjJjb3BpZWRXaWRnZXQlMjIlM0FudWxsJTdEJTJDJTIybWV0YURhdGElMjIlM0ElN0IlN0QlMkMlMjJjb3Vyc2VDb21wbGV0aW9uJTIyJTNBJTdCJTdEJTJDJTIyZGVmYXVsdENvdXJzZUxhbmd1YWdlJTIyJTNBJTdCJTdEJTJDJTIycmVhZGVyUHJlZmVyZW5jZXMlMjIlM0ElN0IlMjJ0aGVtZXMlMjIlM0FudWxsJTdEJTJDJTIycmVzdW1hYmxlQ291cnNlcyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyYmFzaWNQcm9maWxlcyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIydXNlckFwaUtleXMlMjIlM0ElN0IlMjJsb2FkaW5nJTIyJTNBZmFsc2UlMkMlMjJsb2FkZWQlMjIlM0FmYWxzZSUyQyUyMmtleXMlMjIlM0ElN0IlN0QlN0QlN0QlMkMlMjJ1c2VyQ29sbGVjdGlvbkFydGljbGUlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMmNvdXJzZVRyYWNrcyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIydHJhY2tQYWdlJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJleGVjdXRpb25NZXRhZGF0YSUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyZWR1Y2F0aXZlQmFubmVyJTIyJTNBJTdCJTIyY291bnQlMjIlM0EwJTJDJTIybWFyZ2luVG9wJTIyJTNBJTIyMHB4JTIyJTJDJTIyYmFubmVyc0hlaWdodCUyMiUzQTAlMkMlMjJiYW5uZXJzJTIyJTNBJTdCJTdEJTdEJTJDJTIyZG9ja2VyRGV0YWlscyUyMiUzQSU3QiUyMmNvbnRhaW5lciUyMiUzQSU3QiUyMmZpbGUlMjIlM0ElN0IlN0QlMkMlMjJpbWFnZU5hbWUlMjIlM0ElMjIlMjIlMkMlMjJidWlsZFN0YXR1c1VybCUyMiUzQSUyMiUyMiUyQyUyMmJ1aWxkTG9nVXJsJTIyJTNBJTIyJTIyJTJDJTIybGl2ZUluc3RhbmNlJTIyJTNBJTdCJTdEJTJDJTIydHJhY2slMjIlM0FmYWxzZSU3RCUyQyUyMmpvYnMlMjIlM0ElNUIlNUQlMkMlMjJlbnZzJTIyJTNBJTVCJTVEJTJDJTIydmVyc2lvbiUyMiUzQTMlMkMlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCUyQyUyMnRlcm1pbmFsV2lkZ2V0U3RhdHMlMjIlM0ElN0IlMjJhY3RpdmVUZXJtSUQlMjIlM0FudWxsJTdEJTJDJTIyY29tbWVudHMlMjIlM0ElN0IlMjJzZWxlY3RlZERvY3VtZW50JTIyJTNBJTdCJTdEJTJDJTIyY29tbWVudENvdW50cyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyZG9jdW1lbnRDb21tZW50cyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIybmV3Q29tbWVudCUyMiUzQSU3QiU3RCU3RCUyQyUyMnRlc3RpbW9uaWFscyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyd2lkZ2V0c1dyYXBwZXIlMjIlM0ElN0IlN0QlMkMlMjJ1c2VyU3Vic2NyaXB0aW9ucyUyMiUzQSU3QiUyMnBsYW5zJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBdHJ1ZSUyQyUyMmxvYWRpbmclMjIlM0FmYWxzZSUyQyUyMmRhdGElMjIlM0ElN0IlMjJzdWJzY3JpcHRpb25zJTIyJTNBJTVCJTdCJTIyc3Vic2NyaXB0aW9uX3BsYW5fdHlwZSUyMiUzQTYwMDAlMkMlMjJvcmlnaW5hbF9wcmljZSUyMiUzQTQ3OSUyQyUyMmRpc2NvdW50ZWRfcHJpY2VfYmVmb3JlX3JlZ2lvbmFsJTIyJTNBMjQ5JTJDJTIydGl0bGUlMjIlM0ElMjJFZHVjYXRpdmUlMjBBbm51YWwlMjBTdWJzY3JpcHRpb24lMjIlMkMlMjJkaXNjb3VudGVkX3ByaWNlJTIyJTNBMjI0JTJDJTIycmVnaW9uJTIyJTNBJTIyR0IlMjIlMkMlMjJtb250aGx5X29yaWdpbmFsX3ByaWNlJTIyJTNBMzkuOTklMkMlMjJvcmRlciUyMiUzQTUlMkMlMjJtb250aGx5X2Rpc2NvdW50ZWRfYmVmb3JlX3JlZ2lvbmFsJTIyJTNBMjAuNzklMkMlMjJyZWdpb25hbF9kaXNjb3VudF9wZXJjZW50JTIyJTNBMTAlMkMlMjJtb250aGx5X2Rpc2NvdW50ZWRfcHJpY2UlMjIlM0ExOC43MSUyQyUyMmRpc2NvdW50ZWRfZm9yX3JlZ2lvbiUyMiUzQXRydWUlMkMlMjJpZCUyMiUzQSUyMkN5YmVyTW9uZGF5LTIwMTktTGF1bmNoJTIyJTJDJTIydmFsaWRpdHlfbW9udGhzJTIyJTNBMTIlN0QlMkMlN0IlMjJzdWJzY3JpcHRpb25fcGxhbl90eXBlJTIyJTNBNjAwMSUyQyUyMm9yaWdpbmFsX3ByaWNlJTIyJTNBMjI1JTJDJTIyZGlzY291bnRlZF9wcmljZV9iZWZvcmVfcmVnaW9uYWwlMjIlM0EyMjUlMkMlMjJ0aXRsZSUyMiUzQSUyMlRlYW0lMjBTdWJzY3JpcHRpb24lMjBQbGFuJTIyJTJDJTIyZGlzY291bnRlZF9wcmljZSUyMiUzQTIwMiUyQyUyMnJlZ2lvbiUyMiUzQSUyMkdCJTIyJTJDJTIybW9udGhseV9vcmlnaW5hbF9wcmljZSUyMiUzQTE4Ljc1JTJDJTIyb3JkZXIlMjIlM0E1JTJDJTIybW9udGhseV9kaXNjb3VudGVkX2JlZm9yZV9yZWdpb25hbCUyMiUzQTE4Ljc1JTJDJTIycmVnaW9uYWxfZGlzY291bnRfcGVyY2VudCUyMiUzQTEwJTJDJTIybW9udGhseV9kaXNjb3VudGVkX3ByaWNlJTIyJTNBMTYuODclMkMlMjJkaXNjb3VudGVkX2Zvcl9yZWdpb24lMjIlM0F0cnVlJTJDJTIyaWQlMjIlM0ElMjJUZWFtQnV5QW5udWFsUGxhbiUyMiUyQyUyMnZhbGlkaXR5X21vbnRocyUyMiUzQTEyJTdEJTJDJTdCJTIyc3Vic2NyaXB0aW9uX3BsYW5fdHlwZSUyMiUzQTYwMDAlMkMlMjJvcmlnaW5hbF9wcmljZSUyMiUzQTU5JTJDJTIyZGlzY291bnRlZF9wcmljZV9iZWZvcmVfcmVnaW9uYWwlMjIlM0E1OSUyQyUyMnRpdGxlJTIyJTNBJTIyRWR1Y2F0aXZlJTIwTW9udGhseSUyMFN1YnNjcmlwdGlvbiUyMiUyQyUyMmRpc2NvdW50ZWRfcHJpY2UlMjIlM0E1MyUyQyUyMnJlZ2lvbiUyMiUzQSUyMkdCJTIyJTJDJTIybW9udGhseV9vcmlnaW5hbF9wcmljZSUyMiUzQTU5JTJDJTIyb3JkZXIlMjIlM0ExNSUyQyUyMm1vbnRobHlfZGlzY291bnRlZF9iZWZvcmVfcmVnaW9uYWwlMjIlM0E1OSUyQyUyMnJlZ2lvbmFsX2Rpc2NvdW50X3BlcmNlbnQlMjIlM0ExMCUyQyUyMm1vbnRobHlfZGlzY291bnRlZF9wcmljZSUyMiUzQTUzJTJDJTIyZGlzY291bnRlZF9mb3JfcmVnaW9uJTIyJTNBdHJ1ZSUyQyUyMmlkJTIyJTNBJTIybW9udGhseS1zdWJzY3JpcHRpb24tMjAxOS1sYXVuY2glMjIlMkMlMjJ2YWxpZGl0eV9tb250aHMlMjIlM0ExJTdEJTVEJTdEJTdEJTdEJTJDJTIydGVhbVN1YnNjcmlwdGlvbnMlMjIlM0ElN0IlMjJwbGFucyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTdEJTJDJTIyc3Vic2NyaXB0aW9uQmFubmVyU3RhdGUlMjIlM0ElN0IlMjJzaG93QmFubmVyJTIyJTNBZmFsc2UlN0QlMkMlMjJlbnRlcnByaXNlJTIyJTNBJTdCJTIyb3JnYW5pemF0aW9ucyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyc3Vic2NyaXB0aW9ucyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyc3Vic2NyaXB0aW9uc1VzZXJzJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJkaXNjb3VudCUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIydGVhbVRyaWFscyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIydXNhZ2VEYXRhJTIyJTNBJTdCJTIydXNlcnNEYXRhJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJjb3Vyc2VzRGF0YSUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIydXNlclBlckNvdXJzZURhdGElMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCU3RCU3RCUyQyUyMm1hcmtldGluZ1JlZGlyZWN0JTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJub3RGb3VuZFBhZ2UlMjIlM0FmYWxzZSUyQyUyMnJlZ2lvbmFsRGlzY291bnRzJTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJ0ZWFtQnV5JTIyJTNBJTdCJTIyc3Vic2NyaXB0aW9ucyUyMiUzQSU3QiUyMmxvYWRlZCUyMiUzQWZhbHNlJTdEJTJDJTIyc3Vic2NyaXB0aW9uVXNlcnMlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCU3RCUyQyUyMmFzc2Vzc21lbnQlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSUyQyUyMnF1ZXN0aW9uJTIyJTNBbnVsbCU3RCUyQyUyMnVzZXJDb25maWclMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0F0cnVlJTJDJTIybG9hZGluZyUyMiUzQWZhbHNlJTJDJTIyZGF0YSUyMiUzQSU3QiUyMmVkdWNhdGl2ZVN0YXRzJTIyJTNBJTdCJTIyd29ya3NfY291bnQlMjIlM0ExNTUlMkMlMjJjb3VudHJ5X2NvdW50JTIyJTNBMjAzJTJDJTIydXNlcnNfY291bnQlMjIlM0EzNDUwMDAlN0QlMkMlMjJsb2NhdGlvbiUyMiUzQSU3QiUyMmNvdW50cnklMjIlM0ElMjJVbml0ZWQlMjBLaW5nZG9tJTIwb2YlMjBHcmVhdCUyMEJyaXRhaW4lMjBhbmQlMjBOb3J0aGVybiUyMElyZWxhbmQlMjIlMkMlMjJjb250aW5lbnQlMjIlM0ElMjJFdXJvcGUlMjIlN0QlMkMlMjJsb2dnZWRPdXQlMjIlM0F0cnVlJTdEJTdEJTJDJTIydXNhZ2VTdGF0cyUyMiUzQSU3QiUyMnVzZXJzVGltZVNwZW50JTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlMkMlMjJjb3Vyc2VzVGltZVNwZW50JTIyJTNBJTdCJTIybG9hZGVkJTIyJTNBZmFsc2UlN0QlN0QlMkMlMjJhZG1pbnNXaXRoU3RhdHNBY2Nlc3MlMjIlM0ElN0IlMjJsb2FkZWQlMjIlM0FmYWxzZSU3RCU3RA==")));</script>
+          <script nonce="AcH1RKHmhQCKSbp/duuqgg==">var nonce = "AcH1RKHmhQCKSbp/duuqgg=="</script>        
+          <link data-chunk="main" rel="stylesheet" href="./oop_files/296.3db404d9.chunk.css">
+<link data-chunk="EditorPages-ViewEditorPage" rel="stylesheet" href="./oop_files/15.5c17b9f1.chunk.css">
+          <link data-chunk="main" rel="preload" as="script" href="./oop_files/runtime-main.6e84389d.js">
+<link data-chunk="main" rel="preload" as="style" href="./oop_files/296.3db404d9.chunk.css">
+<link data-chunk="main" rel="preload" as="script" href="./oop_files/296.702a8d04.chunk.js">
+<link data-chunk="main" rel="preload" as="script" href="./oop_files/main.4fe6b485.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/0.273500fe.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/1.d1aa1ad8.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/2.644a415f.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/9.3b070b23.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="style" href="./oop_files/15.5c17b9f1.chunk.css">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/15.b4e75772.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/17.829c36c5.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/26.a0049638.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/327.3ac6e3f8.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/14.6ed1d6bc.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/47.c9b01081.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/83.d8989baf.chunk.js">
+<link data-chunk="EditorPages-ViewEditorPage" rel="preload" as="script" href="./oop_files/EditorPages-ViewEditorPage.f82f2882.chunk.js">
+          
+          
+        <style data-styled="" data-styled-version="4.3.2"></style><script async="" src="./oop_files/hotjar-1142875.js"></script><meta property="og:title" content="Interactive Courses for Software Developers | Educative" data-rh="true"><script charset="utf-8" src="./oop_files/3.72c13839.chunk.js"></script><script charset="utf-8" src="./oop_files/6.0ebe6cba.chunk.js"></script><script charset="utf-8" src="./oop_files/8.67f897b5.chunk.js"></script><script charset="utf-8" src="./oop_files/7.1fec6b7d.chunk.js"></script><script charset="utf-8" src="./oop_files/MarkdownEditor-index-tsx.af953b5c.chunk.js"></script><script charset="utf-8" src="./oop_files/13.fe154597.chunk.js"></script><script charset="utf-8" src="./oop_files/19.d41dac45.chunk.js"></script><link rel="stylesheet" type="text/css" href="./oop_files/320.57ddf7ad.chunk.css"><script charset="utf-8" src="./oop_files/320.2511de89.chunk.js"></script><script charset="utf-8" src="./oop_files/Image-index-tsx.dbbaeb4f.chunk.js"></script><script charset="utf-8" src="./oop_files/4.dec4eeff.chunk.js"></script><script charset="utf-8" src="./oop_files/5.869121fb.chunk.js"></script><script charset="utf-8" src="./oop_files/10.28ee191c.chunk.js"></script><script charset="utf-8" src="./oop_files/16.29bc09a1.chunk.js"></script><script charset="utf-8" src="./oop_files/31.c1b26533.chunk.js"></script><script charset="utf-8" src="./oop_files/27.bc25cbeb.chunk.js"></script><link rel="stylesheet" type="text/css" href="./oop_files/32.57ddf7ad.chunk.css"><script charset="utf-8" src="./oop_files/32.535776d2.chunk.js"></script><script charset="utf-8" src="./oop_files/22.d1ac84cf.chunk.js"></script><script charset="utf-8" src="./oop_files/21.2d1f94f3.chunk.js"></script><script charset="utf-8" src="./oop_files/29.f5cc0e0a.chunk.js"></script><script charset="utf-8" src="./oop_files/33.5251ecf0.chunk.js"></script><script charset="utf-8" src="./oop_files/Code-index-tsx.0542c4c3.chunk.js"></script><script async="" src="./oop_files/modules.84652da0cfb5a1b610fa.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style>._hj-mMo1P__styles__resetStyles * {
+  line-height: normal;
+  font-family: Arial, sans-serif, Tahoma !important;
+  text-transform: initial !important;
+  letter-spacing: normal !important; }
+
+._hj-mMo1P__styles__resetStyles *::before,
+._hj-mMo1P__styles__resetStyles *::after {
+  box-sizing: initial; }
+
+._hj-mMo1P__styles__resetStyles div {
+  height: auto; }
+
+._hj-mMo1P__styles__resetStyles div,
+._hj-mMo1P__styles__resetStyles span,
+._hj-mMo1P__styles__resetStyles p,
+._hj-mMo1P__styles__resetStyles a,
+._hj-mMo1P__styles__resetStyles button {
+  font-weight: normal !important; }
+
+._hj-mMo1P__styles__resetStyles div,
+._hj-mMo1P__styles__resetStyles span,
+._hj-mMo1P__styles__resetStyles p,
+._hj-mMo1P__styles__resetStyles a,
+._hj-mMo1P__styles__resetStyles img,
+._hj-mMo1P__styles__resetStyles strong,
+._hj-mMo1P__styles__resetStyles form,
+._hj-mMo1P__styles__resetStyles label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  float: none !important; }
+
+._hj-mMo1P__styles__resetStyles span {
+  color: inherit; }
+
+._hj-mMo1P__styles__resetStyles ol,
+._hj-mMo1P__styles__resetStyles ul,
+._hj-mMo1P__styles__resetStyles li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+._hj-mMo1P__styles__resetStyles li:before,
+._hj-mMo1P__styles__resetStyles li:after {
+  content: none !important; }
+
+._hj-mMo1P__styles__resetStyles hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+._hj-mMo1P__styles__resetStyles input[type='submit'],
+._hj-mMo1P__styles__resetStyles input[type='button'],
+._hj-mMo1P__styles__resetStyles button {
+  margin: 0;
+  padding: 0;
+  float: none !important; }
+
+._hj-mMo1P__styles__resetStyles input,
+._hj-mMo1P__styles__resetStyles select,
+._hj-mMo1P__styles__resetStyles a img {
+  vertical-align: middle; }
+
+._hj-10MNR__styles__globalStyles *,
+._hj-10MNR__styles__globalStyles *::before,
+._hj-10MNR__styles__globalStyles *::after {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'hotjar';
+  src: url(https://script.hotjar.com/font-hotjar_5.fdcf0e.eot);
+  src: url(https://script.hotjar.com/font-hotjar_5.fdcf0e.eot#iefix) format("embedded-opentype"), url(https://script.hotjar.com/font-hotjar_5.c9fb91.woff2) format("woff2"), url(https://script.hotjar.com/font-hotjar_5.8598c5.ttf) format("truetype"), url(https://script.hotjar.com/font-hotjar_5.6da396.woff) format("woff"), url(https://script.hotjar.com/font-hotjar_5.a6049d.svg#hotjar) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@keyframes _hj-CvZ6d__styles__spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes _hj-19ojv__styles__colors {
+  0% {
+    border-color: #f4364c;
+    border-top-color: transparent; }
+  25% {
+    border-color: #00a2f2;
+    border-top-color: transparent; }
+  50% {
+    border-color: #efb60c;
+    border-top-color: transparent; }
+  75% {
+    border-color: #42ca49;
+    border-top-color: transparent; }
+  100% {
+    border-color: #f4364c;
+    border-top-color: transparent; } }
+
+._hj-10MNR__styles__globalStyles p {
+  color: inherit !important; }
+
+._hj-10MNR__styles__globalStyles a,
+._hj-10MNR__styles__globalStyles a:link,
+._hj-10MNR__styles__globalStyles a:hover,
+._hj-10MNR__styles__globalStyles a:active {
+  color: inherit !important;
+  text-decoration: underline; }
+
+._hj-10MNR__styles__globalStyles ._hj-1EbBs__styles__icon {
+  speak: none !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  word-wrap: normal !important;
+  white-space: nowrap !important;
+  line-height: normal !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  vertical-align: middle !important; }
+
+._hj-10MNR__styles__globalStyles ._hj-1EbBs__styles__icon,
+._hj-10MNR__styles__globalStyles ._hj-1EbBs__styles__icon:before,
+._hj-10MNR__styles__globalStyles ._hj-1EbBs__styles__icon:after,
+._hj-10MNR__styles__globalStyles ._hj-1EbBs__styles__icon *,
+._hj-10MNR__styles__globalStyles ._hj-1EbBs__styles__icon *:before,
+._hj-10MNR__styles__globalStyles ._hj-1EbBs__styles__icon *:after {
+  font-family: 'hotjar' !important;
+  display: inline-block !important;
+  direction: ltr !important; }
+
+._hj-10MNR__styles__globalStyles ._hj-1EbBs__styles__icon:before {
+  color: inherit !important; }
+
+._hj-10MNR__styles__globalStyles ._hj-WPdPO__styles__iconX:before {
+  content: '\E803'; }
+
+._hj-10MNR__styles__globalStyles ._hj-2WW4P__styles__iconOk:before {
+  content: '\E804'; }
+
+._hj-10MNR__styles__globalStyles ._hj-34EZP__styles__iconError:before {
+  content: '\E90C'; }
+
+._hj-10MNR__styles__globalStyles ._hj-lAAAw__styles__iconLogo:before {
+  content: '\E806'; }
+
+._hj-10MNR__styles__globalStyles ._hj-FxxIA__styles__surveyIcons {
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block !important;
+  zoom: 1;
+  vertical-align: middle; }
+
+._hj-widget-theme-light ._hj-10MNR__styles__globalStyles ._hj-FxxIA__styles__surveyIcons {
+  background-image: url(https://script.hotjar.com/widget_icons_light.ddcd59.png); }
+
+._hj-widget-theme-dark ._hj-10MNR__styles__globalStyles ._hj-FxxIA__styles__surveyIcons {
+  background-image: url(https://script.hotjar.com/widget_icons_dark.3a8118.png); }
+
+._hj-10MNR__styles__globalStyles ._hj-1oY0c__styles__inputField {
+  font-family: Arial, sans-serif, Tahoma;
+  font-size: 14px;
+  color: #333 !important;
+  padding: 6px !important;
+  text-indent: 0 !important;
+  height: 30px;
+  width: 100%;
+  min-width: 100%;
+  background: white;
+  border: 1px solid !important;
+  outline: none !important;
+  max-width: none !important;
+  float: none;
+  border-radius: 3px; }
+
+._hj-10MNR__styles__globalStyles ._hj-2xXAa__styles__textarea {
+  resize: none;
+  height: 100px; }
+
+._hj-10MNR__styles__globalStyles ._hj-12tLZ__styles__basicButton, ._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 7px 10px;
+  border: 0;
+  outline: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  zoom: 1;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  color: white; }
+  ._hj-10MNR__styles__globalStyles ._hj-12tLZ__styles__basicButton:hover, ._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton:hover, ._hj-10MNR__styles__globalStyles ._hj-12tLZ__styles__basicButton:focus, ._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton:focus, ._hj-10MNR__styles__globalStyles ._hj-12tLZ__styles__basicButton:active, ._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton:active {
+    background: #00a251; }
+  ._hj-10MNR__styles__globalStyles ._hj-12tLZ__styles__basicButton[disabled], ._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton[disabled] {
+    cursor: default; }
+
+._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton {
+  font-size: 13px !important;
+  font-weight: bold !important;
+  padding: 7px 10px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  min-height: initial !important;
+  width: auto !important;
+  min-width: initial !important;
+  background: #00c764 !important; }
+  ._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton:hover, ._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton:focus, ._hj-10MNR__styles__globalStyles ._hj-21tno__styles__primaryButton:active {
+    background: #00a251 !important; }
+
+._hj-10MNR__styles__globalStyles ._hj-2VnCa__styles__clearButton {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 13px !important;
+  padding: 7px 10px !important;
+  border: 0 !important; }
+  ._hj-10MNR__styles__globalStyles ._hj-2VnCa__styles__clearButton, ._hj-10MNR__styles__globalStyles ._hj-2VnCa__styles__clearButton:hover, ._hj-10MNR__styles__globalStyles ._hj-2VnCa__styles__clearButton:focus, ._hj-10MNR__styles__globalStyles ._hj-2VnCa__styles__clearButton:active {
+    background: transparent !important; }
+
+._hj-10MNR__styles__globalStyles ._hj-29HmU__styles__answersContentWrapper {
+  padding: 0 12px 12px 12px; }
+
+._hj-10MNR__styles__globalStyles ._hj-1KgX2__styles__spinner {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-top-color: transparent !important;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  animation: _hj-CvZ6d__styles__spin 0.4s linear infinite, _hj-19ojv__styles__colors 5.6s ease-in-out infinite; }
+
+._hj-2xXAa__styles__textarea { }
+
+._hj-WPdPO__styles__iconX,
+._hj-2WW4P__styles__iconOk,
+._hj-34EZP__styles__iconError,
+._hj-lAAAw__styles__iconLogo { }
+
+._hj-3v_Mp__styles__rtl,
+._hj-3v_Mp__styles__rtl * {
+  direction: rtl !important; }
+</style><style>._hj-3Qhhk__Notification__container {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Tahoma !important;
+  transition-duration: 350ms;
+  opacity: 0;
+  transform: scale(0.9);
+  display: flex;
+  background: #263345;
+  border-radius: 2px;
+  position: fixed;
+  z-index: 2147483646;
+  top: 20px;
+  left: 20px;
+  width: 400px;
+  padding: 25px;
+  box-shadow: "0 2px 4px 0 rgba(0,0,0,.3)"; }
+  ._hj-3Qhhk__Notification__container * {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif, Tahoma !important; }
+
+._hj-ldyOW__Notification__active {
+  opacity: 1;
+  transform: scale(1); }
+
+._hj-3e98A__Notification__status {
+  margin: 0 20px 0 0;
+  border-radius: 50%;
+  min-width: 50px;
+  height: 50px;
+  box-shadow: "0 2px 4px 0 rgba(0,0,0,.3)"; }
+
+._hj-2rMkS__Notification__good {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAABOCAYAAADIHIO3AAAAAXNSR0IArs4c6QAAB85JREFUeAHtnWmMFEUUgKcQEUFY1IBGVIhG4z9PVBQN8YpHQliEhaAGJYQYr0SNxn/4w6iJASGGoEYURcWAXIIciwZBwOgqkYQfGhPPxINTw+Gqu5Tfa7omvbM7R09Xd9dsdyVv6+g63nvfVE91V/esKuQhFg9orfvS8XXIjci5yNmIhH3Ib8gWZLNS6iBxHpL2AICGIfOQA1ofI6okupMKq5ArktYzs+PhbIU8hRyqDKccOL2ctqdl1oFJGI6DByIr6gMUBKd/op+rktA5c2PILEC+ig7JANNH6O/qzDkyToNx6Kl2IRVh7aPfi+LUPTN9+5C+tDeTDCQT652M0cc4tJgwBXlc3QM4cAi1NhUK+vLqteutoS+l5UzTWplEHtfmgQCkBJbUag9aDedaqyOfUbXx8WoBqYlEKzMpAUgypB7Gn5sklYMSL9QQApBG1VDdZpUW6SwHVYNLgTSYahv5hF9ZQ3XbVS6WDnNQVdwKpEFUEUhpXYieJyrmi4kKoAKQRleolsAh1TefUWXc7EPawExKG9JhVn2dOageQAHpFIrXA+maHg4nXXRABsxBlbg9AOnakkNpZdtk4BxUwP1AGkh2HTNpTKA47SSn33wxUYQQgHR9sTD1hGpHhZF8R/2Rzyg8AaQBRGtJOQTJ+5QsEEiSyvzy3If0IZDGeq5x5o/6E1UuBNReUSnTMwpIJ+ODNQ5C6kSvKQZSpkEFIN0gjnAsPAkk7oZkPAgkZFN8m35m86+eWD+dcTzHzQdQf6TVUUjP5JDwgA9po6OQnrUOyTf4HGK51dIQAV1PQjY4Cuk5K07EwCbkPkSe6tzf1Vh54FDO9/phRHYknQvoJZDWd9W7nu+PONro5yM7zDfwceISOOUU9qDNor7cinEi+DascxTSC5GdhIEjkF31Gah3S/vISkTsAB36IWvrs6Hch9FWuZ4d0TzvS3cUBu6JZqD+nT5Se+LTh7Qmmg22oJT2o+fYgCSLBJxc2nk9ed1OX9MjKxWyAx/SB3ZsqMfuSm303JDmdK+OgSciFp+jNgrr+dJ39xHtl/g2rHYU0jwrFmPkg/EZqLfSf6yrQh8SK1PzAXEp1i/ZgiSvjlg65ZVzkP6FMWJ5eNGHtNJRSPOjQgrePR/PMuKMqB1Wbq/l9chPceq0yvXCHaU/eQ3zPfTHBteCehmNHoqqVRBUc9TOamuv++PQRThXXp8UB0cKAUgTInUUS2P1Ct0+wJ1wHbX74sYhBrNR5T1bHbXPEO3VJ1RuCe67hGgs9+4E9BL0nhimXTJ11auMc78NSKKvBwqDeXdU70/GgNJR1M+UNGPQztIjlfI+pHfRe1KleukcU68x7kxbkMQGc+pL8S6Cllf7t+H4u0WhWgJ1T6De245CWohuViGJTwwo2fpNMciWuF4MgDk+hLK6BCBNLlsptQPqDYa2DknMMaAOpWZbl4H1o2TZ1NOndyn2Mz6kxUCd0tPxdMvUm4w/g9PdsTj0MN9RrMQKf+GAfnEMEr5P9SNt5Hvra9PWh/QWOk41Ze7EHqTpcUESO70ZxQDyoF+bO4brkeiyHTjezCEWPRc5ConvykKskOi/ELyO+Yi8K89bo4r3UOQSIF1G5kzyNS82qJ9QUO8w0L1xziRjSPA66iwKf8Ahjpz+jIquxorrt8I9QEpkIWYWEwUG/JWB+aLOQ3UPKG5XJQdJ9CnOKMlwmpHV1i5SwyWfh548oJZSOjWpmWQ0KM4oKWBwuTtxF6lEprNRonFitUz8kzQk8U8XUFKAEluIWkj9K/k8GA+o5aRkJnWYkiTjLqe+4MCcBm8mv5LToDNPFAX1SzatVjDe5LQgia1lQclBYMmLxvIG3hDJZzOoVdgtd/j/S9P+iqBEMWDJD1LwZkHcm4ppuqHc2Go1RyalDUm0qwpKKgHrAiIuiL073VKUgaDWYOSdLkASZ3dbTPREAGW/o3wMXL/t6XjvK1O8JlqY6Aok8W9NM8qAYGYNJd3KzLrElPW+WPGaaGECkJxa9dY0owwMlN9Leix8t5uy3hUrfgTEO905BUl8HAqUNAAW2yGFW0ixwOhNQW3AGtla+cdFq0KDEiMw5ijROFLvu2hUeJ28D52zkMSeukBJQ2DJ6YH9IvW65Bs3qE3oPh572l22oW5QYhTGyT3BGaRedNnI8ropLjkK41yHJPpHAiUdYKRGHiM1S/KNE9TH6NoQkMSnoZbn1SCwfH+EOnNZvlvtt9q44Y+rzbS5gw/Y3+HbptPCukOBNQ1TFgJLnr1zMHhP5wokWRA1TLAOSiwHVjORPLTv2La+t4Vze6NBEp/GAko6BpZj2yRqK2oJpCOiX6OF2ECJI4A1msiBbRK1DT1uA9Jh0asRQ6ygxCHASnmbxLvddWsjQxI/xg7Kh5XSNonawfgCyZFHtsUbjgdmlrxt/01yr27qHYw3yHG3uKkejhuK8H+Ryr3ja6tcf8Y4g930QoNohQPld5V4j9cWlNJ+9Oc5JEsfBhw5AInhl770F/TbZEnNvBvxAA6V3ylaam9m6Tb6y/DTUjF+rnBsH2RBdFgyO/OZFCOq413j5CeQo/UB07Np6+h9xdhdl/wAOHsEsgzpqA2Y/FBinP8MMnkfVBoxkQveSgqUHsP58usxLYjcKzwfGYnIbvJB5HukFVnHRexu4syE/wEDavfJf4zW9AAAAABJRU5ErkJggg==") no-repeat 52% 53% #3acc40;
+  background-size: 25px 18px; }
+
+._hj-38oE1__Notification__bad {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAB4CAYAAADsduKfAAAAAXNSR0IArs4c6QAABEZJREFUaAXtWt9vDUEU7q2iQjVtpEFDECqER31AIoKQePEm4qEvnohI/waJRLz5IzzwJqVJk4YI6YsIFVGiqVaFVlDakP7g+r65O9vd7uze2d05bTR7ku/O7OyZ891z5szsr6mpWSQp2fCUy+U66B0AtgAtwGpgDPgMDJRKpVGU2QUE7cBtYAKIk7848Ri4CKxMxYYOG4A7QFrpQ4dtVmRQbAPepWUI6I+jvjGRDAqbgbFAp6zVe7FEsLgCeJjVsqHf6SBZbeDgAupHAsd5q7Tni0pv/BuWA0CbfyZ/ZRYmWpH6X2hKe3QSdZcktM1UP8oKRRMdqxw6/z2oLWqiw7rBcekT6TH6BYI1jklobhJjtJ6VWiRCPUoJEtpvgP0mVhi6ZlYEZSttk2idIAlNt/KHRH9YEZS1tE0iTixJYQ4oohlJFthWiUaPmNqSwqux8ui3JAtsK0dqMaE4RnOCZD9pm6GjTFYKkV9le1kRLU3oFKvICHnjr8doQoiEZkPJ8EOIaBrTR6080h7500YTSXn0TUdKE33XDY5LPnEokSYaX3ZEkdD5g6ZddVQuXeik0jvskXfx8yeXo7DRTGSM2Cgxl8IekQXimmgGkfIXaz1hJYh8b2i8IGIUbMXPOHYoQmcbNuoVoUsTrZBubOhcXpPKoFSvZjR1ML1dXiomvCuC5pmfR44vFaF1jmxBj3jsagUPjY8k0aJ5tGhEReiYL5mkCF2msPFxMrKcSawMkTnEv/tfE0UyzuSRfwubaXQqnaqHzrtU5CWz8oj/aSSHN+z60dR/YTJQZ9ikmKLN+GFxSYlep/j3C1V5U/JmYSOPTR71mxQt24aRUMZXciailzDKf5ZFnsd1ihB561RWrx5YE3mKvXEdqrT3xJ2PeOQpdsV1SGh/hWjwg6S98CsmMASkkcv2DAFNMFxKwfIeuurzTcCEXRUd+VnuiQXZLHSO21mN0YIBfqPrSiD7inMnYrqHmtVXy1CL4QDG2tF8FtgO8FPdB6APuIUEkP4sBJpCiggUESgiUEQgFAHb1XsXenGjCvdkNQN80OI99lOs3i9QZhdcGlYBV4C3QJKM4uRVoDE1GzodAoaANMKL4DlrMih3ANNAVrmOjslDAoUzAHcA5pVrsZ7B8l5gKi9DoP95IxkUugNKLqrcENigydSdKhq4d+uUbnRUtsBOp7alb4l5hyMhfhaq7IBHg2DZIcEEmzsxqQd5N1qHA96vScluGmboGMvkvKdmdlFbSUlEjyRF2SdR6I27AKOyzw1I3OlkfMB1RPqJdugR5VGlcP47BYvPaFUTdTunqBjsRcTmd7shxZsALvOuJbotFQydjlnuG6MEEm5avuuIjM+0m4xEbMTJeqAnJ9kI+qvVIJbII+OjfweQdt83H5pvAOmeztGhEbgJzAHVhE/v+5M8qLrGwUATDOwLYA/qfG/K90V8QdWPFB5GmSj/AFf+LeTG2bgWAAAAAElFTkSuQmCC") no-repeat center center #ea4031;
+  background-size: 6px 30px; }
+
+._hj-1Zxo9__Notification__warning {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAB4CAYAAADsduKfAAAAAXNSR0IArs4c6QAABEZJREFUaAXtWt9vDUEU7q2iQjVtpEFDECqER31AIoKQePEm4qEvnohI/waJRLz5IzzwJqVJk4YI6YsIFVGiqVaFVlDakP7g+r65O9vd7uze2d05bTR7ku/O7OyZ891z5szsr6mpWSQp2fCUy+U66B0AtgAtwGpgDPgMDJRKpVGU2QUE7cBtYAKIk7848Ri4CKxMxYYOG4A7QFrpQ4dtVmRQbAPepWUI6I+jvjGRDAqbgbFAp6zVe7FEsLgCeJjVsqHf6SBZbeDgAupHAsd5q7Tni0pv/BuWA0CbfyZ/ZRYmWpH6X2hKe3QSdZcktM1UP8oKRRMdqxw6/z2oLWqiw7rBcekT6TH6BYI1jklobhJjtJ6VWiRCPUoJEtpvgP0mVhi6ZlYEZSttk2idIAlNt/KHRH9YEZS1tE0iTixJYQ4oohlJFthWiUaPmNqSwqux8ui3JAtsK0dqMaE4RnOCZD9pm6GjTFYKkV9le1kRLU3oFKvICHnjr8doQoiEZkPJ8EOIaBrTR6080h7500YTSXn0TUdKE33XDY5LPnEokSYaX3ZEkdD5g6ZddVQuXeik0jvskXfx8yeXo7DRTGSM2Cgxl8IekQXimmgGkfIXaz1hJYh8b2i8IGIUbMXPOHYoQmcbNuoVoUsTrZBubOhcXpPKoFSvZjR1ML1dXiomvCuC5pmfR44vFaF1jmxBj3jsagUPjY8k0aJ5tGhEReiYL5mkCF2msPFxMrKcSawMkTnEv/tfE0UyzuSRfwubaXQqnaqHzrtU5CWz8oj/aSSHN+z60dR/YTJQZ9ikmKLN+GFxSYlep/j3C1V5U/JmYSOPTR71mxQt24aRUMZXciailzDKf5ZFnsd1ihB561RWrx5YE3mKvXEdqrT3xJ2PeOQpdsV1SGh/hWjwg6S98CsmMASkkcv2DAFNMFxKwfIeuurzTcCEXRUd+VnuiQXZLHSO21mN0YIBfqPrSiD7inMnYrqHmtVXy1CL4QDG2tF8FtgO8FPdB6APuIUEkP4sBJpCiggUESgiUEQgFAHb1XsXenGjCvdkNQN80OI99lOs3i9QZhdcGlYBV4C3QJKM4uRVoDE1GzodAoaANMKL4DlrMih3ANNAVrmOjslDAoUzAHcA5pVrsZ7B8l5gKi9DoP95IxkUugNKLqrcENigydSdKhq4d+uUbnRUtsBOp7alb4l5hyMhfhaq7IBHg2DZIcEEmzsxqQd5N1qHA96vScluGmboGMvkvKdmdlFbSUlEjyRF2SdR6I27AKOyzw1I3OlkfMB1RPqJdugR5VGlcP47BYvPaFUTdTunqBjsRcTmd7shxZsALvOuJbotFQydjlnuG6MEEm5avuuIjM+0m4xEbMTJeqAnJ9kI+qvVIJbII+OjfweQdt83H5pvAOmeztGhEbgJzAHVhE/v+5M8qLrGwUATDOwLYA/qfG/K90V8QdWPFB5GmSj/AFf+LeTG2bgWAAAAAElFTkSuQmCC") no-repeat center center #f39c11;
+  background-size: 6px 30px; }
+
+._hj-1h3WZ__Notification__content {
+  color: #dedede;
+  font-size: 13px; }
+
+._hj-2KcMV__Notification__title {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px; }
+
+._hj-3-rwN__Notification__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  line-height: 11px; }
+</style><style type="text/css">/*
+ * contextMenu.js v 1.4.0
+ * Author: Sudhanshu Yadav
+ * s-yadav.github.com
+ * Copyright (c) 2013 Sudhanshu Yadav.
+ * Dual licensed under the MIT and GPL licenses
+**/
+
+.iw-contextMenu {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10) !important;
+    border: 1px solid #c8c7cc !important;
+    border-radius: 11px !important;
+    display: none;
+    z-index: 1000000132;
+    max-width: 300px !important;
+    width: auto !important;
+}
+
+.dark-mode .iw-contextMenu,
+.TnITTtw-dark-mode.iw-contextMenu,
+.TnITTtw-dark-mode .iw-contextMenu {
+    border-color: #747473 !important;
+}
+
+.iw-cm-menu {
+    background: #fff !important;
+    color: #000 !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    overflow: visible !important;
+}
+
+.dark-mode .iw-cm-menu,
+.TnITTtw-dark-mode.iw-cm-menu,
+.TnITTtw-dark-mode .iw-cm-menu {
+    background: #525251 !important;
+    color: #FFF !important;
+}
+
+.iw-curMenu {
+}
+
+.iw-cm-menu li {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+    list-style: none !important;
+    padding: 10px !important;
+    padding-right: 20px !important;
+    border-bottom: 1px solid #c8c7cc !important;
+    font-weight: 400 !important;
+    cursor: pointer !important;
+    position: relative !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    line-height: inherit !important;
+    border-radius: 0 !important;
+    display: block !important;
+}
+
+.dark-mode .iw-cm-menu li, .TnITTtw-dark-mode .iw-cm-menu li {
+    border-bottom-color: #747473 !important;
+}
+
+.iw-cm-menu li:first-child {
+    border-top-left-radius: 11px !important;
+    border-top-right-radius: 11px !important;
+}
+
+.iw-cm-menu li:last-child {
+    border-bottom-left-radius: 11px !important;
+    border-bottom-right-radius: 11px !important;
+    border-bottom: none !important;
+}
+
+.iw-mOverlay {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0px !important;
+    left: 0px !important;
+    background: #FFF !important;
+    opacity: .5 !important;
+}
+
+.iw-contextMenu li.iw-mDisable {
+    opacity: 0.3 !important;
+    cursor: default !important;
+}
+
+.iw-mSelected {
+    background-color: #F6F6F6 !important;
+}
+
+.dark-mode .iw-mSelected, .TnITTtw-dark-mode .iw-mSelected {
+    background-color: #676766 !important;
+}
+
+.iw-cm-arrow-right {
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 5px solid transparent !important;
+    border-bottom: 5px solid transparent !important;
+    border-left: 5px solid #000 !important;
+    position: absolute !important;
+    right: 5px !important;
+    top: 50% !important;
+    margin-top: -5px !important;
+}
+
+.dark-mode .iw-cm-arrow-right, .TnITTtw-dark-mode .iw-cm-arrow-right {
+    border-left-color: #FFF !important;
+}
+
+.iw-mSelected > .iw-cm-arrow-right {
+}
+
+/*context menu css end */</style><style type="text/css">@-webkit-keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+@keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}</style><style type="text/css">/* This is not a zero-length file! */</style></head>
+        <body class="fade-out" data-version="1.0.0">
+        <div id="pace-loader" class="pace-big pace-done"></div>
+        <div id="app-container"><div class="b-root"><div id="app"><div class="sc-bbmXgH kDqyiH"><div class="sc-hEsumM KBZCB"></div><div class="sc-jqCOkK gSevpH"><div class="sc-jnlKLf frsyiq"></div><div id="handleScroll" class="sc-uJMKN cIpOyS"><div class="fade-container"><div class="fade-container"><div class="sc-jAaTju dqIvLN"><div class="sc-hqGPoI bVwyRj"><div class="sc-imAxmJ fFCuTd"><a title="educative.io" class="sc-ckVGcZ hUBNVE" href="https://www.educative.io/"><svg viewBox="0 0 1138.66 222" height="23px"><path d="M179.67 8H42.34A34.33 34.33 0 008 42.33v137.34A34.33 34.33 0 0042.34 214h137.33A34.33 34.33 0 00214 179.67V42.33A34.33 34.33 0 00179.67 8zm14.71 167.5a18.88 18.88 0 01-18.88 18.88h-129a18.88 18.88 0 01-18.88-18.88V91.38h166.76zm0-103.74H27.62V46.5A18.88 18.88 0 0146.5 27.62h129a18.88 18.88 0 0118.88 18.88z" fill="#4951f5"></path><rect x="42.97" y="40.4" width="19.62" height="19.62" rx="1.23" fill="#4951f5"></rect><rect x="72.84" y="40.4" width="19.62" height="19.62" rx="1.23" fill="#4951f5"></rect><rect x="102.71" y="40.4" width="19.62" height="19.62" rx="1.23" fill="#4951f5"></rect><rect x="111" y="160.05" width="58.86" height="19.62" rx="1.72" fill="#4951f5"></rect><path d="M64.09 178.51a1.72 1.72 0 002.43-.11l31.84-34.83a1.72 1.72 0 000-2.26l-30-35.62a1.7 1.7 0 00-2.41-.21l-10.25 8.69a1.71 1.71 0 00-.21 2.42l20.4 24.26a1.72 1.72 0 010 2.26L54 167a1.72 1.72 0 00.11 2.43z" fill="#4951f5"></path><path d="M358.38 101.61a44.19 44.19 0 00-17.27-17.17 51.76 51.76 0 00-49.23.46 45.68 45.68 0 00-17.35 18 53.25 53.25 0 00-6.29 25.94A52.5 52.5 0 00274.7 155a45.51 45.51 0 0018.3 18q11.87 6.47 27.45 6.46a56.55 56.55 0 0022-4.06 38.84 38.84 0 0015.94-12l-11.69-14.21q-10.28 10.69-25.68 10.7-10.45 0-17.89-4.43a25.47 25.47 0 01-10.8-12.92l72.43-14.77q-.01-14.99-6.38-26.16zm-68.71 26.12v-.18q0-14 7.52-22.34t19.75-8.31a26.07 26.07 0 0126.21 20.1zM455.89 91.55a34.9 34.9 0 00-13.35-10 43.69 43.69 0 00-17.26-3.34 48.52 48.52 0 00-24.65 6.31 44.56 44.56 0 00-17.17 17.81q-6.24 11.5-6.23 26.53t6.23 26.62a44.36 44.36 0 0017.17 17.9 48.42 48.42 0 0024.65 6.31 44.34 44.34 0 0017.88-3.53c5.4-2.35 9.94-5.87 12.22-10.57v13.87H475V42.33h-19.11zm-3.39 53.61A27 27 0 01442.36 156a29.24 29.24 0 01-28.83 0 27 27 0 01-10.14-10.86 34.35 34.35 0 01-3.74-16.32 34.42 34.42 0 013.74-16.33 27.06 27.06 0 0110.14-10.85 29.24 29.24 0 0128.83 0 27.06 27.06 0 0110.14 10.85 34.3 34.3 0 013.74 16.33 34.23 34.23 0 01-3.74 16.34zM564.4 129.39c0 12.76-3.9 17-8.59 22.17s-11 7.7-18.95 7.7q-10.68 0-16.46-6.58c-3.86-4.39-5.19-11-5.19-20V78.37h-19.34v57.52q0 21.71 10.95 32.74c7.29 7.36 13.78 11 26.48 11a41.46 41.46 0 0017.26-3.62 37.15 37.15 0 0013.84-10.3v13.62H584v-101h-19.6zM652.63 97.58a26 26 0 0113.13 3.42 27.42 27.42 0 0110 10.31l16.69-10.4a37.61 37.61 0 00-15.56-17.09q-10.35-5.94-24.08-5.94a51.54 51.54 0 00-26 6.5 46.45 46.45 0 00-17.82 18 55.57 55.57 0 000 52.46A46.14 46.14 0 00626.9 173a51.65 51.65 0 0025.91 6.49 46.56 46.56 0 0023.9-6 39.09 39.09 0 0015.74-17.18l-16.69-10.4a27.35 27.35 0 01-10 10.31 26 26 0 01-13.13 3.44q-12.35 0-20.25-8.45t-7.92-22.57q0-14.1 8-22.56a26.61 26.61 0 0120.17-8.5zM852.87 160.56q-6.24 0-9.7-3.8a19.08 19.08 0 01-4.46-11c-.06-3.46 0-47.68 0-47.68L863.2 98l.09-19.52h-24.53V58.72h-19.62v19.75h-14.69V98h14.69v48.47q0 16.32 8.55 24.86c5.69 5.69 12.07 8.28 22.51 8.28A41.3 41.3 0 00862 178a26 26 0 009.52-5l-6.22-16.51a19 19 0 01-12.43 4.07zM891.83 78.4h19.18v101.07h-19.18zM979.29 154.07l-29.54-75.66h-21.72l39.64 101.06h22.65l40.76-101.06h-21.36l-30.43 75.66zM1086.7 160q-10.5 0-18-4.45a25.63 25.63 0 01-10.86-13l72.79-14.85q0-15-6.41-26.24a44.35 44.35 0 00-17.35-17.26 49.6 49.6 0 00-24.29-6 49 49 0 00-25.18 6.5 46 46 0 00-17.4 18.07c-4.21 7.74-7.4 16.42-7.4 26.07s3.25 18.52 7.58 26.25a45.62 45.62 0 0018.42 18.08q11.91 6.5 27.58 6.5a56.89 56.89 0 0022.07-4.08 38.88 38.88 0 0016-12.06l-11.74-14.29Q1102.19 160 1086.7 160zm-31.49-32.46q0-14.1 7.56-22.45t19.84-8.34A26.19 26.19 0 011109 117l-53.74 10.75zM891.77 39.21h19.57v19.43h-19.57zM780.92 85.73c-7.38-5-14.91-7.88-27.89-7.88-20.46 0-34 5.45-40.36 16.22l19 8.94c2.72-5.41 9.36-8 20.39-8 6.94 0 12 .89 15 2.67 2.85 1.68 4.6 3.76 5.19 6.19s-.07 6.55 0 12h-5.22c-40.81 0-61.5 11.73-61.5 34.85a25.77 25.77 0 0010.23 21c6.67 5.32 15.24 8 25.47 8 12.62 0 23.39-3.15 32.07-9.36v9l19 .27v-64.2c.1-14.56-3.76-24.56-11.38-29.7zm-7.57 64.46A29.92 29.92 0 01762 159a37.31 37.31 0 01-15.67 3.48c-5.78 0-10.38-1.15-13.67-3.42a10.44 10.44 0 01-4.63-9.23c0-11.61 12-17.49 35.68-17.49h9.69z" fill="#202033"></path></svg></a><span class="sc-hPeUyl eTzdYP">|</span><a class="sc-iWadT iKEFBr" href="https://www.educative.io/blog"><p class="MuiTypography-root jss16 jss17 jss8  MuiTypography-body1">Blog Home</p></a></div></div><div class="sc-jGFFOr bVDwiI"><h1 class="MuiTypography-root jss16 jss50 jss2  MuiTypography-h1 MuiTypography-alignCenter">What is Object Oriented Programming? OOP Explained in Depth</h1></div><div class="sc-hZeNU dutCDg"><div class="sc-hMjcWo fsaahz"><div class="sc-eAudoH iruZHH"><div size="64" class="sc-kvZOFW hlsQiX" overflow="default"><div class=" sb-avatar sb-avatar--text" style="display:inline-block;vertical-align:middle;width:64px;height:64px;border-radius:100%;font-family:Helvetica, Arial, sans-serif"><div class=" sb-avatar__text" style="width: 64px; height: 64px; line-height: initial; text-align: center; color: rgb(255, 255, 255); border-radius: 100%; background: rgb(85, 83, 255);" title="Erin Doherty"><div style="display: table; table-layout: fixed; width: 100%; height: 100%; font-size: 32px;"><span style="display: table-cell; vertical-align: middle; white-space: nowrap;"><span>ED</span></span></div></div></div></div><div class="sc-gLdKKF gUGlWk"><div class="sc-RWGNv dJcILt">Erin Doherty</div><div class="sc-gCUMDz gyUBWG">Apr 15, 2020</div></div></div><div class="sc-bLJvFH gXnMcW"><div class="MuiBox-root jss52" style="display:none"><h5 class="MuiTypography-root jss16 jss53 jss6  MuiTypography-h5 MuiTypography-alignLeft"></h5></div><div class="sc-ZUflv nOmXM"><button aria-label="facebook" class="react-share__ShareButton" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><div rotate="0" color="#000" size="16" id="facebook" display="inline-flex" name="icon-button" class="sc-hzDkRC iPBCVA"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div></button><button aria-label="twitter" class="react-share__ShareButton" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><div rotate="0" color="#000" size="16" id="twitter" display="inline-flex" name="icon-button" class="sc-hzDkRC iPBCVA"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></div></button><button aria-label="linkedin" class="react-share__ShareButton" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><div rotate="0" color="#000" size="16" id="linkedin" display="inline-flex" name="icon-button" class="sc-hzDkRC iPBCVA"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></div></button></div></div><div class="styles__Cover-sc-11w7g2d-1 kNSTqo"><img alt="editor-page-cover" class="sc-hgzKov cjNqHa" src="./oop_files/5909454286487552"></div><div class="PageContent-sc-1cpsjbg-0 jzpjVa"><div class="styles__CompListStyled-sc-16zr3w-0 hacCmV"><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>Object-oriented programming (OOP) is a fundamental programming paradigm that all developers should have in their toolbox. So today we will break down the basics of what makes a program object-oriented so that you can start to utilize this paradigm in your own projects.</p>
+<p>Here’s what will be covered:</p>
+<ul>
+<li><a href="https://www.educative.io/blog/object-oriented-programming#what-is">What is Object-oriented programming?</a></li>
+<li><a href="https://www.educative.io/blog/object-oriented-programming#why">Why OOP?</a></li>
+<li><a href="https://www.educative.io/blog/object-oriented-programming#building">Building blocks of OOP</a></li>
+<li><a href="https://www.educative.io/blog/object-oriented-programming#four">Four principles of OOP</a></li>
+<li><a href="https://www.educative.io/blog/object-oriented-programming#benefits">Benefits of OOP</a></li>
+<li><a href="https://www.educative.io/blog/object-oriented-programming#conclusion">Conclusion</a></li>
+</ul>
+<br>
+<p><a name="what-is" target="_blank"></a></p>
+<h2>What is Object Oriented Programming?</h2>
+<p>Object Oriented programming (OOP) is a programming paradigm that includes or relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints (usually called classes) which are used to create individual instances of objects. Because OOP is a programming paradigm, there are many object-oriented programming languages including: C++, Java, and Python.</p>
+<p>A programmer designs a software program by organizing related pieces of information and behaviors together into a template called a class. Then individual objects are instantiated or created from the class template; these objects usually represent a real world thing.  The entire software program runs by having multiple objects interact with objects to create the larger program.</p>
+<blockquote>
+<p>Note - for this article, we are going to deal with class-based OOP, the most popular kind! Other OOP languages that use class based OOP include C++, Java, Python, (and many more). Pretty much any programming language can be used to write OOP code, since it’s a style of programming.  Most languages are multi-paradigm, which means the language can support multiple programming styles - like OOP, imperative, procedural, or functional programming.</p>
+</blockquote>
+<br> 
+<p><a name="why" target="_blank"></a></p>
+<h2>Why OOP?</h2>
+<p>OOP makes code organized, reusable, and easy to maintain; It follows the DRY method (Don’t Repeat Yourself). Benefits of OOP include security; OOP prevents unwanted access to data, or exposing proprietary code through encapsulation and abstraction  - both are discussed further in the Principles of OOP section.</p>
+<p>So how do programmers create Object Oriented programs? Well the short answer is by making classes, and creating objects from the classes. In OOP everything is an object.
+Classes form the blueprint for how data &amp; behaviors  are structured.</p>
+<p>Objects are created for specific instances of a class.
+As a programmer, you might create a dog class (blueprint) as a standard way to organize all the important information about dogs, and then instantiate an individual dog as an object created from the dog class - like your dog Fluffy.</p>
+<p><strong>The rest of the article goes into the dog class example in depth using JavaScript</strong>.</p>
+<br>
+<p><a name="building" target="_blank"></a></p>
+<h2>Building blocks of OOP</h2>
+<p>For this article, we’ll discuss OOP in JavaScript. Assuming you’ve got a limited familiarity with JavaScript, the code building blocks to build an OOP program we’ll discuss are:</p>
+<ul>
+<li>classes</li>
+<li>objects</li>
+<li>methods</li>
+<li>attributes</li>
+</ul>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div><div style="text-align: center;"><div class="styles__ImageLightbox-sc-1cz5dtf-2 hMPJSX"><div data-rmiz-wrap="visible"><img src="./oop_files/4522286854963200" alt="widget"><button aria-label="Zoom image" data-rmiz-btn-open="true"></button></div></div></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><br>
+<h3>Example OOP Structure</h3>
+<p>Let’s take a real world problem, and conceptually design an OOP software program. Imagine running a pet sitting camp, with hundreds of pets, and you have to keep track of the names, ages, and days attended for each pet. How would you design simple, reusable software to model the pets?</p>
+<p>With hundreds of pets, if code had to be created from scratch for each new pet there would be way too much code. Here’s a code snippet in JavaScript of creating two dog objects:</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">//Object of one individual dog
+var rufus = {
+    name: "Rufus",
+    birthday: "2/1/2017",
+    age: function() {
+        return Date.now() - this.birthday;
+    },
+    attendance: 0
+}
+
+//Object of second individual dog
+var fluffy = {
+    name: "Fluffy",
+    birthday: "1/12/2019",
+    age: function() {
+        return Date.now() - this.birthday;
+    },
+    attendance: 0
+}</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>What do you notice about the code? There is a lot of duplicated code between both objects - the <code>age()</code> function appears in each object. If you think about hundreds of pets, you wouldn’t want to duplicate the code that many times. In OOP, programmers think about how to model things using objects so code is reusable and maintainable.</p>
+<p>Grouping related information together to form a class structure makes the code shorter and easier to maintain.</p>
+<p>In the pet sitting camp example, here’s how a programmer could think about organizing an OOP:</p>
+<ol>
+<li>Group pets into categories
+Like Dog, Cat
+<ul>
+<li>Determine the information the software should model for each pet category</li>
+</ul>
+</li>
+<li>Create classes
+<ul>
+<li>Classes a blueprint of information for each pet</li>
+</ul>
+</li>
+<li>Add Attributes to classes
+<ul>
+<li>Data fields to store for each pet, like name</li>
+</ul>
+</li>
+<li>Add Behaviors to classes
+<ul>
+<li>Functionality that each pet needs to do, like bark</li>
+</ul>
+</li>
+<li>Create objects from the class
+<ul>
+<li>Objects are individual instances of the class template</li>
+<li>In our case dogs like Rufus &amp; Fluffy</li>
+</ul>
+</li>
+</ol>
+<p>We’ll start with a basic example of OOP representing dogs conceptually, and then discuss the code pieces that make up OOP: classes, methods, and objects using JavaScript.</p>
+<p>The diagram below represents how to design an OOP: grouping the related data and behaviors together to form a simple template. In this case, the <code>Dog</code> class is a simplified representation of everything we want to store in the software about dogs. The <code>Dog</code> class is a generic template - containing only the structure about information and behaviors common to all dogs.  To create an individual dog, the programmer instantiates an instance of the <code>Dog</code> Class, and passes in information from the individual dog.</p>
+<p>Let’s say we wanted to store more information specific to French Bulldogs, we can use the <code>Dog</code> class as a parent class, and add a child class <code>French Bulldog</code> with more behaviors and data. Objects are created, or instantiated, from classes. Rufus is an instance of the <code>dog</code> class. Fluffy &amp; Maisel are instances of the <code>French Bulldog</code> class. Inheritance is the ability to create parent and child classes: the <code>French Bulldog</code> class inherits the <code>Dog</code> class. Inheritance is one of the principles of OOP, more about it in the next section.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div><div style="text-align: center;"><div class="styles__ImageLightbox-sc-1cz5dtf-2 hMPJSX"><div data-rmiz-wrap="visible"><img src="./oop_files/6394120273657856" alt="widget"><button aria-label="Zoom image" data-rmiz-btn-open="true"></button></div></div></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p><strong>Here’s a brief example:</strong></p>
+<p><code>Dog</code> is a parent class with generic methods, a blueprint for creating any type of dog. <code>French Bulldog</code> is a child class of the <code>Dog</code> parent class. The <code>French Bulldog</code> class adds more specific attributes and methods unique to French Bulldogs – like nap. The <code>French Bulldog</code> class also inherits the attributes and methods of the parent class. Next, the programmer creates instances of the French Bulldog class – one named <code>Fluffy</code> and one named <code>Maisel</code>. Fluffy &amp; Maisel can both bark and nap. However, Rufus is an instance of the generic <code>dog</code> parent class, so Rufus can bark but he can’t nap. <code>Nap</code> is a method of the child class, and Rufus is an object created from the parent class <code>Dog</code>.</p>
+<br>
+<h3>Classes</h3>
+<p>In a nutshell, they’re essentially user defined data types. Classes are where the programmer creates a blueprint for the structure of methods and attributes. Individual objects are instantiated, or created from this blueprint. Classes contain fields for attributes, and methods for behaviors. In our <code>dog</code> class example, attributes include <code>name</code> &amp; <code>birthday</code>, while methods include <code>bark()</code> and <code>updateAttendance()</code>.
+Here’s a code snippet demonstrating how to program a <code>dog</code> class using the JavaScript language.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">class Dog {
+    constructor(name, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
+    //Declare private variables
+    _attendance = 0;
+
+    getAge() {
+        //Getter
+        return this.calcAge();
+    }
+
+    calcAge() {
+        //calculate age using today's date and birthday
+        return Date.now() - this.birthday;
+    }
+    
+    bark() {
+        return console.log("Woof!");
+    }
+
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
+}</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>Remember the class is a template for modeling a dog, and an object is instantiated from the class representing an individual real world thing - Rufus the dog.</p>
+<br>
+<h3>Objects</h3>
+<p>Of course OOP includes objects! Objects are instances of classes created with specific data, for example in the code snippet below Rufus is an instance of the <code>dog</code> class.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">class Dog {
+    constructor(name, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
+    //Declare private variables
+    _attendance = 0;
+
+    getAge() {
+        //Getter
+        return this.calcAge();
+    }
+
+    calcAge() {
+        //calculate age using today's date and birthday
+        return Date.now() - this.birthday;
+    }
+    
+    bark() {
+        return console.log("Woof!");
+    }
+
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
+}
+
+//instantiate a new object of the Dog class, and individual dog named Rufus
+const rufus = new Dog("Rufus", "2/1/2017");</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>When the new class <code>Dog</code> is called:</p>
+<ul>
+<li>A new object is created named rufus</li>
+<li>The constructor runs <code>name</code> &amp; <code>birthday</code> arguments, and assigns values</li>
+</ul>
+<p>Programming vocabulary: In JavaScript objects are a type of variable. This may cause confusion, because objects can also be declared without a class template in JavaScript, as shown at the beginning.
+Objects have states and behaviors. State is defined by data: things like names, birthday, and other information you’d want to store about a dog. Behaviors are methods, the object can undertake.</p>
+<table>
+<thead>
+<tr>
+<th>N/A</th>
+<th>What is it?</th>
+<th>Contain Information?</th>
+<th>Actions?</th>
+<th style="text-align:right">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Classes</td>
+<td>Blueprint</td>
+<td>Attributes</td>
+<td>Behaviors defined through methods</td>
+<td style="text-align:right">Dog Template</td>
+</tr>
+<tr>
+<td>Objects</td>
+<td>Instance</td>
+<td>State, Data</td>
+<td>Methods</td>
+<td style="text-align:right">Rufus, Fluffy</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3>Attributes</h3>
+<p>Attributes are the information that is stored. Attributes are defined in the <code>Class</code> template. When objects are instantiated individual objects contain data stored in the Attributes field.</p>
+<p>The state of an object is defined by the data in the object’s attributes fields. For example, a puppy and a dog might be treated differently at pet camp. The birthday could define the state of an object, and allow the software to handle dogs of different ages differently.</p>
+<br>
+<h3>Methods</h3>
+<p>Methods represent behaviors. Methods perform actions; methods might return information about an object, or update an object’s data. The method’s code is defined in the class definition. When individual objects are instantiated, these objects can call the methods defined in the class. In the code snippet below, the <code>bark</code> method is defined in <code>Dog</code> class, and the <code>bark</code> method is called on the Rufus object.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">class Dog {
+    //Declare protected (private) fields
+    _attendance = 0;
+
+    constructor(name, birthday) {
+        this.namee = name;
+        this.birthday = birthday;
+    }
+
+    getAge() {
+        //Getter
+        return this.calcAge();
+    }
+
+    calcAge() {
+        //calculate age using today's date and birthday
+        return this.calcAge();
+    }
+
+    bark() {
+        return console.log("Woof!");
+    }
+
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
+}</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>Methods often modify, update or delete data. Methods don’t have to update data though – for example the <code>bark</code> method doesn’t update any data because barking doesn’t modify any of the attributes of the <code>dog</code> class - <code>name</code> or <code>birthday</code>. The <code>updateAttendance()</code> method adds a day the Dog attended the pet sitting camp. The attendance attribute is important to keep track of for billing Owners at the end of the month.</p>
+<p>Methods are how programmers promote reusability, and keep functionality encapsulated inside an object. More on encapsulation and data abstraction in the Principles of OOP section. This reusability is a great benefit when debugging – if there’s an error, there’s only one place to find it and fix it instead of many.</p>
+<p><strong>Note:</strong> the underscore in <code>_attendance</code> denotes that the variable is protected, and shouldn’t be modified directly. The <code>updateAttendance()</code> method is used to change <code>_attendance</code>. For more on private variables in JavaScript, see <a href="https://css-tricks.com/implementing-private-variables-in-javascript/" target="_blank">Implementing Private Variables in JavaScript</a>.</p>
+<br>
+<div style="background-color:#F1F1FF;padding-left: 10px;padding-top:1px;padding-bottom:1px;">
+<h2>Keep the learning going.</h2>
+<p>Learn OOP without scrubbing through videos or documentation. Educative’s text-based courses are easy to skim and feature live coding environments - making learning quick and efficient.
+<b></b></p><b>
+</b><p><b><strong>Learn OOP in <a href="https://www.educative.io/courses/learn-object-oriented-programming-in-java" target="_blank">Java</a>, <a href="https://www.educative.io/courses/learn-object-oriented-programming-in-javascript" target="_blank">JS</a>, <a href="https://www.educative.io/courses/learn-object-oriented-programming-in-python" target="_blank">Python</a>, <a href="https://www.educative.io/courses/learn-object-oriented-programming-in-cpp" target="_blank">C++</a>, <a href="https://www.educative.io/courses/learn-object-oriented-programming-in-c-sharp" target="_blank">C#</a></strong> </b></p>
+</div>
+<br>
+<br>
+<p><a name="four" target="_blank"></a></p>
+<h2>Four principles of OOP</h2>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div><div style="text-align: center;"><div class="styles__ImageLightbox-sc-1cz5dtf-2 hMPJSX"><div data-rmiz-wrap="visible"><img src="./oop_files/4893195767906304" alt="widget"><button aria-label="Zoom image" data-rmiz-btn-open="true"></button></div></div></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>The Four main OOP concepts we’ll talk about are:</p>
+<ul>
+<li><strong>Inheritance:</strong> child classes inherit data and behaviors from parent class</li>
+<li><strong>Encapsulation:</strong> containing information in an object, exposing only selected information</li>
+<li><strong>Abstraction:</strong> only exposing high level public methods for accessing an object</li>
+<li><strong>Polymorphism:</strong> many methods can do the same task</li>
+</ul>
+<br>
+<h3>Inheritance</h3>
+<p>Inheritance allows classes to inherit features of other classes. Put another way, parent classes extend attributes and behaviors to child classes. <strong>Inheritance supports reusability</strong> – if basic attributes and behaviors are defined in a parent class, child classes can be created extending the functionality of the parent class, and adding additional attributes and behaviors.</p>
+<p>Look at an extension of our dog example:</p>
+<p>Let’s say that French Bulldogs are a special type of dog that requires more attention than your average dog. We can create a child class <code>FrenchBulldog</code> from the parent class <code>Dog</code>, and then add behaviors. The benefits of inheritance are programs can create a generic parent class, and then create more specific child classes as needed. This simplifies overall programming, because instead of recreating the structure of the <code>Dog</code> class multiple times, <strong>child classes can extend the functionality of a parent class.</strong></p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div><div style="text-align: center;"><div class="styles__ImageLightbox-sc-1cz5dtf-2 hMPJSX"><div data-rmiz-wrap="visible"><img src="./oop_files/4829571196125184" alt="widget"><button aria-label="Zoom image" data-rmiz-btn-open="true"></button></div></div></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>In the example code snippet, child class <code>French Bulldog</code> inherits the method <code>bark</code> from the parent class <code>Dog</code>, and the child class adds an additional method - <code>nap</code>. Notice that the <code>FrenchBulldog</code> class does not have a copy of the <code>bark</code> method, it inherits the <code>bark</code> method defined in the parent <code>Dog</code> class.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">//Parent class Dog
+class Dog{
+    //Declare protected (private) fields
+    _attendance = 0;
+
+    constructor(namee, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
+    getAge() {
+        //Getter
+        return this.calcAge();
+    }
+
+    calcAge() {
+        //calculate age using today's date and birthday
+        return this.calcAge();
+    }
+
+    bark() {
+        return console.log("Woof!");
+    }
+
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
+}
+
+//Child class French Bulldog, inherits from parent
+class FrenchBulldog extends Dog {
+    constructor(name, birthday) {
+        super(name);
+        super(birthday);
+    }
+
+    nap() {
+        //additional method for FrenchBulldog child class
+        return console.log("Snore")
+    }
+}</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>When the code calls <code>fluffy.bark()</code> method, the <code>bark</code> method walks up the chain of child =&gt; parent classes, to find where the <code>bark</code> method is defined.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">//Parent class Dog
+class Dog{
+    //Declare protected (private) fields
+    _attendance = 0;
+
+    constructor(namee, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
+    getAge() {
+        //Getter
+        return this.calcAge();
+    }
+
+    calcAge() {
+        //calculate age using today's date and birthday
+        return this.calcAge();
+    }
+
+    bark() {
+        return console.log("Woof!");
+    }
+
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
+}
+
+//Child class French Bulldog, inherits from parent
+class FrenchBulldog extends Dog {
+    constructor(name, birthday) {
+        super(name);
+        super(birthday);
+    }
+
+    nap() {
+        //additional method for FrenchBulldog child class
+        return console.log("Snore")
+    }
+}
+
+//instantiate a new FrenchBulldog object
+const fluffy = new FrenchBulldog("Fluffy", "1/12/2019");
+fluffy.bark();</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><blockquote>
+<p>Note: Parent class is also known as super class, or base class. Child class can also be called derived class, or extended class.</p>
+</blockquote>
+<p>In JavaScript, inheritance is also known as prototyping. A prototype object  acts as a template for another object to inherit properties and behaviors from. There can be multiple prototype object templates, creating a prototype chain.  Same concept as the parent/child inheritance.
+Inheritance is from parent to child - in our example all three dogs can bark, but only Maisel and Fluffy can nap. The <code>nap()</code> method is defined in the child <code>French Bulldog</code> class, so the two objects - <code>Maisel</code> and <code>Fluffy</code> - instantiated from the French Bulldog class have access to the <code>nap</code> method. Rufus is an object instantiated from the parent class, so Rufus doesn’t have access to the <code>bark()</code> method.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Object</th>
+<th style="text-align:center">Instantiated from Class</th>
+<th style="text-align:center">Parent Class</th>
+<th style="text-align:center">Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Rufus</td>
+<td style="text-align:center">Dog</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">Bark</td>
+</tr>
+<tr>
+<td style="text-align:center">Maisel</td>
+<td style="text-align:center">French Bulldog</td>
+<td style="text-align:center">Dog</td>
+<td style="text-align:center">Bark, nap</td>
+</tr>
+<tr>
+<td style="text-align:center">Fluffy</td>
+<td style="text-align:center">French Bulldog</td>
+<td style="text-align:center">Dog</td>
+<td style="text-align:center">Bark, nap</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3>Encapsulation</h3>
+<p>Encapsulation is containing all important information inside an object, and only exposing selected information to the outside world. Attributes and behaviors are defined by code inside the class template. Then, when an object is instantiated from the class, the data and methods are encapsulated in that object. Encapsulation hides the internal software code implementation inside a class, and hides internal data of inside objects. Encapsulation requires defining some fields as private and some as public.</p>
+<ul>
+<li>Private/ Internal interface – methods and properties, accessible from other methods of the same class.</li>
+<li>Public / External Interface – methods and properties, accessible also from outside the class.</li>
+</ul>
+<p>Let’s use a car as a metaphor for encapsulation. The information the car shares with the outside world - through blinkers to indicate turns, are public interfaces. In contrast, the engine is hidden under the hood - it’s a private, internal interface. When you’re driving a car down the road, other drivers require information to make decisions, like whether you’re turning left or right. However, exposing internal, private data like the engine temperature, would just confuse other drivers.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div><div style="text-align: center;"><div class="styles__ImageLightbox-sc-1cz5dtf-2 hMPJSX"><div data-rmiz-wrap="visible"><img src="./oop_files/5229512913584128" alt="widget"><button aria-label="Zoom image" data-rmiz-btn-open="true"></button></div></div></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>Encapsulation adds security. Attributes and methods can be set to private, so they can’t be accessed outside the class. To get information about data in an object, public methods &amp; properties are used to access or update data. This adds a layer of security, where the developer chooses what data can be seen on an object by exposing that data through public methods in the class definition.</p>
+<p>Within classes, most programming languages have public, protected, and private sections. Public is the limited selection of methods available to the outside world, or other classes within the program. Protected is only accessible to child classes. Private code can only be accessed from within that class. To go back to our dog/owner example, encapsulation is ideal so owners can’t access private information about other people’s dogs.</p>
+<blockquote>
+<p>Note: JavaScript has private and protected properties and methods. Protected Fields are prefixed with a <code>_</code> ; private fields are prefixed with a <code>#</code>. Protected fields are inherited, private ones aren’t. See this <a href="https://javascript.info/private-protected-properties-methods" target="_blank">Private and protected properties and methods article for a good explanation</a>.</p>
+</blockquote>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">//Parent class Dog
+class Dog{
+    //Declare protected (private) fields
+    _attendance = 0;
+
+    constructor(namee, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
+    getAge() {
+        //Getter
+        return this.calcAge();
+    }
+
+    calcAge() {
+        //calculate age using today's date and birthday
+        return this.calcAge();
+    }
+
+    bark() {
+        return console.log("Woof!");
+    }
+
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
+}
+
+//instantiate a new instance of Dog class, an individual dog named Rufus
+const rufus = new Dog("Rufus", "2/1/2017");
+//use getter method to calculate Rufus' age
+rufus.getAge();</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>Consider the <code>getAge()</code> method in our example code, the calculation details are hidden inside the <code>Dog</code> class. The rufus object uses the <code>getAge()</code> method to calculate Rufus’s age.</p>
+<p>Encapsulating &amp; updating data: Since methods can also update an object’s data, the developer controls what values can be changed through public methods. This allows developers to hide important information that should not be changed - like a social security number - from both phishing and the more likely scenario of other developers mistakenly changing important data.</p>
+<p>Encapsulation adds security to code and makes it easier to collaborate with external developers. When you’re programming to share information with an external company, you wouldn’t want to expose the classes’ templates or private data because your company owns that intellectual property. Instead, developers create public methods that allow other developers to call methods on an object. Ideally, these public methods come with documentation for the external developers.</p>
+<p>Benefits of encapsulation:</p>
+<ul>
+<li>Adds security
+<ul>
+<li>Only public methods and attributes are accessible from the outside</li>
+</ul>
+</li>
+<li>Protects developers from common mistakes
+<ul>
+<li>Only public fields &amp; methods accessible, so developers don’t accidentally change something dangerous</li>
+</ul>
+</li>
+<li>Protects IP
+<ul>
+<li>Code is hidden in a class, only public methods are accessible by the outside developers</li>
+</ul>
+</li>
+<li>Supportable
+<ul>
+<li>most code undergoes updates and improvements</li>
+</ul>
+</li>
+<li>Developer can change internal code in the class without alerting users
+<ul>
+<li>As long as the public attributes &amp; methods stay the same, internal code can be updated without changing existing objects</li>
+</ul>
+</li>
+<li>Hides complexity
+<ul>
+<li>No one can see what’s behind the object’s curtain!</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3>Abstraction</h3>
+<p>Abstraction means that the user interacts with only selected attributes and methods of an object. Abstraction uses simplified, high level tools, to access a complex object.</p>
+<ul>
+<li>Using simple things to represent complexity
+<ul>
+<li>Objects, classes represent more complex underlying code</li>
+</ul>
+</li>
+<li>Hide complex details from user</li>
+</ul>
+<p>Abstraction is using simple classes to represent complexity. Abstraction is an extension of encapsulation. For example, you don’t have to know all the details of how the engine works to drive a car. A driver only uses a small selection of tools: like gas pedal, brake, steering wheel, blinker. The engineering is hidden from the driver. To make a car work, a lot of pieces have to work under the hood, but exposing that information to the driver would be a dangerous distraction.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div><div style="text-align: center;"><div class="styles__ImageLightbox-sc-1cz5dtf-2 hMPJSX"><div data-rmiz-wrap="visible"><img src="./oop_files/5107346863816704" alt="widget"><button aria-label="Zoom image" data-rmiz-btn-open="true"></button></div></div></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>Abstraction also serves an important security role – by only displaying selected pieces of data, and only allowing data to be accessed through classes and modified through methods, the developer protects the data from exposure. To continue with the car example, you wouldn’t want an open gas tank while driving a car.</p>
+<p>Benefits of abstraction:</p>
+<ul>
+<li>Simple, high level user interfaces</li>
+<li>Complex code is hidden</li>
+<li>Security
+<ul>
+<li>Only chosen parts of object are accessible</li>
+</ul>
+</li>
+<li>Easier software maintenance
+<ul>
+<li>Code updates rarely change abstraction</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3>Polymorphism</h3>
+<p>Polymorphism is designing objects to share behaviors. Using inheritance, objects can override shared parent behaviors, with specific child behaviors. Polymorphism allows the same method to execute different behaviors in two ways: method overriding and method overloading.</p>
+<br>
+<h4>Method Overriding</h4>
+<p>Runtime polymorphism uses method overriding. In method overriding, a child class can provide a different implementation than its parent class. In our dog example, we may want to give French Bulldogs a specific type of bark different than the generic dog class. Method overriding could create a <code>bark()</code> method in the child class that overrides the <code>bark()</code> method in the parent dog class.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">//Parent class Dog
+class Dog{
+    //Declare protected (private) fields
+    _attendance = 0;
+
+    constructor(namee, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
+    getAge() {
+        //Getter
+        return this.calcAge();
+    }
+
+    calcAge() {
+        //calculate age using today's date and birthday
+        return this.calcAge();
+    }
+
+    bark() {
+        return console.log("Woof!");
+    }
+
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
+}
+
+//Child class French Bulldog, inherits from parent
+class FrenchBulldog extends Dog {
+    constructor(name, birthday)
+        super(name);
+        super(birthday);
+    }
+
+    nap() {
+        //additional method for FrenchBulldog child class
+        return console.log("Snore")
+    }
+
+    bark() {
+        return console.log("French bark!");
+    }
+
+
+//instantiate a new French Bulldog object
+const fluffy = new FrenchBulldog("Fluffy", "1/12/2019");
+fluffy.bark(); //returns "French bark!"</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div><div style="text-align: center;"><div class="styles__ImageLightbox-sc-1cz5dtf-2 hMPJSX"><div data-rmiz-wrap="visible"><img src="./oop_files/4862589059203072" alt="widget"><button aria-label="Zoom image" data-rmiz-btn-open="true"></button></div></div></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><br>
+<h4>Method Overloading</h4>
+<p>Compile Time polymorphism uses method overloading. Methods or functions may have the same name, but a different number of parameters passed into the method call. Different results may occur depending on the number of parameters passed in.</p>
+</div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="code-container"><div></div><div><pre style="background: rgb(30, 30, 30); color: rgb(233, 233, 233);">//Parent class Dog
+class Dog{
+    //Declare protected (private) fields
+    _attendance = 0;
+
+    constructor(namee, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
+    getAge() {
+        //Getter
+        return this.calcAge();
+    }
+
+    calcAge() {
+        //calculate age using today's date and birthday
+        return this.calcAge();
+    }
+
+    bark() {
+        return console.log("Woof!");
+    }
+
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
+
+    updateAttendance(x) {
+        //adds multiple to the dog's attendance days at the petsitters
+        this._attendance = this._attendance + x;
+    }
+}
+
+//instantiate a new instance of Dog class, an individual dog named Rufus
+const rufus = new Dog("Rufus", "2/1/2017");
+rufus.updateAttendance(); //attendance = 1
+rufus.updateAttendance(4); // attendance = 5</pre><span class="styles__CodeDownloader-sc-16qi5c6-28 jBLHPV"><div class="styles__Buttons-sc-16qi5c6-2 dTpiok"><button aria-label="copy-code-button" class="styles__Buttons_DownloadAndCopyButton-sc-16qi5c6-6 jgSGOr"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Copy To Clipboard" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></div></span></div></div></div></div></div></div></div></div></div><div class="styles__ViewerComponentViewStyled-sc-1xosrua-0 ihPtjb"><div><div><div><div><div class=""><div class=""><div class="markdown-container-div Markdown__MarkdownContainerDiv-sc-7qtuee-5 kEVHDh" height="auto"><div class="markdownViewer Markdown__Viewer-sc-7qtuee-1 dVwCFv" role="none"><p>In this code example, if no parameters are passed into the <code>updateAttendance()</code> method - one day is added to the count. If a parameter is passed in - <code>updateAttendance(4)</code>, then 4 is passed into the <code>x</code> parameter in <code>updateAttendance(x)</code>, and 4 days are added to the count.</p>
+<p>The benefits of Polymorphism are:</p>
+<ul>
+<li>Objects of different types can be passed through the same interface</li>
+<li>Method overriding</li>
+<li>Method overloading</li>
+</ul>
+<br>
+<h2>Notes to remember</h2>
+<ul>
+<li>
+<p>OOP: Everything is an object</p>
+</li>
+<li>
+<p>Code building blocks</p>
+<ul>
+<li>Classes are blueprints for objects</li>
+<li>Objects are instances of classes</li>
+<li>Attributes are data fields</li>
+<li>Methods are behaviors</li>
+</ul>
+</li>
+<li>
+<p>Object oriented programming concepts</p>
+<ul>
+<li>Inheritance: child classes inherit attributes and code from parent classes</li>
+<li>Encapsulation:  only exposing selected information to the outside world</li>
+<li>Abstraction: creating a simple model that represents the complex data &amp; behaviors</li>
+<li>Polymorphism: when multiple objects can implement the same functionality</li>
+</ul>
+</li>
+</ul>
+<br>
+<p><a name="benefits" target="_blank"></a></p>
+<h2>Benefits of OOP</h2>
+<ul>
+<li>OOP models complex things as reproducible, simple structures</li>
+<li>OOP code is reusable</li>
+<li>OOP prevents duplicating code</li>
+<li>OOP makes fixing bugs easier. Fixing an error contained in a well-structured class is easier than finding the error in multiple places in code.</li>
+<li>OOP protects information through encapsulation
+Object’s data can only be accessed through public properties and methods</li>
+<li>OOP uses abstraction to make complexity digestible</li>
+<li>OOP is easy to work with in a team of developers – classes can be assigned out to different developers, allowing multiple people to code a project at the same time.</li>
+</ul>
+<br>
+<p><a name="conclusion" target="_blank"></a></p>
+<h2>Conclusion</h2>
+<p>Object Oriented programming requires thinking about the structure of the program and planning at the beginning of coding. Looking at how to break up the requirements into simple, reusable classes that can be used to blueprint instances of objects. Overall, implementing OOP allows for better data structures and reusability, saving time in the long run.</p>
+<p>If you’d like to take a deep dive into OOP, Educative has courses for OOP in:</p>
+<ul>
+<li>
+<p><a href="https://www.educative.io/courses/learn-object-oriented-programming-in-java" target="_blank">Java</a></p>
+</li>
+<li>
+<p><a href="https://www.educative.io/courses/learn-object-oriented-programming-in-javascript" target="_blank">JavaScript</a>,</p>
+</li>
+<li>
+<p><a href="https://www.educative.io/courses/learn-object-oriented-programming-in-python" target="_blank">Python</a>,</p>
+</li>
+<li>
+<p><a href="https://www.educative.io/courses/learn-object-oriented-programming-in-cpp" target="_blank">C++</a></p>
+</li>
+<li>
+<p><a href="https://www.educative.io/courses/learn-object-oriented-programming-in-c-sharp" target="_blank">C#</a></p>
+</li>
+</ul>
+<p>These courses are text-based with in-browser coding environments so you can learn even faster and more efficiently. No set-up required, just get in and start coding.</p>
+<p>Happy learning!</p>
+</div></div></div></div></div></div></div></div></div></div> </div><hr><div class="sc-hCbubC cUUHxg"><div size="80" class="sc-kvZOFW hqmfMV" overflow="default"><div class=" sb-avatar sb-avatar--text" style="display:inline-block;vertical-align:middle;width:80px;height:80px;border-radius:100%;font-family:Helvetica, Arial, sans-serif"><div class=" sb-avatar__text" style="width: 80px; height: 80px; line-height: initial; text-align: center; color: rgb(255, 255, 255); border-radius: 100%; background: rgb(85, 83, 255);" title="Erin Doherty"><div style="display: table; table-layout: fixed; width: 100%; height: 100%; font-size: 40px;"><span style="display: table-cell; vertical-align: middle; white-space: nowrap;"><span>ED</span></span></div></div></div></div><div class="sc-kMBllD eZGOAa">WRITTEN BY<h3 class="MuiTypography-root jss16 jss55 jss4  MuiTypography-h3 MuiTypography-alignLeft">Erin Doherty</h3></div></div></div></div><div id="related-blogs"></div><div style="display:flex" class="sc-ESoVU glsfOr"><div class="sc-kkbgRg gLHuRm"><div class="sc-hRmvpr iiqNOq"><div class="sc-cZBZkQ kinpVG"><div class="sc-gbzWSY dBYIBQ"><a aria-label="educative.io" class="sc-jMMfwr kykcsv" href="https://www.educative.io/"><svg viewBox="0 0 1138.66 222" width="170px"><path d="M179.67 8H42.34A34.33 34.33 0 008 42.33v137.34A34.33 34.33 0 0042.34 214h137.33A34.33 34.33 0 00214 179.67V42.33A34.33 34.33 0 00179.67 8zm14.71 167.5a18.88 18.88 0 01-18.88 18.88h-129a18.88 18.88 0 01-18.88-18.88V91.38h166.76zm0-103.74H27.62V46.5A18.88 18.88 0 0146.5 27.62h129a18.88 18.88 0 0118.88 18.88z" fill="#4951f5"></path><rect x="42.97" y="40.4" width="19.62" height="19.62" rx="1.23" fill="#4951f5"></rect><rect x="72.84" y="40.4" width="19.62" height="19.62" rx="1.23" fill="#4951f5"></rect><rect x="102.71" y="40.4" width="19.62" height="19.62" rx="1.23" fill="#4951f5"></rect><rect x="111" y="160.05" width="58.86" height="19.62" rx="1.72" fill="#4951f5"></rect><path d="M64.09 178.51a1.72 1.72 0 002.43-.11l31.84-34.83a1.72 1.72 0 000-2.26l-30-35.62a1.7 1.7 0 00-2.41-.21l-10.25 8.69a1.71 1.71 0 00-.21 2.42l20.4 24.26a1.72 1.72 0 010 2.26L54 167a1.72 1.72 0 00.11 2.43z" fill="#4951f5"></path><path d="M358.38 101.61a44.19 44.19 0 00-17.27-17.17 51.76 51.76 0 00-49.23.46 45.68 45.68 0 00-17.35 18 53.25 53.25 0 00-6.29 25.94A52.5 52.5 0 00274.7 155a45.51 45.51 0 0018.3 18q11.87 6.47 27.45 6.46a56.55 56.55 0 0022-4.06 38.84 38.84 0 0015.94-12l-11.69-14.21q-10.28 10.69-25.68 10.7-10.45 0-17.89-4.43a25.47 25.47 0 01-10.8-12.92l72.43-14.77q-.01-14.99-6.38-26.16zm-68.71 26.12v-.18q0-14 7.52-22.34t19.75-8.31a26.07 26.07 0 0126.21 20.1zM455.89 91.55a34.9 34.9 0 00-13.35-10 43.69 43.69 0 00-17.26-3.34 48.52 48.52 0 00-24.65 6.31 44.56 44.56 0 00-17.17 17.81q-6.24 11.5-6.23 26.53t6.23 26.62a44.36 44.36 0 0017.17 17.9 48.42 48.42 0 0024.65 6.31 44.34 44.34 0 0017.88-3.53c5.4-2.35 9.94-5.87 12.22-10.57v13.87H475V42.33h-19.11zm-3.39 53.61A27 27 0 01442.36 156a29.24 29.24 0 01-28.83 0 27 27 0 01-10.14-10.86 34.35 34.35 0 01-3.74-16.32 34.42 34.42 0 013.74-16.33 27.06 27.06 0 0110.14-10.85 29.24 29.24 0 0128.83 0 27.06 27.06 0 0110.14 10.85 34.3 34.3 0 013.74 16.33 34.23 34.23 0 01-3.74 16.34zM564.4 129.39c0 12.76-3.9 17-8.59 22.17s-11 7.7-18.95 7.7q-10.68 0-16.46-6.58c-3.86-4.39-5.19-11-5.19-20V78.37h-19.34v57.52q0 21.71 10.95 32.74c7.29 7.36 13.78 11 26.48 11a41.46 41.46 0 0017.26-3.62 37.15 37.15 0 0013.84-10.3v13.62H584v-101h-19.6zM652.63 97.58a26 26 0 0113.13 3.42 27.42 27.42 0 0110 10.31l16.69-10.4a37.61 37.61 0 00-15.56-17.09q-10.35-5.94-24.08-5.94a51.54 51.54 0 00-26 6.5 46.45 46.45 0 00-17.82 18 55.57 55.57 0 000 52.46A46.14 46.14 0 00626.9 173a51.65 51.65 0 0025.91 6.49 46.56 46.56 0 0023.9-6 39.09 39.09 0 0015.74-17.18l-16.69-10.4a27.35 27.35 0 01-10 10.31 26 26 0 01-13.13 3.44q-12.35 0-20.25-8.45t-7.92-22.57q0-14.1 8-22.56a26.61 26.61 0 0120.17-8.5zM852.87 160.56q-6.24 0-9.7-3.8a19.08 19.08 0 01-4.46-11c-.06-3.46 0-47.68 0-47.68L863.2 98l.09-19.52h-24.53V58.72h-19.62v19.75h-14.69V98h14.69v48.47q0 16.32 8.55 24.86c5.69 5.69 12.07 8.28 22.51 8.28A41.3 41.3 0 00862 178a26 26 0 009.52-5l-6.22-16.51a19 19 0 01-12.43 4.07zM891.83 78.4h19.18v101.07h-19.18zM979.29 154.07l-29.54-75.66h-21.72l39.64 101.06h22.65l40.76-101.06h-21.36l-30.43 75.66zM1086.7 160q-10.5 0-18-4.45a25.63 25.63 0 01-10.86-13l72.79-14.85q0-15-6.41-26.24a44.35 44.35 0 00-17.35-17.26 49.6 49.6 0 00-24.29-6 49 49 0 00-25.18 6.5 46 46 0 00-17.4 18.07c-4.21 7.74-7.4 16.42-7.4 26.07s3.25 18.52 7.58 26.25a45.62 45.62 0 0018.42 18.08q11.91 6.5 27.58 6.5a56.89 56.89 0 0022.07-4.08 38.88 38.88 0 0016-12.06l-11.74-14.29Q1102.19 160 1086.7 160zm-31.49-32.46q0-14.1 7.56-22.45t19.84-8.34A26.19 26.19 0 011109 117l-53.74 10.75zM891.77 39.21h19.57v19.43h-19.57zM780.92 85.73c-7.38-5-14.91-7.88-27.89-7.88-20.46 0-34 5.45-40.36 16.22l19 8.94c2.72-5.41 9.36-8 20.39-8 6.94 0 12 .89 15 2.67 2.85 1.68 4.6 3.76 5.19 6.19s-.07 6.55 0 12h-5.22c-40.81 0-61.5 11.73-61.5 34.85a25.77 25.77 0 0010.23 21c6.67 5.32 15.24 8 25.47 8 12.62 0 23.39-3.15 32.07-9.36v9l19 .27v-64.2c.1-14.56-3.76-24.56-11.38-29.7zm-7.57 64.46A29.92 29.92 0 01762 159a37.31 37.31 0 01-15.67 3.48c-5.78 0-10.38-1.15-13.67-3.42a10.44 10.44 0 01-4.63-9.23c0-11.61 12-17.49 35.68-17.49h9.69z" fill="#202033"></path></svg></a><p class="MuiTypography-root jss16 jss56 jss9  MuiTypography-body1">Level up your coding skills, quickly and efficiently.</p><div class="sc-iCwjlJ iabLHm"><a target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://facebook.com/educativeinc"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a target="_blank" rel="noopener noreferrer" aria-label="Linkedin" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://linkedin.com/company/educative-inc/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://twitter.com/educativeinc"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></div></div><div class="sc-jqIZGH fAqboi"><span class="MuiTypography-root jss16 jss57 jss13  MuiTypography-caption">Copyright ©<!-- -->2020<!-- --> Educative, Inc. All rights reserved.<img src="./oop_files/soc2Blue.png" alt="soc2" class="sc-jGxEUC fwHipv"></span></div></div><div class="sc-ecaExY kIkURt"><div class="sc-jdeSqf hnuvTD"><span class="MuiTypography-root jss16 jss58 jss14  MuiTypography-overline">LEARN</span><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/explore"><p class="MuiTypography-root jss16 jss59 jss8  MuiTypography-body1">Courses</p></a><a target="_blank" rel="noopener noreferrer" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/edpresso"><p class="MuiTypography-root jss16 jss60 jss8  MuiTypography-body1">Edpresso</p></a><a target="_blank" rel="noopener noreferrer" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/blog"><p class="MuiTypography-root jss16 jss61 jss8  MuiTypography-body1">Blog</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/unlimited"><p class="MuiTypography-root jss16 jss62 jss8  MuiTypography-body1">Subscriptions</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/business"><p class="MuiTypography-root jss16 jss63 jss8  MuiTypography-body1">For Teams</p></a><a target="_blank" rel="noopener noreferrer" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://codinginterview.com/"><p class="MuiTypography-root jss16 jss64 jss8  MuiTypography-body1">CodingInterview.com</p></a></div><div class="sc-jdeSqf hnuvTD"><span class="MuiTypography-root jss16 jss65 jss14  MuiTypography-overline">SCHOLARSHIPS</span><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/github-students"><p class="MuiTypography-root jss16 jss66 jss8  MuiTypography-body1">For Students</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/github-educators"><p class="MuiTypography-root jss16 jss67 jss8  MuiTypography-body1">For Educators</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/covid-scholarship"><p class="MuiTypography-root jss16 jss68 jss8  MuiTypography-body1">COVID Scholarship</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/ml-scholarship"><p class="MuiTypography-root jss16 jss69 jss8  MuiTypography-body1">ML Scholarship</p></a></div><div class="sc-jdeSqf hnuvTD"><span class="MuiTypography-root jss16 jss70 jss14  MuiTypography-overline">CONTRIBUTE</span><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/authors"><p class="MuiTypography-root jss16 jss71 jss8  MuiTypography-body1">Become An Author</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/published-authors"><p class="MuiTypography-root jss16 jss72 jss8  MuiTypography-body1">Published Authors</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/affiliate"><p class="MuiTypography-root jss16 jss73 jss8  MuiTypography-body1">Become An Affiliate</p></a></div><div class="sc-jdeSqf hnuvTD"><span class="MuiTypography-root jss16 jss74 jss14  MuiTypography-overline">LEGAL</span><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/privacy"><p class="MuiTypography-root jss16 jss75 jss8  MuiTypography-body1">Privacy Policy</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/terms"><p class="MuiTypography-root jss16 jss76 jss8  MuiTypography-body1">Terms of Service</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/enterprise-terms"><p class="MuiTypography-root jss16 jss77 jss8  MuiTypography-body1">Enterprise Terms of Service</p></a></div><div class="sc-jdeSqf hnuvTD"><span class="MuiTypography-root jss16 jss78 jss14  MuiTypography-overline">MORE</span><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/team"><p class="MuiTypography-root jss16 jss79 jss8  MuiTypography-body1">Team</p></a><a target="_blank" rel="noopener noreferrer" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://angel.co/educativeinc/jobs"><p class="MuiTypography-root jss16 jss80 jss8  MuiTypography-body1">Careers</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/business"><p class="MuiTypography-root jss16 jss81 jss8  MuiTypography-body1">Enterprise</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/blog/enterprise"><p class="MuiTypography-root jss16 jss82 jss8  MuiTypography-body1">Blog for Business</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/courses/educative-faq/"><p class="MuiTypography-root jss16 jss83 jss8  MuiTypography-body1">FAQ</p></a><a class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://www.educative.io/contactUs"><p class="MuiTypography-root jss16 jss84 jss8  MuiTypography-body1">Contact Us</p></a></div><div class="jss95"><div class="sc-jdeSqf hnuvTD"><span class="MuiTypography-root jss16 jss100 jss14  MuiTypography-overline">SOCIAL</span><div class="sc-iCwjlJ iabLHm"><a target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://facebook.com/educativeinc"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a target="_blank" rel="noopener noreferrer" aria-label="Linkedin" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://linkedin.com/company/educative-inc/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="sc-bdVaJa sc-cBrjTV eluCqL" href="https://twitter.com/educativeinc"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></div></div></div></div></div></div></div></div></div></div></div></div></div><div></div></div></div></div>
+        <script nonce="AcH1RKHmhQCKSbp/duuqgg==" id="__LOADABLE_REQUIRED_CHUNKS__" type="application/json">[0,1,2,9,15,17,26,327,14,47,83,172]</script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="main" src="./oop_files/runtime-main.6e84389d.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="main" src="./oop_files/296.702a8d04.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="main" src="./oop_files/main.4fe6b485.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/0.273500fe.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/1.d1aa1ad8.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/2.644a415f.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/9.3b070b23.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/15.b4e75772.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/17.829c36c5.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/26.a0049638.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/327.3ac6e3f8.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/14.6ed1d6bc.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/47.c9b01081.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/83.d8989baf.chunk.js"></script>
+<script nonce="AcH1RKHmhQCKSbp/duuqgg==" async="" data-chunk="EditorPages-ViewEditorPage" src="./oop_files/EditorPages-ViewEditorPage.f82f2882.chunk.js"></script>
+        
+          
+    <script type="text/javascript" id="">(function(a,c,e,f,d,b){a.hj=a.hj||function(){(a.hj.q=a.hj.q||[]).push(arguments)};a._hjSettings={hjid:1142875,hjsv:6};d=c.getElementsByTagName("head")[0];b=c.createElement("script");b.async=1;b.src=e+a._hjSettings.hjid+f+a._hjSettings.hjsv;d.appendChild(b)})(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv\x3d");</script>
+
+    
+    <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1637285686566701");fbq("track","PageView");</script>
+    
+
+    
+    <script type="text/javascript" id="">!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nz5z7");twq("track","PageView");</script>
+    
+
+    
+    <script type="text/javascript" id="" src="./oop_files/17085.js"></script>
+
+    
+    <script type="text/javascript" id="">_linkedin_partner_id="1107276";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);(function(){var b=document.getElementsByTagName("script")[0],a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://snap.licdn.com/li.lms-analytics/insight.min.js";b.parentNode.insertBefore(a,b)})();</script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./oop_files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body></html>
