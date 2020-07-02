@@ -174,7 +174,7 @@ class Animal:
 class Bird(Animal):
     # using super(), (temporary object of the superclass) allows us to access methods of the base class (parent class)
     def __init__(self):
-        super().__init___*(
+        super().__init__()
         print("I am a bird")
 
     def tweet(self):
