@@ -50,6 +50,7 @@ else:
 - Key value is provided in the dictionary to make it more optimised
 - We use curly brackets {} to create a dictionary, separated by 'comma'
 - Values in a dictionary can be of any data type and can be duplicated, whereas keys cannot be repeated and must be immutable
+- Dictionaries are accessed via keys and not via their index position
 
 ```python
 student_record = {
