@@ -159,3 +159,4 @@ The implicit behaviour of passing the object as the first argument was avoided w
 - Data is safe and secure with data abstraction.
 - Polymorphism allows the same interface for different objects, so programmers can write efficient code. 
 
+> Exercises for OOP classes [HERE](OOP_class.py)
