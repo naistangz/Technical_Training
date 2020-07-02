@@ -32,8 +32,54 @@ print(hello())
 
 def greet():
     name = input("What is your name? \n")
-    return "Hello, " + name + " Good morning!"
+    return "Hello " + name + ", I hope you are having a good morning!"
 
 # Calling the function
 print(greet())
 
+def greet():
+    name = input("What is your name? \n")
+    print("Hello, " + name + " Good morning!")
+# Using print will return None. We require return in order for the function to give back a value
+
+# We can return anything - string or int with + operator
+# This function tells us that there are two arguments involved
+def add_values(a, b):
+    print("The sum of these values are:")
+    return a + b
+
+# If we do not enter two arguments, it was pass an error
+print(add_values(4, 5))
+print(add_values(5, 6))
+
+# Creating a function to return subtraction
+def sub_values(a, b):
+    print("The difference between these values are:")
+    return a - b
+
+print(sub_values(15045, 2342))
+print(sub_values(56, 3))
+
+# Creating a function to return division
+def divide(a, b):
+    print("The division between the values is")
+    return a / b
+
+print(divide(10, 2))
+print(divide(324,5))
+
+# Creating a function to return multiplication
+def multiply(a, b):
+    print("The product of these values are:")
+    return a * b
+
+print(multiply(5, 6))
+print(multiply(4, 198))
+
+# Create a function to find the remainder
+def modulus(a , b):
+    print("The remainder of the values is:")
+    return a % b
+
+print(modulus(100, 4))
+print(modulus(45, 7))
