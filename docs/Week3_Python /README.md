@@ -31,6 +31,12 @@
 
 
 ## **Terminology**
+
+**Abstraction**
+- Abstraction focuses on hiding the internal implementations of a process or method from the user. In this way, the user knows what he is doing but not how the work is being done. 
+
+---
+
 **Control Flow**
 - The order in which the program's code executes
 - The control flow of a Python program is regulated by conditional statements, loops, and function calls
@@ -63,6 +69,14 @@ student_record = {
     "completed_lesson_names": ["Business Skills", "SQL", "Python"]
 }
 ```
+
+---
+
+**Encapsulation**
+- Concept of encapsulation is to keep together the implementation (code) and the data it manipulates (variables). 
+- In python, we can **restrict** access to methods and variables. This prevents data from being modified (encapsulation).
+- In python, we denote private attributes using underscore `_` or dunder (double underscore) `__` as the prefix.
+
 ---
 **Function**
 - A block of organised, reusable code that is used to perform a single, related action
@@ -85,6 +99,10 @@ def greet(name):
 cities = ["Paris", "Hong Kong", "Buenos Aires", "London,", "Tel Aviv", "Amsterdam"]
 print(cities)
 ```
+
+---
+**Inheritance**
+- Inheritance is a way of creating a new class for using details of an **existing** class without modifying it. The newly formed class is a derived class (or child class). Similarly, the existing class is a base class(or parent class).
 
 ---
 **Loops**
@@ -124,6 +142,17 @@ print(normal_set)
 frozen_set = frozenset(["e", "f", "g"])
 print(frozen_set)
 ```
+
+---
+
+**Polymorphism**
+- Refers to the ability of an object taking many forms. 
+- Python being an OOP supports Polymorphism through Method overriding and operator overloading. 
+- Polymorphism can be achieved through inheritance - Method overriding
+- Method overriding provides ability to change the implementation of a method in a child class which is already defined in one of its super class or parent class. 
+- If there is a method in a super class the method having the same name number of arguments in a child class is said to be **overriding** the parent class method. 
+- We can use the concept of polymorphism while creating class methods as Python allows different classes to have methods with the same name. 
+- We can then later generalise calling these methods by disregarding the object we are working with. 
 
 ---
 **Tuple**

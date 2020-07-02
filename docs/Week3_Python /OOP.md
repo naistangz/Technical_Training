@@ -197,7 +197,39 @@ We used the `super()` function inside the `__init__()` method. This allows us to
 ---
 
 ### Encapsulation 
+- Concept of encapsulation is to keep together the implementation (code) and the data it manipulates (variables). 
+- Python does not have the private keyword, unlike some other object oriented languages.
+- In python, we can **restrict** access to methods and variables. This prevents data from being modified (encapsulation).
+- In python, we denote private attributes using underscore `_` or dunder (double underscore) `__` as the prefix.
 
+```python
+class Robot(object):
+    def __init__(self):
+        self.a = 123
+        self.b = 123
+        self.__c = 123
+
+obj = Robot()
+print(obj.a)
+print(obj._b)
+print(obj.__c)
+```
+
+**Outcome:**
+
+```python
+123
+123
+Traceback (most recent call last):
+  File "test.py", line 10, in &lt;module&gt;
+    print(obj.__c)
+AttributeError: 'Robot' object has no attribute '__c' 
+```
+
+
+`_` Single underscore denotes private variable. It should not be accessed directly. 
+
+`__` Dunder or double underscore also denotes private variable. 
 
 ---
 
@@ -286,7 +318,9 @@ The `fact()` method for object `a(Square class)` is overridden. However, `fact()
 - OOP makes the program easy to understand as well as efficient
 - The class is shareable, therefore the code can be reused.
 - Data is safe and secure with data abstraction.
-- Polymorphism allows the same interface for different objects, so programmers can write efficient code. 
+- Polymorphism allows the same interface for different objects (implement the same functionality), so programmers can write efficient code. 
+- Encapsulation: only exposes selected information to the outside world. 
+
 
 > Exercises for OOP classes [HERE](OOP_class.py)
 >
