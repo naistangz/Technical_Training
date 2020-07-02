@@ -7,7 +7,7 @@
 - [x] [Data Types](variables.py)
 - [x] [Strings and Concatenation](string_casting.py)
 - [x] [Built-in Methods Examples](string_casting.py) 
-- [x] [Importing built-in methods](importing.py) 
+- [x] [Importing built-in methods](math_functions.py) 
 - [x] [More Built-in Functions with Python](https://docs.python.org/3/library/functions.html)
 - [x] [Indexing And Slicing](slicing.md)
 - [x] [List](lists.py)

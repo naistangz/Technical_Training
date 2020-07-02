@@ -35,7 +35,7 @@ the_sum(1, 2, 3, 4)
 # sum: 10
 ```
 
-**`**kwargs` Receive multiple keyword arguments as a dictionary 
+**`**kwargs` Receive multiple keyword arguments as a dictionary**
 
 The function can receive any number of keyword arguments. In the function, multiple keyword arguments are received as a dictionary whose `key` is argument name and whose `value` is value.
 
@@ -57,3 +57,5 @@ def func_kwargs_error(**kwargs, arg):
 
 # SyntaxError: invalid syntax
 ```
+
+> `*args` exercise [HERE](function.py)
