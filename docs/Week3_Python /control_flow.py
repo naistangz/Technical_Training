@@ -27,10 +27,15 @@ else:
 # Conditional statement exercises
 # Writing a program to check these conditions by getting user input
 required_age = 18
+pg_rating = 13
 age = int(input("How old are you?"))
 
 if age < 18:
     print("You are too young to watch this movie.\nThe required age to watch this movie is {}".format(str(required_age)))
+elif age == 17:
+    print("Sorry! You are not {} yet!".format(str(required_age)))
+elif age < 13:
+    print("You are able to watch {} rated films".format(str(pg_rating)))
 else:
     print("Congratulations!\nYou are old enough to watch the movie! Enjoy!")
 
