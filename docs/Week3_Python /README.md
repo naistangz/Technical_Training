@@ -119,10 +119,18 @@ print(frozen_set)
 dob = ("name", "dob", "passport number")
 print(dob)
 ```
-
-
 ---
 
+**Variable**
+- Another name for placeholder
+- A reserved memory location to store data values 
+- Variables can be declared by any name 
+``python
+this_is_variable = 19
+this_is_another_variable = "Hello World"
+this_is_also_a_variable = (str(this_is_variable) + this_is_another_variable)
+`` 
+ 
 > Common Python Interview Questions [HERE](https://www.guru99.com/python-interview-questions-answers.html)
 
 
