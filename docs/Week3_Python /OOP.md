@@ -122,6 +122,7 @@ A dog makes a 'bark' sound
 
 In the above program, we define a method `sound()`. These are called instance methods because they are called on an instance object i.e `dog`.
 
+**What is self?**
 **`def __init__(self):`**
 - This is the short form for initialising our class (creating an object)
 - By using the `self` keyword we can access the attributes and methods of the class in **python**.
@@ -196,6 +197,8 @@ We used the `super()` function inside the `__init__()` method. This allows us to
 ---
 
 ### Encapsulation 
+
+
 ---
 
 ### Polymorphism
