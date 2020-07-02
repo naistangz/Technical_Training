@@ -1,6 +1,7 @@
 # Object Oriented Programming 
 
 **What is OOP?**
+
 **O**bject-**o**riented **p**rogramming **(OOP)** refers to a type of computer programming (software design) that includes or relies on the concept of classes and objects.
 It is used to structure a software program into simple, reusable pieces of code or blueprints (called classes) which are used to create individual instances of objects.
 
@@ -22,13 +23,17 @@ It is used to structure a software program into simple, reusable pieces of code 
 - An instantiation of a class
 - When a class is defined, only the description for the object is defined. Therefore, no memory or storage is allocated.
 
-
 **What is an instance?**
-
+- Also called an object 
+- Objects are **instances** of types.
+- 23 is an **instance** of the type *int*
+- Instantiation is the creating of a predefined object.
+- A realisation of a template (Class of objects)
 
 Example: 
 
 Objects are created for specific instances of a class. You might create an animal class (blueprint) as a standard way to organise all importing information about animals, and then instantiate an individual animal as an object created from the animal class - like a fish.
+
 
 ## Building blocks of OOP
 * Classes (blueprint)
@@ -120,9 +125,11 @@ In the above program, we define a method `sound()`. These are called instance me
 **`def __init__(self):`**
 - This is the short form for initialising our class (creating an object)
 - By using the `self` keyword we can access the attributes and methods of the class in **python**.
-- It binds the attributes with the given arguments.
+- It **binds** the instance of the class to the **instance** method.
 - This represents a constructor in Python
 - We know that class is a blueprint for the objects. This blueprint can be used to create multiple numbers of objects. 
+
+**What happens if we do not use `self`**
 
 **Self can be avoided**
 
@@ -147,11 +154,15 @@ Here, no self was passed
 
 The implicit behaviour of passing the object as the first argument was avoided while using a static method
 
-## Inheritance 
+## The 4 pillars of OOP
 
-## Encapsulation 
+### Inheritance 
 
-## Polymorphism
+### Encapsulation 
+
+### Polymorphism
+
+### Abstraction 
 
 ## Key Points to Remember:
 - OOP makes the program easy to understand as well as efficient
@@ -160,3 +171,6 @@ The implicit behaviour of passing the object as the first argument was avoided w
 - Polymorphism allows the same interface for different objects, so programmers can write efficient code. 
 
 > Exercises for OOP classes [HERE](OOP_class.py)
+> More exercises for OOP classes [HERE](OOP_class2.py)
+> Exercises for Inheritance [HERE](OOP_class2.py)
+> Exercises for Polymorphism [HERE]

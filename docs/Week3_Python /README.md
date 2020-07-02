@@ -15,7 +15,7 @@
 - [x] [Tuples](tuples.py)
 - [x] [Functions](function.py)
 - [x] [Variable-Length Arguments (*args, **kwargs)](kwargs.md)
-- [ ] [Object-Oriented Programming](OOP.md) :fire:
+- [x] [Object-Oriented Programming](OOP.md) :fire:
 - [x] [Control Flow](control_flow.py)
 - [x] [Sets](sets.py)
 - [x] [Loops](loops.py)
