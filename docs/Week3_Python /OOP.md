@@ -192,6 +192,7 @@ In the above program, we created two classes i.e. `Animal` (parent class) and `P
 The child class modified the behaviour of the parent class. We also extended the functions of the parent class, by creating new methods like `tweet()` and `fly()`.
 
 We used the `super()` function inside the `__init__()` method. This allows us to run the `__init__()` method of the parent class inside the child class. 
+
 ---
 
 ### Encapsulation 
