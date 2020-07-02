@@ -2,6 +2,7 @@
 
 **Topics Covered In This Course:**
 
+**Part I**
 - [x] [Introduction](introduction.md)
 - [x] [Data Types](variables.py)
 - [x] [Strings and Concatenation](string_casting.py)
@@ -15,6 +16,15 @@
 - [x] [Control Flow](control_flow.py)
 - [x] [Sets](sets.py)
 - [x] [Loops](loops.py)
+
+**Part II**
+- [] Unit Testing
+- [] Error Handling
+- [] SQL with Python
+- [] CSV and Excel Files 
+- [] Using JSON with Python
+- [] HTTP and APIs
+
 
 
 ## **Terminology**
