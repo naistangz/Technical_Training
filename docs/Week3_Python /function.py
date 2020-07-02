@@ -86,10 +86,10 @@ print(modulus(45, 7))
 
 # Adding user input
 def user_multiply():
-    number_1 = int(input("Choose a number:\n"))
-    number_2 = int(input("Choose another number:\n"))
+    num_1 = int(input("Choose a number:\n"))
+    num_2 = int(input("Choose another number:\n"))
     print("The product of your chosen numbers is: ")
-    return number_1 * number_2
+    return num_1 * num_2
 
 print(user_multiply())
 
