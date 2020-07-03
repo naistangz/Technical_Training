@@ -20,15 +20,6 @@
 - [x] [Sets](sets.py)
 - [x] [Loops](loops.py)
 
-**Part II**
-- [] Unit Testing
-- [] Error Handling
-- [] SQL with Python
-- [] CSV and Excel Files 
-- [] Using JSON with Python
-- [] HTTP and APIs
-
-
 
 ## **Terminology**
 
