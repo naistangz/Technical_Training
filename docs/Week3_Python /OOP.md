@@ -111,7 +111,7 @@ class Animal:
 
     # instance method 
     def sound(self, sound):
-        return "A {} makes a {} sound.format(self.name, song)
+        return "A {} makes a {} sound.format(self.name, sound)
 
 # instantiate the object
 dog = Animal("Fluffy, 5)
