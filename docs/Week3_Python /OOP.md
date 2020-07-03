@@ -30,6 +30,12 @@ It is used to structure a software program into simple, reusable pieces of code 
 - Instantiation is the creating of a predefined object.
 - A realisation of a template (Class of objects)
 
+**What is the difference between instantiation and initialisation?**
+- Variables, properties are initialised meaning they are given an initial value.
+- The act of assigning values to variables is initialisation.
+- Objects are instantiated. A baby is an instance of a Human, an object is an instance of some Class.
+- The act of creating an instance is instantiation.
+
 Example: 
 
 Objects are created for specific instances of a class. You might create an animal class (blueprint) as a standard way to organise all importing information about animals, and then instantiate an individual animal as an object created from the animal class - like a fish.

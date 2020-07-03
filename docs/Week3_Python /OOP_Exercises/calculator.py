@@ -5,6 +5,7 @@ class Python_calculator:
     # num1 = int(input("Enter first number: "))
     # num2 = int(input("Enter second number: "))
     # initialising our class
+
     def __init__(self, num1, num2):
         self.num1 = num1
         self.num2 = num2
