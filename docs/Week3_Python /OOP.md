@@ -128,6 +128,8 @@ A dog makes a 'bark' sound
 
 In the above program, we define a method `sound()`. These are called instance methods because they are called on an instance object i.e `dog`.
 
+## Self
+
 **What is self?**
 **`def __init__(self):`**
 - This is the short form for initialising our class (creating an object)
