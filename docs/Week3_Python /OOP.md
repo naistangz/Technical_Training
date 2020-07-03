@@ -322,10 +322,10 @@ The `fact()` method for object `a(Square class)` is overridden. However, `fact()
 - Encapsulation: only exposes selected information to the outside world. 
 
 
-> Exercises for OOP classes [HERE](OOP_class.py)
+> Exercises for OOP classes [HERE](OOP_Exercises/OOP_class.py)
 >
-> More exercises for OOP classes [HERE](OOP_class2.py)
+> More exercises for OOP classes [HERE](OOP_Exercises/OOP_class2.py)
 >
-> Exercises for Inheritance [HERE](OOP_class2.py)
+> Exercises for Inheritance [HERE](OOP_Exercises/OOP_class2.py)
 >
 > Exercises for Polymorphism [HERE]
