@@ -19,7 +19,7 @@
 - [x] [Control Flow](control_flow.py)
 - [x] [Sets](sets.py)
 - [x] [Loops](loops.py)
-- [x] [HTTP Requests and Python APIs](APIs)
+- [x] [HTTP Requests and Python APIs](../Week4_Python/APIs)
 
 ## **Terminology**
 

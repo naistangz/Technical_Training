@@ -1,11 +1,11 @@
 # Python Training Part II:snake:
 
-**Topics Covered In This Course:**
+### Topics Covered In This Course:
 
-**For Part I** 
+#### Part I
 [Click Here](/docs/Week3_Python%20)
 
-**Part II**
+#### Part II
 - [x] [Python APIs](APIs/README.md)
 - [] Unit Testing
 - [] Error Handling

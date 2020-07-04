@@ -4,8 +4,8 @@ import requests
 # receive a response and check if 200 - print success
 # elif code 400 - page not found
 # else code 404 woops sorry the info you are looking for is not available
-response_bcc = requests.get("https://www.bbc.co.uk/")
-print(response_bcc)
+response_bbc = requests.get("https://www.bbc.co.uk/")
+print(response_bbc)
 if response_bbc.status_code == 200:
     print("Your request has been successful")
 elif response_bbc.status_code == 400:
@@ -14,7 +14,7 @@ elif response_bbc.status_code == 404:
     print("Woops sorry the info you are looking for is not available")
 
 
-checking_response_code = response_bcc.status_code
+checking_response_code = response_bbc.status_code
 print("The status code is : {}".format(str(checking_response_code)))
 
 
