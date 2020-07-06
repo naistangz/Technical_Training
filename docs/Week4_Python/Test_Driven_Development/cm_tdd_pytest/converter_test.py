@@ -12,3 +12,6 @@ class Converter_Test(unittest.TestCase):
 
     def test_inches_to_cm(self):
         self.assertEqual(self.c.inches_to_cm(10),25.4)
+
+    def test_modulo(self):
+        self.assertEqual(self.c.modulo(12, 10),2)
