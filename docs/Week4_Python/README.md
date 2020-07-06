@@ -7,7 +7,7 @@
 #### Part II
 - [x] [HTTP Requests and Python APIs](APIs)
 - [x] [Test Driven Development (TDD)](Test_Driven_Development)
-- [] Unit Testing
+- [x] Unit Testing
 - [] Error Handling
 - [] SQL with Python
 - [] CSV and Excel Files 
