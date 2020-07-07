@@ -106,8 +106,6 @@ with open("new_json_file.json") as jsonfile:
 
 ## Exercises with JSON
 
--[x] [JSON Exchange Rates](json_exchange_rates.py)
-
--[x] [JSON Encoding and Decoding](json_encoding_decoding.py)
-
--[x] [JSON parsing with API](json_parsing_with_api.py)
+- [x] [JSON Exchange Rates](json_exchange_rates.py)
+- [x] [JSON Encoding and Decoding](json_encoding_decoding.py)
+- [x] [JSON parsing with API](json_parsing_with_api.py)
