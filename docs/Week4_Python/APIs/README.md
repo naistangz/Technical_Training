@@ -106,7 +106,8 @@ print(response_bbc)
 * 200  Success
 * 400 
 * 404 Page not found 
-[Click Here for Infographic](../JSON_API/README.md)
+
+[Click Here for Infographic](../images/http-decision-diagram.png)
 
 ---
 Practical resources: [Codecademy Learn the Watson API](https://www.codecademy.com/learn/ibm-watson)
