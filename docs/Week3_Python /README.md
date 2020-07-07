@@ -21,7 +21,7 @@
 - [x] [Loops](loops.py)
 - [x] [HTTP Requests and Python APIs](../Week4_Python/APIs)
 
-For part II[Click Here](/docs/Week4_Python)
+For part II  [Click Here](/docs/Week4_Python)
 
 ## **Terminology**
 
