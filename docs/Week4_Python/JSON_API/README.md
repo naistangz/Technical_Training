@@ -54,3 +54,16 @@ int, long, float|number
 True| true
 False|false
 None|null
+
+## Deserialising JSON
+In the `json` library, `load()` and `loads()` turn JSON encoded data into Python objects.
+**JSON**|**Python**
+--------|-------
+object|dict
+array|list, tuple
+string|str
+number(int)|int
+number(real)|float
+true|True
+false|False
+null|None|
