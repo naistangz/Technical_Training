@@ -6,11 +6,11 @@
 
 #### Part II
 - [x] [HTTP Requests and Python APIs](APIs)
+- [x] [JSON API with Python](JSON_API)
 - [x] [Test Driven Development (TDD)](Test_Driven_Development)
-- [x] Unit Testing
 - [] Error Handling
 - [] SQL with Python
 - [] CSV and Excel Files 
-- [] Using JSON with Python
+
 
 
