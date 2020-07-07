@@ -1,0 +1,58 @@
+# JSON API with Python 
+
+## What is JSON? Javascript Object Notation 
+- Minimal, readable format for structuring data.
+- Used to transmit data between server and web application, as an alternative to XML (e**X**tensible Markup Language).
+- It is a way to store information in an organised, easy-to-access manner.
+- It gives us human-readable collection of data that we can access in a logical manner. 
+
+## Why does JSON matter?
+
+- JSON feeds from other sites via AJAX (Asynchronous JavaScript and XML). Many sites are sharing data using JSON in addition to RSS (Really Simple Syndication) feeds.
+- JSON feeds can be loaded **asynchronously** much more easily than XML/RSS.
+
+## Syntax - json is syntax for exchanging data
+
+## Keys and Values 
+The two primary parts that make up JSON are keys and values. 
+Together they make a key/value pair. 
+
+- **Key:** A key is always a string enclosed in quotation marks.
+- **Value:** A value can be string, number, boolean expression, array, or object.
+- **Key/Value Pair:** A key value pair follows a specific syntax, with the key followed by a colon followed by the value. Key/Value pairs are comma separated.
+
+```json
+"foo":"bar"
+```
+This is a key/value pair. The key is "foo" and the value is "bar".
+
+## Types of Values
+- **Array:** Associative array of values
+- **Boolean:** True or False
+- **Number:** Integer
+- **Object:** Associative array of key/value pairs
+- **String:** Several plain text characters which usually form a word.
+
+**Objects**
+- An object is indicated by curly brackets. Everything inside of the curly brackets is part of the object. 
+
+```json
+"hello" : {
+  "foo": "bar"
+}
+```
+The key/value pair "foo":"bar" is nested inside the key/value pair "hello":{ ... }. This is an example of a hierarchy in JSON data.
+
+## Serialising JSON
+When a computer processes lots of information, it needs to take a data dump. The `json`library exposes the `dump()` method for writing data to files.
+Simple python objects are translated to JSON accordingly. 
+
+**Python**|**JSON**
+--------|-------
+dict|object
+list, tuple|array
+str|string
+int, long, float|number
+True| true
+False|false
+None|null

@@ -14,3 +14,20 @@
 
 
 
+## Terminology
+
+**HTTP(Hypertext Transfer Protocol)**
+
+---
+**URL**
+
+---
+
+**JSON(Javascript Object Notation)**
+
+
+---
+**REST(Representational State Transfer)**
+
+
+* [To edit]  (https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)

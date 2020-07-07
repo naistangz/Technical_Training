@@ -111,19 +111,3 @@ print(response_bbc)
 ---
 Practical resources: [Codecademy Learn the Watson API](https://www.codecademy.com/learn/ibm-watson)
 
-## API Terminology
-
-**HTTP(Hypertext Transfer Protocol)**
-
----
-**URL**
-
----
-
-**JSON(Javascript Object Notation)**
-
----
-**REST(Representational State Transfer)**
-
-
-* [To edit]  (https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
