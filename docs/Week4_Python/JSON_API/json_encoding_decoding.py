@@ -26,3 +26,17 @@ with open("new_json_file.json", "w") as jsonfile:
     json.dump(car_data, jsonfile)
     #json.dump takes 2 args
     # first argument is dictionary, second argument is file_type (jsonfile)
+
+with open("new_json_file.json") as jsonfile:
+    # Decoding
+    # Reading the file we have created
+    car = json.load(jsonfile)
+
+    print(type(car))
+    # checking the type of data again
+
+    print(car['name']) # to get the value stored in the key called 'name'
+    print(car['engine']) # to get the value of second key value pair
+
+# We have decoded our file 'new_json_file.json'
+# We have used dumps(), dump() and load() methods

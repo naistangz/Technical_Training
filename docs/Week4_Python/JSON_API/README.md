@@ -55,6 +55,20 @@ True| true
 False|false
 None|null
 
+```python
+import json
+car_data = {"name": "tesla", "engine": "electric"}
+car_data_json_string = json.dumps(car_data)
+with open("new_json_file.json", "w") as jsonfile:
+    # opening a new file called new_json_file.json, permission type write 'w'
+    # jsonfile as the alias
+    # Encoding and writing into json file
+
+    json.dump(car_data, jsonfile)
+    #json.dump takes 2 args
+    # first argument is dictionary, second argument is file_type (jsonfile)
+```
+
 ## Deserialising JSON
 In the `json` library, `load()` and `loads()` turn JSON encoded data into Python objects.
 **JSON**|**Python**
@@ -67,3 +81,16 @@ number(real)|float
 true|True
 false|False
 null|None|
+
+```python
+with open("new_json_file.json") as jsonfile:
+    # Decoding
+    # Reading the file we have created
+    car = json.load(jsonfile)
+
+    print(type(car))
+    # checking the type of data again
+
+    print(car['name']) # to get the value stored in the key called 'name'
+    print(car['engine']) # to get the value of second key value pair
+```
