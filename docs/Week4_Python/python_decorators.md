@@ -18,7 +18,7 @@ class Function:
         return 'static method called'
 ```
 
-### **Instance Methods**
+## **Instance Methods**
 - Most widely used
 - Instance method receives the instance of the class as the first argument. 
 - By convention we use `self`, and refers to the instance of the class.
@@ -33,7 +33,7 @@ Built-in example of instance method:
 >>> "Hello world"
 ```
 
-### **Class Methods**
+## **Class Methods**
 - Class method accepts the class as an argument
 - By convention, class methods take `cls` as a parameter, which refers to the class Function instead of the object.
 - Declared using `@classmethod` decorator.
@@ -99,7 +99,7 @@ class Pizza(object):
 - Each `Pizza` object does not need to be instantiated. Bound methods are objects too, and `@staticmethod` improves readability of code when we know that is does not depend on the state of the object `Pizza` itself.
 - It allows us to override the `mix_ingredients` method in a subclass. If we used a function `mix_ingredients` defined at the top-level of our module, a class inheriting from `Pizza` would not be able to change the way we mix ingredients for our pizza without overriding `cook` itself. 
 
-### A longer example
+## A longer example
 
 ```python
 # Using static and class methods together
@@ -143,7 +143,7 @@ Invalid!
 
 Static methods can work together with `from_csv` calling `validate` using the `cls` object. Running the code above prints out an array of valid grades, and then fails on the second attempt.
 
-### Abstract Methods
+## Abstract Methods
 - Defined in a base class, and may not provide any implementation. 
 
 For example:
