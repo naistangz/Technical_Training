@@ -112,8 +112,11 @@ with open("new_json_file.json") as jsonfile:
 ## HTTP Response
 HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:
 
-1. Informational responses(`100`-`199`)
-
+1. Informational responses (`100`-`199`)
+2. Successful responses (`200`-`299`)
+3. Redirects (`300`-`399`)
+4. Client errors (`400`-`499`)
+5. Server errors (`500`-`509`)
 
 * 100 Continue. The client SHOULD continue with its request
 * 200 OK. The request has succeeded

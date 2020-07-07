@@ -40,11 +40,29 @@ Example of JSON object
 
 ---
 **REST(Representational State Transfer)**
+* [To edit]  (https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
 
 ---
+
 
 `__name__ == __main__:`
 
 
+## [Using Python Decorators](python_decorators.md)
 
-* [To edit]  (https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
+`@staticmethod`
+
+```python
+class ToyClass:
+    def instancemethod(self):
+        return 'instance method called', self
+    
+    @classmethod
+    def classmethod(cls):
+        return 'class method called', cls
+    @staticmethod
+    def staticmethod():
+        return 'static method called'
+
+```
+
