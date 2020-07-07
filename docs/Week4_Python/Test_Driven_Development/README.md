@@ -37,8 +37,8 @@
 $ python -m pip install pytest
 ```
 
+The test file **must** include key word **test**
 ```bash
-test file MUST INCLUDE KEY WORD TEST
 calc_test
 ```
 
