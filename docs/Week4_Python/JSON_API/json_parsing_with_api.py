@@ -1,9 +1,11 @@
 import requests
 import json
 
-post_codes_requests = requests.get("https://api.postcodes.io/postcodes/se120nb")
+post_codes_requests = requests.get("https://api.postcodes.io/postcodes/EN40NB")
 
-print(post_codes_requests.status_code)
+post_codes_requests_status = post_codes_requests.status_code
+
+
 # Why should we use built in packages
 
 # First iteration
@@ -24,14 +26,25 @@ print(post_codes_requests.status_code)
 # check_status_code()
 
 # Third iteration create same function with OOP - class and a method
-class HTTPStatusCode:
-    response = None
+# Create a method called check_status_code():
+# Output should the same as we achieved without OOP.
 
-    def check_status_code(self, response):
-        if response is not None:
-            self.response = response.status_code
+class HTTPStatusCode:
+
+    def check_status_code(self, request):
+        if request:
+            print(f"Your request was successful\nStatus Code: {request}")
         else:
             print("Sorry your request is not available")
+            return
+
+
+
+# print(post_codes_requests.headers)
+# print(post_codes_requests.cookies)
+# print(post_codes_requests.json())
+# print(type(post_codes_requests))
 
 c = HTTPStatusCode()
-# c.check_status_code(HTTPStatusCode)
+c.check_status_code(request=None) # Prints Sorry your request is not available
+c.check_status_code(request=post_codes_requests_status) # Prints Your request was successful\nStatus Code: 200

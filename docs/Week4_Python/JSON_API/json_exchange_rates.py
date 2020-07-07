@@ -12,15 +12,7 @@ class Exchange_Rates:
     def __init__(self):
         self.self = self
 
-    def fetch_exchange_rate(self, currency):
-        with open("exchange_rates.json", "r") as jsonfile: # name aliasing
-            rates = json.load(jsonfile)
-            for i in rates:
-                if i == 'base':
-                    print(rates['base']) # Prints value of base: 'EUR'
-            print(f"The exchange rate between EUR and {currency} is", rates["rates"][currency])
-
-    def fetch_exchange_rates(self):
+    def input_exchange_rates(self):
         with open("exchange_rates.json", "r") as jsonfile:
             currencies = json.load(jsonfile)
             # For loop to get all exchange rates
@@ -33,13 +25,8 @@ class Exchange_Rates:
                         print(f"1 Euro: " + str(currencies["rates"][currency]))
 
 
-
-
-
 e = Exchange_Rates
-print(e)
-e.__init__(Exchange_Rates)
-e.fetch_exchange_rates(Exchange_Rates)
+e.input_exchange_rates(Exchange_Rates)
 
 
 

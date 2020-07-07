@@ -95,6 +95,16 @@ with open("new_json_file.json") as jsonfile:
     print(car['engine']) # to get the value of second key value pair
 ```
 
+## HTTP Request Structure
+
+![HTTP_Request Structure](../../../images/http_request.png)
+
+
+## HTTP Response
+
+![HTTP_Response_Infographic](../../../images/http-decision-diagram.png)
+
 ## Exercises with JSON
 -[x] [JSON Exchange Rates](json_exchange_rates.py)
 -[x] [JSON Encoding and Decoding](json_encoding_decoding.py)
+-[x] [JSON parsing with API](json_parsing_with_api.py)
