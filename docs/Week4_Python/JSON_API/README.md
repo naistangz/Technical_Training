@@ -1,4 +1,4 @@
-# JSON API with Python 
+# JSON API with Python :closed_lock_with_key:
 
 ## What is JSON? Javascript Object Notation 
 - Minimal, readable format for structuring data.
