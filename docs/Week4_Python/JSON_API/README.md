@@ -11,8 +11,6 @@
 - JSON feeds from other sites via AJAX (Asynchronous JavaScript and XML). Many sites are sharing data using JSON in addition to RSS (Really Simple Syndication) feeds.
 - JSON feeds can be loaded **asynchronously** much more easily than XML/RSS.
 
-## Syntax - json is syntax for exchanging data
-
 ## Keys and Values 
 The two primary parts that make up JSON are keys and values. 
 Together they make a key/value pair. 
