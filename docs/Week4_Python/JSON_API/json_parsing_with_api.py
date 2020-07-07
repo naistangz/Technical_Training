@@ -39,7 +39,6 @@ class HTTPStatusCode:
             return
 
 
-
 # print(post_codes_requests.headers)
 # print(post_codes_requests.cookies)
 # print(post_codes_requests.json())
@@ -48,3 +47,31 @@ class HTTPStatusCode:
 c = HTTPStatusCode()
 c.check_status_code(request=None) # Prints Sorry your request is not available
 c.check_status_code(request=post_codes_requests_status) # Prints Your request was successful\nStatus Code: 200
+
+json_data = post_codes_requests.json()
+# storing data from json()
+print(type(json_data)) # Prints <class 'dict'>
+
+
+
+# Exercise is to fetch data by key value pairs within dictionaries
+# Create a function to return the above values (key, value pairs)
+
+# Iterating through keys. Without .key, it will iterate through keys by default
+# for key in json_data:
+#     print(key)
+#     # Prints status, result
+#
+# print(json_data)
+
+# Iterating through values
+# for value in json_data.values():
+#     print(value)
+
+# Iterating through key, value pairs
+def http_dict():
+    for k, v in json_data.items():
+        kv = k, v
+        print(f"Key, value pairs =",(kv))
+
+http_dict()

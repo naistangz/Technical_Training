@@ -8,7 +8,7 @@
 - [x] [HTTP Requests and Python APIs](APIs)
 - [x] [JSON API with Python](JSON_API)
 - [x] [Test Driven Development (TDD)](Test_Driven_Development)
-- [] Error Handling
+- [x] [Error Handling](JSON%20exception%20handling)
 - [] SQL with Python
 - [] CSV and Excel Files 
 
@@ -40,5 +40,11 @@ Example of JSON object
 
 ---
 **REST(Representational State Transfer)**
+
+---
+
+`__name__ == __main__:`
+
+
 
 * [To edit]  (https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)

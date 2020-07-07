@@ -6,8 +6,13 @@
 - It is a way to store information in an organised, easy-to-access manner.
 - It gives us human-readable collection of data that we can access in a logical manner. 
 
-## Why does JSON matter?
 
+## The Python JSON Module
+- The JSON module is part of the built in Python library and contains methods for working with the format.
+- There are two methods for parsing text into JSON. `LOAD` and `LOADS`.
+- There are two methods for taking python objects and serialising them directly into `JSON`, `dump` and `dumps`.
+
+## Why does JSON matter?
 - JSON feeds from other sites via AJAX (Asynchronous JavaScript and XML). Many sites are sharing data using JSON in addition to RSS (Really Simple Syndication) feeds.
 - JSON feeds can be loaded **asynchronously** much more easily than XML/RSS.
 
@@ -44,6 +49,7 @@ The key/value pair "foo":"bar" is nested inside the key/value pair "hello":{ ...
 ## Serialising JSON
 When a computer processes lots of information, it needs to take a data dump. The `json`library exposes the `dump()` method for writing data to files.
 Simple python objects are translated to JSON accordingly. 
+Python - JSON -> `DUMP`
 
 **Python**|**JSON**
 --------|-------
@@ -71,6 +77,9 @@ with open("new_json_file.json", "w") as jsonfile:
 
 ## Deserialising JSON
 In the `json` library, `load()` and `loads()` turn JSON encoded data into Python objects.
+
+`JSON` to Python object -> `LOAD`
+
 **JSON**|**Python**
 --------|-------
 object|dict
@@ -101,6 +110,19 @@ with open("new_json_file.json") as jsonfile:
 
 
 ## HTTP Response
+HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:
+
+1. Informational responses(`100`-`199`)
+
+
+* 100 Continue. The client SHOULD continue with its request
+* 200 OK. The request has succeeded
+* 203 Non-Authoritative Information
+* 206 Partial Content
+* 300 Multiple Choices
+* 303 See Other
+* 306 (Unused) 
+* 400 Bad Request
 
 [Click Here for infographic](../images/http-decision-diagram.png)
 
@@ -109,3 +131,8 @@ with open("new_json_file.json") as jsonfile:
 - [x] [JSON Exchange Rates](json_exchange_rates.py)
 - [x] [JSON Encoding and Decoding](json_encoding_decoding.py)
 - [x] [JSON parsing with API](json_parsing_with_api.py)
+- [x] [JSON_Parse_start](json_parse_start.py)
+- [x] [JSON Serialize Start](json_serialize_start.py)
+
+## JSON exception handling 
+- [x] [JSON error handling](../Error%20Handling/json_err_finished.py)

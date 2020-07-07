@@ -107,7 +107,35 @@ print(response_bbc)
 * 400 
 * 404 Page not found 
 
+
 [Click Here for Infographic](../images/http-decision-diagram.png)
+
+### Using Requests
+* Simple API - each HTTP verb is a method name 
+* Makes working with parameters, headers, and cookies easier
+* Automatically decodes returned content
+* Automatically parses JSON content when detected
+* Handles redirects, timeouts, and errors
+* Supports advanced features like authentication and sessions
+
+**Importing the requests module in pycharm**
+
+```python
+import requests
+```
+
+### Making a simple requests
+```python
+response = requests.get(url)
+```
+
+**params**|Key-value pairs that will be sent in the query string
+-------|--------
+**headers**| Dictionary of header values to send along with the request
+**auth**| Authentication tuple to enable different forms of authentication
+**timeout**| Value in seconds to wait for the server to respond 
+
+Exercise file [HERE](python_requests_module.py)
 
 ---
 Practical resources: [Codecademy Learn the Watson API](https://www.codecademy.com/learn/ibm-watson)
