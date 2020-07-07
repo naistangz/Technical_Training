@@ -94,3 +94,7 @@ with open("new_json_file.json") as jsonfile:
     print(car['name']) # to get the value stored in the key called 'name'
     print(car['engine']) # to get the value of second key value pair
 ```
+
+## Exercises with JSON
+-[x] [JSON Exchange Rates](json_exchange_rates.py)
+-[x] [JSON Encoding and Decoding](json_encoding_decoding.py)
