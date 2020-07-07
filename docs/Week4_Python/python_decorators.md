@@ -175,5 +175,8 @@ Using `abc` module and its special class when instantiating the base class `Stud
 **Why do we use abstract class in Python?**
 - Allows us to create functionality that subclasses (child classes) can implement or override. 
 - Serves as a 'skeleton' for a subclass.
+- Helpful in large code when remembering many classes is difficult.
+- By declaring an abstract method in the child class, we can provide some guidelines to the child class, such that they should compulsorily implement those methods.
+- If we remove the `@abstractmethod` decorator, then the method becomes a normal method and the child class may or may not give implementation to it. 
 
 <img src = "https://cdn.educba.com/academy/wp-content/uploads/2019/10/Abstract-classes-in-Python.jpg">
