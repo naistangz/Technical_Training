@@ -17,7 +17,7 @@ file_object = open("filename", "mode")
 Syntax
 
 ```python
-file = open("filetext.txt"w+")
+file = open("filetext.txt", "w+")
 ```
 
 - We have declared the variable file to open a file named `"filetext.txt"`. Open takes 2 arguments the file that we want to open and a string that represents the kinds of permission or operation we want to do on the file.
