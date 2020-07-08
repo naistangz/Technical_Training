@@ -16,7 +16,7 @@ from http import HTTPStatus
 
 class HTTP_Check():
 
-    def __init__(self, url):
+    def __init__(self, url=None):
         self.url = url
 
     def main(self):
@@ -45,6 +45,8 @@ class HTTP_Check():
             f.write(f"Something exceptional just happened.\nHere is the error:{e.reason}")
             f.close()
             print("Hmmmmm something is wrong with the URL")
+
+
 
 
 # will generate a URLError
