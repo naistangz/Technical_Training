@@ -53,6 +53,7 @@ else:
 - We use curly brackets {} to create a dictionary, separated by 'comma'
 - Values in a dictionary can be of any data type and can be duplicated, whereas keys cannot be repeated and must be immutable
 - Dictionaries are accessed via keys and not via their index position
+- Can be nested
 
 ```python
 student_record = {
@@ -62,6 +63,75 @@ student_record = {
     "completed_lesson_names": ["Business Skills", "SQL", "Python"]
 }
 ```
+
+---
+
+**Collections**
+- Containers used to store collections of data, e.g. list, dict, set, tuple
+- They have different characteristics based on the declaration and the usage.
+- Built-in Python module that implements specialised container datatypes.
+- Developed to provide additional data structures to store collections of data. 
+- Examples: 
+    - OrderedDict
+    - defaultdict
+    - counter
+    - namedtuple
+    - deque
+
+**OrderedDict**
+```python
+from collections import OrderedDict
+
+roll_no = OrderedDict([
+(11, 'Anais'),
+(9, 'Severus'),
+(17, 'Jonty'),
+])
+
+for key, value in roll_no.items():
+print(key, value)
+```
+
+**Output:**
+```python
+(11, 'Anais')
+(9, 'Severus'),
+(17, 'Jony')
+```
+The output order is exactly the same as the order of insertion. 
+
+---
+**Dynamic vs Static**
+- Python is dynamically typed meaning variable names (unless `NULL`) is bound only to an object
+- Data type determined at run time, not in advance, so no need to specify type of variable.
+- This makes python a strongly typed language (type checking happens at run time), python interpreter keeps track of all variables types. 
+- In python, it is the program's responsibility to use built-in functions like `isinstance()` or `issubclass` to test variable types.
+
+**Python (Dynamically Typed):**
+```python
+num = 5
+```
+
+**Java (Statically Typed):**
+```java
+int num;
+num = 5;
+```
+
+**Python: strongly typed**
+- In python, you cannot perform operations inappropriate to the type of object e.g adding numbers to strings
+```python
+'x' + 3
+>>> # Returns error. Integer MUST be converted to string 
+```
+
+**Javascript: weakly typed**
+- Compiler/interpreter sometimes changes the type of variable
+```javascript
+'x' + 3
+>>> x3
+```
+Above program is problematic. Instead of raising exception, execution will continue but variables now have wrong and unexpected values.
 
 ---
 
@@ -167,7 +237,28 @@ this_is_variable = 19
 this_is_another_variable = "Hello World"
 this_is_also_a_variable = (str(this_is_variable) + this_is_another_variable)
 ``` 
- 
+
+---
+**List** vs **tuple** vs **set** vs **dictionary**
+
+[List](lists.py) []
+- mutable, stores duplicate values, elements accessed using indexes, ordered collection
+- Methods = `.append()`, `.remove()`, `.insert()`, `.pop()`
+
+[Tuple](tuples.py) ()
+- Like a list but immutable, stores duplicate values, ordered collection, accessed using indexes.
+- Methods = `.add()`, `.discard()`, `.count()`, `.del`
+
+[Set](sets.py) ()
+- Unordered, not indexed, does not store duplicate entries
+- Methods = `.add()`, `.clear()`, `.update()`, `.remove()`
+
+[Dictionary](dictionaries.py) {key:value}
+- Key value pairs, mutable, unordered
+- Methods = `.items()`, `.keys()`, `.values()`
+- More useful than lists when mapping unique keys to values
+- Dict elements accessed via keys
+
 > Common Python Interview Questions [HERE](https://www.guru99.com/python-interview-questions-answers.html)
 
 

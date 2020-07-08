@@ -10,11 +10,12 @@ class TextFileHandling:
         # Open the file
         # Read the file
         # Closing the file
-        file = open(self.file_path, "r") # Read mode
-        self.text_storage = file.read()
+        file = open(self.file_path, "r")  # Read mode
+        # self.text_storage = file.read()
+        print(file.read(1))
         self.text_storage = file.readline()
-        print(self.text_storage)
         self.text_storage = file.readlines()
+        print(file.tell())  # The pointer is at the current position and will start reading from there
         # for line in file:
         #     print(line)
         file.close()

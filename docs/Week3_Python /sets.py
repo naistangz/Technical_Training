@@ -31,3 +31,62 @@ print(frozen_set)
 # This will throw an error. Frozenset objects cannot use the 'add' attribute
 # frozen_set.add("h")
 
+
+# Example 2
+# initialize my_set
+my_set = {1, 3}
+print(my_set)
+
+# if you uncomment line 9,
+# you will get an error
+# TypeError: 'set' object does not support indexing
+
+# my_set[0]
+
+# add an element
+# Output: {1, 2, 3}
+my_set.add(2)
+print(my_set)
+
+# add multiple elements
+# Output: {1, 2, 3, 4}
+my_set.update([2, 3, 4])
+print(my_set)
+
+# add list and set
+# Output: {1, 2, 3, 4, 5, 6, 8}
+my_set.update([4, 5], {1, 6, 8})
+print(my_set)
+
+# Removing vs discard
+# Discard function leaves a set unchanged if element not present in set
+# Remove function raises error if element not present in the set
+
+# Difference between discard() and remove()
+
+# initialize my_set
+my_set = {1, 3, 4, 5, 6}
+print(my_set)
+
+# discard an element
+# Output: {1, 3, 5, 6}
+my_set.discard(4)
+print(my_set)
+
+# remove an element
+# Output: {1, 3, 5}
+my_set.remove(6)
+print(my_set)
+
+# discard an element
+# not present in my_set
+# Output: {1, 3, 5}
+my_set.discard(2)
+print(my_set)
+
+# remove an element
+# not present in my_set
+# you will get an error.
+# Output: KeyError
+
+my_set.remove(2)
