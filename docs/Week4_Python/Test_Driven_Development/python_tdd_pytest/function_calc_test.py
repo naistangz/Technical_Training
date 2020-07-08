@@ -15,5 +15,3 @@ class Calc_Test(unittest.TestCase):
 
 
 func = Function_calc
-print(func.find_sqrt(16))
-print(func.find_ceil(90.3411))
