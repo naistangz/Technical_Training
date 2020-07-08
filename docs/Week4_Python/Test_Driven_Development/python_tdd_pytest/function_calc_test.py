@@ -1,7 +1,6 @@
 import unittest
 from function_calc import *
 
-from docs.Week4_Python.Test_Driven_Development.python_tdd_pytest.function_calc import Function_calc
 
 
 class Calc_Test(unittest.TestCase):

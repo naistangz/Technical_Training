@@ -16,6 +16,13 @@
 
 ## Terminology
 
+[**CRUD**](crud.md)
+- When building APIs, we want our models to provide four basic types of functionality.
+- The model must be able to `CREATE`, `READ`, `UPDATE`, and `DELETE` resources.
+- CRUD paradigm common in constructing web applications, because it provides a memorable framework for reminding developers of how to construct full, usable models.
+
+---
+
 **HTTP(Hypertext Transfer Protocol)**
 - Foundation of WWW, used to load web pages using hypertext links.
 - HTTP is an application layer **protocol** designed to transfer information between networked devices and runs on top of other layers of the network protocol stack
@@ -40,8 +47,9 @@ Example of JSON object
 
 ---
 **REST(Representational State Transfer)**
-* [To edit]  (https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
-
+- Architectural style that defines set of **standards** to be used for creating Web services.
+- REST-compliant systems or RESTful systems are characterised by how they are stateless and separate the concerns of client and server.
+- REST is based on four methods defined by the HTTP protocol: `POST`, `GET`, `PUT`, and `DELETE`. These correspond to the four traditional actions performed on data in a database (CRUD): `CREATE`, `READ`, `UPDATE`, and `DELETE`.
 ---
 
 
@@ -49,8 +57,6 @@ Example of JSON object
 
 
 ## [Using Python Decorators](python_decorators.md)
-
-`@staticmethod`
 
 ```python
 class ToyClass:
@@ -63,6 +69,5 @@ class ToyClass:
     @staticmethod
     def staticmethod():
         return 'static method called'
-
 ```
 
