@@ -244,6 +244,7 @@ this_is_also_a_variable = (str(this_is_variable) + this_is_another_variable)
 [List](lists.py) []
 - mutable, stores duplicate values, elements accessed using indexes, ordered collection
 - Methods = `.append()`, `.remove()`, `.insert()`, `.pop()`
+- `.remove()` removes first matching value, `del list_name[index]` removes item at specific index. `.pop()` removes item at specific index and returns it.
 
 [Tuple](tuples.py) ()
 - Like a list but immutable, stores duplicate values, ordered collection, accessed using indexes.
@@ -257,7 +258,8 @@ this_is_also_a_variable = (str(this_is_variable) + this_is_another_variable)
 - Key value pairs, mutable, unordered
 - Methods = `.items()`, `.keys()`, `.values()`
 - More useful than lists when mapping unique keys to values
-- Dict elements accessed via keys
+- Dict elements accessed via keys NOT position of items so slicing cannot happen.
+- `.pop("key")` method to remove entry in dictionary or `del`
 
 ---
 

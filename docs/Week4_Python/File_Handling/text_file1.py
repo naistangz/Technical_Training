@@ -95,3 +95,41 @@ class TextFileHandling:
             # Reading the file
             self.text_storage=f.read()
             return self.text_storage
+
+    def playingWithPythonOSModule(self):
+        # Provides functions for interacting with the operating system
+        import os
+
+        # Prints current working directory
+        # Prints /Users/anaistang/DevOps_Training/docs/Week4_Python/File_Handling
+        cwd_result = os.getcwd()
+        print(cwd_result)
+
+        # Removing "writer.txt" file
+        # os.remove("writer.txt")
+
+        # Listing the directory
+        # Prints ['text_file1.py', '__pycache__', 'order.txt', 'README.md', 'text_file.py', 'order2.txt', 'main.py', 'main1.py']
+        # print(os.listdir())
+
+        # Renaming a file. Takes two args: first argument is file to modify, second argument is the modified name
+        # os.rename('order2.txt', 'modified.txt')
+
+        # Changing the directory
+        # os.chdir("path name")
+        os.chdir("/Users/anaistang/DevOps_Training/docs/Week4_Python/File_Handling")
+        updated_cwd = os.getcwd()
+        print(f"Directory changed successfully!\nCurrent directory: ", updated_cwd)
+
+        # Creating a directory
+        # Creates a new directory within my File_Handling directory
+        # creating_dir = os.mkdir("New_directory")
+        # print(f"A new directory has been created", creating_dir)
+
+        # Removing a directory
+        # Removes the directory from my File_Handling directory
+        # removing_dir = os.rmdir("New_directory")
+        # print(f"Directory has been deleted successfully")
+
+
+

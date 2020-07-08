@@ -19,4 +19,6 @@ textfileObject = TextFileHandling(file_path)
 # print(textfileObject.readTextFileUsingWith())
 
 # Writing text file using with (overriding)
-print(textfileObject.writeTextFileUsingWith())
+# print(textfileObject.writeTextFileUsingWith())
+
+textfileObject.playingWithPythonOSModule()

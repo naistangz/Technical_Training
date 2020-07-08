@@ -129,3 +129,52 @@ Syntax
 f1=f.readlines()
 ```
 This will read the file or document line by line and separate each line and present the file in a readable format
+
+## File Modes in Python 
+
+**Mode**|**Description**
+-----|------
+'r'|This is default mode, opens file for reading
+'w'|Opens file for writing. If file does not exist, it creates a new file. If file exists, it truncates the file.
+'x'|Creates new file, it file already exists, operation fails.
+'a'| Opens files in append mode. If file does not exist, it creates a new file
+'t'| Default mode, opens in text mode
+'b'| Opens in binary mode 
+'+'|Opens file for reading and writing(updating)
+
+## Python Check if File or Directory Exists using built-in library functions
+
+The builtin `OS` module in python provides functions for interacting with the operating system
+
+** Importing os.path module:**
+
+```python
+import os.path
+from os import path
+```
+
+Using the `path.exists()` function to check whether a File exists.
+
+```python
+path.exists("filetext.txt") # Returns boolean
+```
+
+**`OS` Module**| Output
+----|-----
+`os.path.exists()`| Returns `True` if path or directory exists
+`os.path.isfile()`| Returns `True` if path is File
+`os.path.isdir()`| Returns `True` if path is Directory
+`pathlib.Path.exists()`|Returns `True` if path or directory does exist
+
+## Renaming Files and Directories using `os.rename()`
+
+`rename()` method is used to rename a file or directoy. It takes two arguments.
+
+Syntax:
+```python
+os.rename(src, dst)
+```
+
+**src:** Source is name of file or directory. It should already exists
+
+**dst:** Destination is the new name of the file or directory you want to change.
