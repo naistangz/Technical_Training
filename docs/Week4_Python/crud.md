@@ -21,4 +21,14 @@ After this function is called, a new entry in the `books` corresponds to the new
 
 **`READ`** - Consists of a function we call to see all of the books currently in the catalog. The function does not alter the books in the catalog, it retrieves the resource and displays the results. The object is not be modified, only retrieved.
 
-**`UPDATE`** - 
+**`UPDATE`** - Consists of a function to supply the new values for `"title"`, `"author"`, and `"isbn"` to identify the book. Corresponding entry contains new fields.
+
+**`DELETE`** - Function to remove a library book from the catalog. 
+
+## Practice Qs
+- What routes would you need to implement to provide your workout class model with this CRUD functionality and what are their corresponding HTTP verbs?
+- What effect would each route have on the database?
+- What response body would each route return?
+- What response code would each route return?
+
+> [Answers](answer_crud.md)
