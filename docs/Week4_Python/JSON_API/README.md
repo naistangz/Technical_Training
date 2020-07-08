@@ -129,6 +129,40 @@ HTTP response status codes indicate whether a specific HTTP request has been suc
 
 [Click Here for infographic](../images/http-decision-diagram.png)
 
+## Comparing JSON to XML style:
+
+**JSON style:**
+
+```bash
+{"students":[
+    {"name":"John", "city:" Agra},
+    {"name":"Steve", "city":"Santiago"},
+    {"name":"Peter", "city":"Madrid"},
+    {"name": "Anais", "city":"Paris"}
+]}
+```
+
+**XML Style:**
+
+```xml
+<students>
+  <student>
+    <name>John</name><city>Agra</city>
+  </student>
+  <student>
+    <name>Steve</name><city>Santiago</city>
+  </student>
+  <student>
+    <name>Peter</name><city>Madrid</city>
+  </student>
+  <student>
+    <name>Anais</name> <city>Paris</city>
+  </student>
+</students>
+```
+
+JSON is light-weighted compared to XML. In JSON we can also take advantage of arrays that is not available in XML>
+
 ## Exercises with JSON
 
 - [x] [JSON Exchange Rates](json_exchange_rates.py)
