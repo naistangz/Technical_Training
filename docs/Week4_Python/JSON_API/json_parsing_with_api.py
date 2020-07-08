@@ -69,9 +69,16 @@ print(type(json_data)) # Prints <class 'dict'>
 #     print(value)
 
 # Iterating through key, value pairs
-def http_dict():
-    for k, v in json_data.items():
-        kv = k, v
-        print(f"Key, value pairs =",(kv))
+class JSONIterator:
+    def key_value_pair(self, json_dictionary):
+        for k, v in json_dictionary.items():
+            if type(v) is dict:
+                self.key_value_pair(v)
+            # kv = k, v
+            else:
+                print(k, ":", v)
 
-http_dict()
+json_test = JSONIterator()
+json_test.key_value_pair(json_data)
+
+
