@@ -27,7 +27,10 @@ class HTTP_Check():
             response = urllib.request.urlopen(url)
             print(f"Response code:{response.status}")
             if (response.getcode() == HTTPStatus.OK):
-                print(response.read())
+                response_read = response.read()
+                print(f"Hurrrah your request was successful\n{response_read}")
+            f = open("successfulHTTP.txt", "w+")
+            f.write(f"Wooop the HTTP request was successful\nResponse Code:{response.status}\n{response_read}")
         # exception when server returns an unsuccessful error code
         except HTTPError as e:
             f = open("errorHTTPlog.txt", "w+")
@@ -46,7 +49,7 @@ class HTTP_Check():
 # url = "http://no-such-server.org"
 
 # will generate a HTTPError
-url = "http://httpbin.org/status/404"
+# url = "http://httpbin.org/status/404"
 
 # Successful request
 # url = "http://httpbin.org/html"

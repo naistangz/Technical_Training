@@ -1,0 +1,1 @@
+Something exceptional just happened. Here is the error: [Errno 8] nodename nor servname provided, or not known
