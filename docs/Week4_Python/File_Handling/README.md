@@ -146,7 +146,7 @@ This will read the file or document line by line and separate each line and pres
 
 The builtin `OS` module in python provides functions for interacting with the operating system
 
-** Importing os.path module:**
+**Importing os.path module:**
 
 ```python
 import os.path
