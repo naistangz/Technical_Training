@@ -1,0 +1,2 @@
+Something exceptional just happened.
+HTTP Error 404: Not Found
