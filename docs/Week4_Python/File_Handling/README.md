@@ -178,3 +178,7 @@ os.rename(src, dst)
 **src:** Source is name of file or directory. It should already exists
 
 **dst:** Destination is the new name of the file or directory you want to change.
+
+> Exercises: 
+>[Error Handing](text_file1_error_handling.py)
+>[Main.py](main1_error_handling.py)

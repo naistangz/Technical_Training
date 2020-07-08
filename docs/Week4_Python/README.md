@@ -58,6 +58,9 @@ Example of JSON object
 
 `__name__ == __main__:`
 
+---
+**Try, Except, Else, Finally**
+
 
 ## [Using Python Decorators](python_decorators.md)
 
