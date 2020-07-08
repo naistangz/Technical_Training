@@ -26,7 +26,7 @@ class HTTP_Check():
         try:
             response = urllib.request.urlopen(url)
             print(f"Response code:{response.status}")
-            if (response.getcode() == HTTPStatus.OK):
+            if (response.getcode() == HTTPStatus.OK): # or Status code == 200
                 response_read = response.read()
                 print(f"Hurrrah your request was successful\n{response_read}")
             f = open("successfulHTTP.txt", "w+")
