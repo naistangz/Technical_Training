@@ -9,21 +9,21 @@ post_codes_requests_status = post_codes_requests.status_code
 # Why should we use built in packages
 
 # First iteration
-# if post_codes_requests.status_code == 200:
-#     print("Your request was successful")
-# elif post_codes_requests.status_code == 404:
-#     print("Sorry your request is not available")
-# elif post_codes_requests.status_code == 500:
-#     print("Server Error")
+if post_codes_requests.status_code == 200:
+    print("Your request was successful")
+elif post_codes_requests.status_code == 404:
+    print("Sorry your request is not available")
+elif post_codes_requests.status_code == 500:
+    print("Server Error")
 
 # Second iteration without comparison operators
-# def check_status_code():
-#     if post_codes_requests.status_code:
-#         print("Your request was successful")
-#     elif post_codes_requests.status_code:
-#         print("Sorry the page is not available")
-#
-# check_status_code()
+def check_status_code():
+    if post_codes_requests.status_code:
+        print("Your request was successful")
+    elif post_codes_requests.status_code:
+        print("Sorry the page is not available")
+
+check_status_code()
 
 # Third iteration create same function with OOP - class and a method
 # Create a method called check_status_code():
@@ -58,15 +58,15 @@ print(type(json_data)) # Prints <class 'dict'>
 # Create a function to return the above values (key, value pairs)
 
 # Iterating through keys. Without .key, it will iterate through keys by default
-# for key in json_data:
-#     print(key)
-#     # Prints status, result
-#
-# print(json_data)
+for key in json_data:
+    print(key)
+    # Prints status, result
+
+print(json_data)
 
 # Iterating through values
-# for value in json_data.values():
-#     print(value)
+for value in json_data.values():
+    print(value)
 
 # Iterating through key, value pairs
 class JSONIterator:
