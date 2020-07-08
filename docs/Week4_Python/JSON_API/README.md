@@ -172,4 +172,4 @@ JSON is light-weighted compared to XML. In JSON we can also take advantage of ar
 - [x] [JSON Serialize Start](json_serialize_start.py)
 
 ## JSON exception handling 
-- [x] [JSON error handling](../JSON_exception_handling/json_err_finished.py)
+- [x] [JSON error handling](../Error_Handling/json_err_finished.py)

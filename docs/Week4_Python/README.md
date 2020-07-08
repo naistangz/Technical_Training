@@ -10,7 +10,8 @@
     - [x] [CRUD](crud.md)
 - [x] [Python Decorators](python_decorators.md)
 - [x] [Test Driven Development (TDD)](Test_Driven_Development)
-- [x] [Error Handling](JSON%20exception%20handling)
+- [x] [Error Handling](Error_Handling)
+- [x] [File Handling](File_Handling)
 - [] SQL with Python
 - [] CSV and Excel Files 
 
