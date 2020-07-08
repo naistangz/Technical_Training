@@ -59,7 +59,32 @@ Example of JSON object
 `__name__ == __main__:`
 
 ---
+
 **Try, Except, Else, Finally**
+- Exceptions in python are objects that represent errors.
+- Exceptions can be raised in many ways e.g passing invalid arguments to functions ("string" + int) or performing illegal operations (12/0).
+- By default, exceptions stop Python programs and print a traceback to the console with information about the exception.
+
+```python
+try:
+    """
+    Code with exception you want to catch. 
+    If exception raised (error occurs), control leaves this block and goes to except block
+    """
+except:
+    """
+    Executed only if an exception was raised in the try block. Code executed in this block is like normal code. 
+    """
+else:
+    """
+    Code executed only if no exceptions were raised in the try block
+    """
+finally:
+    """
+    This code ALWAYS executes after the other blocks, even if there was an uncaught exception or a return statement in one of the other blocks.
+    """
+```
+
 
 
 ## [Using Python Decorators](python_decorators.md)

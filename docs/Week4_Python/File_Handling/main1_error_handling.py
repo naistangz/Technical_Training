@@ -11,3 +11,6 @@ textfileObject.readTextFile()
 # Calling playWithExceptions method
 # Prints Dumplings
 print(textfileObject.playWithExceptions())
+
+# Using raised exceptions
+print(textfileObject.raiseException())

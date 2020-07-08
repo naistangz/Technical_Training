@@ -7,16 +7,19 @@ class TextFileHandlingError:
 
     def readTextFile(self):
 
-    # Execute the following code which may raise an exception
+        # Execute the following code which may raise an exception
         try:
             f = open(self.file_path, "r")
 
-    # If there is no exception, only try clause will run
-    # If any exception occurred, try clause will be skipped and else clause will run
-    # except will capture the thrown exception
+        # If there is no exception, only try clause will run
+        # If any exception occurred, try clause will be skipped and else clause will run
+        # except will capture the thrown exception
+        # Aliasing exception as e
+        except FileNotFoundError as e:
+            print(e)
         except Exception as e:
             print(e)
-    # If exception is not thrown, program will run the following code
+        # If exception is not thrown, program will run the following code
         else:
             print(f.read())
 
@@ -36,11 +39,10 @@ class TextFileHandlingError:
             f.close()
             return self.text_storage
 
-
     def playWithExceptions(self):
 
         try:
-            f=open(self.file_path, 'r')
+            f = open(self.file_path, 'r')
 
         # aliasing error as e
         # Optional block
@@ -50,7 +52,7 @@ class TextFileHandlingError:
             print("The file does not exist")
         else:
             print("I am in the else clause")
-            self.text_storage=f.readline()
+            self.text_storage = f.readline()
             f.close()
 
         # Finally defines block of code to run when try...except..else block is final
@@ -58,3 +60,14 @@ class TextFileHandlingError:
         finally:
             print("Read line method successful")
             return self.text_storage
+
+    def raiseException(self):
+            try:
+                name = str(input("Enter your name:\n"))
+                if len(name) == 0:
+                    raise Exception
+            except Exception:
+                print("You have not entered your name. Please try again")
+                self.raiseException()
+            else:
+                print(f"Welcome! {name}")
