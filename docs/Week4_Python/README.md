@@ -7,6 +7,8 @@
 #### Part II
 - [x] [HTTP Requests and Python APIs](APIs)
 - [x] [JSON API with Python](JSON_API)
+    - [x] [CRUD](crud.md)
+- [x] [Python Decorators](python_decorators.md)
 - [x] [Test Driven Development (TDD)](Test_Driven_Development)
 - [x] [Error Handling](JSON%20exception%20handling)
 - [] SQL with Python
