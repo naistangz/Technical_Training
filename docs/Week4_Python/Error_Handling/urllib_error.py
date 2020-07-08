@@ -22,7 +22,7 @@ class HTTP_Check():
     def main(self):
 
         # using exception handling when accessing URL
-        # try URL and print HTTP status ONLY if successful
+        # try URL and print HTTP status code
         try:
             response = urllib.request.urlopen(url)
             print(f"Response code:{response.status}")
@@ -31,12 +31,14 @@ class HTTP_Check():
                 print(f"Hurrrah your request was successful\n{response_read}")
             f = open("successfulHTTP.txt", "w+")
             f.write(f"Wooop the HTTP request was successful\nResponse Code:{response.status}\n{response_read}")
+
         # exception when server returns an unsuccessful error code
         except HTTPError as e:
             f = open("errorHTTPlog.txt", "w+")
             f.write(f"Something exceptional just happened.\n{e}")
             f.close()
             print("Errrrrm your request could not be found")
+
         # When something is wrong with the URL itself i.e server does not exist. Reason method provides description.
         except URLError as e:
             f = open("errorlog.txt", "w+")
