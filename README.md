@@ -13,8 +13,8 @@
 
 - [x] **Week 1** [Business Skills and Agile Methodologies](/docs/Week1_BusinessSkills)
 - [x] **Week 2** [SQL](/docs/Week2_SQL)
-- [x] **Week 3** [Python](/docs/Week3_Python%20)
-- [x] **Week 4** [Python](/docs/Week4_Python)
+- [x] **Week 3** [Python OOP, Data Types](/docs/Week3_Python%20)
+- [x] **Week 4** [Python Error Handling, APIs](/docs/Week4_Python)
 - [ ] **Week 5** Python
 
 ---
