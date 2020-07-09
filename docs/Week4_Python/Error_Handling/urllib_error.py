@@ -48,8 +48,7 @@ class HTTP_Check():
 
 
 
-
-# will generate a URLError
+# # will generate a URLError
 url = "http://no-such-server.org"
 
 # will generate a HTTPError
