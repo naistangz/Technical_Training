@@ -33,7 +33,7 @@ import os
 <img src="https://i.stack.imgur.com/IstkF.jpg" alt="Environment_variables">
 
 3. Add or change variables, then click `OK` e.g Database, Password, etc
-<img src="https://i.stack.imgur.com/l3ZRt.jpg alt="changing variables">
+<img src="https://i.stack.imgur.com/l3ZRt.jpg" alt="changing variables">
 
 4. Restart interpreter
 
