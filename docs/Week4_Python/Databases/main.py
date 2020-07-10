@@ -1,10 +1,10 @@
 # 1) DB server connection
 from database_OOP import *
 
-server = 'databases2.spartaglobal.academy'
-database = 'Northwind'
-username = 'SA'
-password = 'Passw0rd2018'
+server = os.environ.get('db_server')
+database = os.environ.get('db_database')
+username = os.environ.get('db_username')
+password = os.environ.get('db_password')
 
 # OOP
 user_input = int(input("Select the operation to execute:\n1. Fetch one row\n2. Fetch many rows\n3. Fetch All rows\n"))

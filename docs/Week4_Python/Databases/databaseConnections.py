@@ -1,9 +1,12 @@
 import pyodbc
+import os
 
-server = 'databases2.spartaglobal.academy'
-database = 'Northwind'
-username = 'SA'
-password = 'Passw0rd2018'
+
+server = os.environ.get('db_server')
+database = os.environ.get('db_database')
+username = os.environ.get('db_username')
+password = os.environ.get('db_password')
+
 connections = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE=' + database +';UID='+ username +';PWD='+ password)
 
 cursor = connections.cursor()
