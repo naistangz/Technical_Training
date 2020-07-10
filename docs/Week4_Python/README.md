@@ -12,18 +12,44 @@
 - [x] [Test Driven Development (TDD)](Test_Driven_Development)
 - [x] [Error Handling](Error_Handling)
 - [x] [File Handling](File_Handling)
-- [] SQL with Python
-- [] CSV and Excel Files 
+- [x] [Using databases with Python](Databases)
+
 
 
 
 ## Terminology
+
+**APIs**
+- **A**pplication **P**rogramming **I**interface (API)
+- Set of tools that takes data and information and makes it universally accessible
+- API makes a call to a server or database, executes request and returns response
+- Gives programmers access to company's product or set of code that can be injected into your own project without having to build from scratch.
+- Lately used to describe a kind of web interface.
+- Web API is part of website designed to interact with programs that use specific URLs to request certain information (API call)
+- Requested data returned in an easily processed format such as JSON or CSV.
+- Built around HTTP protocol (meaning any programming language can be used to access them) e.g. Python, Java, Javascript, etc have at least one HTTP library to make this process easier.
+
+---
 
 [**CRUD**](crud.md)
 - When building APIs, we want our models to provide four basic types of functionality.
 - The model must be able to `CREATE`, `READ`, `UPDATE`, and `DELETE` resources.
 - CRUD paradigm common in constructing web applications, because it provides a memorable framework for reminding developers of how to construct full, usable models.
 
+---
+**CSV**
+- **C**omma-**s**eparated **v**alues file
+- Allows data to be saved in a tabular format 
+
+Using pandas library to import CSV file into Python 
+```bash
+import pandas as pd
+```
+
+Using pyodbc to connect Python to SQL server
+```bash
+import pyodbc
+```
 ---
 
 **HTTP(Hypertext Transfer Protocol)**
