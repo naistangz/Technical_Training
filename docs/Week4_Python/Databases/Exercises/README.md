@@ -22,7 +22,8 @@ Please enter the number for the operation you want to execute:
 ====================================================
 1.SELECT * FROM products
 2.Find Average unit price for all products
-3.To exit
+3.To save product names onto a CSV file
+4.To exit
 ====================================================
 
 ```
