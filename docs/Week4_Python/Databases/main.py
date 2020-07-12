@@ -1,6 +1,6 @@
 # 1) DB server connection
 from database_OOP import *
-
+import os
 server = os.environ.get('db_server')
 database = os.environ.get('db_database')
 username = os.environ.get('db_username')

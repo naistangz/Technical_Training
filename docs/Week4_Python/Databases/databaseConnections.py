@@ -2,6 +2,7 @@ import pyodbc
 import os
 
 
+
 server = os.environ.get('db_server')
 database = os.environ.get('db_database')
 username = os.environ.get('db_username')

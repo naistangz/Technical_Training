@@ -11,7 +11,7 @@ class database_OOP:
 
     # 2) establishing the connection
     def establish_connection(self):
-        connectionString = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + self.server + ';DATABASE=' + self.database + ';UID=' + self.username + ';PWD=' + self.password
+        connectionString = ('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + self.server + ';DATABASE=' + self.database + ';UID=' + self.username + ';PWD=' + self.password)
 
         try:
             with pyodbc.connect(connectionString, timeout=5) as connection:
@@ -19,13 +19,15 @@ class database_OOP:
         except:
             print("Connection Timed Out")
         else:
-            return connection
+            self.create_cursor()
 
 
 
      # 3) Create a cursor from the connection
     def create_cursor(self, connection):
-         return connection.cursor()
+        self.cursor = connection.cursor()
+        self.query_database()
+        return connection.cursor()
 
 
 

@@ -25,6 +25,7 @@ class Function:
 - `self` allows us to access the class attributes and methods on the same object.
 - `self.__class__` attribute gives access to class attributes.
 - **Instance methods** give us control of changing the object as well as the class state.
+- `self` part of object (the instance)
 
 Built-in example of instance method: 
 
