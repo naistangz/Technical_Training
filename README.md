@@ -1,6 +1,6 @@
 # Welcome to my Github! :blush:
 
-**`Anais'` DevOps Trainee Notes** [HERE](/docs)
+**`Anais'` Trainee Notes** [HERE](/docs)
 
 **`Anais'` CodePen Projects** [HERE](https://codepen.io/tangintech)
 
@@ -22,6 +22,7 @@
 :books: **Projects**
 
 1. SQL Data Analysis [HERE](/docs/Week2_SQL/SQL_Projects)
+2. Object-Oriented Programming[HERE](https://github.com/naistangz/OOP)
 
 
  
