@@ -1,5 +1,6 @@
 import pyodbc
 import os
+import csv
 
 class Databases:  # create class to initialise the connection
 
@@ -54,6 +55,22 @@ class Databases:  # create class to initialise the connection
             Average_unit_price.append(row)
         return f"Average Unit Price:{Average_unit_price}"
 
+    def dump_to_csv(self, connection):
+        sql_command = "SELECT ProductName FROM Products"
+        cursor = connection.cursor()
+        rows = cursor.execute(sql_command)
+        Product_Name = []
+        for row in rows:
+            Product_Name.append(row)
+        with open("testing.csv", "w", newline="") as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow([Product_Name])
+        print("""
+                ===============================
+                | a CSV file has been created |
+                ===============================
+                """)
+
     def user_interface(self):
         object = Databases(server, database, username, password)
 
@@ -61,18 +78,20 @@ class Databases:  # create class to initialise the connection
 
         while not user_exit:
             def menu():
-                options = "\nPlease enter the number for the operation you want to execute:\n1.SELECT * FROM products\n2.Find Average unit price for all products\n3.To exit\n"
+                options = "\nPlease enter the number for the operation you want to execute:\n1.SELECT * FROM products\n2.Find Average unit price for all products\n3.To save products on CSV file\n4.To exit\n"
                 print(options)
             menu()
             try:
                 user_input = int(input("Your selection:\n"))
             except ValueError:
-                print("Invalid selection. Please select number 1, 2, or 3")
+                print("Invalid selection. Please select number 1, 2, 3 or 4")
             if user_input == 1:
                 print(object.execute_query(connection))
             elif user_input == 2:
                 print(object.avg_unitprice(connection))
             elif user_input == 3:
+                print(object.dump_to_csv(connection))
+            elif user_input == 4:
                 print("""
                 ========================================
                 | Thank you! Goodbye! Closing connection|
@@ -95,4 +114,5 @@ connection = pyodbc.connect(cnxn, timeout=5)
 d = Databases(server, database, username, password)
 d.create_connection()
 d.user_interface()
+
 
