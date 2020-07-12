@@ -22,7 +22,7 @@
 :books: **Projects**
 
 1. SQL Data Analysis [HERE](/docs/Week2_SQL/SQL_Projects)
-2. Object-Oriented Programming[HERE](https://github.com/naistangz/OOP)
+2. Object-Oriented Programming [HERE](https://github.com/naistangz/OOP)
 
 
  
