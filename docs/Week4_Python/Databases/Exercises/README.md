@@ -8,7 +8,7 @@ from connectingDatabases1 import *
 
 Check if connection to the database is successful:
 
-```python
+```bash
                 =========================================
                 | Connection to the database successful!|
                 =========================================
