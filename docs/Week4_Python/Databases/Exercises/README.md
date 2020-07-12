@@ -16,7 +16,7 @@ Check if connection to the database is successful:
 
 Menu Options:
 
-```python
+```bash
 
 Please enter the number for the operation you want to execute:
 ====================================================
@@ -29,7 +29,7 @@ Please enter the number for the operation you want to execute:
 
 Type in 3 to exit the program
 
-```python
+```bash
                 ========================================
                 | Thank you! Goodbye! Closing connection|
                 ========================================
