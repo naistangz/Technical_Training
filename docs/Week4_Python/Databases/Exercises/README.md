@@ -20,7 +20,7 @@ Menu Options:
 
 Please enter the number for the operation you want to execute:
 ====================================================
-1.SELECT * FROM products
+1.To select a query (e.g. SELECT * FROM Products)
 2.Find Average unit price for all products
 3.To save product names onto a CSV file
 4.To exit

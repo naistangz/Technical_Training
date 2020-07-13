@@ -13,6 +13,7 @@
 - [x] [Error Handling](Error_Handling)
 - [x] [File Handling](File_Handling)
 - [x] [Using databases with Python](Databases)
+    - [x] [Using Pandas library, joining data using DataFrames](Databases/pandas_library.py)
 
 
 
