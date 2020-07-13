@@ -54,6 +54,7 @@ else:
 - Values in a dictionary can be of any data type and can be duplicated, whereas keys cannot be repeated and must be immutable
 - Dictionaries are accessed via keys and not via their index position
 - Can be nested
+- Are mutable
 
 ```python
 student_record = {
@@ -63,7 +64,18 @@ student_record = {
     "completed_lesson_names": ["Business Skills", "SQL", "Python"]
 }
 ```
+`del student_record["stream"]`
+or
+`student_record.pop("stream")`
 
+Outcome
+```python
+student_record = {
+    "name": "Anais",
+    "completed_lesson": 5,
+    "completed_lesson_names": ["Business Skills", "SQL", "Python"]
+}
+```
 ---
 
 **Collections**

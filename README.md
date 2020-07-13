@@ -9,7 +9,7 @@
 ---
 :round_pushpin: **London Based**
 
-:pencil2:: **Technical Consultant Training Program Roadmap:**
+:pencil2: **Technical Consultant Training Program Roadmap:**
 
 - [x] **Week 1** [Business Skills and Agile Methodologies](/docs/Week1_BusinessSkills)
 - [x] **Week 2** [SQL](/docs/Week2_SQL)
