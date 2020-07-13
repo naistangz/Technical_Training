@@ -120,7 +120,3 @@ connection = pyodbc.connect(cnxn, timeout=5)
 d = Databases(server, database, username, password)
 d.create_connection()
 d.user_interface()
-
-
-
-
