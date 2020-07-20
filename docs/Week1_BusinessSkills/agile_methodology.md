@@ -101,7 +101,6 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/matrix-waterfall-agile%402x.gif?itok=fARF2Wlw" alt="agile vs waterfall">
 
 
-
 **Kanban:**
 - Derives from the japanese word signboard or billboard 看板
 - Visual way to implement agile
