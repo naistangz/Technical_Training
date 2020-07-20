@@ -49,11 +49,51 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 - **Continuous improvement:**
     - Agile projects encourage feedback from users, team members throughout whole project.
     - Lessons learned are used to improve future iterations. 
-    
-<img src=https://www.smartsheet.com/sites/default/files/styles/1300px/public/agile-lifecycle_0.png?itok=tjkbaxQa>
+   
+<img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/agile-lifecycle_0.png?itok=tjkbaxQa" alt="agile methodology">
 
 ## Disadvantages of Agile
-
+- **Planning is less concrete:**
+    - Hard to pin down solid delivery date. 
+    - Agile is based on time-boxed delivery and project managers are often reprioritising tasks
+    - Items originally scheduled for delivery may not be complete in time. 
+    - Additional sprints can be added at any time in the project, adding to overall timeline. 
+    
+- **Final product can be different:**
+    - Initial agile project might not have a definitive plan, so the final product can look much different than what was initially intended.
+    - Agile is so flexible, new iterations may be added based on evolving customer feedback, which can lead to different final deliverable. 
    
 # Agile vs Scrum vs Waterfall vs Kanban
-- SCRUM is a framework 
+- Scrum is **not** a methodology. 
+- Scrum is a framework 
+- Scrum falls under agile 
+- Scrum is an iterative software model that follows a set of roles, responsibilities and meetings that never change
+- Scrum is an **Agile** process to focus on delivering business value in the shortest time
+- Scrum promotes accountability, teamwork and function in an iterative and incremental approach. 
+- Scrum projects are driven by Scrum master along with product managers and developers. 
+- Time frame for each built which are released into production are denoted as a sprint in a Scrum system
+- Scrum has two mandatory roles: **Product Owner** and **Scrum Master.**
+
+**Waterfall:**
+- **Not** agile. Follows sequential, linear process
+- Sometimes called a Gantt chart, a type of bar chart that shows the start and end dates for each task
+- Once one of the eight stages are complete, the development team moves onto the next step. 
+- The team cannot go back to a previous stage without starting the whole process from the beginning. 
+- Before the team can move to next stage, requirements may be reviewed and approved by the customer.
+- Changes can't be easily accommodated like agile, once the team completes a phase, they cannot go back. 
+- Software is not delivered until late, the project has to complete two to four phases before coding actually begins, as a result, stakeholders do not see working software until late in lifecycle. 
+- Waterfall projects usually include defined requirements in advance (in agile they evolve).
+
+<img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/matrix-waterfall-agile%402x.gif?itok=fARF2Wlw" alt="agile vs waterfall">
+
+
+
+**Kanban:**
+- Derives from the japanese word signboard or billboard 看板
+- Visual way to implement agile
+- Kanban is a method not a philosophy (agile)
+- Kanban advocates for continuous flow, while agile works in iterations
+- Kanban requires visual representation of workflow 
+- Visualises workflow and full transparency of work, allowing every team member to see the state of every piece of work at any time.
+
+Example of Kanban with [Trello Board](https://trello.com/)
