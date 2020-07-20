@@ -96,4 +96,7 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 - Kanban requires visual representation of workflow 
 - Visualises workflow and full transparency of work, allowing every team member to see the state of every piece of work at any time.
 
+
+<img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/kanban-board%402x.png?itok=lgaiQP5B" alt="kanban_example">
+
 Example of Kanban with [Trello Board](https://trello.com/)
