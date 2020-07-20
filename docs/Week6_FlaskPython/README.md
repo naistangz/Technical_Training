@@ -7,7 +7,8 @@
 - Allows developers to build web applications easily 
 - A lightweight WSGI web application framework
 
-* :bulb: Developed by Armin Ronacher, who led team of international Python enthusiasts called Poocco :bulb:
+
+:bulb: Developed by Armin Ronacher, who led team of international Python enthusiasts called Poocco :bulb:
 
 # What is a web framework?
 - Represents a collection of libraries and modules that enable web application developers to write applications without worrying about low-level details such as protocol, thread management, etc.
