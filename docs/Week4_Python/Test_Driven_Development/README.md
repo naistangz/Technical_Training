@@ -28,6 +28,10 @@
     - Having set of automated tests can fix those breaks before release.
     - Proper warning is given when breaks are identified.
 
+## TDD in Agile 
+- Development technique where you must first write a test that fails before you write new functional code. 
+- Starts with designing and developing tests for every small functionality and prompts developers to write new code only if an automated test has failed. 
+ 
 
 ## Using Pytest 
 

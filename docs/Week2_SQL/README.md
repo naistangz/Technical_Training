@@ -18,3 +18,14 @@
 
 **SQL Projects and Exams**
 1. [Northwind Database Data Analysis](/docs/Week2_SQL/SQL_Projects)
+
+# Terminology 
+
+## **DELETE vs TRUNCATE vs DROP**:
+
+**`DELETE`** vs **`TRUNCATE`**: `DELETE` used to remove records using `WHERE` clause. `TRUNCATE` removes all records. `TRUNCATE` is not possible when a table is referenced by a foreign key.
+
+**`DELETE`** vs **`DROP`**: `DROP` DDL command removes a table from the database. Removes **all** named elements of the schema like relations, domains or constraints. `DELETE` removes only those tuples which satisfy the `WHERE` clause condition. If `WHERE` clause is missing then by default all tuples present in relation are *removed (same as `TRUNCATE`)*
+
+**`TRUNCATE`** vs **`DROP`**: `DROP` Removes table definition, indexes, data, constraints, triggers. Cannot be rolled back (must be recreated) `TRUNCATE` removes all data but preserves structure of table and remain in the memory for further operations unlike `DROP` table.
+

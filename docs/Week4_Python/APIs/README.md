@@ -6,11 +6,23 @@
 - An API is a software-to-software interface, not a user interface.
 - Applications talk to each other without any user knowledge or intervention. 
 - APIs defines the rules that programmers *must* follow in order to interact with a programming language, a software library, or any other software tool.
+- Allows two unrelated systems to interact with each other.
+
+### API set of specifications?
+- API typically defined as set of specifications, such as HTTP request messages, along with definition of the structure of response messages, usually in Extensible Markup Language (XML) or JavaScript Object Notation (JSON) format.
+- API specification describes the way that each of the two systems must interact with the API itself (such as language that must be used, the syntax, etc)
+- Example: shipping company API that can be added to an eCommerce-focused website to facilitate ordering shipping services and automatically include current shipping rates, without site developer having to enter the shipper's rate table into a web database.
 
 ### Example of an API?
 - When using an application on a mobile phone, the application connects to the Internet and sends data to a server.
 - The server retrieves that data, interprets it, performs the necessary actions and sends it back to your phone. 
 - The application interprets that data and presents you with the information you want in a readable way. 
+
+### What is web scraping?
+- Data scraping used for extracting data from websites 
+- Refers to automated processes implemented using a bot or web crawler
+- Some websites can contain very large amount of invaluable data such as stock prices, product details
+    - Web scraping allows developers to extract and export data in a format that is more useful for the user. In the form of a spreadsheet or an API.
 
 **Analogy**
 [Extracted from Mulesoft](https://www.mulesoft.com/resources/api/what-is-an-api)
