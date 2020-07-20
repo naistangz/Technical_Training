@@ -44,6 +44,8 @@
 - APIs allow developers to access a library of an app's existing information by using a key. 
 - APIs are re-usable, secure and more manageable.
 - No need to open up database to direct client connections and manage those connections. 
+- Extends functionality of a web server.
+- Useful when dealing with data that changes constantly like stock prices and weather. 
 
 ### Why are APIs important?
 **1. APIs are huge time-savers**
