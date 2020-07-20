@@ -115,3 +115,6 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 
 Example of Kanban with [Trello Board](https://trello.com/)
 
+# Definition of *done*
+- When all conditions, or acceptance criteria, that a software product must satisfy are met and ready to be accepted by a user, customers, team, or consuming system. 
+
