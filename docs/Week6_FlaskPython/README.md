@@ -50,5 +50,5 @@ Easy to get started | Extremely limited, you have to build almost everything tha
 Very customisable | No database support, you have to write all your custom SQL statements and create objects and turn them back into database data.
 Web Server Gateway Interface (WSGI) compatible |
 
-**Mini flask project**
+## **Mini flask project**
 - [URL Shortener](url-shortener)
