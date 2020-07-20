@@ -29,3 +29,7 @@
 
 **`TRUNCATE`** vs **`DROP`**: `DROP` Removes table definition, indexes, data, constraints, triggers. Cannot be rolled back (must be recreated) `TRUNCATE` removes all data but preserves structure of table and remain in the memory for further operations unlike `DROP` table.
 
+
+## **Null**
+- Undefined values 
+- `NULL` does not equal to zero 

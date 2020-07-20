@@ -8,6 +8,20 @@
     - This **work** is organised into a backlog that is prioritised based on business or customer value
 - The goal of each iteration is to produce a working product. 
 
+## The four values of the Agile Manifesto 
+- Individuals and interactions over processes and tools
+    - People are more important that using the best tools
+    - Communication is key  
+- Working software over comprehensive documentation 
+    - Be customer centric rather than focus on documentation
+- Customer collaboration over contract negotiation
+    - Continuous development
+    - Build feedback loop with your customers so that you can constantly ensure that your product works for them.
+- Responding to change over following a plan.
+    -  Flexible road-map
+    - Software team should have the ability to pivot and change direction whenever they need to, with a flexible road map 
+
+
 ## **12 Principles of Agile Methodology**
 Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html). 
 1. Highest priority: satisfy the customer through early and continuous delivery of valuable software.
@@ -91,7 +105,7 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 **Kanban:**
 - Derives from the japanese word signboard or billboard 看板
 - Visual way to implement agile
-- Kanban is a method not a philosophy (agile)
+- Kanban is a method or tool not a philosophy (agile)
 - Kanban advocates for continuous flow, while agile works in iterations
 - Kanban requires visual representation of workflow 
 - Visualises workflow and full transparency of work, allowing every team member to see the state of every piece of work at any time.
@@ -100,3 +114,4 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/kanban-board%402x.png?itok=lgaiQP5B" alt="kanban_example">
 
 Example of Kanban with [Trello Board](https://trello.com/)
+
