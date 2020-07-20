@@ -38,7 +38,7 @@
 - The API is the interface that online travel services like skyscanner use to get information from the airline's database to book seats, baggage options, flight options, etc. 
 - Skyscanner's Travel API then takes the airline's response to your request, which shows the most updated, relevant information. 
 
-![Skyscanner_api](images/skyscanner_api.png)
+<img src="https://i.stack.imgur.com/WSYOk.png" alt="skyscanner_api">
 
 ### Why use an API?
 - APIs allow developers to access a library of an app's existing information by using a key. 
