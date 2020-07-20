@@ -13,7 +13,7 @@ class Databases:
     # establish connection
     def create_connection(self):
 
-        cnxn = ('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + self.server + ';DATABASE=' + self.database + ';UID=' + self.username + ';PWD=' + self.password)
+        # cnxn = ('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + self.server + ';DATABASE=' + self.database + ';UID=' + self.username + ';PWD=' + self.password)
         try:
             with pyodbc.connect(cnxn, timeout=5) as connection:
                 print("""
