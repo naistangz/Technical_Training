@@ -16,7 +16,7 @@
 - [x] **Week 3** [Python OOP, Data Types, etc](/docs/Week3_Python%20)
 - [x] **Week 4** [Python File Handling, Error Handling, APIs, etc](/docs/Week4_Python)
 - [x] **Week 5** [Python Airport Project](https://github.com/Humza277/pythonProject)
-- [x] **Week 5** [Using Flask in Python](/docs/Week6_FlaskPython)
+- [x] **Week 5** [Flask Web Framework](/docs/Week6_FlaskPython)
 ---
 
 :books: **Projects**
