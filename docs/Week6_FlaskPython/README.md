@@ -53,3 +53,7 @@ Web Server Gateway Interface (WSGI) compatible |
 
 ## **Mini flask project**
 - [URL Shortener](url-shortener)
+
+# Terminology 
+
+**Model View Controller (MVC)**
