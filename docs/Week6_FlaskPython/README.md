@@ -100,3 +100,17 @@ Web Server Gateway Interface (WSGI) compatible |
 **End Point**
 - Any device that is physically an end point on a network
 - One end of a communication channel
+
+---
+
+**WSGI (Web Server Gateway Interface)**
+Frameworks|Servers
+------|------
+Flask | Gunicorn
+Django| uWSGI
+
+- WSGI is a protocol for Python applications in order to serve websites in a uniform manner.
+- Examples of Python frameworks include Flask or Django
+- Examples of servers include Gunicorn and uWSGI
+- If we have a Python framework that wants to serve webpages, if it follows the WSGI format, that means that any Python framework you choose can work with any compatible WSGI server. 
+- Flask and Django by default implement those, same as Gunicorn and uWSGI
