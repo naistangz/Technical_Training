@@ -3,21 +3,21 @@ import json
 import os.path
 from werkzeug.utils import secure_filename
 
-bp = Blueprint('urlshort', __name__)
+# bp = Blueprint('urlshort',__name__)
 
 # name of the module that is currently running in flask
-# app = Flask(__name__)
-# app.secret_key = 'h42314trge435rtgfdew345rt'
-bp = Flask(__name__)
+app = Flask(__name__)
+app.secret_key = 'h42314trge435rtgfdew345rt'
+# bp = Flask(__name__)
 
 # home page
-@bp.route('/')
+@app.route('/')
 def home():
     # we provide different codes that come as part of the cookies
     return render_template('home.html', codes=session.keys())
 
 # about page
-@bp.route('/your-url', methods=['GET', 'POST'])
+@app.route('/your-url', methods=['GET', 'POST'])
 def your_url():
     if request.method == 'POST':
         urls = {}
@@ -49,7 +49,7 @@ def your_url():
         return redirect(url_for('home'))
 
 # redirecting to url page
-@bp.route('/<string:code>')
+@app.route('/<string:code>')
 def redirect_to_url(code):
     if os.path.exists('../urls.json'):
         with open('../urls.json') as urls_file:
@@ -62,7 +62,7 @@ def redirect_to_url(code):
                     return redirect(url_for('static', filename='user_files/' + urls[code]['file']))
     return abort(404)
 
-@bp.errorhandler(404)
+@app.errorhandler(404)
 def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
@@ -72,18 +72,15 @@ def page_not_found(error):
 # route for api
 # creating an api
 # jsonify takes any list or dictionary and takes it into json format
-@bp.route('/api')
+@app.route('/api')
 def session_api():
     return jsonify(list(session.keys()))
 
 
 # if python interpreter is running this module as the main program, it sets __name__ variable to have a value '__main__'
 # Tells us whether the python module was executed as a script, or imported from another module. It will only enter if __name__ == __main__ block if file was executed as a script (main module)
-# if __name__ == "__main__":
-#     # to run in environment production
-#     app.run(debug=True)
-
 if __name__ == "__main__":
     # to run in environment production
-    bp.run(debug=True)
+    app.run(debug=True)
+
 
