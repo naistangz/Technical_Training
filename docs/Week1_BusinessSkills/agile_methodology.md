@@ -63,6 +63,7 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 - **Continuous improvement:**
     - Agile projects encourage feedback from users, team members throughout whole project.
     - Lessons learned are used to improve future iterations. 
+
    
 <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/agile-lifecycle_0.png?itok=tjkbaxQa" alt="agile methodology">
 

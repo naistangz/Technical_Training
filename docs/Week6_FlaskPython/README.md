@@ -43,6 +43,33 @@ bash-3.2$ flask run
  * Debugger is active!
  * Debugger PIN: 891-424-380
 ```
+
+If you already have a process bound to the default port (5000), locate the process:
+```bash
+$ ps -fA | grep python
+```
+
+```bash
+501 81651 12648 0 9:53PM ttys000 0:00.00 grep python
+```
+
+Stop the server by sending it a signal (the second number - process number)
+```bash
+kill 81651
+```
+
+**or:**
+
+Run the server on a *different** port, by specifying the alternative port on the command line:
+```bash
+$ python -m SimpleHTTPServer 8910
+Serving HTTP on 0.0.0.0 port 8910
+```
+
+Then access the server as `http://localhost:8910`; where `8910` can be any number from 1024 and up, provided the port is not already taken.
+
+
+
 ## Pros and Cons of Flask 
 
 **Pros**|**Cons**
@@ -57,3 +84,19 @@ Web Server Gateway Interface (WSGI) compatible |
 # Terminology 
 
 **Model View Controller (MVC)**
+- A software design pattern used for developing user interfaces that divides the related program logic into three interconnected elements, **Model,** **View** and **Controller.**
+- The **MVC** model or 'pattern' is used for developing modern user interfaces.
+- Each architecture component is built to handle specific development aspect of an application 
+- MVC separates the business logic and presentation layer from each other. 
+
+<img src="https://www.guru99.com/images/1/122118_0445_MVCTutorial1.png" alt="mvc_image">
+
+
+- **Model** - Includes all data and its related logic
+- **View** - Presents data and its related logic
+- **Controller** - An interface between Model and View components
+
+---
+**End Point**
+- Any device that is physically an end point on a network
+- One end of a communication channel

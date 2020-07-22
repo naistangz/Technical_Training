@@ -1,8 +1,10 @@
-<h1>URL Shortener</h1>
+{% extends 'base.html' %}
 
-{% for message in get_flashed_messages() %}
-<h2>{{ message }}</h2>
-{% endfor %}
+{% block title %}URL Shortener{% endblock %}
+
+{% block main %}
+
+<h1>URL Shortener</h1>
 
 <form action="your-url" method="post">
     <label for ="url">Website URL</label>
@@ -24,4 +26,16 @@
     <input type="submit" value="Shorten">
 </form>
 
-<!--<h2>{{ name }}</h2>-->
+<!--syntax for writing code-->
+{% if codes %}
+<h2>Codes you have created</h2>
+<ul>
+  {% for code in codes %}
+  <a href="{{ url_for('redirect_to_url', code=code) }}">
+  <li>{{ code }}</li>
+  </a>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}
