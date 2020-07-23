@@ -78,10 +78,8 @@ Easy to get started | Extremely limited, you have to build almost everything tha
 Very customisable | No database support, you have to write all your custom SQL statements and create objects and turn them back into database data.
 Web Server Gateway Interface (WSGI) compatible |
 
-## **Mini flask project**
-- [URL Shortener](url-shortener)
 
-# Terminology 
+## Terminology 
 
 **Model View Controller (MVC)**
 - A software design pattern used for developing user interfaces that divides the related program logic into three interconnected elements, **Model,** **View** and **Controller.**
@@ -114,3 +112,6 @@ Django| uWSGI
 - Examples of servers include Gunicorn and uWSGI
 - If we have a Python framework that wants to serve webpages, if it follows the WSGI format, that means that any Python framework you choose can work with any compatible WSGI server. 
 - Flask and Django by default implement those, same as Gunicorn and uWSGI
+
+# **Mini flask project**
+- [URL Shortener](url-shortener)
