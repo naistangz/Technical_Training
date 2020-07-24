@@ -173,11 +173,11 @@ Anaiss-MBP:myfirstbox anaistang$ vagrant ssh
 **Try:**
 
 ```bash
-# save the config to a file
-vagrant ssh-config > vagrant-ssh
+Anaiss-MBP:myfirstbox anaistang$ vagrant ssh-config > vagrant-ssh
+Anaiss-MBP:myfirstbox anaistang$ ssh -F vagrant-ssh default
+```
 
-# run ssh with the file.
-ssh -F vagrant-ssh default
+```bash
 Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-185-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -198,6 +198,7 @@ This system is built by the Bento project by Chef Software
 More information can be found at https://github.com/chef/bento
 vagrant@vagrant:~$ 
 ```
+
 
 The prompt is no longer our Mac prompt. It is now the Ubuntu box connected remotely via SSH
 
@@ -235,7 +236,7 @@ lo        Link encap:Local Loopback
           RX bytes:5824 (5.8 KB)  TX bytes:5824 (5.8 KB)
 ```
 
-**Disconnecting and terminating the SSH connection and returning to OSX prompt.
+**Disconnecting and terminating the SSH connection and returning to OSX prompt**
 ```bash
 vagrant@vagrant:/$ exit
 logout
@@ -245,3 +246,26 @@ Anaiss-MBP:myfirstbox anaistang$
 
 SSH is used to connect to a box to test installation and configuration management scripts or to run diagnostics on a box while a process is running. 
 The Vagrant CLI includes Windows box connections commands for RDP, which is a remote desktop client and PowerShell.
+
+## Halting and Destroying Boxes
+```bash
+Anaiss-MBP:myfirstbox anaistang$ vagrant halt
+==> default: Attempting graceful shutdown of VM...
+Anaiss-MBP:myfirstbox anaistang$ 
+```
+- The `vagrant halt` command will send a shutdown signal to the box. The guest operating system will attempt to `shut down gracefully`
+- A box that has been shut down can be restarted with a `vagrant up` at any time
+
+**Starting over in your environment:**
+Changes made to the box that you want to discard, and start from initial state of the box as it was the first time it was booted.
+```bash
+Anaiss-MBP:myfirstbox anaistang$ vagrant destroy
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+==> default: Destroying VM and associated drives...
+Anaiss-MBP:myfirstbox anaistang$ 
+```
+
+- The `bento/ubuntu-16.04` box will be re-imported and started in its initial state.
+- This box and all boxes on Vagrant Cloud are referred to as base boxes.
+- They're intended as starting points
+- Most vagrant use cases involve you as the user starting with the base box, then adding software and configuration to create a box fit for a particular purpose. 
