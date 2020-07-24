@@ -24,6 +24,7 @@
 1. SQL Data Analysis [HERE](/docs/Week2_SQL/SQL_Projects)
 2. Object-Oriented Programming [HERE](https://github.com/naistangz/OOP)
 3. Python Group Project: Airport Simulation [HERE](https://github.com/Humza277/pythonProject)
-
+4. Python Flask URL-Shortener [HERE](/docs/Week6_FlaskPython/url-shortener)
+5. Python Flask Login Page [HERE](https://github.com/naistangz/flask_autho_app/tree/master/flask_autho_app)
 
  
