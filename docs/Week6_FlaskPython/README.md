@@ -113,5 +113,6 @@ Django| uWSGI
 - If we have a Python framework that wants to serve webpages, if it follows the WSGI format, that means that any Python framework you choose can work with any compatible WSGI server. 
 - Flask and Django by default implement those, same as Gunicorn and uWSGI
 
-# **Mini flask project**
+# Flask Projects
 - [URL Shortener](url-shortener)
+- [Flask Authorisation App](https://github.com/naistangz/flask_autho_app/tree/master/flask_autho_app)
