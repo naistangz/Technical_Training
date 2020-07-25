@@ -1,7 +1,9 @@
 # Vagrant
 
 Contents
-[Part I Working with Boxes]
+
+[Part I Working with Boxes](#what-is-vagrant)
+
 1. [What is Vagrant?](#what-is-vagrant)
 2. [Why use vagrant?](#why-use-vagrant)
 3. [Using vagrant](#using-vagrant)
@@ -34,7 +36,7 @@ Contents
 
 
 
-Part II
+
 ## What is vagrant?
 - Software written in Ruby for creating a full development environment within minutes
 - From a developer's perspective, working on a software project, this involves setting up, installing and configuring multiple services.
