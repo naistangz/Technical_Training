@@ -1,5 +1,40 @@
 # Vagrant
 
+Contents
+[Part I Working with Boxes]
+1. [What is Vagrant?](#what-is-vagrant)
+2. [Why use vagrant?](#why-use-vagrant)
+3. [Using vagrant](#using-vagrant)
+4. [Vagrant Features](#vagrant-features)
+5. [Brief intro TCP/IP and DNS networking](#tcpip-and-dns-networking)
+6. [Vagrant Cloud](#vagrant-cloud)
+
+[Part II Configuring Boxes with Vagrant Files](#part-ii)
+1. [Vagrant Files]
+2. [Vagrant Synced folders]
+3. [Vagrant networking]
+4. [Vagrant providers]
+5. [Vagrant provisioners]
+
+[Part III Vagrant Use Cases]
+1. [Application developer environment overview]
+2. [Creating a developer environment]
+3. [Vagrant multi-machien Vagrantfile]
+
+[Part IV Vagrant Use Cases]
+1. [Application Developer environment overview]
+2. [Creating a developer environment]
+3. [Vagrant multi-machine Vagrant file]
+
+[Part V Vagrant Features and Services]
+1. [Create a base box, part I]
+2. [Create a base box, part II]
+3. [Uploading a box to Vagrant Cloud]
+4. [Tips and Tricks]
+
+
+
+Part II
 ## What is vagrant?
 - Software written in Ruby for creating a full development environment within minutes
 - From a developer's perspective, working on a software project, this involves setting up, installing and configuring multiple services.
@@ -7,7 +42,7 @@
 - This involves installing all the required dependency softwares on your laptop/workstation.
 - This is time and resource intensive especially when dealing with modern web applications that has a lot of moving parts to it e.g web servers, application servers, backend API services, etc.
 
-## Why use vagrant?
+## Why use vagrant? 
 - Preserve purpose-built isolated development environments.
 - **Vagrant** allows users to maintain the application dependency configuration and environment completely in sync with other developers working in the project, regardless of what operating system are being used.
 - Software dev envs depends on tools and libraries
@@ -268,4 +303,9 @@ Anaiss-MBP:myfirstbox anaistang$
 - The `bento/ubuntu-16.04` box will be re-imported and started in its initial state.
 - This box and all boxes on Vagrant Cloud are referred to as base boxes.
 - They're intended as starting points
-- Most vagrant use cases involve you as the user starting with the base box, then adding software and configuration to create a box fit for a particular purpose. 
+- Most vagrant use cases involve you as the user starting with the base box, then adding software and configuration to create a box fit for a particular purpose.
+
+ ## Vagrant Cloud 
+ 
+ # Part II
+ ## Configuring Boxes with Vagrantfiles
