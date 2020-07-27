@@ -167,6 +167,17 @@ suspend the virtual machine. In either case, to restart it again,
 simply run `vagrant up`.
 ```
 
+`sudo apt-get update` command:
+1. The `sudo apt-get update` command is used to download package information from all configured sources
+2. The sources defined in `/etc/apt/sources.list` file and other files located in `/etc/apt/sources.list.d/` directory.
+3. When you run update command, it downloads the package information from the Internet.
+4. `apt` is a package manager.
+
+`sudo apt-get upgrade` command:
+1. New packages will be installed if required to satisfy dependencies, but existing packages will never be removed. 
+2. Install outdated packages, apply security patches for packages and keeps your system secure.
+3. `sudo apt-get upgrade` installs available upgrades of all packages currently installed on the system from the sources configured via `sources.list` file. 
+
 **Listing the status of all Vagrant VMs on your machine (if there are multiple running on your system)**
 ```bash
 Anaiss-MBP:myfirstbox anaistang$ cd ..
@@ -213,6 +224,8 @@ Anaiss-MBP:myfirstbox anaistang$ vagrant ssh
 Anaiss-MBP:myfirstbox anaistang$ vagrant ssh-config > vagrant-ssh
 Anaiss-MBP:myfirstbox anaistang$ ssh -F vagrant-ssh default
 ```
+
+This command drops you into a full-fledged SSH session (connecting to machine via SSH)
 
 ```bash
 Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-185-generic x86_64)
@@ -308,6 +321,8 @@ Anaiss-MBP:myfirstbox anaistang$
 - Most vagrant use cases involve you as the user starting with the base box, then adding software and configuration to create a box fit for a particular purpose.
 
  ## Vagrant Cloud 
+ - Public boxes are stored on Vagrant Cloud
+ - You can browse boxes on Vagrant Cloud by opening a browser and going to app.vagrantup.com
  
  # Part II
  ## Configuring Boxes with Vagrantfiles

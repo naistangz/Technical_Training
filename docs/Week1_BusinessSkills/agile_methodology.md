@@ -1,7 +1,9 @@
 # Agile Methodologies
 
 ## What is agile?
-- Agile software development is an iterative methodology 
+- Agile software development is an iterative methodology
+- It is an approach that breaks down larger projects into small, manageable chunks called iterations
+- At the end of each iteration (which takes place over consistent time interval) something of value is produced.
 - Instead of in-depth planning at the beginning of the project, agile methodologies are open to changing requirements over time
 - Encourages constant feedback from the end users
 - Cross-functional teams work on iterations of a product over a period of time
@@ -18,7 +20,7 @@
     - Continuous development
     - Build feedback loop with your customers so that you can constantly ensure that your product works for them.
 - Responding to change over following a plan.
-    -  Flexible road-map
+    - Flexible road-map
     - Software team should have the ability to pivot and change direction whenever they need to, with a flexible road map 
 
 
@@ -63,7 +65,12 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 - **Continuous improvement:**
     - Agile projects encourage feedback from users, team members throughout whole project.
     - Lessons learned are used to improve future iterations. 
-   
+
+- **Speed to market**
+    - Agile lets you get your concepts to users as quickly as possible 
+    - During every sprint an agile project delivers something of value
+    - At any point, you may determine you want to launch what has been delivered and start building a user base or testing your hypothesis.
+     
 <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/agile-lifecycle_0.png?itok=tjkbaxQa" alt="agile methodology">
 
 ## Disadvantages of Agile
@@ -100,6 +107,7 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 
 <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/matrix-waterfall-agile%402x.gif?itok=fARF2Wlw" alt="agile vs waterfall">
 
+Unlike waterfall, which is strictly sequenced, you do not start design until research is done and you don't start development until the designs are signed off. Agile has designers, developers and business people working together simultaneously
 
 **Kanban:**
 - Derives from the japanese word signboard or billboard 看板
