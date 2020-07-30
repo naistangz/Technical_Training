@@ -9,7 +9,6 @@ Contents
 3. [Using vagrant](#using-vagrant)
 4. [Vagrant Features](#vagrant-features)
 5. [Brief intro TCP/IP and DNS networking](#tcpip-and-dns-networking)
-6. [Vagrant Cloud](#vagrant-cloud)
 
 [Part II Configuring Boxes with Vagrant Files](#part-ii)
 1. [Vagrant Files]
@@ -21,20 +20,7 @@ Contents
 [Part III Vagrant Use Cases]
 1. [Application developer environment overview]
 2. [Creating a developer environment]
-3. [Vagrant multi-machien Vagrantfile]
-
-[Part IV Vagrant Use Cases]
-1. [Application Developer environment overview]
-2. [Creating a developer environment]
-3. [Vagrant multi-machine Vagrant file]
-
-[Part V Vagrant Features and Services]
-1. [Create a base box, part I]
-2. [Create a base box, part II]
-3. [Uploading a box to Vagrant Cloud]
-4. [Tips and Tricks]
-
-
+3. [Vagrant multi-machine Vagrantfile]
 
 
 ## What is vagrant?
@@ -172,6 +158,9 @@ simply run `vagrant up`.
 2. The sources defined in `/etc/apt/sources.list` file and other files located in `/etc/apt/sources.list.d/` directory.
 3. When you run update command, it downloads the package information from the Internet.
 4. `apt` is a package manager.
+
+`sudo apt-get update -y`
+1. Automates updates  
 
 `sudo apt-get upgrade` command:
 1. New packages will be installed if required to satisfy dependencies, but existing packages will never be removed. 
@@ -320,9 +309,33 @@ Anaiss-MBP:myfirstbox anaistang$
 - They're intended as starting points
 - Most vagrant use cases involve you as the user starting with the base box, then adding software and configuration to create a box fit for a particular purpose.
 
- ## Vagrant Cloud 
- - Public boxes are stored on Vagrant Cloud
- - You can browse boxes on Vagrant Cloud by opening a browser and going to app.vagrantup.com
- 
  # Part II
- ## Configuring Boxes with Vagrantfiles
+ ## Configuring Boxes with Vagrant files
+ - Vagrant boxes are configured using a Vagrantfile 
+ - They are ruby programs used by CLI (Command Line Interface) to set attributes of a Vagrant box such as CPU, memory, disk, and network configurations.
+ 
+ ## Vagrant Synced Folders
+ - Hypervisors (computer software, that creates and runs virtual machines) have the ability to synchronise a folder on the host operating system to a folder in a virtual machine.
+ - The Vagrant synced folder feature exposes those hypervisor features and the synced folder section of the Vagrantfile is used to configure it.
+ 
+ **Vagrantfile**
+ ```bash
+config.vm.synced_folder "filepath", "/home/vagrant/environment"
+```
+ 
+Synced folders have a range of uses. One common use is to map a folder between a box and a host containing the application code. A developer can edit code on the host system and the changes are synced to the box where it can be executed in an isolated runtime environment.
+
+ ## Vagrant Networking
+ - Port Forwarding
+    - **Port:** A number between 1 and 65555 assigned to a TCP packet
+    - **Known Ports:**
+        - 21: FTP
+        - 80: HTTP
+        - 443: HTTPS/TLS
+    - Vagrant can forward requests that are sent to a port on the host network to the same or different port on the box network.
+    - This is known as forwarding or mapping ports between the host and box.
+    - We install a web server to the Ubuntu box to see port forwarding in action (Nginx).     
+ - Private Networks
+    - Private networks use non-routable IP addresses to create isolated networks.
+    - This is useful for security and testing purposes.
+ - Public Networks

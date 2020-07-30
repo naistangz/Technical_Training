@@ -90,9 +90,17 @@ Web Server Gateway Interface (WSGI) compatible |
 <img src="https://www.guru99.com/images/1/122118_0445_MVCTutorial1.png" alt="mvc_image">
 
 
-- **Model** - Includes all data and its related logic
-- **View** - Presents data and its related logic
-- **Controller** - An interface between Model and View components
+- **Model** - Includes all data and its related logic (a way for talking about data)
+- **View** - Presents data and its related logic (a way for talking about user interfaces) MVC is HTML, CSS and some special syntax.
+- **Controller** - An interface between Model and View components (a way for talking about program logic) aka the request handler
+
+When a user enters a URL in the browser, it goes to the webserver and routed to a controller. A controller executes related view and models for that request and creates the response and sends it back to the browser.
+
+**Flask MVC Structure:**
+What?
+- A popular architecture for designing applications that have a user interface
+- MVC is a collection of software design patterns that provide a vocabulary for designing your application. 
+
 
 ---
 **End Point**
