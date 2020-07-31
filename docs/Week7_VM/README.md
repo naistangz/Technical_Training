@@ -17,11 +17,7 @@ Contents
 4. [Vagrant providers]
 5. [Vagrant provisioners]
 
-[Part III Vagrant Use Cases]
-1. [Application developer environment overview]
-2. [Creating a developer environment]
-3. [Vagrant multi-machine Vagrantfile]
-
+[Part III NGINX](learningNGINX.md)
 
 ## What is vagrant?
 - Software written in Ruby for creating a full development environment within minutes
