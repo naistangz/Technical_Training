@@ -240,7 +240,7 @@ The prompt is no longer our Mac prompt. It is now the Ubuntu box connected remot
 
 **Experimenting with commands in the Ubuntu Box:**
 
-**File system in this Ubuntu system
+**File system in this Ubuntu system**
 ```bash
 vagrant@vagrant:~$ ls
 vagrant@vagrant:~$ cd /
