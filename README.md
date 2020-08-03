@@ -18,6 +18,7 @@
 - [x] **Week 5** [Python Airport Project](https://github.com/Humza277/pythonProject)
 - [x] **Week 6** [Flask Web Framework](/docs/Week6_FlaskPython)
 - [x] **Week 7** [Virtual Machines](/docs/Week7_VM)
+- [x] **Week 8** [CI/CD Pipelines](/docs/Week8_CICD)
 ---
 
 :books: **Projects**
