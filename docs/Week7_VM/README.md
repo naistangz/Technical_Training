@@ -20,6 +20,7 @@ Contents
 [Part III NGINX](learningNGINX.md)
 
 ## What is vagrant?
+- Software to build and maintain virtual software development environment.
 - Software written in Ruby for creating a full development environment within minutes
 - From a developer's perspective, working on a software project, this involves setting up, installing and configuring multiple services.
 - Most times, developers will be working in their own development environment entirely configured inside the laptop.
