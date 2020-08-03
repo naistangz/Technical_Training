@@ -27,5 +27,5 @@
 3. Python Group Project: Airport Simulation [HERE](https://github.com/Humza277/pythonProject)
 4. Python Flask URL-Shortener [HERE](/docs/Week6_FlaskPython/url-shortener)
 5. Python Flask Login Page [HERE](https://github.com/naistangz/flask_autho_app/tree/master/flask_autho_app)
-
+6. Nginx Reverse Proxy [HERE](https://github.com/naistangz/nginx-reverse-proxy)
  
