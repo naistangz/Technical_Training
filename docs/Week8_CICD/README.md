@@ -1,5 +1,9 @@
 # Continuous Integration Continuous Delivery 
 
+## What is a pipeline?
+- A pipeline consists of a chain of processing elements arranged so that the output of each element is the input of the next. 
+- A set of automated processes that allow Developers and DevOps professionals to reliably and efficiently compile, build and deploy their code to their production compute platforms.
+ 
 ## What is a CI/CD pipeline?
 - CI/CD pipeline automates your software delivery process
 - The pipeline builds code, runs tests (CI), and safely deploys a new version of the application (CD).
@@ -40,6 +44,7 @@ Dev Cycle is slow| The dev cycle is fast. New Features are more readily availabl
 # Benefits of pipelines
 Having a CI/CD pipeline has more positive effects than only making an existing process more efficient:
 - Developers can stay focused on writing code and monitoring the behaviour of the system in production. 
+- In an agile environment, QA and Developers can work efficiently together.
 - QA and product stakeholders have easy access to the latest, or any, version of the system. 
 - Product updates are not stressful.
 - Logs of all code changes, tests and deployments are available for inspection at any time.
@@ -75,3 +80,22 @@ Having a CI/CD pipeline has more positive effects than only making an existing p
 **Solution Delivery Pipeline:**
 
 <img src="http://techtowntraining.com/sites/default/files/inline-images/solution-s-curve.png">
+
+## Scenario of a CI/CD Pipeline
+1. You are building a web application which is going to be deployed on live web servers. 
+2. You have a set of developers responsible for writing the code, who will further go on and build the web application. 
+3. Code is committed into a version control system (such as git) by the team of developers.
+<img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka-1.png" alt="version_control">
+4. Next, is the first phase of the pipeline, the build phase, where developers put in their code, code goes into version control system.
+<img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka-2.png">
+5. Once **build phase** is over, next is the **testing phase**. In this phase, we have various kinds of testing. *Unit test* (testing a chunk/unit of software or for its sanity test).
+<img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka-3.png"> 
+6. When test is completed, next is the **deploy phase**, where you deploy it into a staging or a test server. Here, you can view the code or you can view the app in a simulator. 
+<img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka.png">
+7. Once code is deployed, you can run another sanity test. It everything is accepted, then it can be deployed to production. 
+<img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka-6.png" alt="deploy_to_production">
+8. In every step, if there is an error, you can shoot an email back to the development team so that they can fix it. 
+9. Developers can push the updated code into the version control system and goes back into the pipeline.
+10. If there is any error reported during testing, the feedback goes to the dev team again, where they fix it and the process reiterates if required. 
+<img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka-7.png">
+11. Lifecycle continues until we get code/a product which can be deployed to the production server.
