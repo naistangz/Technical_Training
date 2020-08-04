@@ -94,8 +94,12 @@ Having a CI/CD pipeline has more positive effects than only making an existing p
 <img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka.png">
 7. Once code is deployed, you can run another sanity test. It everything is accepted, then it can be deployed to production. 
 <img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka-6.png" alt="deploy_to_production">
+
 8. In every step, if there is an error, you can shoot an email back to the development team so that they can fix it. 
+
 9. Developers can push the updated code into the version control system and goes back into the pipeline.
+
 10. If there is any error reported during testing, the feedback goes to the dev team again, where they fix it and the process reiterates if required. 
 <img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka-7.png">
+
 11. Lifecycle continues until we get code/a product which can be deployed to the production server.
