@@ -123,5 +123,37 @@ Unlike waterfall, which is strictly sequenced, you do not start design until res
 Example of Kanban with [Trello Board](https://trello.com/)
 
 # Definition of *done*
-- When all conditions, or acceptance criteria, that a software product must satisfy are met and ready to be accepted by a user, customers, team, or consuming system. 
+- **Definition of Done** is a list of requirements that must be satisfied for all user stories. These are set at the start of the project and rarely change.
+- **Acceptance criteria** (or user story acceptance criteria), however, are particular to each feature being developed. They are set at the start of a sprint and may change as development progresses and more is discovered about that feature. 
 
+Example of each:
+- **Definition of Done**: No critical and High defect will be accepted: code coverage percentage to be at least 70%; all web pages to load in under 2 seconds
+- **Acceptance Criteria:** The password must be no less than 8 and no greater than 12 characters, contain at least one Uppercase letter
+
+Acceptance Criteria| Definition of Done
+------|-------
+A user cannot submit a form without completing all the mandatory fields | Code Builds without error warning
+Information from the form is stored in the registrations database | Code is Unit Test
+Payment can be made via credit card| Code is deployed to system test environment and passed system tests
+An acknowledgement email is sent to the user after submitting the form | Build pushed to demo server
+DoD is macro, Acceptance Criteria is micro | Remaining hours of the User Story are marked zero
+
+## Building a house 
+**DoD:** 
+- Must have four outer walls of brick
+- Must have a sloped, tiled roof
+- Must have a secure front door
+- Must have four windows 
+- Must be wind and watertight
+- Must be wired for electricity
+- Must be plumbed in 
+
+**Acceptance Criteria**
+- The front door must be mahogany, and be painted blue 
+- Front door must be a Yale platinum 3 star (maximum security level) lock.
+- The window frames must also be mahogany.
+- The electrical sockets must also be fitted with CAT-5 computer network ports.
+- The bathroom must have a bath and shower
+
+This list is very specific. These details do not need to be gathered until just before the house is built. Not every house needs to be built to these exact specifications.
+This is the **acceptance criteria** only for this particular house. 
