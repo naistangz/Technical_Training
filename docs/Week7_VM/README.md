@@ -10,7 +10,7 @@ Contents
 4. [Vagrant Features](#vagrant-features)
 5. [Brief intro TCP/IP and DNS networking](#tcpip-and-dns-networking)
 
-Part II Configuring Boxes with Vagrant Files
+[Part II Configuring Boxes with Vagrant Files](#part-ii)
 
 1. [Vagrant Files](#configuring-boxes-with-vagrant-files)
 2. [Vagrant Synced folders](#vagrant-synced-folders)
