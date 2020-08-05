@@ -91,7 +91,6 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 - Scrum is an iterative software model that follows a set of roles, responsibilities and meetings that never change
 - Scrum is an **Agile** process to focus on delivering business value in the shortest time
 - Scrum promotes accountability, teamwork and function in an iterative and incremental approach. 
-- Scrum projects are driven by Scrum master along with product managers and developers. 
 - Time frame for each built which are released into production are denoted as a sprint in a Scrum system
 - Scrum has two mandatory roles: **Product Owner** and **Scrum Master.**
 
@@ -120,7 +119,24 @@ Unlike waterfall, which is strictly sequenced, you do not start design until res
 
 <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/kanban-board%402x.png?itok=lgaiQP5B" alt="kanban_example">
 
-Example of Kanban with [Trello Board](https://trello.com/)
+> Example of Kanban with [Trello Board](https://trello.com/)
+
+# Lean Start up
+- Eliminating unnecessary meetings, tasks and documentation
+- Eliminating inefficient methods of working, such as multitasking
+- Places strong emphasis on **the system**, i.e. the way the team works as a whole
+- Lean methodology states that every process should be continuously inspected and adapted in order to improve it. 
+- Method is focused on continuous improvement, kaizen 改善
+
+# Lean vs Agile
+- Both methodologies, the people - the workers - who perform the tasks are more important than the tools they use. 
+- Nothing is more important than the final result. Result must create value for the customer and is the only goal of the development process.
+- Agile methodology allows the client to constantly adapt his needs
+- Lean provides for the manufacture of the product so that there is no waste.
+- Agile concerns the optimisation of a development process
+- Lean concerns the optimisation of a production process. 
+
+<img src="https://goleansixsigma.com/wp-content/uploads/2015/07/Lean-and-Agile-GoLeanSixSigma.com_.png" alt="lean_vs_agile">
 
 # Definition of *done*
 - **Definition of Done** is a list of requirements that must be satisfied for all user stories. These are set at the start of the project and rarely change.

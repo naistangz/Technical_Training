@@ -1,5 +1,7 @@
 # Continuous Integration Continuous Delivery 
 
+> [Intro to Jenkins](jenkins_intro.md)
+
 ## What is a pipeline?
 - A pipeline consists of a chain of processing elements arranged so that the output of each element is the input of the next. 
 - A set of automated processes that allow Developers and DevOps professionals to reliably and efficiently compile, build and deploy their code to their production compute platforms.
