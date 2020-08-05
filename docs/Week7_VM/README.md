@@ -10,12 +10,13 @@ Contents
 4. [Vagrant Features](#vagrant-features)
 5. [Brief intro TCP/IP and DNS networking](#tcpip-and-dns-networking)
 
-[Part II Configuring Boxes with Vagrant Files](#part-ii)
-1. [Vagrant Files]
-2. [Vagrant Synced folders]
-3. [Vagrant networking]
-4. [Vagrant providers]
-5. [Vagrant provisioners]
+Part II Configuring Boxes with Vagrant Files
+
+1. [Vagrant Files](#configuring-boxes-with-vagrant-files)
+2. [Vagrant Synced folders](#vagrant-synced-folders)
+3. [Vagrant networking](#vagrant-networking) TBC
+4. [Vagrant providers] TBC
+5. [Vagrant provisioners] TBC
 
 [Part III NGINX](learningNGINX.md)
 
