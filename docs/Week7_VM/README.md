@@ -21,7 +21,7 @@ Part II Configuring Boxes with Vagrant Files
 [Part III NGINX](learningNGINX.md)
 
 ---
-[Nginx Reverse Proxy Exercise](https://github.com/naistangz/nginx-reverse-proxy)
+> [Nginx Reverse Proxy Exercise](https://github.com/naistangz/nginx-reverse-proxy)
 
 ## What is vagrant?
 - Software to build and maintain virtual software development environment.
