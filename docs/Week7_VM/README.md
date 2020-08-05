@@ -15,8 +15,7 @@ Contents
 1. [Vagrant Files](#configuring-boxes-with-vagrant-files)
 2. [Vagrant Synced folders](#vagrant-synced-folders)
 3. [Vagrant networking](#vagrant-networking) TBC
-4. [Vagrant providers] TBC
-5. [Vagrant provisioners] TBC
+4. [Vagrant provisioners](#vagrant-provisioners) TBC
 
 [Part III NGINX](learningNGINX.md)
 
@@ -340,3 +339,8 @@ Synced folders have a range of uses. One common use is to map a folder between a
     - Private networks use non-routable IP addresses to create isolated networks.
     - This is useful for security and testing purposes.
  - Public Networks
+ 
+## Vagrant Provisioners
+- Vagrant provisioners are scripts that can be defined in a Vagrantfile or externally in a separate file
+- By default, provisioners are executed the first time a box runs.
+- Provisioners can install software, download application code, and set configuraitons needed for a particular developer environment.
