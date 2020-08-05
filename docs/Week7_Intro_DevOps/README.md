@@ -1,10 +1,10 @@
 # Introduction to DevOps
 
-> [Multiple Environments](multiple_environments.md)
-> [CICD](../Week8_CICD/README.md)
-> [Jenkins](../Week8_CICD/jenkins_intro.md)
-> [Nginx](../Week7_VM/learningNGINX.md)
-> [Web Servers](../Week7_VM/webservers.md)
+> [Multiple Environments](multiple_environments.md)\
+> [CICD](../Week8_CICD/README.md)\
+> [Jenkins](../Week8_CICD/jenkins_intro.md)\
+> [Nginx](../Week7_VM/learningNGINX.md)\
+> [Web Servers](../Week7_VM/webservers.md)\
 > [Vagrant](../Week7_VM/README.md)
 
 ## What is DevOps 
