@@ -107,7 +107,6 @@ E.g Twilio, a developer platform for communications uses webhooks to let your ap
 ![gif_webhook](sms-http-request-cycle.width-800.gif)
 - They are triggered by some event in a web applications and can facilitate integrating different applications or third-party APIs
 
-
 ### What is NodeJs
 - A runtime environment for JavaScript 
 - A framework that executes JavaScript code outside a web browser
