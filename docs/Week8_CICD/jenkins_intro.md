@@ -1,10 +1,16 @@
-# Jenkins 
+# Jenkins!
 
 ## What is Jenkins?
 > Extracted from [Here](https://intellipaat.com/blog/tutorial/devops-tutorial/jenkins-tutorial/)
 - An automation tool written in Java with built in plugins for continuous integration tasks.
 - Used to continuously build and test projects, making it easier to integrate the changing codes to it. 
 - Jenkins allows for faster delivery of software by working with a large number of deployment and testing technologies.
+
+## What is an automation server?
+- An application that exposes programmable objects to other applications
+- Automation servers uses the same commands used by developers to build the software and execute unit tests.
+- They are capable of deploying the latest artifact to the production environment 
+- Help ease the deployment for testing and staging environments to quickly alert the QA team to the latest changes.
 
 ## Why use Jenkins?
 - Jenkins practices pipeline-as-a-code concept, that practices automation
@@ -25,14 +31,15 @@
 
 ### Configuring Jenkins 
 6. In Jenkins, click on 'New Item' to create a new project
-<img src="https://cdn2.hubspot.net/hubfs/208250/Blog_Images/jengit6.png" alt="new_item_jenkins">
+    <img src="https://cdn2.hubspot.net/hubfs/208250/Blog_Images/jengit6.png" alt="new_item_jenkins">
+    
 7. Give your project a name, then choose 'Freestyle project' and finally click 'OK'.
 8. Click on 'Source Code Management' tab
 9. Click on Git and paste your Github repository `url` in the 'Repository URL' field.
 10. Click on the 'Build Triggers' tab and then on the 'Github hook trigger for GITscm polling'.
 11. Click on `apply` and `save`
 12. To test changes, create new directories or folders within the repository and commit changes through git.
-13. In Jenkins, click on build history, then console output\
+13. In Jenkins, click on build history, then console output
 **which returns**
 [Started by an SCM change screenshot here]
 
@@ -47,7 +54,7 @@
 8. Source Code Management, click on Git
 
 ## Using Github Publisher Plugin
-Automatically pushing code from other branches to master branch to Github if the tests passes.
+Git Publisher Plugin automatically pushing code from other branches to master branch to Github if the tests passes.
 
 ## Configuring Jenkins 
 1. Name of Project -> Configure -> Source Code Management -> Git. Setup to get the integration branch.
@@ -58,6 +65,7 @@ Automatically pushing code from other branches to master branch to Github if the
 
 Jenkins is now configured to merge the integration branch into master if the build succeeds. This assumes that your repository is setup and has a separate branches.\
 You can also setup build triggers to trigger the build automatically 
+
 
 
 # Recap 
@@ -107,8 +115,32 @@ E.g Twilio, a developer platform for communications uses webhooks to let your ap
 ![gif_webhook](sms-http-request-cycle.width-800.gif)
 - They are triggered by some event in a web applications and can facilitate integrating different applications or third-party APIs
 
+### Webhook vs API
+> Extracted from [craftersoftware](https://craftersoftware.com/blog/2019/08/webhooks-vs-apis--whats-the-difference)
+- Both help sync and relay data between two applications
+- APIs make requests and enabling [CRUD](https://github.com/naistangz/Technical_Training/blob/master/docs/Week4_Python/crud.md) (create, read, update, delete) operations
+- This means APIs can not only request data for third-parties, but can manipulate and delete it as well if authorised.
+- Webhooks are automated calls to a server
+- Webhooks do not require requests to be initiated, data is sent whenever there is new data available
+- To set up a webhook, all you have to do is register a URL with the company proving the service you are requesting data from..
+- Webhooks receive calls through HTTP POSTs only when the external system you're hooked to has a data update.
+- Webhooks listens at URL for incoming HTTP POST notification messages 
+
+API | Webhook
+-----|-----
+Request-based|Event-based
+Useful for know whether external system is online |Useful for real-time updates
+Immediately aware if the request was successful because you'll get a response with a status code|Webhooks only communicate if there's an update, so software will be unaware if the other system is offline
+
+SaaS applications use APIs if they want to offer full `CRUD` - create, read, update, and delete - capabilities.
+
 ### What is NodeJs
-- A runtime environment for JavaScript 
+- Not a programming language
+- A [runtime environment](#RTE) for JavaScript
 - A framework that executes JavaScript code outside a web browser
 - Node.js lets developers use JavaScript to write command line tools and for server-side scripting - running scripts server-side to proudce dynamic web page content before the page is sent to the user's web browser.
 
+### RTE
+- Stands for Runtime Environment
+- As soon as software program is executed, it is in a runtime state
+- In this state, program sends instructions to the computer's processor and access the computer's memory (RAM) and other system resources.

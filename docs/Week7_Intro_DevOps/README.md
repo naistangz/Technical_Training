@@ -8,6 +8,7 @@
 > 4. [Web Servers](../Week7_VM/webservers.md)\
 >   i. [Nginx](../Week7_VM/learningNGINX.md)
 > 5. [Virtual Machines](../Week7_VM/README.md)
+> 6. [AWS - Cloud Computing Services](../Week8_CICD/aws.md)
 
 ## What is DevOps 
 - Not a job role 
