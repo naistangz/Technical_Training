@@ -343,4 +343,20 @@ Synced folders have a range of uses. One common use is to map a folder between a
 ## Vagrant Provisioners
 - Vagrant provisioners are scripts that can be defined in a Vagrantfile or externally in a separate file
 - By default, provisioners are executed the first time a box runs.
-- Provisioners can install software, download application code, and set configuraitons needed for a particular developer environment.
+- Provisioners can install software, download application code, and set configurations needed for a particular developer environment.\
+E.g If we want to install [Nginx](learningNGINX.md) as a part of the environment setup, we can add a shell provisioner to our Vagrantfile\
+- We create a bash script with a `.sh` extension and enter the following
+```bash
+sudo apt-get update
+sudo apt-get install space -y nginx
+```
+The first line uses the sudo command to run apt-get update.\
+Sudo runs commands as the root user.\
+Apt is the Linux package manager\
+The update command updates all the apt sources so it can get the latest versions of published software\
+The next line executes the apt install command which installs Nginx.\
+
+## Other provisioners
+Other provisioners include file provisioners which copy files from the host machine to the box. This is commonly used to store configuration files along with the Vagrantfile and copy them into the box on first boot.\
+The docker provisioner will install `docker` and optionally, pull, build, and run docker images on a box.\
+Configuration management provisioners for Chef, Puppet, and Ansible and Salt are also included with Vagrant. These tools are used to install software and set and maintain configurations.

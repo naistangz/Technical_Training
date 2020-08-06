@@ -1,7 +1,8 @@
 # Development, Test, QA, and Production Environments
 
 ## What is an environment?
-Where your code runs
+- Where your code and test runs
+- If using virtual machine, environment will be consistent for all developers
 
 ## Multiple Environments 
 <img src="https://deploybot.com/assets/blog/Deploybot_Multiple-Environments_illustrations_previewchanges-1.png"alt="deploy_image">
