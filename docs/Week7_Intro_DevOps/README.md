@@ -3,7 +3,7 @@
 > Topics Covered:
 > 1. [What is DevOps](#what-is-devops)
 > 2. [Multiple Environments](multiple_environments.md)
-> 3. [CICD](../Week8_CICD/README.md)
+> 3. [CICD](../Week8_CICD/README.md)\
 >   i. [Jenkins](../Week8_CICD/jenkins_intro.md)
 > 4. [Nginx](../Week7_VM/learningNGINX.md)
 > 5. [Web Servers](../Week7_VM/webservers.md)
