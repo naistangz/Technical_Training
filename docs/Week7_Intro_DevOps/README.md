@@ -7,7 +7,7 @@
 >   i. [Jenkins](../Week8_CICD/jenkins_intro.md)
 > 4. [Web Servers](../Week7_VM/webservers.md)\
 >   i. [Nginx](../Week7_VM/learningNGINX.md)
-> 5. [Vagrant](../Week7_VM/README.md)
+> 5. [Virtual Machines](../Week7_VM/README.md)
 
 ## What is DevOps 
 - Not a job role 
