@@ -5,9 +5,9 @@
 > 2. [Multiple Environments](multiple_environments.md)
 > 3. [CICD](../Week8_CICD/README.md)\
 >   i. [Jenkins](../Week8_CICD/jenkins_intro.md)
-> 4. [Nginx](../Week7_VM/learningNGINX.md)
-> 5. [Web Servers](../Week7_VM/webservers.md)
-> 6. [Vagrant](../Week7_VM/README.md)
+> 4. [Web Servers](../Week7_VM/webservers.md)\
+>   i. [Nginx](../Week7_VM/learningNGINX.md)
+> 5. [Vagrant](../Week7_VM/README.md)
 
 ## What is DevOps 
 - Not a job role 
