@@ -20,6 +20,7 @@
 - [x] **Week 7** [Introduction to DevOps](/docs/Week7_Intro_DevOps)
 - [x] **Week 7** [Virtual Machines](/docs/Week7_VM)
 - [x] **Week 8** [CI/CD Pipelines](/docs/Week8_CICD)
+- [x] **Week 8** [Cloud Services](/docs/Week8_CloudServices)
 ---
 
 :books: **Projects**
