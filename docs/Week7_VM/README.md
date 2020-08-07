@@ -357,6 +357,6 @@ The update command updates all the apt sources so it can get the latest versions
 The next line executes the apt install command which installs Nginx.\
 
 ## Other provisioners
-Other provisioners include file provisioners which copy files from the host machine to the box. This is commonly used to store configuration files along with the Vagrantfile and copy them into the box on first boot.\
+Other provisioners include file provisioners which copy files from the host machine to the box. This is commonly used to store configuration files (i.e putting in environment variables, installing web server, syncing files) along with the Vagrantfile and copy them into the box on first boot.\
 The docker provisioner will install `docker` and optionally, pull, build, and run docker images on a box.\
 Configuration management provisioners for Chef, Puppet, and Ansible and Salt are also included with Vagrant. These tools are used to install software and set and maintain configurations.
