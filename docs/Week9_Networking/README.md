@@ -14,12 +14,13 @@
 - [x] [N-Tier Architecture](#n-tier-architecture)
 - [x] [Virtual Private Cloud](#vpcs)
 - [x] [Virtual Private Networks](#vpns)
-- [x] [IGW]
-- [x] [NACLs]
-- [x] [Route Tables]
-- [x] [SGs Security Groups]
+- [x] [IGW Internet Gateways](#igws) TBC
+- [x] [NACLs](#nacls-network-access-control-lists)
+- [x] [Route Tables](#routing-table) TBC
+- [x] [SGs Security Groups](#sg-security-groups-ec2)
 
 > Network [PDF](https://www.ece.uvic.ca/~itraore/elec567-13/notes/dist-03-4.pdf)
+> [Setting up a VPC on AWS](VPC_Setup.md)
 
 ## What is a network?
 - Consists of two or more computers that are linked in order to share resources (e.g printers and CDs), exchange files, or allow electronic communications.
@@ -277,6 +278,9 @@ https://stackoverflow.com/questions/45164355/what-is-vpc-subnet-in-aws
 - Virtual Private Network.
 - A VPN can allow users to exhange data efficiently across shared or public networks, as though they are directly linked to the private network
 
+## IGWs
+- Internet Gateways 
+
 ## NACLs (Network Access Control Lists) 
 - Virtual network-level firewalls that are associated to each and every subnet
 - Help control both ingress and egress (incoming, outbound) traffic moving in and out of your VPC and between your subnets.
@@ -291,4 +295,9 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 **Subnet or EC2 instance?**\
 - SGs are tied to an instance whereas Network ACLs are tied to the subnet level
 - Instances in the subnet with an associated NACL will follow rules of NACL.
-- SGs have to be assigned explicitly to the instance, meaning any instances within the subnet group gets the rule applied
+- SGs have to be assigned explicitly to the instance, meaning any instances within the subnet group gets the rule applied.
+
+## Routing Table
+- A **routing table** or **routing information base (RIB)**, is a data table stored in a router or a network host that lists the routes to particular network destinations.
+- A set of rules, often viewed in table format, that is used to determine where data packets travelling over an [IP](#what-is-an-ip) will be directed.
+
