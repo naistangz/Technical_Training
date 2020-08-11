@@ -301,3 +301,4 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 - A **routing table** or **routing information base (RIB)**, is a data table stored in a router or a network host that lists the routes to particular network destinations.
 - A set of rules, often viewed in table format, that is used to determine where data packets travelling over an [IP](#what-is-an-ip) will be directed.
 
+> Navigate [HERE](VPC_Setup.md) on setting up a VPC on AWS
