@@ -21,6 +21,7 @@
 - [x] **Week 7** [Virtual Machines](/docs/Week7_VM)
 - [x] **Week 8** [CI/CD Pipelines](/docs/Week8_CICD)
 - [x] **Week 8** [Cloud Services](/docs/Week8_CloudServices)
+- [x] **Week 9** [Networking and Configuration Management](/docs/Week9_Networking)
 ---
 
 :books: **Projects**
@@ -31,4 +32,4 @@
 4. Python Flask URL-Shortener [HERE](/docs/Week6_FlaskPython/url-shortener)
 5. Python Flask Login Page [HERE](https://github.com/naistangz/flask_autho_app/tree/master/flask_autho_app)
 6. Nginx Reverse Proxy [HERE](https://github.com/naistangz/nginx-reverse-proxy)
- 
+7. Jenkins CICD Pipeline NodeJs App [HERE](https://github.com/naistangz/NodeJSAWS_Deploy_Code)
