@@ -2,11 +2,13 @@
 
 ## Summary 
 Can refer to hardware or software 
-1. On **hardware side**, a web server is a computer that stores web server software and a website's component files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files)
-2 It is connected to the Internet and supports physical data interchange with other devices connected to the web.
-3. On the **software** side, a web server includes several parts that control how web users access hosted files, at minimum an HTTP server.
-4. An HTTP server is a piece of software that understands URLs (web addresses) and HTTP (the protocol your browser uses to view webpages). It can be accessed through the domain names (like `mozilla.org`) of websites it stores, and delivers their content to the end-user's device. 
-
+- On **hardware side**, a web server is a computer that stores web server software and a website's component files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files)
+- It is connected to the Internet and supports physical data interchange with other devices connected to the web.
+- On the **software** side, a web server includes several parts that control how web users access hosted files, at minimum an HTTP server.
+- An HTTP server is a piece of software that understands URLs (web addresses) and HTTP (the protocol your browser uses to view webpages). It can be accessed through the domain names (like `mozilla.org`) of websites it stores, and delivers their content to the end-user's device. 
+- Can satisfy client requests on the World Wide Web
+- They process incoming network requests over HTTP and other protocols.
+- Primary function is to store, process and deliver web pages to clients. 
 
 <img src='https://mdn.mozillademos.org/files/8659/web-server.svg' alt='http protocol img'>
 

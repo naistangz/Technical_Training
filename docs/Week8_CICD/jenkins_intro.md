@@ -70,6 +70,19 @@ You can also setup build triggers to trigger the build automatically
 
 [Recap from Week 4 APIs](../Week4_Python/APIs/)
 ### HTTP Requests/ API calls 
+**POST Requests**
+- Data sent to the server from the user, typically these are private details (e.g. Payment Details) and they won't be visible in the URL. 
+- Data sent to the server with `POST` is stored in the request body of the HTTP request
+- `POST` requests are never cached
+- `POST` requests do not remain in the browser history 
+- `POST` requests cannot be bookmarked
+- `POST` requests have no restrictions on data length
+
+**GET Requests**
+- They **request** data from a specified resource
+- `GET` requests can be cached
+- `GET` requests can be bookmarked
+- `GET` requests should **never** be used when dealing with sensitive data
 
 
 ### What is an API?
