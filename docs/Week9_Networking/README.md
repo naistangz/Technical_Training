@@ -184,8 +184,16 @@ This helps identify the network and the host ID. The address bits which have cor
             -----------------------------------
              net id |      host id    
 ```
+**Net ID** identifies which network you're on\
+**Host ID** is a device that has an address on the network.
 
-Submask 
+There are four things that have to exist for a network to be a network.
+1. Network address `192.168.0.0`
+2. Subnet Mask `255.255.255.0`
+3. Hosts `192.168.0.1 - 192.168.0.254`
+4. Broadcast address `192.168.0.255`
+
+Submask - Identifies how many addresses you can have on your network at the same time.
 A second IP that tells you where to match IPs to be in the same network
 Computer A 192.65.63.1
 Computer B 190.65.30.1
@@ -379,6 +387,8 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 ## What is bastion server AWS?
 - Also called a Jump Box
 - A bastion is a special purpose **server instance** that is designed to be the primary access point from the Internet and acts as a [proxy](#what-is-a-proxy) to your other EC2 instances.
+- Use bastion to gain access to private subnets.
+- Bastion server sits in public subnet (another EC2 instance)
 - Acts as a proxy server and allows client machines to connect to the remote server.
 - A bastion host is a **server** 
 - A bastion host provides access to a private network from an external network, such as the Internet.

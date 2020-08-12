@@ -114,3 +114,40 @@ sudo apt-get install nginx
 ```
 
 ## Setting up a Bastion Server (a new instance)
+- Create New Instance (Bastion Server)
+- Create new security group
+- Allow SSH on port 22 from this IP address.
+    - This means that any instances associated to this security group allow inbound SSH from any resource sitting within this security group, which is associated to our bastion host.
+    - This will allow the bastion host SSH access to these instances.
+- Securely copy private key into Bastion instance using the following command:
+```bash
+scp -i ~/.ssh/DevOpsStudents.pem DevOpsStudents.pem ubuntu@52.19.173.136:/home/ubuntu/.ssh
+```
+- `ssh into bastion with bastion public ip` using private key. The connection will come through the IGW (internet gateway).
+- `ssh into db instance with private ip` to access our private subnet.
+
+1. cd AWSNodeAPPipeline
+2. Enter following to link files in OS to app 
+```bash
+scp -i ~/.ssh/DevOpsStudents.pem -r ~/PycharmProjects/AWSNodeAppPipeline/environment/app/ ubuntu@54.78.57.81:/home/ubuntu/environment
+```
+3. SSH into App on VPC:
+```bash
+ssh -i "DevOpsStudents.pem" ubuntu@54.78.57.81
+```
+4. Run the `provision.sh` file in `environment/app` to install all packages:
+```bash
+provision.sh
+```
+5. Cd into app to run `app.js`
+```bash
+cd ~/app
+pm2 start app.js
+```
+
+6. Enter the IP address into the browser (with reverse proxy working correctly) to see the app working:
+```bash
+54.78.57.81
+```
+
+![App VPC Successfully working](app_vpc_success.gif)
