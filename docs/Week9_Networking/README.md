@@ -300,6 +300,7 @@ https://stackoverflow.com/questions/45164355/what-is-vpc-subnet-in-aws
 
 ## SG Security Groups EC2
 - Firewall at EC2 level
+- Responsible for controlling the traffic in and out of your instances.
 
 ## AWS - Difference between Security Groups and Network ACLs
 **TL;DR**

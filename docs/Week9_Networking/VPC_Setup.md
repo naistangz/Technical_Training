@@ -6,6 +6,8 @@
 - [x] [Subnets](#subnet)
 - [x] [Private and Public Subnets](#private-and-public-subnets)
 - [x] [Internet Gateway](#igw)
+- [x] [Routing Tables](#routing-table)
+- [x] [Setting up a VPC](#setting-up-a-vpc)
 
 ## What is a VPC?
 - Reside inside the AWS Cloud 
@@ -59,14 +61,46 @@
 - E.g. We create our VPC with the following **CIDR** block `10.0.0.0/16`
 - **Note:** Any subnets that we create within our VPC need to reside within this CIDR block range.
 
-
 ## Routing Table
+> Extracted from [Stratoscale](https://www.stratoscale.com/blog/cloud/vpc-for-dummies/)
+> AWS Route Tables [Link](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html?shortFooter=true)
 - The place where routing information is stored 
 - A routing table contains routing entries, which is a list of destinations (or a list of network prefixes or routes)
-- 
+- In AWS, traffic within VPC does not need to be routed.
+- A router takes care of this and the entries in this [router](#what-is-a-router) are controlled by you through Route Tables.
+- When you want to access a resource outside of your VPC, - you route traffice through your IGW (for public instances) or through the NGW (for private instances).
+- The route tables are associated with each of your subnets to allow the flow of traffic according to the policies and options you have in place. 
 
-ssh into vpc 
-get nginx running 
+## What is a router?
+- Piece of network hardware that connects a local network to the internet.
+- A router forwards data packets between computer networks.
+- Routers perform the traffic direction functions on the Internet.
+- Data sent through the internet, such as a web page or email, is in the form of data packets.
+- A router is connected to two or more data lines from different IP networks. 
+
+## Setting up a VPC TBC
+[Insert GIF instructions]
+
+## Creating an IGW
+
+## Creating Public and Private Subnets
+
+## Creating a route table TBC
+
+## Security Group Rules - NACLs
+
+## Testing using Mac Terminal
+1. Connect to the EC2 Instance with VPC
+2. In terminal, `ssh` into the instance by typing in the following command:
 ```bash
-sudo apt-get install nginx 
+ssh -i "DevOpsStudents.pem" ubuntu@34.245.71.30
+```
+3. Install web server `nginx`
+```bash
+sudo apt-get install nginx
+```
+
+4. Type in the following IP into the browser to verify that `nginx` has been installed successfully:
+```bash
+34.245.71.30
 ```
