@@ -16,9 +16,9 @@
 - [x] [N-Tier Architecture](#n-tier-architecture)
 - [x] [Virtual Private Cloud](#vpcs)
 - [x] [Virtual Private Networks](#vpns)
-- [x] [IGW Internet Gateways](#igws) TBC
+- [x] [IGW Internet Gateways](#igws) 
 - [x] [NACLs](#nacls-network-access-control-lists)
-- [x] [Route Tables](#routing-table) TBC
+- [x] [Route Tables](#routing-table) 
 - [x] [SGs Security Groups](#sg-security-groups-ec2)
 
 > Network [PDF](https://www.ece.uvic.ca/~itraore/elec567-13/notes/dist-03-4.pdf)\
@@ -292,7 +292,15 @@ https://stackoverflow.com/questions/45164355/what-is-vpc-subnet-in-aws
 - A VPN can allow users to exhange data efficiently across shared or public networks, as though they are directly linked to the private network
 
 ## IGWs
-- Internet Gateways 
+- An Internet Gateway is a managed component by AWS that is attached to your VPC and acts as a gateway between your VPC and the outside world.
+- An IGW is a transparent component. It does not have an IP address of its own, and is not a component that you need to manage.
+- **Note**: For an EC2 instance to talk to the outside world, instances must be located on a subnet that has a route defined to the IGW, **and** there must be a public IP address (Elastic IP - a reserved public IP address)
+- This is **mandatory** to enable **bi-directional** communication between the outside world and the instances. 
+- Serves as a bridge between our isolated VPC to the Internet by the IGW which is managed by AWS.
+- Before the public subnet can access the Internet, we need to add a route to the public subnet's route table.
+- Associated with every subnet when it is created will also be an associated route table.
+- You can have the same route table associated to multiple subnets.
+- You **cannot** associate more than one route table to a single subnet.
 
 ## NACLs (Network Access Control Lists) 
 - Virtual network-level firewalls that are associated to each and every subnet
@@ -314,5 +322,21 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 ## Routing Table
 - A **routing table** or **routing information base (RIB)**, is a data table stored in a router or a network host that lists the routes to particular network destinations.
 - A set of rules, often viewed in table format, that is used to determine where data packets travelling over an [IP](#what-is-an-ip) will be directed.
+- Also called the forwarding table.
+- The place where routing information is stored 
+- A routing table contains routing entries, which is a list of destinations (or a list of network prefixes or routes)
+- In AWS, traffic within VPC does not need to be routed.
+- A router takes care of this and the entries in this [router](#what-is-a-router) are controlled by you through Route Tables.
+- When you want to access a resource outside of your VPC, - you route traffic through your IGW (for public instances) or through the NGW (for private instances).
+- The route tables are associated with each of your subnets to allow the flow of traffic according to the policies and options you have in place. 
+
+## What is a router?
+- Piece of network hardware that connects a local network to the internet.
+- A router forwards data packets between computer networks.
+- Routers perform the traffic direction functions on the Internet.
+- Data sent through the internet, such as a web page or email, is in the form of data packets.
+- A router is connected to two or more data lines from different IP networks. 
+- A router directs incoming and outgoing internet traffic on that network in the fastest and most efficient way.
+
 
 > Navigate [HERE](VPC_Setup.md) on setting up a VPC on AWS
