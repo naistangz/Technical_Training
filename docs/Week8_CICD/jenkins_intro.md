@@ -67,7 +67,6 @@ Jenkins is now configured to merge the integration branch into master if the bui
 You can also setup build triggers to trigger the build automatically 
 
 
-
 [Recap from Week 4 APIs](../Week4_Python/APIs/)
 ### HTTP Requests/ API calls 
 **POST Requests**

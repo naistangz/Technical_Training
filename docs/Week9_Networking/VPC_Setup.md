@@ -8,6 +8,7 @@
 - [x] [Internet Gateway](#igw)
 - [x] [Routing Tables](#routing-table)
 - [x] [Setting up a VPC](#setting-up-a-vpc)
+- [x] [Setting up a Bastion Server](#setting-up-a-bastion-server-a-new-instance)
 
 ## What is a VPC?
 - Reside inside the AWS Cloud 
@@ -80,6 +81,7 @@
 - A router is connected to two or more data lines from different IP networks. 
 - A router directs incoming and outgoing internet traffic on that network in the fastest and most efficient way.
 
+
 ## Setting up a VPC TBC
 [Insert GIF instructions]
 
@@ -110,3 +112,5 @@ sudo apt-get install nginx
 ```bash
 34.245.71.30
 ```
+
+## Setting up a Bastion Server (a new instance)

@@ -1,6 +1,7 @@
 # Networking :computer: :cloud:
 
-**Contents**
+**Contents**\
+[Part I](#part-i)
 - [x] [What is a Network?](#what-is-a-network)
 - [x] [What is an IP?](#what-is-the-maximum-ip-in-ipv4)
 - [x] [Understanding IP addresses](#understanding-ip-addresses)
@@ -20,9 +21,17 @@
 - [x] [Route Tables](#routing-table) 
 - [x] [SGs Security Groups](#sg-security-groups-ec2)
 
+[Part II](#part-ii-networking-and-security)
+- [x] [Networking and Security](#part-ii-networking-and-security)
+- [x] [Bastion Server](#what-is-bastion-server-aws)
+- [x] [What is a Proxy or Proxy Server?](#what-is-a-proxy)
+- [x] [Benefits of using a proxy](#benefits-of-proxies)
+- [x] [Reverse Proxies](#reverse-proxy-recap)
+
 > Network [PDF](https://www.ece.uvic.ca/~itraore/elec567-13/notes/dist-03-4.pdf)\
 > [Setting up a VPC on AWS](VPC_Setup.md)
 
+## Part I
 ## What is a network?
 - Consists of two or more computers that are linked in order to share resources (e.g printers and CDs), exchange files, or allow electronic communications.
 - These computers on a network can be linked through cables, telephone lines, radio waves, satellites, or infrared light beams.
@@ -136,6 +145,13 @@ The `IP address` is like the phone number assigned to your smartphone. `TCP` is 
 This is a large IP range to have as a single network as it allows for up to 65,534 hosts (256 * 256 * 256).\
 To make better use of this range and to create smaller networks allowing segmentation within your network you could subnet the `CIDR` block into smaller `CIDR` ranges using a different subnet mask, such as `/17` for each subnet. 
 
+- Creating subnets is about creating commonalities.
+- `201.105.7.34/24` is in the same network as `201.105.7.1/24`. 
+- The **suffix** `/24` signals that only the first 24 bits of the network component are counted. 
+- To do this, they have to be the same, if both addresses are to belong to the same network. 
+- The remaining bits (everything after `201.105.7.`) are reserved for the host part. 
+- The number of bits that you see right after the slash (`/`) in CIDR format indicates the number of digits (from left to right) that belong to the power supply of the IP address.
+
 ## What is a Subnet mask?
 - A 32-bit (8 by 4) combination used to describe which portion of an address refers to the subnet and which part refers to the host
 - A byte = 8 bits 
@@ -225,6 +241,21 @@ Aka **Multi-tier architecture** or **multilayered architecture**. **N-Tier** arc
 - In an MVC framework, the interaction is triangular. Instead of going through the logic tier, it is the control layer that accesses the  model and view layers, which the model layer accesses the view layer.
 - The control layer makes a model using the requirements and then pushes that model into the view layer. 
 
+**N-tier design:**
+```bash
+Client <-> Middle <-> Data
+```
+
+**MVC Pattern**
+```bash
+     Middle
+     ^    |
+     |    v
+Client <- Data
+```
+- In the n-tier, communication between layers is **bi-directional** meaning it always passes through the **Middle Tier**
+- In **MVC**, each `layer` is updated by the one at the left and, in turn, updates the one at the right -where 'eft' and 'right' are merely illustrative. 
+
 ## Benefits of N-Tier Architecture
 - Separating application components into separate tiers increases the maintainability and scalability of the application
 - It does this by enabling easier adoption of new technologies that can be applied to a single tier without the requirement to redesign the whole solution
@@ -302,10 +333,12 @@ https://stackoverflow.com/questions/45164355/what-is-vpc-subnet-in-aws
 - You **cannot** associate more than one route table to a single subnet.
 
 ## NACLs (Network Access Control Lists) 
-- Virtual network-level firewalls that are associated to each and every subnet
+- Protects subnet
+- Virtual network-level firewalls that are associated to each and every **subnet**
 - Help control both ingress and egress (incoming, outbound) traffic moving in and out of your VPC and between your subnets.
 
 ## SG Security Groups EC2
+- Protects Instance 
 - Firewall at EC2 level
 - Responsible for controlling the traffic in and out of your instances.
 
@@ -339,3 +372,66 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 
 
 > Navigate [HERE](VPC_Setup.md) on setting up a VPC on AWS
+
+---
+
+## Part II Networking and Security
+## What is bastion server AWS?
+- Also called a Jump Box
+- A bastion is a special purpose **server instance** that is designed to be the primary access point from the Internet and acts as a [proxy](#what-is-a-proxy) to your other EC2 instances.
+- Acts as a proxy server and allows client machines to connect to the remote server.
+- A bastion host is a **server** 
+- A bastion host provides access to a private network from an external network, such as the Internet.
+- Anything that provides perimeter access control security can be considered as the **Bastion Host** or **Bastion Server**.
+
+## Using a Bastion Server
+- After creating a [VPC](VPC_Setup.md), the **next** important part of creating an infrastructure in the cloud is to provide a mechanism for **secure connection** and a communication channel to your VPC resources e.g providing an external IP address.
+- However, assigning an external IP address would cause various security risks.
+- When instances do not have external IP addresses, they can **only** be reached by some other instances on the network.
+- To allow access to these machines over an SSH connection, you use a Bastion Host.
+- A bastion host is the most **convenient** method is to provide an instance in your network to act as a trusted relay for inbound connections.
+
+**Bastion Server Architecture**
+<img src="https://www.learningjournal.guru/_resources/img/jpg-7x/bastion-server-architecture.jpg" alt="bastion_server_architecture">
+- All your isolated instances have only internal IP addresses in your VPC.
+- The bastion host instance has an external IP address as well as an internal IP address.
+- If you need to access instances on the internal network that do not have an external IP address, you can connect to a Bastion host and **then** connect to your internal instances from that Bastion host. 
+
+> Setting up a Bastion server [here](VPC_Setup.md)
+
+## What is a proxy?
+- A proxy server acts as a gateway between you and the internet
+- An intermediary server separating end users from the websites they browse.
+- An intermediary for requests from clients seeking resources from servers that provide those resources.
+- They potentially mask the true origin of the request to the resource server instead of the client connecting directly to a server.
+- Proxy servers act as a firewall and web filter, provide shared network connections, and cache data to speed up common requests.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Proxy_concept_en.svg/554px-Proxy_concept_en.svg.png" alt="proxy_image">
+
+## Benefits of proxies
+- Proxies serve as a method to simplify or control the complexity of the request, or provide additional benefits such as:
+    - Load Balancing 
+    - Privacy 
+    - Security
+- They add structure and encapsulation to distributed systems.
+
+**An open proxy forward requests from and to anywhere on the Internet**
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Open_proxy_h2g2bob.svg/560px-Open_proxy_h2g2bob.svg.png">
+
+## Reverse Proxy Recap
+- A **reverse proxy** or **surrogate** is a proxy server that appears to clients to be an ordinary server.
+- Reverse proxies forward requests to one or more ordinary servers that handle the request.
+- The response from the proxy server is returned as if it came directly from original server, leaving client with no knowledge of original server.
+- They are  installed in the neighbourhood of one or more web servers.
+
+## Benefits of reverse proxies
+- **Load balancing:** reverse proxies can distribute the load to several web servers, each web server serving its own application area.
+- **Security:** Proxy server is an additional layer of defense and can protect against some OS and Web Server specific attacks.
+- **Content-filtering:** A content-filtering web proxy server provides administrative control over the content that may be relayed in one or both commercial and non-commercial organisation (e.g schools).
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Reverse_proxy_h2g2bob.svg/560px-Reverse_proxy_h2g2bob.svg.png">
+
+**Using a reverse proxy to circumvent proxies which filter using blacklists using services designed to proxy information from a non-blacklisted location**
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/CPT-Proxy.svg/800px-CPT-Proxy.svg.png">

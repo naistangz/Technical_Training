@@ -4,13 +4,17 @@
 - TDD is the process of developing and running automated test before actual development of the application.
 - Relies on the repetition of a very short development cycle.
 - Sometimes called **Test First Development**
-
+- The tests **drive** development
 
 ## Why do we use TDD?
 - Reduces the number of bugs when applied to legacy projects 
 - Decreases bug to code ratio in new projects 
 - Increases overall software quality.
 - Increases code quality.
+- TDD is one of the common practices of Agile core development.
+- Agile is feedback driven development and **feedback is critical**
+- Requirements you start with may change during development cycle
+
 
 ## Benefits of using TDD
 * **Early bug notification**
@@ -27,6 +31,9 @@
     - When refactoring code, there is a greater likelihood of breaks.
     - Having set of automated tests can fix those breaks before release.
     - Proper warning is given when breaks are identified.
+
+## Limitations of TDD
+- Large numbers of **unit tests** can become hard to maintain as the project grows in size.
 
 ## TDD in Agile 
 - Development technique where you must first write a test that fails before you write new functional code. 
