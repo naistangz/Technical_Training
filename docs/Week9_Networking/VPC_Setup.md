@@ -41,12 +41,18 @@
 - For any resources created within your public subnet e.g. web servers, would be accessible from the Internet
 - A **private subnet**, for example your backend databases, would be inaccessible by default from the Internet.
 - In order to make a subnet public or private, you have to add an Internet gateway.
+- The **main difference** is the **route** the traffic takes out to the Internet - the Internet Gateway of the NAT Gateway.
 
 ## IGW
 - An Internet Gateway is a managed component by AWS that is attached to your VPC and acts as a gateway between your VPC and the outside world.
+- An IGW is a transparent component. It does not have an IP address of its own, and is not a component that you need to manage.
+- **Note**: For an EC2 instance to talk to the outside world, instances must be located on a subnet that has a route defined to the IGW, **and** there must be a public IP address (Elastic IP - a reserved public IP address)
+- This is **mandatory** to enable **bi-directional** communication between the outside world and the instances. 
 - Serves as a bridge between our isolated VPC to the Internet by the IGW which is managed by AWS.
 - Before the public subnet can access the Internet, we need to add a route to the public subnet's route table.
-- 
+- Associated with every subnet when it is created will also be an associated route table.
+- You can have the same route table associated to multiple subnets.
+- You **cannot** associate more than one route table to a single subnet.
 
 ## CIDR block
 - The **CIDR block address** is a range of IP addresses and this CIDR block range can have a subnet mask between a range of IP addresses from a `/16` all the way to a `/28`.
@@ -54,7 +60,10 @@
 - **Note:** Any subnets that we create within our VPC need to reside within this CIDR block range.
 
 
-Routing Table 
+## Routing Table
+- The place where routing information is stored 
+- A routing table contains routing entries, which is a list of destinations (or a list of network prefixes or routes)
+- 
 
 ssh into vpc 
 get nginx running 
