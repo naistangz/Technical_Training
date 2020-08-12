@@ -10,7 +10,7 @@
 - [x] [IP and Binary - Demo Convert 1 IP into binary](#ip-and-binary---demo-convert-1-ip-into-binary)
 - [x] [IP4 VS IPV6](#ipv4-vs-ipv6)
 - [x] [Class Networks](#class-networks)
-- [x] [Classless Inter-Domain Routing](#cidr)
+- [x] [CIDR Classless Inter-Domain Routing](#cidr)
 - [x] [Monolith Architecture](#monolith-architecture)
 - [x] [N-Tier Architecture](#n-tier-architecture)
 - [x] [Virtual Private Cloud](#vpcs)
