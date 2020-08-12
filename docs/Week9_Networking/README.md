@@ -1,4 +1,4 @@
-# Networking and Configuration Management :computer: :cloud:
+# Networking :computer: :cloud:
 
 **Contents**
 - [x] [What is a Network?](#what-is-a-network)
