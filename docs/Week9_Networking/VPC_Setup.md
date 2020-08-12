@@ -127,9 +127,10 @@ scp -i ~/.ssh/DevOpsStudents.pem DevOpsStudents.pem ubuntu@52.19.173.136:/home/u
 - `ssh into db instance with private ip` to access our private subnet.
 
 1. cd AWSNodeAPPipeline
-2. Enter following to link files in OS to app 
+2. Enter following to link files (app folder and provision file) in OS to app 
 ```bash
 scp -i ~/.ssh/DevOpsStudents.pem -r ~/PycharmProjects/AWSNodeAppPipeline/environment/app/ ubuntu@54.78.57.81:/home/ubuntu/environment
+scp -i ~/.ssh/DevOpsStudents.pem -r ~/PycharmProjects/AWSNodeAppPipeline/app/ ubuntu@54.78.57.81:/home/ubuntu/
 ```
 3. SSH into App on VPC:
 ```bash
