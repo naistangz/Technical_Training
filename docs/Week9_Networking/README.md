@@ -13,7 +13,7 @@
 - [x] [CIDR Classless Inter-Domain Routing](#cidr)
 - [x] [Monolith Architecture](#monolith-architecture)
 - [x] [N-Tier Architecture](#n-tier-architecture)
-- [x] [Virtual Private Cloud](#vpcs)
+- [x] [Virtual Private Cloud](#vpcs) :cloud:
 - [x] [Virtual Private Networks](#vpns)
 - [x] [IGW Internet Gateways](#igws) 
 - [x] [NACLs](#nacls-network-access-control-lists)
