@@ -102,7 +102,7 @@ IPv6 hexadecimal better suited to mobile networks
 - Wide Area Network. 
 - A telecommunications network that extends over a large geographical area for the purpose of computer networking. 
 - A `WAN` can cover country, continent or even a whole world. 
-- The **internet** is the world's larges `WAN`.
+- The **internet** is the world's largest `WAN`.
 - Examples of WAN tech: Asynchronous Transfer Mode (ATM), Integrated Services Digital Network (ISDN)
 
 ## TCP/IP
