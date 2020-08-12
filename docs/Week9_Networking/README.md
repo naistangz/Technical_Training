@@ -1,6 +1,7 @@
 # Networking and Configuration Management
 # N-tier Architecture vs Monolith :computer:
 
+**Contents**
 - [x] [What is a Network?](#what-is-a-network)
 - [x] [What is an IP?](#what-is-the-maximum-ip-in-ipv4)
 - [x] [Understanding IP addresses](#understanding-ip-addresses)
@@ -10,6 +11,7 @@
 - [x] [IP and Binary - Demo Convert 1 IP into binary](#ip-and-binary---demo-convert-1-ip-into-binary)
 - [x] [IP4 VS IPV6](#ipv4-vs-ipv6)
 - [x] [Class Networks](#class-networks)
+- [x] [Classless Inter-Domain Routing](#cidr)
 - [x] [Monolith Architecture](#monolith-architecture)
 - [x] [N-Tier Architecture](#n-tier-architecture)
 - [x] [Virtual Private Cloud](#vpcs)
@@ -135,11 +137,18 @@ To make better use of this range and to create smaller networks allowing segment
 - A 32-bit (8 by 4) combination used to describe which portion of an address refers to the subnet and which part refers to the host
 - A byte = 8 bits 
 - Class A, B, and C networks have default masks, also known as natural masks:
+- For each class, different numbers of octets (four numerical blocks of IP addresses) are used to identify the networks.
+- The remaining octets determine the number of hosts in a network. 
 ```bash
 Class A: 255.0.0.0
 Class B: 255.255.0.0
 Class C: 255.255.255.0
 ```
+
+## CIDR
+- Classless Inter-Domain Routing
+- `CIDR` is based on the idea of [subnet masks](#subnet). A mask is placed over an IP address and creates a sub network: a network that is subordinate to the internet.
+- The subnet mask signals to the router which part of the IP address is assigned to the hosts and which determines the network.
 
 An IP address on Class A network that has not been subnetted would have an address/mask pair similar to 8.20.15.1 255.0.0.0
 
