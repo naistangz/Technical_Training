@@ -26,7 +26,7 @@
 ## What is a network?
 - Consists of two or more computers that are linked in order to share resources (e.g printers and CDs), exchange files, or allow electronic communications.
 - These computers on a network can be linked through cables, telephone lines, radio waves, satellites, or infrared light beams.
-- There are two common types of networks include:
+- There are two common types of networks:
     - [Local Area Network (LAN)](#LAN)
     - [Wide Area Network (WAN)](#WAN)
     
