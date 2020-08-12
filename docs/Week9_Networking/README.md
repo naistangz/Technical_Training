@@ -1,5 +1,4 @@
-# Networking and Configuration Management
-# N-tier Architecture vs Monolith :computer:
+# Networking and Configuration Management :computer:
 
 **Contents**
 - [x] [What is a Network?](#what-is-a-network)
