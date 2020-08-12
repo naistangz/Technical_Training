@@ -94,12 +94,16 @@ IPv6 hexadecimal better suited to mobile networks
 - **Problem of only having 4B IPs**:
 
 ## LAN
-Local Area Network. A computer network that interconnects within a limited area such as a residence, school, laboratory, university campus or office building.\
-Examples of LAN tech: Ethernet, Token Ring, Fibber, Distributed Data Interconnect (FDDI)
+- Local Area Network. 
+- A computer network that interconnects within a limited area such as a residence, school, laboratory, university campus or office building.
+- Examples of LAN tech: Ethernet, Token Ring, Fibber, Distributed Data Interconnect (FDDI)
 
 ## WAN
-Wide Area Network. A telecommunications network that extends over a large geographical area for the purpose of computer networking. A `WAN` can cover country, continent or even a whole world. The **internet** is the world's larges `WAN`.\
-Examples of WAN tech: Asynchronous Transfer Mode (ATM), Integrated Services Digital Network (ISDN)
+- Wide Area Network. 
+- A telecommunications network that extends over a large geographical area for the purpose of computer networking. 
+- A `WAN` can cover country, continent or even a whole world. 
+- The **internet** is the world's larges `WAN`.
+- Examples of WAN tech: Asynchronous Transfer Mode (ATM), Integrated Services Digital Network (ISDN)
 
 ## TCP/IP
 > Extracted from [avast](https://www.avast.com/c-what-is-tcp-ip)
