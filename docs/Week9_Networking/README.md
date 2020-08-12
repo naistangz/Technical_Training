@@ -21,7 +21,7 @@
 - [x] [Route Tables](#routing-table) TBC
 - [x] [SGs Security Groups](#sg-security-groups-ec2)
 
-> Network [PDF](https://www.ece.uvic.ca/~itraore/elec567-13/notes/dist-03-4.pdf)
+> Network [PDF](https://www.ece.uvic.ca/~itraore/elec567-13/notes/dist-03-4.pdf)\
 > [Setting up a VPC on AWS](VPC_Setup.md)
 
 ## What is a network?
