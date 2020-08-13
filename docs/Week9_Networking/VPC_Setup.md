@@ -115,6 +115,8 @@ sudo apt-get install nginx
 
 ## Setting up a Bastion Server (a new instance)
 ### Introduction :japanese_castle:
+> Extracted from [Cloud Academy](https://cloudacademy.com/blog/aws-bastion-host-nat-instances-vpc-peering-security/)
+
 Bastion host or server is an **instance** that is **provisioned** with a **public IP address** and can be accessed via **SSH**. Once set up, the bastion host acts as a **jump server** allowing secure connection to instances provisioned **without a public IP address**.
 
 Access to the private subnets and regular internet access from the servers, e.g. for software installation, will only be allowed with a special maintenance **security group** attached to those servers.
@@ -139,7 +141,10 @@ scp -i ~/.ssh/DevOpsStudents.pem DevOpsStudents.pem ubuntu@52.19.173.136:/home/u
 - `ssh into bastion with bastion public ip` using private key. The connection will come through the IGW (internet gateway).
 - `ssh into db instance with private ip` to access our private subnet.
 
-1. cd AWSNodeAPPipeline
+1. Navigate to AWSNodeAPPipeline folder
+```bash 
+cd AWSNodeAPPipeline
+```
 2. Enter following to link files (app folder and provision file) in OS to app 
 ```bash
 scp -i ~/.ssh/DevOpsStudents.pem -r ~/PycharmProjects/AWSNodeAppPipeline/environment/app/ ubuntu@54.78.57.81:/home/ubuntu/environment
@@ -149,11 +154,11 @@ scp -i ~/.ssh/DevOpsStudents.pem -r ~/PycharmProjects/AWSNodeAppPipeline/app/ ub
 ```bash
 ssh -i "DevOpsStudents.pem" ubuntu@54.78.57.81
 ```
-4. Run the `provision.sh` file in `environment/app` to install all packages:
+4. Run the `provision.sh` file in `environment/app` to install all packages (`npm`, `nginx`, etc):
 ```bash
 provision.sh
 ```
-5. Cd into app to run `app.js`
+5. `cd` into app to run `app.js`
 ```bash
 cd ~/app
 pm2 start app.js
