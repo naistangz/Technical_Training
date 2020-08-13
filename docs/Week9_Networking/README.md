@@ -23,7 +23,7 @@
 
 [Part II](#part-ii-networking-and-security)
 - [x] [Networking and Security](#part-ii-networking-and-security)
-- [x] [Bastion Server](#what-is-bastion-server-aws)
+- [x] [Bastion Server](#what-is-bastion-server-aws) :japanese_castle:
 - [x] [What is a Proxy or Proxy Server?](#what-is-a-proxy)
 - [x] [Benefits of using a proxy](#benefits-of-proxies)
 - [x] [Reverse Proxies](#reverse-proxy-recap)
@@ -384,7 +384,7 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 ---
 
 ## Part II Networking and Security
-## What is bastion server AWS?
+## What is bastion server AWS? :japanese_castle:
 - Also called a Jump Box
 - A bastion is a special purpose **server instance** that is designed to be the primary access point from the Internet and acts as a [proxy](#what-is-a-proxy) to your other EC2 instances.
 - Use bastion to gain access to private subnets.
@@ -393,6 +393,8 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 - A bastion host is a **server** 
 - A bastion host provides access to a private network from an external network, such as the Internet.
 - Anything that provides perimeter access control security can be considered as the **Bastion Host** or **Bastion Server**.
+
+<img src="https://d1o2okarmduwny.cloudfront.net/wp-content/uploads/2015/11/aws-bastion-host-1.png">
 
 ## Using a Bastion Server
 - After creating a [VPC](VPC_Setup.md), the **next** important part of creating an infrastructure in the cloud is to provide a mechanism for **secure connection** and a communication channel to your VPC resources e.g providing an external IP address.

@@ -1,14 +1,14 @@
 # Working with AWS Networking and Amazon VPC
 
 **Contents**
-- [x] [What is a VPC](#what-is-a-vpc)
+- [x] [What is a VPC](#what-is-a-vpc) :cloud:
 - [x] [Why use a VPC](#why-use-a-vpc)
 - [x] [Subnets](#subnet)
 - [x] [Private and Public Subnets](#private-and-public-subnets)
 - [x] [Internet Gateway](#igw)
 - [x] [Routing Tables](#routing-table)
 - [x] [Setting up a VPC](#setting-up-a-vpc)
-- [x] [Setting up a Bastion Server](#setting-up-a-bastion-server-a-new-instance)
+- [x] [Setting up a Bastion Server](#setting-up-a-bastion-server-a-new-instance) :japanese_castle:
 
 ## What is a VPC?
 - Reside inside the AWS Cloud 
@@ -114,6 +114,19 @@ sudo apt-get install nginx
 ```
 
 ## Setting up a Bastion Server (a new instance)
+### Introduction :japanese_castle:
+Bastion host or server is an **instance** that is **provisioned** with a **public IP address** and can be accessed via **SSH**. Once set up, the bastion host acts as a **jump server** allowing secure connection to instances provisioned **without a public IP address**.
+
+Access to the private subnets and regular internet access from the servers, e.g. for software installation, will only be allowed with a special maintenance **security group** attached to those servers.
+
+<img src="https://cloud.ibm.com/docs-content/v1/content/b013743f65e5c455bad277431a84cb77fc2431d5/solution-tutorials/images/solution47-vpc-secure-management-bastion-server/ArchitectureDiagram.png">
+
+- [x] After setting up required infrastructure (subnet, security groups, etc) on the cloud, the admin connect (SSH) to the bastion host using the private SSH key.
+- [x] The admin assigns a maintenance security group with proper outbound rules.
+- [x] The admin connects (SSH) securely to the instance's private IP address **via** the bastion host to install or update any required software e.g. a web server
+- [x] The internet user makes an HTTP/HTTPs request to the web server
+
+## Steps
 - Create New Instance (Bastion Server)
 - Create new security group
 - Allow SSH on port 22 from this IP address.
