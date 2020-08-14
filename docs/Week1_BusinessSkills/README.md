@@ -15,6 +15,7 @@
 - [x][Kanban](#kanban)
 - [x][Agile vs Scrum vs Kanban](#agile-vs-scrum-vs-waterfall-vs-kanban)
 - [x][Agile vs DevOps](#agile-vs-devops)
+- [x][CALMS Model - Culture, Automation, Lean, Measurement and Sharing](#calms-model---culture-automation-lean-measurement-sharing)
 - [x][Why is DevOps Better than Agile?](#why-is-devops-better-than-agile)
 - [x][Dev vs Ops](#dev-vs-it-operations)
 - [x][Lean Start Up](#lean-start-up)
@@ -136,8 +137,10 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 - Scrum is an empirical process control framework meaning Scrum embraces experimental approach to improve the product so they inspect and adapt if they need to make changes.
 - A scrum team might learn something new and then work with customer to quickly improve the product.
 - Popular because it's lightweight (simple to understand)
-- Scrum team only has **3** roles, **5** events and **3** artifacts
+- Scrum team only has **3** roles, **5** events and **3** artifacts:
 
+    -[x]Scrum Roles: [Product Owner](#product-owner), [Scrum Master](#scrum-master), Development Team
+    
 ## Burndown Chart
 - Graphical representation of work left to do versus time
 - Used in Scrum
@@ -215,7 +218,30 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
     - It must be in usable condition regardless of whether the product owner decides to actually release it.
 
 ## Scrum Events
-- 
+- [x]Sprint 
+    - An event, a time-boxed event where the development takes place 
+- [x]Spring Planning
+    - Event that kick starts each sprint and where the product owner and development team discuss which product backlog items will be included in Sprint (Sprint Backlog)
+    - Dev team encouraged to respond, raise issues, push back where necessary
+    - Dev team forecast how many product backlog items they can deliver in the Sprint
+    - Outcome of the Sprint planning meeting is to get a sprint goal and sprint backlog that everyone agrees is realistic and achievable.
+- [x]Daily Scrum
+    - Seeks to efficiently use your time and resources
+    - Time boxed to 15 mins
+    - Opportunity for Dev Team to check in, assess progress towards achieving sprint goal and to review and plan activities for the next 24 hours.
+- [x]Sprint Review
+    - Meeting before last event of the sprint
+    - Held at end of sprint, before sprint retrospective
+    - Inspects the product increment delivered in sprint, adapts product backlog
+    - Informal meeting, not status meeting, meeting intended to elicit **customer feedback** or other stakeholders and foster collaboration.
+    - Presentation to stakeholders, product owner requests feedback
+    - What went well, what problems did team run into
+    - Next steps for next sprint
+- [x]Sprint Retrospective
+    - Follow right after the Sprint review
+    - Evaluates entire sprint
+    - Evaluate how to improve the way we do sprint reviews over time
+    - Opportunity to inspect feedback after sprint review and decide how to deal with it in the next Sprint.
 
 # Kanban
 - A scheduling system used in [lean](#lean-start-up) manufacturing
@@ -289,10 +315,22 @@ Scope of work|Agility and need for automation|Agility only
 - By silos, people are working in individual roles from Developers, Testers or Operations with very little communication.
 - Even with communication tools like slack or teams, Agile does not emphasise the collaboration between the divisions so between them, they are not aware of what others are working on.
 - This can result in the blame game when software fails or has major flaws.
+- DevOps focuses on performance of an entire system, development to operations to the customer.
 - DevOps breaks these silos, and reinforces the idea of testing as equal importance to delivering in a timely manner.
 - Devs thinking like Ops and Ops thinking like Devs which brings about DevOps Engineer who have a holistic view of everything: developing the code, testing that code and deploying the code.
 - DevOps offers challenges in all facets of IT, communication and business. 
+- Feedback is continuous, don't have to wait after every sprint
+- Identifies bottlenecks that prevent rapid development, deployment, feedback, constant iteration.
+- Monitoring systems to enable feedback, rather than sprint reviews, which fosters continuity.
 
+## CALMS Model - Culture, Automation, Lean, Measurement, Sharing
+- Framework for achieving DevOps, based on Culture, Automation, Lean, Measurement, and Sharing.
+- Agile is prerequisite for DevOps, but agile remains iterative when employed apart from DevOps.
+- DevOps is the way to enable continuous deployment of change.
+- Even in agile environment, without DevOps, deploying even small changes can be time-consuming, often resulting in long release cycles.
+    - Teams are disconnected, processes are highly manual
+- DevOps is required to enable fail fast and respond fast mentality to deliver requirements at business speed.
+- Reduce risk and demonstrate impact, splitting releases into smaller batches.
 
 # Dev vs IT Operations
 **IT:**
@@ -301,8 +339,9 @@ Scope of work|Agility and need for automation|Agility only
 - [x]Computer Operations and Help Desk
 - [x]Vendor and contract management
 
-**Dev:**\
-
+**Dev:**
+- [x]Building software
+- [x]Testing software
 
 # Lean Start up
 - Eliminating unnecessary meetings, tasks and documentation
