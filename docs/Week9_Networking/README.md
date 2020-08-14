@@ -6,7 +6,7 @@
 - [x] [What is an IP?](#what-is-the-maximum-ip-in-ipv4)
 - [x] [Understanding IP addresses](#understanding-ip-addresses)
 - [x] [Subnets](#subnet)
-- [x] [Understand Subnetting](#why-use-subnetting)
+- [x] [Understand Subnetting](#subnetting)
 - [x] [What a maximum IP in IPV4?](#what-is-the-maximum-ip-in-ipv4)
 - [x] [IP and Binary - Demo Convert 1 IP into binary](#ip-and-binary---demo-convert-1-ip-into-binary)
 - [x] [IP4 VS IPV6](#ipv4-vs-ipv6)
@@ -20,18 +20,21 @@
 - [x] [NACLs](#nacls-network-access-control-lists)
 - [x] [Route Tables](#routing-table) 
 - [x] [SGs Security Groups](#sg-security-groups-ec2)
+- [x] [Instance vs Subnet](#instance-vs-subnet)
 
 [Part II](#part-ii-networking-and-security)
 - [x] [Networking and Security](#part-ii-networking-and-security)
-- [x] [Bastion Server](#what-is-bastion-server-aws) :japanese_castle:
+- [x] [Bastion Server](#what-is-bastion-server-aws-japanese_castle) :japanese_castle:
 - [x] [What is a Proxy or Proxy Server?](#what-is-a-proxy)
 - [x] [Benefits of using a proxy](#benefits-of-proxies)
 - [x] [Reverse Proxies](#reverse-proxy-recap)
+- [x] [What is Secure Shell (SSH)](#what-is-secure-shell-ssh)
+- [x] [What is an ephemeral port](#what-is-an-ephemeral-port)
 
 > Network [PDF](https://www.ece.uvic.ca/~itraore/elec567-13/notes/dist-03-4.pdf)\
 > [Setting up a VPC on AWS](VPC_Setup.md)
 
-## Part I
+# Part I
 ## What is a network?
 - Consists of two or more computers that are linked in order to share resources (e.g printers and CDs), exchange files, or allow electronic communications.
 - These computers on a network can be linked through cables, telephone lines, radio waves, satellites, or infrared light beams.
@@ -41,7 +44,7 @@
     
 ## What is an IP?
 - Stands for internet protocol, is the internet's principal set of rules for communications.
-- IP is part of an internet protocol suite, which also includes Transmission Control Protocol [(TCP)](#tcp)
+- IP is part of an internet protocol suite, which also includes Transmission Control Protocol [(TCP)](#tcpip)
 - The IP governs rules for packetising, addressing, transmitting, routing and receiving data over networks.
 - An IP address has two parts - one part **identifies the host**, such as a computer or other device. The other part **identifies the network it belongs to**. [TCP/IP](#tcpip) uses a subnet mask to separate them.
 - 1) The Network ID 
@@ -327,7 +330,7 @@ https://stackoverflow.com/questions/45164355/what-is-vpc-subnet-in-aws
 
 ## VPNs
 - Virtual Private Network.
-- A VPN can allow users to exhange data efficiently across shared or public networks, as though they are directly linked to the private network
+- A VPN can allow users to exchange data efficiently across shared or public networks, as though they are directly linked to the private network
 
 ## IGWs
 - An Internet Gateway is a managed component by AWS that is attached to your VPC and acts as a gateway between your VPC and the outside world.
@@ -369,6 +372,10 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 - A router takes care of this and the entries in this [router](#what-is-a-router) are controlled by you through Route Tables.
 - When you want to access a resource outside of your VPC, - you route traffic through your IGW (for public instances) or through the NGW (for private instances).
 - The route tables are associated with each of your subnets to allow the flow of traffic according to the policies and options you have in place. 
+- Each subnet in VPC must be associated with a route table, which controls routing for subnet.
+- Enables you to specify routing rules for inbound traffic that enters your VPC through the gateway.
+
+<img src="https://wiki.outscale.net/download/attachments/23495529/sch-General-InternetGateways.png?version=2&modificationDate=1536827811000&api=v2">
 
 ## What is a router?
 - Piece of network hardware that connects a local network to the internet.
@@ -378,12 +385,28 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 - A router is connected to two or more data lines from different IP networks. 
 - A router directs incoming and outgoing internet traffic on that network in the fastest and most efficient way.
 
+## Instance vs Subnet
+- Subnet is subdivision of VPC IP
+- Subnets are containers (public and private) within VPC, they segment off a slice of the CIDR block you define in your VPC.
+- Subnets give different access rules and place resources in different containers where those rules apply.
+- Instances sit within subnets, they are virtual servers.
+
+## SG vs NACL 
+- Network Access Control List is an optional layer of security of your VPC.
+- NACL filter incoming and outgoing traffic into a subnet
+- Security Groups filter incoming traffic at instance level
+
+Metric|NACL|SG
+----|----|----
+Job|Filter incoming and outgoing traffic into a subnet|Filter incoming traffic to instance
+Location|At subnet level| At instance level
+Rules in|By default deny everything. Rules numbered. Should be broader than SG|By default nothing allowed, you need to specify
+Rules out|By default deny everything. You need to specify what goes out. One subnet can only connect with a single ACL but a single ACL can have multiple subnets. |By default allows everything out. No need to worry, it is stateful. Not your job.
 
 > Navigate [HERE](VPC_Setup.md) on setting up a VPC on AWS
 
----
 
-## Part II Networking and Security
+# Part II Networking and Security
 ## What is bastion server AWS? :japanese_castle:
 - Also called a Jump Box
 - A bastion is a special purpose **server instance** that is designed to be the primary access point from the Internet and acts as a [proxy](#what-is-a-proxy) to your other EC2 instances.
@@ -447,3 +470,12 @@ Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 **Using a reverse proxy to circumvent proxies which filter using blacklists using services designed to proxy information from a non-blacklisted location**
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/CPT-Proxy.svg/800px-CPT-Proxy.svg.png">
+
+## What is Secure Shell (SSH)?
+- A network protocol for operating network services securely over an unsecured network.
+- A method for secure remote login from one computer to another (VM)
+- SSH protocol uses encryption to secure the connection between a client and a server.
+
+## What is an ephemeral port?
+-
+

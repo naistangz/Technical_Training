@@ -2,14 +2,17 @@
 
 **What is OOP?**
 
-**O**bject-**o**riented **p**rogramming **(OOP)** refers to a type of computer programming (software design) that includes or relies on the concept of classes and objects.
+**O**bject-**o**riented **p**rogramming **(OOP)** refers to a type of computer programming (software design) that includes or relies on the concept of classes and objects instead of functions and logic.
 It is used to structure a software program into simple, reusable pieces of code or blueprints (called classes) which are used to create individual instances of objects.
 
 **Why OOP?**
 - OOP makes code organised, reusable, and easy to maintain
 - Follow the DRY method (Don't Repeat Yourself)
 - Prevents unwanted access to data, or exposing proprietary code through encapsulation and abstraction.
+- OOP focuses on the objects that the developers want to manipulate rather than the logic required to manipulate them.
+- Code reusability
 
+<img src="https://cdn.ttgtmedia.com/rms/onlineimages/whatis-object_oriented_programming_half_column_desktop.png">
 **Characteristics of objects**
 * Attributes
 * Behaviour
@@ -20,6 +23,7 @@ It is used to structure a software program into simple, reusable pieces of code 
 - Classes determine how data and behaviours are structured 
 
 **What is an object?**
+- Can be defined as data field that has unique attributes and behaviours
 - An instantiation of a class
 - When a class is defined, only the description for the object is defined. Therefore, no memory or storage is allocated.
 
@@ -29,6 +33,9 @@ It is used to structure a software program into simple, reusable pieces of code 
 - 23 is an **instance** of the type *int*
 - Instantiation is the creating of a predefined object.
 - A realisation of a template (Class of objects)
+
+**What is a method?**
+- Logical sequence or action
 
 **What is the difference between instantiation and initialisation?**
 - Variables, properties are initialised meaning they are given an initial value.
@@ -205,7 +212,9 @@ We used the `super()` function inside the `__init__()` method. This allows us to
 ---
 
 ### Encapsulation 
-- Concept of encapsulation is to keep together the implementation (code) and the data it manipulates (variables). 
+- The implementation and state of each object are privately held inside a defined boundayr or class
+- Other objects do not have access to it
+- Method of data hiding, provides greater security 
 - Python does not have the private keyword, unlike some other object oriented languages.
 - In python, we can **restrict** access to methods and variables. This prevents data from being modified (encapsulation).
 - In python, we denote private attributes using underscore `_` or dunder (double underscore) `__` as the prefix.
@@ -321,6 +330,10 @@ The `fact()` method for object `a(Square class)` is overridden. However, `fact()
 
 
 ---
+
+### Polymorphism
+- Objects can take on more than one form depending on the context
+- The program determines which meaning or usage is necessary for each execution of that object, cutting down need to duplicate code.
 
 ## Key Points to Remember:
 - OOP makes the program easy to understand as well as efficient

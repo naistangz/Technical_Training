@@ -5,6 +5,8 @@
 - [x] [Why use a VPC](#why-use-a-vpc)
 - [x] [Subnets](#subnet)
 - [x] [Private and Public Subnets](#private-and-public-subnets)
+- [x] [Public Subnet Prerequisites](#public-subnet-prerequisites)
+- [x] [Private Subnet Prerequisites](#private-subnet-prerequistes)
 - [x] [Internet Gateway](#igw)
 - [x] [Routing Tables](#routing-table)
 - [x] [Setting up a VPC](#setting-up-a-vpc)
@@ -45,6 +47,20 @@
 - A **private subnet**, for example your backend databases, would be inaccessible by default from the Internet.
 - In order to make a subnet public or private, you have to add an Internet gateway.
 - The **main difference** is the **route** the traffic takes out to the Internet - the Internet Gateway of the NAT Gateway.
+
+## Public Subnet Prerequisites
+- The public subnet hosting the bastion instance must have the following:
+- [x] An Internet Gateway for SSH server responses to the SSH Client.
+- [x] A Routing Rule in the subnet's Route Talbes directing SSH responses to the Internet Gateway.
+- [x] A compute instance with access to the app-server
+- [x] An SSH public key corresponding a private key on the SSH client.
+- [x] An Ingress rules allowing access to port 22. Port 22 is the default for SSH
+
+## Private Subnet Prerequistes
+- The private subnet hosting the app-server must have the following.
+- [x] A compute Instance with access back to the bastion host.
+- [x] An SSH public key corresponding to a private key on the SSH client.
+- [x] An Ingress rule allowing access to port 22.
 
 ## IGW
 - An Internet Gateway is a managed component by AWS that is attached to your VPC and acts as a gateway between your VPC and the outside world.
@@ -125,6 +141,9 @@ Access to the private subnets and regular internet access from the servers, e.g.
 
 - [x] After setting up required infrastructure (subnet, security groups, etc) on the cloud, the admin connect (SSH) to the bastion host using the private SSH key.
 - [x] The admin assigns a maintenance security group with proper outbound rules.
+- [x] **SG** Inbound and Outbound traffic must be **restricted** at the protocol level as much as possible
+- [x] **SG** Inbound rule base should accept SSH or RDP connections only from the specific IP addresses (admin IP), AVOID wide open access (0.0.0.0/0)
+- [x] **SG** Outbound connection should also be restricted to SSH (secure shell) or RDP (remote desktop) access to private instance.
 - [x] The admin connects (SSH) securely to the instance's private IP address **via** the bastion host to install or update any required software e.g. a web server
 - [x] The internet user makes an HTTP/HTTPs request to the web server
 
