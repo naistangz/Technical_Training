@@ -21,7 +21,8 @@
 - [x] **Week 7** [Virtual Machines](/docs/Week7_VM)
 - [x] **Week 8** [CI/CD Pipelines](/docs/Week8_CICD)
 - [x] **Week 8** [Cloud Services](/docs/Week8_CloudServices)
-- [x] **Week 9** [Networking and Configuration Management](/docs/Week9_Networking)
+- [x] **Week 9** [Networking](/docs/Week9_Networking)
+- [x] **Week 10** [Configuration Management](/docs/Week10_ConfigurationManagement)
 ---
 
 :books: **Projects**
