@@ -98,26 +98,117 @@
 - A router directs incoming and outgoing internet traffic on that network in the fastest and most efficient way.
 
 
-## Setting up a VPC TBC
-[Insert GIF instructions]
+## Setting up a VPC 
+### Part I
+1. Create AWS account [Here](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+2. Navigate to Services, click on VPC
+3. Choose Ireland Location
+4. When choosing the area be aware it's not the same as availability zones.
+5. Region, close cluster of data centres
+6. Availability zones = within the region = logically connected but physically segregated data centres inside a region.
+
+### Part II Create VPC
+1. Create VPC
+2. Choose description name tag
+```bash
+Eng67.Anais.VPC
+```
+3. Specify IPv4 CIDR block
+```bash
+123.11.0.0/16
+```
+**Note**: `/16` mask allows you to create subnets with a `/24` mask allowing you to create networks - each with 256 available IP addresses.
+
+4. Select `No IPv6 CIDR Block`
+5. Tenancy Default
 
 ## Creating an IGW
-[Insert GIF instructions]
+1. Create an Internet Gateway by navigating to VPC bar on the left.
+2. Select a descriptive name tag 
+```bash
+Eng67.Anais.IGW
+```
+3. Go to actions on the right and attach IGW to the VPC we have just created
 
 ## Creating Public and Private Subnets
-[Insert GIF instructions]
+### Public Subnet
+1. Navigate to VPC bar and create subnet
+2. Use descriptive name tag e.g.
+```bash
+Eng67.Atang.Subnet.Public
+```
+3. Assign your VPC
+4. Choose no preference for availability zone
+5. Select IPv4 CIDR block:
+```bash
+123.11.1.0/24
+```
+5. Click create
 
-## Creating a route table TBC
-[Insert GIF instructions]
+### Private Subnet
+1. Follow the same steps for public subnet using descriptive name tags
+```bash
+Eng67.Atang.Subnet.Private
+```
+2. Type following IPv4 CIDR block:
+```bash
+123.11.2.0/24
+```
+3. Click create
 
-## Security Group Rules - NACLs
-[Insert GIF instructions]
+## Creating a route table
+1. Navigate to Route Table Option from VPC bar
+2. There should already be a default Route Table by typing in your VPC ID.
+3. Create new route table with descriptive name tags
+```bash
+Eng56.ATang.Route.Public
+```
+4. Assign VPC 
+5. Once created edit routes
+6. Add 0.0.0.0/0 to the Destination and your IGW as Target
+7. Add 123.11.0.0/16 to the Destination and local as Target.
+8. Save Routes
+9. Click on Subnet Associations and assign public subnets to your public route and private subnets to your private route.
+
+## Creating a Network ACL
+### Rules Public 
+1. Navigate to Network ACL under security
+2. Enter descriptive name tag
+```bash
+Eng67.ATang.NACL.public
+```
+3. Click create then edit inbound rules:
+```bash
+Rule    Type              Protocol    Port Range     Source                                    Allow/Deny
+100     HTTP(80)          TCP(6)      80             0.0.0.0/0                                 Allow
+110     HTTPS(443)        TCP(6)      443            0.0.0.0/0                                 Allow
+120     Custom TCP Rule   TCP(6)      1024-65535     0.0.0.0/0                                 Allow
+130     Custom TCP Rule   TCP(6)      22             Personal IP                               Allow
+140     Custom TCP Rule   TCP(6)      27017          123.11.2.0/24                             Allow
+150     Custom TCP Rule   TCP(6)      1024-65535     123.11.2.0/24 (CIDR Private Subnet IP)    Allow
+```
+4. Edit Outbound rules then click save:
+```bash
+Rule     Type             Protocol    Port Range     Destination    Allow/Deny
+101      ALL TCP          TCP(6)      ALL            0.0.0.0/0      Allow
+```
+
+5. Click on subnet associations and edit subnet associations. 
+6. Select Public Subnet.
+7. Create new EC2 Instances and select the VPC and subnet you created in the `Network` and `Subnet` settings in `Step 3: Configuring Instance Details`
+
+**Ingress Rule:**
+- Allow port 80 
+- Allow port 443
+- Allow port 22 on range of IPs
+- Allow ephemeral ports 
+
 
 ## Testing using Mac Terminal
 1. Connect to the EC2 Instance with VPC
 2. In terminal, `ssh` into the instance by typing in the following command:
 ```bash
-ssh -i "DevOpsStudents.pem" ubuntu@34.245.71.30
+ssh -i "private_key.pem" ubuntu@34.245.71.30
 ```
 3. Install web server `nginx`
 ```bash
@@ -166,12 +257,12 @@ cd AWSNodeAPPipeline
 ```
 2. Enter following to link files (app folder and provision file) in OS to app 
 ```bash
-scp -i ~/.ssh/DevOpsStudents.pem -r ~/PycharmProjects/AWSNodeAppPipeline/environment/app/ ubuntu@54.78.57.81:/home/ubuntu/environment
-scp -i ~/.ssh/DevOpsStudents.pem -r ~/PycharmProjects/AWSNodeAppPipeline/app/ ubuntu@54.78.57.81:/home/ubuntu/
+scp -i ~/.ssh/privatekey.pem -r ~/PycharmProjects/AWSNodeAppPipeline/environment/app/ ubuntu@54.78.57.81:/home/ubuntu/environment
+scp -i ~/.ssh/privatekey.pem -r ~/PycharmProjects/AWSNodeAppPipeline/app/ ubuntu@54.78.57.81:/home/ubuntu/
 ```
 3. SSH into App on VPC:
 ```bash
-ssh -i "DevOpsStudents.pem" ubuntu@54.78.57.81
+ssh -i "privatekey.pem" ubuntu@54.78.57.81
 ```
 4. Run the `provision.sh` file in `environment/app` to install all packages (`npm`, `nginx`, etc):
 ```bash

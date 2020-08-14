@@ -182,12 +182,37 @@ Agile manifesto lists [12 principles](http://agilemanifesto.org/principles.html)
 - Once they have a vision, they'll bring in a product owner to own the product.
 
 ## Scrum Artefacts
+- They are key information that Scrum Team and the stakeholders need to be aware of for understanding the product under development, the activities being planned and activities done in the project.
+- [x]Product Vision
+    - Long term goal of project/product
+    - Overall direction, guides Scrum Team
+    - Everyone should be able to memorise the Product Vision
+- [x]Sprint Goal
+    - Objective that will be met within each Sprint
+    - Goal forecasted in Product Backlog items
+    - Product Owner supports this process by having clear business goals for the coming sprint.
 - [x]Product Backlog
     - A ranked list of features that product owner would like included in product.
     - Teams will put [user stories](#user-story) in the product backlog
-    -
+    - Owned by product owner, consists of features, functions, requirements, enhancements, fixes
+    - Requirements of product keep changing i.e. change in business requirements, market conditions, technology
 - [x]Sprint Backlog
+    - Set of product backlog items selected for the sprint plus a plan for delivering product increment and realising sprint goal
+    - Forecasted by dev team about what functionality is next on priority list.
+- [x]Definition of Done
+    - Every product backlog item has acceptance criteria that define measurable what must be met when the item is declared to be completed.
+    - Shared understanding of the Scrum Team on the meaning of work to be complete
+    - Contains quality criteria, constraints, overall non-functional requirements
+    - Minimum requirements to produce minimum viable product.
+- [x]Burn-Down Chart
+    - Give overview of progress over time while completing project.
+    - As tasks are completed, the graph burns down to zero
+    - Used as a tool to guide dev team to a successful completion of a Sprint.
+    - Aids dev team in ascertaining which tasks they are not realistically able to complete so that these tasks can be moved back to the product backlog.
 - [x]Product Increment
+    - Sum of all product backlog items completed during a sprint and all previous sprints
+    - At the end of a sprint, the new increment must be done
+    - It must be in usable condition regardless of whether the product owner decides to actually release it.
 
 ## Scrum Events
 - 

@@ -30,6 +30,7 @@
 - [x] [Reverse Proxies](#reverse-proxy-recap)
 - [x] [What is Secure Shell (SSH)](#what-is-secure-shell-ssh)
 - [x] [What is an ephemeral port](#what-is-an-ephemeral-port)
+- [x] [Egress vs Ingress Network Traffic](#-what-does-ingress-and-egress-mean-in-networking)
 
 > Network [PDF](https://www.ece.uvic.ca/~itraore/elec567-13/notes/dist-03-4.pdf)\
 > [Setting up a VPC on AWS](VPC_Setup.md)
@@ -345,22 +346,56 @@ https://stackoverflow.com/questions/45164355/what-is-vpc-subnet-in-aws
 
 ## NACLs (Network Access Control Lists) 
 - Protects subnet
+- Stateless
+    - If instance in subnet sends request, the connection is not tracked, response is subject to NACL's inbound rules.
+    - If traffic is allowed into subnet, the response is evaluated according to outbound rules
 - Virtual network-level firewalls that are associated to each and every **subnet**
 - Help control both ingress and egress (incoming, outbound) traffic moving in and out of your VPC and between your subnets.
+- For example, an inbound rule might deny incoming traffic from a range of IP addresses, outbound rule might allow all traffic to leave the subnet.
+- Optional but best solution is to use both resource types as virtual firewalls.
 
 ## SG Security Groups EC2
-- Protects Instance 
+- Protects Instance
+- Stateful
+    - They automatically allow return traffic, no matter what rules are specified
+    - If instance sends out a request, connection is tracked and the response is accepted regardless of inbound rules.
+    - If traffic is allowed into instance, the response is allow out regardless of explicit outbound rules
+    - SGs don't need rules to evaluate traffic because once a request is permitted, response is automatically permissed.
+- When creating a VPC, AWS automatically creates a default security group for it. 
 - Firewall at EC2 level
 - Responsible for controlling the traffic in and out of your instances.
+- Inbound rules **stateful**, meaning in an EC2 instance in an SG with port 80, incoming traffic is allowed, regardless of any rules
+- Outbound rules can respond to HTTP request but cannot initiate an HTTP request e.g to update server.
+
+Both...
+
+- Use inbound and outbound rules to control traffic
+- Can be applied to more than one instance
+- Can be locked down to deny all traffic in either direction
+- Valid methods of securing resources in a VPC
+- Work together to promote network redundancy and prevent authorised activity.
 
 ## AWS - Difference between Security Groups and Network ACLs
 **TL;DR**
 Security group is firewall of EC2 instance, Network ACL is firewall of subnet
 
-**Subnet or EC2 instance?**\
+**Subnet or EC2 instance?**
 - SGs are tied to an instance whereas Network ACLs are tied to the subnet level
 - Instances in the subnet with an associated NACL will follow rules of NACL.
 - SGs have to be assigned explicitly to the instance, meaning any instances within the subnet group gets the rule applied.
+
+<img src="https://www.fugue.co/hubfs/Security-vs-NACLshs-1.png" alt="nacl_vs_sg">
+
+- Using SGs and NACLs together reduce attack surface of AWS application
+- E.g you might create a custom NACL to whitelist or allow SSH access for a single IP which you associate with your subnet
+- You also create a SG with a similar whitelist rule but if you accidentally make the SG rules too permissive, the NACL rules continue to permis access only from that friendly IP address.
+
+Analogy: NACL is the UK Civil Defence/National Security and Intelligence, which applies high-level to stop bad things from entering the country. But SGs are like local law enforcement like local and state police.
+
+- When traffic enters, it is filtered by NACLs before filtered by SGs.
+- This mean traffic allowed by NACL can be allowed or denied by SG, traffic stopped by NACL never makes it any further.
+
+If one fails, the remaining can protect.
 
 ## Routing Table
 - A **routing table** or **routing information base (RIB)**, is a data table stored in a router or a network host that lists the routes to particular network destinations.
@@ -477,5 +512,15 @@ Rules out|By default deny everything. You need to specify what goes out. One sub
 - SSH protocol uses encryption to secure the connection between a client and a server.
 
 ## What is an ephemeral port?
--
+- Aka TCP port, a port (defined by the source) that is used to keep track of what traffic goes to what computer and application
+- When you make a TCP connection, a random source port number is chosen to represent your connection for the duration of the session. 
+- That port number is called an ephemeral port, since it is short-lived and disappears.
+- They do same thing a TCP or UDP server port would do, which is to allow a server to respond to the client request.
 
+## What does Ingress and Egress mean in networking?
+> Extracted from [Aviatrix](https://a.aviatrix.com/learning/cloud-security-operations/egress-and-ingress/)
+- **Egress:** traffic that exits an entity or a network boundary 
+- **Ingress:** traffic that enters the boundary of a network.
+- In the cloud, Egress still means traffic that is leaving from inside the private network out to public internet
+- In cloud, Ingress refers to unsolicited traffic sent from an address in public Internet to the private network - it is not a response to a request initiated by an inside system
+- Firewalls are designed to decline this request unless there is a specific rule and configuration that allows ingress connections.
