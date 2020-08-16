@@ -15,16 +15,38 @@
 Identity Access Management
 
 ## VPC
+- A virtual private cloud
+- Public cloud in AWS with security around it, granting you virtual privacy.
+- Personal data center in Amazon's Cloud
+- Taking your data centre with all your different servers, all your different storage units, in the cloud.
+- You can create subnets within the VPC
+
+## VPC Endpoints
+- End point, a device that is physically an end point on a network e.g. laptops, desktops, mobile phones, tablets, servers, virtual environments.
+- In AWS, endpoints are virtual devices, they allow communication between instances in your VPC.
+- Termination point or a node
+- There are two types of VPC endpoints:
+    1. Interface endpoints - elastic network interface with Private IP, serves as entry point for traffic destined to a supported device.
+    2. Gateway endpoints - a gateway that you specify as a target for a route in your route table 
 
 ## Network Access Control Lists
-- Firewall for subnet
+- Stateless, support allow and deny rules
+- Firewall for subnet (at network level)
 - Controls inbound and outbound traffic
 - Stateless, meaning if you want your instances to communicate over port 80 (HTTP), then you have to add an inbound as well as an outbound rule allowing port 80.
 - When creating a VPC, it comes with a default Network ACL that allows all inbound and outbound rules.
 - If you create a custom NACL, both inbound and outbound rules are denied
 
+## Rule numbers 
+- Defines precedence
+- Lowest numbered rules first, first match applies 
+- E.g if I've got five rules, 1, 2, 3, 4, 5 and an action is being attempted, and rule 3 says it can be done, then that rule is going to apply and we don't have to process 4 and 5. But if rule 3 says the action is allowed but rule 2 says it not allowed, it will not be allowed.
+
+
 ## Security Groups 
-- Stateful
+- Instance
+- Stateful, meaning if instance sends out request, it will also accept incoming those communications to back in.
+- Define allowed traffic flows, the ingress (entrance) and egress (exit)
 - They are virtual firewalls for your **instance** to control inbound and outbound traffic. 
 - If you don't specify a security group, the instance is automatically assigned to the default security group for the VPC.
 
@@ -60,7 +82,7 @@ Identity Access Management
 - Packaged environments containing software configuration
 - Machine images are like templates that are configured using an operating system (Linux, Mac, Windows)
 - Amazon Machine Image
-- A template to create virtual machines within the Amazon Elastic Compute Cloud
+- A template to create virtual machines within the Amazon Elastic Compute Cloud.
 - Template for the instance (e.g operating system, an application server), launch permissions, system architecture (whether is 32 or 64 bit) and storage
 - Used to create virtual servers, which are called Instances.
 

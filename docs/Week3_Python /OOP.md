@@ -212,12 +212,14 @@ We used the `super()` function inside the `__init__()` method. This allows us to
 ---
 
 ### Encapsulation 
-- The implementation and state of each object are privately held inside a defined boundayr or class
-- Other objects do not have access to it
 - Method of data hiding, provides greater security 
+- Other objects do not have access to it
 - Python does not have the private keyword, unlike some other object oriented languages.
 - In python, we can **restrict** access to methods and variables. This prevents data from being modified (encapsulation).
-- In python, we denote private attributes using underscore `_` or dunder (double underscore) `__` as the prefix.
+- In python, we denote `access modifiers using underscore `_` or dunder (double underscore) `__` as the prefix.
+- We use `access modifiers` to change the default scope of variables.
+- Private variables `__` can only be accessed inside the class
+- Protected variables `_` can be accessed within the same package.
 
 ```python
 class Robot(object):

@@ -9,6 +9,7 @@
 >   i. [Nginx](../Week7_VM/learningNGINX.md)
 > 5. [Virtual Machines](../Week7_VM/README.md)
 > 6. [AWS - Cloud Computing Services](../Week8_CloudServices/aws.md)
+> - [Companies](https://www.helpsystems.com/blog/6-companies-are-doing-devops-well) that have successfully implemented DevOps
 
 ## What is DevOps 
 - Not a job role 

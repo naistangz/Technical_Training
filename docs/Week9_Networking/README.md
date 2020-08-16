@@ -269,12 +269,16 @@ Client <- Data
 - In **MVC**, each `layer` is updated by the one at the left and, in turn, updates the one at the right -where 'eft' and 'right' are merely illustrative. 
 
 ## Benefits of N-Tier Architecture
-- Separating application components into separate tiers increases the maintainability and scalability of the application
+- Separating application components into separate tiers increases the maintainability and scalability of the application.
+- Each N-tier architectures typically implemented as IaaS, with each tier running on separate set of VMs.
 - It does this by enabling easier adoption of new technologies that can be applied to a single tier without the requirement to redesign the whole solution
 - N-tier applications typically store sensitive information in the middle-tier, which maintains isolation from the presentation tier. 
 - **Secure:** You can secure each of the tiers separately using different methods
 - **Scalable:** You can add more resources without affecting the other tiers.
 - **Flexible:** You can expand each tier in any manner that your requirements dictate. 
+- **Portability:** Easy to move between cloud and on premises.
+- Having more than one VMs provides resiliency in case on VM fails.
+- Load balancers used to distribute requests across the VMS in a tier.
 
 ## Monolith Architecture
 - A traditional model for software in which the structure is a single and indivisible unit. A monolith has one code base with multiple modules.
@@ -285,8 +289,20 @@ Client <- Data
 - Every element is closely related and dependent on the others, so it is difficult to change to a new or advanced technology, language, or framework
 - Updating can be a challenge
 - Problems with scalability, because each element has different resource requirements 
+- Difficult to manage **network security** in a large system.
+- **Monolithic** design prevents independent deployment of features.
 
 <img src="https://divante.com/blog/wp-content/uploads/2020/01/Frame-1.png">
+
+## N-Tier Architecture Description
+1. Each tiers consists of two or more VMs
+2. Multiple VMs provide resiliency in case one VM fails.
+3. Load balancers used to distribute requests across the VMs in a tier. 
+3. Each tier is placed inside its own subnet, meaning internal IP address falls within same address range.
+4. This makes it easy to apply network security group rules and route tables to individual tiers.
+5. Web and business tiers are stateless, meaning VM can handle any request for that tier.
+6. Network security groups restrict access to each tier. E.g. the database tier only allows access from the business tier.
+7. **Note** Tiers are the boundary of scalability, reliability, and security.
 
 ## VPCs
 > Extracted from [Prasad Vara](https://www.infoq.com/articles/aws-vpc-explained/)
