@@ -170,6 +170,8 @@ Eng56.ATang.Route.Public
 8. Save Routes
 9. Click on Subnet Associations and assign public subnets to your public route and private subnets to your private route.
 
+Do the same with a private route main but once you have configured the instance (e.g mongo.conf), close internet access by going to edit routes and removing IGW target.
+
 ## Creating a Network ACL
 ### Rules Public 
 1. Navigate to Network ACL under security
@@ -268,6 +270,7 @@ ssh -i "privatekey.pem" ubuntu@54.78.57.81
 ```bash
 provision.sh
 ```
+
 5. `cd` into app to run `app.js`
 ```bash
 cd ~/app

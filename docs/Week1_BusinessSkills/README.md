@@ -2,6 +2,7 @@
 
 **Contents**
 - [x] [What is Agile?](#what-is-agile)
+- [x] [SDLC - Software Development Life Cycle](#software-development-life-cycle-sdlc)
 - [x] [Four pillars of Agile](#the-four-values-of-the-agile-manifesto)
 - [x] [The 12 Principles of Agile Methodology](#12-principles-of-agile-methodology)
 - [x] [Advantages of Agile](#advantages-of-agile)
@@ -18,6 +19,7 @@
 - [x] [CALMS Model - Culture, Automation, Lean, Measurement and Sharing](#calms-model---culture-automation-lean-measurement-sharing)
 - [x] [Why is DevOps Better than Agile?](#why-is-devops-better-than-agile)
 - [x] [Dev vs Ops](#dev-vs-it-operations)
+- [x] [Devs thinking like Ops, Ops thinking like Devs](#devs-thinking-like-ops-and-ops-thinking-like-devs)
 - [x] [Lean Start Up](#lean-start-up)
 - [x] [Lean vs Agile](#lean-vs-agile)
 - [x] [Definition of Done](#definition-of-done)
@@ -37,6 +39,12 @@
 - The goal of each iteration is to produce a working product. 
 - All about delivering the product incrementally and iteratively, iteratively meaning refining the product each time.
 - Customer is getting value at the end of every sprint, and about the team learning about the product, understanding more about what your customer wants.
+
+## Software Development Life Cycle (SDLC)
+- Process to produce software through key stages like planning, implementing, testing, documenting and maintaining.
+- Models shifted from traditional staged SDLC processes (e.g. waterfall), to agile, and now to DevOps.
+- Agile breaks down each of these discrete stages into smaller sub-cycles, instead of doing one big release or deployment.
+- Agile releases and deploys in increments.
 
 ## The four values of the Agile Manifesto 
 - Customer collaboration over contract negotiation
@@ -319,7 +327,7 @@ Scope of work|Agility and need for automation|Agility only
 - DevOps breaks these silos, and reinforces the idea of testing as equal importance to delivering in a timely manner.
 - Devs thinking like Ops and Ops thinking like Devs which brings about DevOps Engineer who have a holistic view of everything: developing the code, testing that code and deploying the code.
 - DevOps offers challenges in all facets of IT, communication and business. 
-- Feedback is continuous, don't have to wait after every sprint
+- Feedback is continuous, don't have to wait after every sprint.
 - Identifies bottlenecks that prevent rapid development, deployment, feedback, constant iteration.
 - Monitoring systems to enable feedback, rather than sprint reviews, which fosters continuity.
 
@@ -342,6 +350,11 @@ Scope of work|Agility and need for automation|Agility only
 **Dev:**
 - [x]Building software
 - [x]Testing software
+
+## Devs thinking like Ops and Ops thinking like Devs
+- Ops teams working in increments like scrum team
+- Agile teams implementing CI/CD pipeline
+- Greater integration of QA, testing and automation 
 
 # Lean Start up
 - Eliminating unnecessary meetings, tasks and documentation

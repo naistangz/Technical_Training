@@ -122,6 +122,12 @@ Production server fails|Medium|Loss of Revenue|High
 
 ---
 
+# But, it works on my machine
+- There are common reasons why a particular change works on a developer machine, but fails on others:
+    - Different machine and system environments
+    - Missing dependencies
+    - Hardcoded directory or path in the code
+
 Using [Vagrant](https://github.com/naistangz/Technical_Training/tree/master/docs/Week7_VM)
 
 

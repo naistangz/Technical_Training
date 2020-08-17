@@ -105,3 +105,10 @@ Having a CI/CD pipeline has more positive effects than only making an existing p
 <img src="https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/CI-CD-Pipeline-CI-CD-Pipeline-Edureka-7.png">
 
 11. Lifecycle continues until we get code/a product which can be deployed to the production server.
+
+## What is a development, staging and production environment?
+**Development**: Environment on your computer, code updates take place here, all commits and branches live along with those of our co-workers. A lot of preliminary testing takes place in this environment.
+
+**Staging**: Code is on a server instead of a local machine. It will connect to as many services as it can without touching the production environment. Hard core testing happens here. Any database migrations will be tested here and configuration changes. If you have a client, this is when you give them a demo of how things work.
+
+**Production**: Where users access the final code after all of the updates and testing. 

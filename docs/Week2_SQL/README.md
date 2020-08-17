@@ -33,3 +33,22 @@
 ## **Null**
 - Undefined values 
 - `NULL` does not equal to zero 
+
+## Joins
+- A method of combining two tables together through a foreign and primary key relationship.
+
+## Normalisation
+- Approach of eliminating data redundancy 
+- Approach of organising data and dividing larger tables into smaller tables and linking them through relationships
+- Ensures that data is stored logically.
+
+## Key 
+- A value used to identify a record in a table uniquely
+
+## Primary key 
+- Used to identify a database record uniquely
+- A primary key cannot be `NULL`
+- A primary key value must be unique
+
+## Composite key
+- A Primary key composed of multiple columns to identify a record

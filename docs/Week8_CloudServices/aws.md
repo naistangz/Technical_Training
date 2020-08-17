@@ -37,11 +37,23 @@ Identity Access Management
 - When creating a VPC, it comes with a default Network ACL that allows all inbound and outbound rules.
 - If you create a custom NACL, both inbound and outbound rules are denied
 
+## What is Port 80?
+- Port number assigned to HTTP
+- Port from which computer sends and receives web client-based communication and messages from a web server and is used to send and receive HTML pages.
+- Any web/HTTP client (e.g web server) uses port 80 to send and receive requested web pages from a HTTP server.
+- HTTP may use port 8080 to deploy a caching or proxy server.
+
+## What is TCP?
+- Network communication protocol designed to send data packets over the internet.
+- TCP is transport layer, used to create a connection between remote computers by transporting and ensuring delivery of messages over supporting networks and the Internet.
+- Ensures end to end delivery of data between distinct nodes.
+- TCP works with Internet Protocol (define the local location of the remote node), TCP transports the data to the correct destination.
+- TCP breaks large data into smaller packets and ensures that data integrity is intact.
+
 ## Rule numbers 
 - Defines precedence
 - Lowest numbered rules first, first match applies 
 - E.g if I've got five rules, 1, 2, 3, 4, 5 and an action is being attempted, and rule 3 says it can be done, then that rule is going to apply and we don't have to process 4 and 5. But if rule 3 says the action is allowed but rule 2 says it not allowed, it will not be allowed.
-
 
 ## Security Groups 
 - Instance

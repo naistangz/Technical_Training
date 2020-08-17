@@ -250,6 +250,8 @@ AttributeError: 'Robot' object has no attribute '__c'
 
 `__` Dunder or double underscore also denotes private variable. 
 
+We use name mangling, a technique to rewrite the attribute name and helps to access class variables from outside the class.
+
 ---
 
 ### Polymorphism

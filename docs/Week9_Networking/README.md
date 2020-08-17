@@ -31,6 +31,7 @@
 - [x] [What is Secure Shell (SSH)](#what-is-secure-shell-ssh)
 - [x] [What is an ephemeral port](#what-is-an-ephemeral-port)
 - [x] [Egress vs Ingress Network Traffic](#-what-does-ingress-and-egress-mean-in-networking)
+- [x] [What is an elastic IP](#what-is-an-elastic-ip)
 
 > Network [PDF](https://www.ece.uvic.ca/~itraore/elec567-13/notes/dist-03-4.pdf)\
 > [Setting up a VPC on AWS](VPC_Setup.md)
@@ -138,6 +139,7 @@ The `IP address` is like the phone number assigned to your smartphone. `TCP` is 
 - Subnetting makes network routing much more efficient e.g a large network might want to have smaller networks inside of it... such as one department (e.g accounting) of a business.
 - Subnetting allows a network administrator break a network into 'subnets', allowing them to connect more people to the network without getting more IP addresses.
 - A subnet can be configured as a VPN-only subnet by routing traffic via [virtual private gateway.](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html)
+- Subnet allows us to configure different security groups around our instances.
 
 ## Subnetting
 - Process of splitting a CIDR block into smaller CIDR blocks within the same range by using different subnet masks.
@@ -377,10 +379,11 @@ https://stackoverflow.com/questions/45164355/what-is-vpc-subnet-in-aws
     - If instance sends out a request, connection is tracked and the response is accepted regardless of inbound rules.
     - If traffic is allowed into instance, the response is allow out regardless of explicit outbound rules
     - SGs don't need rules to evaluate traffic because once a request is permitted, response is automatically permissed.
+- Bastion and app server both in public subnet but different security groups, for example bastion server we only give access to our IP (22), app server we gave access to any IP address (port 80 and 443). In public NACL we granted internet to public subnet, however because our bastion server has a security group, traffic would not be allowed in.
 - When creating a VPC, AWS automatically creates a default security group for it. 
-- Firewall at EC2 level
+- Firewall at EC2 level.
 - Responsible for controlling the traffic in and out of your instances.
-- Inbound rules **stateful**, meaning in an EC2 instance in an SG with port 80, incoming traffic is allowed, regardless of any rules
+- Inbound rules **stateful**, meaning in an EC2 instance in an SG with port 80, incoming traffic is allowed, regardless of any rules.
 - Outbound rules can respond to HTTP request but cannot initiate an HTTP request e.g to update server.
 
 Both...
@@ -417,6 +420,7 @@ If one fails, the remaining can protect.
 - A **routing table** or **routing information base (RIB)**, is a data table stored in a router or a network host that lists the routes to particular network destinations.
 - A set of rules, often viewed in table format, that is used to determine where data packets travelling over an [IP](#what-is-an-ip) will be directed.
 - Also called the forwarding table.
+- Routing table directs internet from IGW to our subnets.
 - The place where routing information is stored 
 - A routing table contains routing entries, which is a list of destinations (or a list of network prefixes or routes)
 - In AWS, traffic within VPC does not need to be routed.
@@ -435,6 +439,9 @@ If one fails, the remaining can protect.
 - Data sent through the internet, such as a web page or email, is in the form of data packets.
 - A router is connected to two or more data lines from different IP networks. 
 - A router directs incoming and outgoing internet traffic on that network in the fastest and most efficient way.
+- Route table can be associated with multiple subnets
+- A subnet may only be associated with one route table
+
 
 ## Instance vs Subnet
 - Subnet is subdivision of VPC IP
@@ -540,3 +547,11 @@ Rules out|By default deny everything. You need to specify what goes out. One sub
 - In the cloud, Egress still means traffic that is leaving from inside the private network out to public internet
 - In cloud, Ingress refers to unsolicited traffic sent from an address in public Internet to the private network - it is not a response to a request initiated by an inside system
 - Firewalls are designed to decline this request unless there is a specific rule and configuration that allows ingress connections.
+
+## What is an Elastic IP?
+- A permanent IP for your instance.
+- Public static IPv4 address which is reachable from the Internet.
+- When launching en EC2 instance within the VPC, you can receive a Public IP.
+- Once you stop that instance and restart the instance you get a new Public IP for the same instance.
+- To overcome this problem, we attach an Elastic IP to an instance which doesn't change after you stop/start the instance.
+- Useful if you regularly SSH into an instance but AWS want to discourage people from holding onto Elastic IPs that are not in use.
