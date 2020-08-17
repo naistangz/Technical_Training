@@ -191,6 +191,9 @@ $ sudo nano hosts
 #192.168.33.12 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
 ```
 
+AWS is commented out because we are using the VM as the controller through which we `SSH`
+
+
 19. Exit and SSH into the web and db VMs
 ```bash
 sudo su 
@@ -244,5 +247,4 @@ echo
 [db]
 192.168.33.11 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
 " >> hosts
-
 ```
