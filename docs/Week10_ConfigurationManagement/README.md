@@ -63,7 +63,7 @@ https://www.edureka.co/blog/what-is-ansible/
 - It maintains configuration of the product performance by keeping a record and updating detailed information which describes an enterprise's hardware and software.
 
 ## What is Infrastructure as Code?
-- Type of IT setup wherein developers or operations team automatically manage and provision technology stack for an application through software e.g. Ansible, rather than using a manual process to configure hardware devices and operating systems.
+- Type of IT setup to automatically manage and provision technology stack for an application through software e.g. Ansible, rather than using a manual process to configure hardware devices and operating systems.
 - Process of managing and provisioning computer data centers through machine-readable definition files e.g YAML or Ruby, rather than physical hardware configuration.
 - Process of automating your infrastructure deployments
 
@@ -71,16 +71,19 @@ https://www.edureka.co/blog/what-is-ansible/
 1. Terraform
     - Provisioning tool 
     - Allows you to describe your infrastructure as code and creates 'execution plans' that outline exactly what will happen when you run your code.
-    
+   
+2. Ansible 
+    - Configuration tool 
+        
 ## How does Ansible fit into DevOps?
 > - Extracted from [TechBeacon](https://techbeacon.com/enterprise-it/infrastructure-code-engine-heart-devops)
+
 - Simple IT automation, automating repeatable tasks like provisioning, configuration, and deployments for one machine or millions.
-- Accelerates feedback loop
-- Discover bugs sooner 
-- More reliable deployments
+- Automates software provisioning, configuration management, and application deployment, improving workflow and adding a further level of abstraction through ansible playbooks/
 - Ansible is agentless meaning no additional software or firewall ports are required and you do not have to separately set up a management infrastructure which includes managing your entire systems, network and storage.
 - Ansible further reduces the effort required for your team to start automating right away.
 - Ansible isn't just about automation. IaC requires DevOps practices to automation scrips to ensure they're free of errors, are able to be redeployed on multiple servers and can be rolled back in case of problems, and can be engaged by both operations and development teams.
+- Infrastructure-as-code is one of key DevOps best practices.
 
 ## Best practices of IaC:
 1.**Managing infrastructure via source control**, providing a detailed audit trail for changes.
@@ -98,7 +101,7 @@ mkdir ansible_demo
 cd ansible_demo
 nano Vagrantfile
 ```
-3. Configure vagrant file to set up virtual machines 
+3. Configure [vagrant file](https://github.com/naistangz/ansible_demo/blob/master/Vagrantfile) to set up virtual machines 
 4. Vagrant up
 ```bash
 vagrant up
@@ -109,21 +112,9 @@ vagrant status
 ```
 7. In each of the VMs sudo apt-get update by SSHing into each one
 ```bash
-vagrant ssh web
+vagrant ssh web/db/aws
 vagrant@web:~$ sudo apt-get update
 vagrant@web:~$ exit
-```
-
-```bash
-vagrant ssh db
-vagrant@db:~$ sudo apt-get update
-vagrant@db:~$ exit
-```
-
-```bash
-vagrant ssh aws
-vagrant@aws:~$ sudo apt-get update
-vagrant@aws:~$ exit
 ```
 
 8. Then exit 
@@ -159,7 +150,7 @@ sudo apt-get install tree -y
 $ tree
 ```
 
-14. Use ping to test if a particular host is reachable
+14. Use ping to test if a particular host is reachable/testing network connectivity and internet speed. The lower the value, the faster the packets take to arrive across the network.
 ```bash
 $ ansible web -m ping
 ```
@@ -363,7 +354,7 @@ $ ansible db -m shell -a "hostname -I"
   tasks:
   - name: Install nginx
 
-# Installing nginx and the declaring the state - the available states are: present/absent/ 
+# Installing nginx and the declaring the state - the available states are: present/absent/latest
     apt: pkg=nginx state=present
 
 # Command to run ansible playbook: ansible-playbook install_nginx_on_web.yml
