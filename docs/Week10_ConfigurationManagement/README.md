@@ -65,7 +65,7 @@ https://www.edureka.co/blog/what-is-ansible/
 ## What is Infrastructure as Code?
 - Type of IT setup to automatically manage and provision technology stack for an application through software e.g. Ansible, rather than using a manual process to configure hardware devices and operating systems.
 - Process of managing and provisioning computer data centers through machine-readable definition files e.g YAML or Ruby, rather than physical hardware configuration.
-- Process of automating your infrastructure deployments
+- Process of automating your infrastructure deployments through the use playbooks.
 
 ## Infrastructure as Code tools
 1. Terraform
@@ -327,14 +327,15 @@ $ ansible db -m shell -a "hostname -I"
 > List of `ad-hoc commands` [here](https://devopsideas.com/ansible-ad-hoc-commands-usage/)
 
 ## Ansible Playbooks
-- Units of scripts and define work for a server configuration managed by Ansible
+- Units of scripts and describe commands to execute on one or more servers.
 - Ansible is a configuration management tool that automates configuration of multiple servers through Ansible playbooks.
-- Playbooks are core components of any Ansible configuration (and other DevOps tools)
-- Ansible playbooks contain one or multiple plays, each of which define the work to be done for a configuration on a managed server.
 - Written in YAML (yet another mark up language)
 - Playbooks manage configurations of and deployments to remote machines.
-- At more advanced level, they can sequence multi-tier rollouts involving rolling updates, and can delegrate actions to other hosts, interacting with monitoring servers and load balancers along the way. 
+- At more advanced level, they can sequence multi-tier rollouts involving rolling updates, and can delegate actions to other hosts, interacting with monitoring servers and load balancers along the way. 
 - They can launch tasks synchronously or asynchronously
+
+:exclamation: **Note** INDENTATION IS IMPORTANT WHEN USING YAML :exclamation:
+
 
 ## Creating a playbook that installs nginx
 ```yaml
