@@ -16,6 +16,7 @@
 - [x] [Ansible Ad-Hoc Commands](#ansible-ad-hoc-commands)
 - [x] [Ansible Playbooks](#ansible-playbooks)
 - [x] [Terraform](terraform.md)
+- [x] [Setting up EC2 Instance with Terraform](https://github.com/naistangz/terraform_demo)
 
 ## What is Ansible?
 - Ansible is an open-source, configuration management tool to **provision IT environments**, **deploy software** or be integrated to **CI/CD** pipelines.

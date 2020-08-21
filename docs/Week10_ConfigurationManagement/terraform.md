@@ -9,7 +9,7 @@
 - [x] [Why Terraform?](#why-terraform)
 - [x] [Terraform Commands](#terraform-commands)
 - [x] [Creating an AWS Subnet and Security Group using Terraform](https://github.com/naistangz/terraform_demo)
--
+
 
 ## Infrastructure as code 
 ```bash
