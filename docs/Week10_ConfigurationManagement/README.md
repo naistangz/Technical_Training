@@ -1,4 +1,4 @@
-# Ansible 
+# Ansible and Terraform
 
 **Contents**
 - [x] [Ansible](#ansible)
@@ -15,6 +15,7 @@
 - [x] [Setting up Ansible](#steps-in-terminal)
 - [x] [Ansible Ad-Hoc Commands](#ansible-ad-hoc-commands)
 - [x] [Ansible Playbooks](#ansible-playbooks)
+- [x] [Terraform](terraform.md)
 
 ## What is Ansible?
 - Ansible is an open-source, configuration management tool to **provision IT environments**, **deploy software** or be integrated to **CI/CD** pipelines.
@@ -359,8 +360,7 @@ $ ansible db -m shell -a "hostname -I"
     apt: pkg=nginx state=present
 
 # Command to run ansible playbook: ansible-playbook install_nginx_on_web.yml
-```
-
+`
 **Run the playbook:**
 ```bash
 root@aws:/etc/ansible# ansible-playbook installing_nginx_on_web.yml
@@ -370,3 +370,5 @@ root@aws:/etc/ansible# ansible-playbook installing_nginx_on_web.yml
 ```bash
 192.168.33.10
 ```
+
+> Click [here]() to find steps to run app

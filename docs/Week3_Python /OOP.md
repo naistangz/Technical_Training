@@ -186,6 +186,7 @@ class Animal:
         self.hungry = hungry
         self.mood = mood
 
+
 # child class
 class Bird(Animal):
     # using super(), (temporary object of the superclass) allows us to access methods of the base class (parent class)

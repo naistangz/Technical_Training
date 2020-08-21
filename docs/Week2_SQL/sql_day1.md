@@ -1,6 +1,6 @@
 # Week 2.1 SQL
 
-## What is SQL? ##
+## What is SQL? 
 **SQL** stands for Structured Query Language. 
 
 - It is used for managing data in relational database management system which stores data in the form of tables.

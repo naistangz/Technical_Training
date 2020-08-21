@@ -19,7 +19,26 @@
 **SQL Projects and Exams**
 1. [Northwind Database Data Analysis](/docs/Week2_SQL/SQL_Projects)
 
-# Terminology 
+# Terminology
+
+##  What is SQL?
+Structured Query Language. Used to communicate with a database. Standard language for relational database management systems, meaning SQL can draw relationships between different tables as long as they have a relationship through a primary and foreign key relationship.
+
+## Types of relationships
+1. One to One
+2. One to Many
+3. Many to Many - uses technique called junction table which stores attributes of the relationships between two lists of entities. They use `PRIMARY KEYS` of each data table.
+
+## Primary key
+- Uniquely identify a record in the table 
+
+## Composite key
+- Combination of two or more columns in a table to uniquely identify each row when taken individually, it does not guarantee uniqueness.
+
+## Foreign key 
+- Acts as a cross-reference between tables where the primary key of another table is linked to the primary of key of the current table.
+- Establishing a link between the two tables.
+- Primary key in another table
 
 ## **DELETE vs TRUNCATE vs DROP**:
 
