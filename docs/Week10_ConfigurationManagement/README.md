@@ -9,6 +9,7 @@
 - [x] [What does agentless mean?](#what-does-agentless-mean)
 - [x] [What is Configuration Management?](#what-is-configuration-management)
 - [x] [What is Infrastructure as Code?](#-what-is-infrastructure-as-code)
+- [x] [Configuration vs Orchestration Management](#orchestration-vs-configuration-management-computer)
 - [x] [Terraform](#infrastructure-as-code-tools)
 - [x] [How does Ansible fit into DevOps](#-how-does-ansible-fit-into-devops)
 - [x] [Best practices of IaC](#best-practices-of-iac)
@@ -17,6 +18,7 @@
 - [x] [Ansible Playbooks](#ansible-playbooks)
 - [x] [Terraform](terraform.md)
 - [x] [Setting up EC2 Instance with Terraform](https://github.com/naistangz/terraform_demo)
+- [x] [Creating your own VPC with terraform](https://github.com/naistangz/terraform_demo)
 
 ## What is Ansible?
 - Ansible is an open-source, configuration management tool to **provision IT environments**, **deploy software** or be integrated to **CI/CD** pipelines.
@@ -76,7 +78,21 @@ https://www.edureka.co/blog/what-is-ansible/
    
 2. Ansible 
     - Configuration tool 
-        
+ 
+## Orchestration vs Configuration Management :computer:
+Config|Orchestration
+---|---
+Chef, Puppet, Ansible|Terraform, AWS Cloud formation
+Create immutable infrastructure, useful for replicating servers|This can create the infrastructure but also the networking, security, monitoring and the entire setup around the machine that creates a production environment
+
+Example:
+```bash
+1. Terraform creates VPC
+2. Creates two subnets
+3. Adds rules and security
+4. Deploys AMIs and run scripts
+```
+       
 ## How does Ansible fit into DevOps?
 > - Extracted from [TechBeacon](https://techbeacon.com/enterprise-it/infrastructure-code-engine-heart-devops)
 
