@@ -23,7 +23,7 @@
 - [x] **Week 8**  [Cloud Services](/docs/Week8_CloudServices)
 - [x] **Week 9**  [Networking](/docs/Week9_Networking)
 - [x] **Week 10** [Configuration Management](/docs/Week10_ConfigurationManagement)
-- [ ] **Week 11** 
+- [x] **Week 11** [Containerisation](/docs/Week11_Containerisation)
 
 ---
 
@@ -35,6 +35,6 @@
 4. Python Flask URL-Shortener [HERE](/docs/Week6_FlaskPython/url-shortener)
 5. Python Flask Login Page [HERE](https://github.com/naistangz/flask_autho_app/tree/master/flask_autho_app)
 6. Nginx Reverse Proxy [HERE](https://github.com/naistangz/nginx-reverse-proxy)
-7. Jenkins CICD Pipeline NodeJs App [HERE](https://github.com/naistangz/NodeJSAWS_Deploy_Code)
+7. Jenkins CI/CD Pipeline NodeJs App [HERE](https://github.com/naistangz/NodeJSAWS_Deploy_Code)
 8. Configuring AWS with Ansible [HERE](https://github.com/naistangz/ansible_ami)
 9. Configuring AWS with Terraform [HERE](https://github.com/naistangz/terraform_demo)

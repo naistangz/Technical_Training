@@ -10,6 +10,7 @@
 - [x] [What is Configuration Management?](#what-is-configuration-management)
 - [x] [What is Infrastructure as Code?](#-what-is-infrastructure-as-code)
 - [x] [Configuration vs Orchestration Management](#orchestration-vs-configuration-management-computer)
+- [x] [Immutable vs Mutable Infrastructure](#immutable-vs-mutable-infrastructure)
 - [x] [Terraform](#infrastructure-as-code-tools)
 - [x] [How does Ansible fit into DevOps](#-how-does-ansible-fit-into-devops)
 - [x] [Best practices of IaC](#best-practices-of-iac)
@@ -92,6 +93,12 @@ Example:
 3. Adds rules and security
 4. Deploys AMIs and run scripts
 ```
+
+## Immutable vs Mutable Infrastructure
+- **Immutable:** - Something we don't want to change or upgrade. Once the server exists, we do not want upgrades after they're deployed
+- If something needs to be updated, fixed or modified, new servers can be built from a common image with the appropriate changes provisioned to replace the old ones.
+- Immutable infrastructure includes more consistency and reliability in our infrastructure and more predictable deployment process.
+- **Mutable** - Changes designed to be changed after deployment
        
 ## How does Ansible fit into DevOps?
 > - Extracted from [TechBeacon](https://techbeacon.com/enterprise-it/infrastructure-code-engine-heart-devops)
