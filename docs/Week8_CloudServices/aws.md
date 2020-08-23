@@ -112,3 +112,5 @@
 - Private Images
     - Used by EC2 users who have been granted access to it by the developer.
 
+
+![Anais_example_vpc](Terraform%20-%20AWS%20-%20Load%20Balancing%20-%20Eng67.Atang.VPC.png)

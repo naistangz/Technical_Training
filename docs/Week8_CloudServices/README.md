@@ -39,3 +39,4 @@
 ## Hybrid Cloud characteristics
 - On-premises data centre, private and cloud resources, workloads tied together under common data management
 - Can connect existing systems running on traditional architectures that run business-critical applications or contain sensitive data that might be suited for public cloud.
+
