@@ -12,7 +12,9 @@
 <img src="https://d2o2utebsixu4k.cloudfront.net/media/images/1567147556468-Amazon-Web-Services-2.png">
 
 ## IAM 
-Identity Access Management
+- Identity Access Management - framework of policies that manages user identities and regulates user access within an organisation 
+- Two vital IAM concepts - User and Access, former being employees, partners, suppliers, contractors, latter being an administrator.
+- Three tasks: authenticate, identify and authorise (grant user privileges)
 
 ## VPC
 - A virtual private cloud
@@ -91,6 +93,9 @@ Identity Access Management
 - That AMI is loaded to the Amazon Simple Storage Services (S3)
 
 ## AMI
+- Preconfigured EC2 instances, allow you to quickly launch new EC2 based on configuration within AMI
+- No need to install an OS
+- Beneficial when implementing auto scaling and creating immutable infrastructure
 - Packaged environments containing software configuration
 - Machine images are like templates that are configured using an operating system (Linux, Mac, Windows)
 - Amazon Machine Image
