@@ -10,7 +10,9 @@
 - [x] [Choosing between VMs Containers](#choosing-vm-vs-containers)
 - [x] [What is a Daemon?](#-what-is-daemon)
 - [x] [What are the challenges of Docker?](#what-are-the-challenges-of-adopting-docker)
-- [x] [Setting up Docker](#setting-up-docker-with-mac) :whale:
+
+> - [Setting up Docker](docker_basic.md) :whale:
+> - [Spinning up multiple Docker containers with Docker-Compose](https://github.com/naistangz/Docker_demo)
 
 ## What is containerisation?
 - Packing up software code and all its dependencies (node package manager, programming languages) so that it can run uniformly and consistently on any infrastructure or operating system.
@@ -135,6 +137,7 @@ Settings
 - The isolation and security allow us to run containers simultaneously on a client/local host.
 - They are lightweight because they don't need a hypervisor and run directly within the host machine's kernel.
 - This means you can run more containers on hardware than if you were using virtual machines.
+- Docker uses client-server architecture, where local host or client communicates to a docker daemon with RESTful API. If local host does not have the image, Docker communicates with the Docker registry to pull the image from the remote server so that it can run locally.
 
 ## Docker Engine and Components
 - *Docker Engine* is a client-server application with these components:
@@ -160,53 +163,4 @@ Settings
 (Containers won't be replacing VMs)
 https://www.infoworld.com/article/3310941/why-you-should-use-docker-and-containers.html
 
-## Setting up Docker with Mac
-1. Install [Docker Desktop on Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
-2. Run Docker Desktop (command, space, docker, enter)
-3.When the :whale: icon appears, run the following command
-```bash
-docker run hello-world
-```
-4. Run ahskhan/nginx-test-rp-app
-```bash
-docker run ahskhan/nginx-test-rp-app
-```
-5. Pull nginx
-```
-docker pull nginx
-```
-6. Run docker to test if the app is working
-```bash
-docker run -p 80:80 ahskhan/nginx-test-rp-app:v2
-```
-7. 
-```bash
-docker run -d -p 80:80 nginx
-docker ps
-```
 
-```
-docker exec -it 31dc9df77202 sh
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
-31dc9df77202        nginx               "/docker-entrypoint.…"   13 minutes ago      Up 13 minutes       0.0.0.0:80->80/tcp   dazzling_easley
-
-docker exec -it 31dc9df77202 sh
-```
-
-8. To exit
-```bash
-exit
-```
-
-## Untagging an Image 
-```
-docker rmi -f naistangz/eng67_anais_nginx  
-```  
-
-## Port mapping
-```bash
-docker pull naistangz/eng67_anais_nginx 
-docker run -d -p 50:80 naistangz/eng67_anais_nginx -> To run on port 50
-docker stop -> To stop
-docker ps -> process status
-```
