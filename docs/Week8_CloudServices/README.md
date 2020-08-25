@@ -2,6 +2,17 @@
 
 > Navigate [here](aws.md) for AWS Cloud Services
 
+**Contents**
+- [x] [What is the cloud?](#what-is-the-cloud)
+- [x] [Benefits of cloud services](#benefits-of-cloud-services)
+- [x] [Types of Cloud Services](#types-of-cloud-services)
+- [x] [Hybrid Cloud](#hybrid-cloud-computer-cloud)
+- [x] [Hybrid Cloud Characteristics](#hybrid-cloud-characteristics)
+- [x] [Challenges adopting cloud services](#challenges-of-the-cloud)
+
+## What is the cloud?
+
+## What are cloud services?
 1. Services delivered on demand over the Internet.
 2. Services designed to provide access to compute resources and applications without the need for internal infrastructure or hardware.
 3. There is no need for a company to host the applications because cloud services are fully managed by cloud computing vendors (Azure, Google, AWS, IBM Cloud)
@@ -40,3 +51,9 @@
 - On-premises data centre, private and cloud resources, workloads tied together under common data management
 - Can connect existing systems running on traditional architectures that run business-critical applications or contain sensitive data that might be suited for public cloud.
 
+## Challenges of the Cloud
+- Cloud is an attractive concept to reduce costs.
+- Variable expenses can be more affordable than fixed expenses, and with a pay as you go service, budget becomes more realistic
+- Cloud improves efficiency and can respond to scaling needs, market demands BUT poses challenges
+- Government regulators especially within financial services may not allow companies to adopt the cloud fully, owing to issues with security and privacy.
+- Risk management - Board level leaders may question how risky it is to move data off-premise

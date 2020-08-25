@@ -97,6 +97,7 @@
 - No need to install an OS
 - Beneficial when implementing auto scaling and creating immutable infrastructure
 - Packaged environments containing software configuration
+- Snapshots, all the files are saved to the AMI
 - Machine images are like templates that are configured using an operating system (Linux, Mac, Windows)
 - Amazon Machine Image
 - A template to create virtual machines within the Amazon Elastic Compute Cloud.
